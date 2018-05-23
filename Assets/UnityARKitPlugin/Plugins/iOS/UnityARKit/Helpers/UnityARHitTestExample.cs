@@ -12,6 +12,10 @@ namespace UnityEngine.XR.iOS
 		public LayerMask collisionLayer = 1 << 10;  //ARKitPlane layer
 		public CanvasController ccontroller;
 		public UnityARGeneratePlane generate_script;
+
+		public GameObject pointCloud;
+
+
 		private bool mapWasShown = false;
 		private bool planeAppeared = false;
 		private GameObject planeObj;
@@ -23,10 +27,8 @@ namespace UnityEngine.XR.iOS
             List<ARHitTestResult> hitResults = UnityARSessionNativeInterface.GetARSessionNativeInterface ().HitTest (point, resultTypes);
 			if (hitResults.Count > 0 && !mapWasShown && planeAppeared ) {
 				mapWasShown = true;
-				Debug.Log ("Hit first if arrku");
 
                 foreach (var hitResult in hitResults) {
-					Debug.Log ("foreach arrku");
                     m_HitTransform.position = UnityARMatrixOps.GetPosition (hitResult.worldTransform);
                     m_HitTransform.rotation = UnityARMatrixOps.GetRotation (hitResult.worldTransform);
 					m_HitTransform.localScale = new Vector3 (0.1f, 0.1f, 0.1f);
@@ -36,8 +38,10 @@ namespace UnityEngine.XR.iOS
 						map = m_HitTransform.GetChild (i);
 						if (map.name == "Map") {
 							spawnScript = map.GetComponent<SpawnOnMap> ();
-							map.GetComponent<Animator> ().Play ("MapAnimationScalerQQ");
-							map.GetComponent<Animator> ().Play ("none");
+	//						map.GetComponent<Animator> ().Play ("MapAnimationScalerQQ");
+	//						map.GetComponent<Animator> ().Play ("none");
+							showPins();
+							switchCloud(false);
 
 						}
 					}
@@ -111,7 +115,6 @@ namespace UnityEngine.XR.iOS
 
 		void PlaneAppearDetector.planeDetect(){
 			planeAppeared = true;
-			Debug.Log ("arrku plane appeared");
 		}
 
 		public void reload_map(){
@@ -125,8 +128,9 @@ namespace UnityEngine.XR.iOS
 				if (child.name == "Map") {
 					child.gameObject.SetActive (true);
 				}
-
 			}
+			
+			switchCloud(true);
 			ccontroller.hide_back_Button ();
 			ccontroller.hide_reload_btn ();
 			ccontroller.hide_about_model ();
@@ -138,6 +142,16 @@ namespace UnityEngine.XR.iOS
 		public void showPins(){
 			spawnScript.showPinsOnMap ();
 		}	
+
+		private void switchCloud(bool value){
+				UnityPointCloudExample cloud = pointCloud.GetComponent<UnityPointCloudExample>();
+				cloud.setCloudWorks(false);
+				List<GameObject> list = cloud.getCloud();
+				foreach (GameObject ob in list){
+				float v = value ? 0.002f : 0;
+				ob.transform.localScale = new Vector3(v,v,v);
+			}
+		}
 	}
 }
 

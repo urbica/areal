@@ -54,6 +54,7 @@ namespace UnityEngine.XR.iOS
 				PlaneDetectorSwitcher switcher = Camera_managerScrpt;
 				switcher.turn_on_Detector (false);
 				shouldCreatePlane = false;
+				
 
 
 //				hitTest.enabled = true;
@@ -99,6 +100,7 @@ namespace UnityEngine.XR.iOS
 
 		public void HidePrefabs(){
 			foreach (ARPlaneAnchorGameObject arpag in GetCurrentPlaneAnchors()) {
+				Debug.Log("Prefabs was hidden unityq");
 				arpag.gameObject.SetActive (false);
 			}
 				

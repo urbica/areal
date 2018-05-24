@@ -80,8 +80,8 @@ public class clicker : MonoBehaviour {
 		originObj.transform.position = map.transform.position;
 
 		ccontroller.show_back_Button ();
-		ccontroller.show_about_model ();
-		ccontroller.show_info_btn ();
+//		ccontroller.show_about_model ();
+//		ccontroller.show_info_btn ();
 
 		ccontroller.hide_about_pins ();
 //		ccontroller.hide_reload_btn ();
@@ -93,6 +93,5 @@ public class clicker : MonoBehaviour {
 			script.setPinsScale (0);
 		else
 			script.setPinsScale (0.02f);
-
 	}
 }

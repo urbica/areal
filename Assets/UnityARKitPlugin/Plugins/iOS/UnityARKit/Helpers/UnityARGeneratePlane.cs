@@ -22,6 +22,7 @@ namespace UnityEngine.XR.iOS
 //			scrpt = map.GetComponent<UnityARHitTestExample>();
 			unityARAnchorManager = new UnityARAnchorManager(this,hitParent,hitScript,Camera_managerScrpt);
 			UnityARUtility.InitializePlanePrefab (planePrefab);
+			controller.show_find_surface_info();
 
 		}
 
@@ -47,6 +48,8 @@ namespace UnityEngine.XR.iOS
 		void PlaneAppearDetector.planeDetect(){
 			controller.show_about_map_text ();
 			controller.hide_screenShot_btn ();
+			controller.show_reload_btn ();
+			controller.hide_find_surface_info();
 		}
 
 		public void reload_plane(){

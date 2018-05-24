@@ -12,8 +12,6 @@
 		[SerializeField]
 		AbstractMap _map;
 
-
-
 		[SerializeField]
 		[Geocode]
 		string[] _locationStrings;
@@ -46,30 +44,24 @@
 				_spawnedObjects.Add(instance);
 				_markerPrefab.transform.localScale = new Vector3 (0, 0, 0);
 
-
 			}
 		}
 
 		private void Update()
 		{
-
-
 			if ((Input.touchCount > 0) && (Input.GetTouch (0).phase == TouchPhase.Began)) {
 				Ray raycast = Camera.main.ScreenPointToRay(Input.GetTouch(0).position);
 				RaycastHit raycastHit;
 
 				if (Physics.Raycast (raycast, out raycastHit)) {
-					if (raycastHit.collider.name == "mcollider") {
+					int touchs = Input.touchCount;
+					if (raycastHit.collider.name == "mcollider" && touchs != 2) {
 						clicker.OnClickPin (_spawnedObjects);
 					}
 				}
 			}
-
-
-//			pinsShown = _spawnScale == 0 ? false : true;
 			
 			if (pinsShown) {
-				Debug.Log ("pins shown arrka");
 				int count = _spawnedObjects.Count;
 				for (int i = 0; i < count; i++) {
 					var spawnedObject = _spawnedObjects [i];
@@ -84,25 +76,17 @@
 				if (_spawnScale == 0) {
 					pinsShown = false;
 				}
-			}
-
+			} 
 			if (_spawnScale != 0 )
 				pinsShown = true;
-
 		}
 
 		public void showPinsOnMap(){
 			int count = _spawnedObjects.Count;
+			switchPins(true);
 			for (int i = 0; i < count; i++)
 			{
 				var spawnedObject = _spawnedObjects [i];
-//				var location = _locations [i];
-//
-//				spawnedObject.transform.localPosition = _map.GeoToWorldPosition (location, true);
-//				float _x = spawnedObject.transform.position.x;
-//				float _z = spawnedObject.transform.position.z;
-//				spawnedObject.transform.localScale = new Vector3 (_spawnScale, _spawnScale, _spawnScale);
-//				spawnedObject.transform.localPosition = new Vector3 (_x, _map.transform.position.y, _z);
 
 				var boxCollider = spawnedObject.AddComponent<BoxCollider> ();
 				boxCollider.transform.localPosition = spawnedObject.transform.localPosition;
@@ -115,6 +99,14 @@
 
 		public void setPinsScale(float scaleValue){
 			_spawnScale = scaleValue;
+		}
+
+		public void switchPins(bool value){
+//			SpawnOnMap script = _map.gameObject.GetComponent<SpawnOnMap> ();
+			if (!value)
+				setPinsScale (0);
+			else
+				setPinsScale (0.02f);
 		}
 	}
 }

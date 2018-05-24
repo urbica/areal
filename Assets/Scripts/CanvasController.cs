@@ -1,5 +1,5 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿//using System.Collections;
+//using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.XR.iOS;
@@ -8,6 +8,8 @@ public class CanvasController : MonoBehaviour {
 
 	public Button ok_intro;
 //	public Text intro;
+
+
 
 
 	public Button back_Button;
@@ -21,6 +23,7 @@ public class CanvasController : MonoBehaviour {
 	public GameObject about_pins_Panel;
 	public GameObject about_model_Panel;
 	public GameObject about_isaac_Panel;
+	public GameObject find_surface_Panel;
 
 
 	public UnityARAnchorManager anchManager;
@@ -33,7 +36,9 @@ public class CanvasController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		initUI();
 		if (first_Enter) {
+
 			show_intro ();
 		}
 		else {
@@ -48,12 +53,10 @@ public class CanvasController : MonoBehaviour {
 		hide_about_Isaac_info ();
 		hide_info_btn ();
 		hide_screenShot_btn ();
+		hide_find_surface_info();
 	}
 	
 	// Update is called once per frame
-	void Update () {
-		
-	}
 
 
 	public void close_introduction(){
@@ -124,6 +127,12 @@ public class CanvasController : MonoBehaviour {
 	public void show_screenShot_btn(){
 		screenShot_Button.transform.localScale = new Vector3 (1f, 1f, 1f);
 	}
+	public void show_find_surface_info(){
+		find_surface_Panel.SetActive(true);
+	}
+	public void hide_find_surface_info(){
+		find_surface_Panel.SetActive(false);
+	}
 
 
 
@@ -137,5 +146,16 @@ public class CanvasController : MonoBehaviour {
 		ok_intro.transform.localScale = new Vector3 (1f, 1f, 1f);
 		intro_Panel.SetActive(true);
 	}
+
+    private void initUI(){
+
+        intro_Panel.SetActive(true);
+        about_map_Panel.SetActive(true);
+        about_pins_Panel.SetActive(true);
+        about_model_Panel.SetActive(true);
+        about_isaac_Panel.SetActive(true);
+		find_surface_Panel.SetActive(true);
+		
+    }
 		
 }

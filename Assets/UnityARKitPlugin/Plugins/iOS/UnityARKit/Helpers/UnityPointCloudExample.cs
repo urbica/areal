@@ -7,10 +7,13 @@ using System.Runtime.InteropServices;
 
 public class UnityPointCloudExample : MonoBehaviour
 {
+
+    public bool cloudWorks  = false;
     public uint numPointsToShow = 100;
     public GameObject PointCloudPrefab = null;
     private List<GameObject> pointCloudObjects;
     private Vector3[] m_PointCloudData;
+
 
     public void Start()
     {
@@ -42,4 +45,7 @@ public class UnityPointCloudExample : MonoBehaviour
             }
         }
     }
+
+    public List<GameObject> getCloud(){ return pointCloudObjects;}
+    public void setCloudWorks(bool value){cloudWorks = value;}
 }

@@ -4,7 +4,10 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.XR.iOS;
 
+
 public class CanvasController : MonoBehaviour {
+
+	private AnimationComponent component;
 
 	public Button ok_intro;
 //	public Text intro;
@@ -37,6 +40,7 @@ public class CanvasController : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		initUI();
+		component = new AnimationComponent();
 		if (first_Enter) {
 
 			show_intro ();
@@ -129,6 +133,7 @@ public class CanvasController : MonoBehaviour {
 	}
 	public void show_find_surface_info(){
 		find_surface_Panel.SetActive(true);
+		component.playAnimation(find_surface_Panel,"findPlane_AnimA");
 	}
 	public void hide_find_surface_info(){
 		find_surface_Panel.SetActive(false);
@@ -136,11 +141,11 @@ public class CanvasController : MonoBehaviour {
 
 
 
-
 	private void close_intro(){
+		component.playAnimation(intro_Panel,"intro_anim_transit");
 		ok_intro.transform.localScale = new Vector3 (0, 0, 0);
+//		intro_Panel.SetActive(false);
 
-		intro_Panel.SetActive(false);
 	}
 	private void show_intro(){
 		ok_intro.transform.localScale = new Vector3 (1f, 1f, 1f);
@@ -157,5 +162,7 @@ public class CanvasController : MonoBehaviour {
 		find_surface_Panel.SetActive(true);
 		
     }
+
+	public AnimationComponent getAnimScript(){return component;}
 		
 }

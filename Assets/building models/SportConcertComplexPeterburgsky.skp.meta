@@ -1,0 +1,508 @@
+fileFormatVersion: 2
+guid: 74889781ff8ba4c31a4a1eb4c93e30ff
+timeCreated: 1522336063
+licenseType: Free
+SketchUpImporter:
+  generateBackFace: 0
+  mergeCoplanarFaces: 0
+  selectedNodes: 00000000010000000200000003000000060000000700000008000000090000000a0000000b0000000c0000000d0000000e0000000f000000100000001100000012000000130000001400000015000000160000001700000018000000190000001a0000001b0000001c0000001d0000001e0000001f000000200000002100000022000000230000002400000025000000260000002700000028000000290000002a0000002b0000002c0000002d0000002e0000002f000000300000003100000032000000330000003400000035000000360000003700000038000000390000003a0000003b0000003c0000003d0000003e0000003f000000400000004100000042000000430000004400000045000000460000004700000048000000490000004a0000004b0000004c0000004d0000004e0000004f000000500000005100000052000000530000005400000055000000560000005700000058000000590000005a0000005b0000005c0000005d0000005e0000005f000000600000006100000062000000630000006400000065000000660000006700000068000000690000006a0000006b0000006c0000006d0000006e0000006f000000700000007100000072000000730000007400000075000000760000007700000078000000790000007a0000007b0000007c0000007d0000007e0000007f000000800000008100000082000000830000008400000085000000860000008700000088000000890000008a0000008b0000008c0000008d0000008e0000008f000000900000009100000092000000930000009400000095000000960000009700000098000000990000009a0000009b0000009c0000009d0000009e0000009f000000a0000000a1000000a2000000a3000000a4000000a5000000a6000000a7000000a8000000a9000000aa000000ab000000ac000000ad000000ae000000af000000b0000000b1000000b2000000b3000000b4000000b5000000b6000000b7000000b8000000b9000000ba000000bb000000bc000000bd000000
+  assetHash:
+    serializedVersion: 2
+    Hash: c9fc5970dce1fa4915c93b2a97e89eef
+  longitude: 30.341813000179357
+  latitude: 59.86930279745953
+  northCorrection: -0
+  fileUnit: 0
+  sketchUpImportData:
+    defaultCamera:
+      position: {x: -446.63864, y: 90.93261, z: -83.3004}
+      lookAt: {x: -221.91159, y: 46.78916, z: -34.333893}
+      up: {x: 0.18416667, y: 0.9820755, z: 0.040128663}
+      fov: 12.986031
+      aspectRatio: 0
+      orthoSize: 1
+      isPerspective: 1
+    scenes:
+    - camera:
+        position: {x: -187.4572, y: 1.4981028, z: -241.87952}
+        lookAt: {x: 10.2343445, y: 33.313683, z: -13.500064}
+        up: {x: -0.069898784, y: 0.99449706, z: -0.078037225}
+        fov: 12.986031
+        aspectRatio: 3.088962
+        orthoSize: 1
+        isPerspective: 1
+      name: ckk21516
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Google Earth Terrain
+    100002: Group#1
+    100004: Group#1 1
+    100006: Group#1 10
+    100008: Group#1 11
+    100010: Group#1 12
+    100012: Group#1 13
+    100014: Group#1 14
+    100016: Group#1 15
+    100018: Group#1 16
+    100020: Group#1 17
+    100022: Group#1 18
+    100024: Group#1 19
+    100026: Group#1 2
+    100028: Group#1 20
+    100030: Group#1 21
+    100032: Group#1 22
+    100034: Group#1 23
+    100036: Group#1 24
+    100038: Group#1 25
+    100040: Group#1 26
+    100042: Group#1 27
+    100044: Group#1 28
+    100046: Group#1 29
+    100048: Group#1 3
+    100050: Group#1 30
+    100052: Group#1 31
+    100054: Group#1 32
+    100056: Group#1 33
+    100058: Group#1 34
+    100060: Group#1 35
+    100062: Group#1 36
+    100064: Group#1 37
+    100066: Group#1 38
+    100068: Group#1 39
+    100070: Group#1 4
+    100072: Group#1 40
+    100074: Group#1 41
+    100076: Group#1 42
+    100078: Group#1 43
+    100080: Group#1 44
+    100082: Group#1 45
+    100084: Group#1 46
+    100086: Group#1 47
+    100088: Group#1 48
+    100090: Group#1 49
+    100092: Group#1 5
+    100094: Group#1 50
+    100096: Group#1 51
+    100098: Group#1 52
+    100100: Group#1 53
+    100102: Group#1 54
+    100104: Group#1 55
+    100106: Group#1 56
+    100108: Group#1 57
+    100110: Group#1 58
+    100112: Group#1 59
+    100114: Group#1 6
+    100116: Group#1 7
+    100118: Group#1 8
+    100120: Group#1 9
+    100122: Group#2
+    100124: Group#2 1
+    100126: Group#2 10
+    100128: Group#2 11
+    100130: Group#2 12
+    100132: Group#2 13
+    100134: Group#2 14
+    100136: Group#2 15
+    100138: Group#2 16
+    100140: Group#2 17
+    100142: Group#2 18
+    100144: Group#2 19
+    100146: Group#2 2
+    100148: Group#2 20
+    100150: Group#2 21
+    100152: Group#2 22
+    100154: Group#2 23
+    100156: Group#2 24
+    100158: Group#2 25
+    100160: Group#2 26
+    100162: Group#2 27
+    100164: Group#2 28
+    100166: Group#2 29
+    100168: Group#2 3
+    100170: Group#2 4
+    100172: Group#2 5
+    100174: Group#2 6
+    100176: Group#2 7
+    100178: Group#2 8
+    100180: Group#2 9
+    100182: Group#3
+    100184: Group#3 1
+    100186: //RootNode
+    400000: Google Earth Terrain
+    400002: Group#1
+    400004: Group#1 1
+    400006: Group#1 10
+    400008: Group#1 11
+    400010: Group#1 12
+    400012: Group#1 13
+    400014: Group#1 14
+    400016: Group#1 15
+    400018: Group#1 16
+    400020: Group#1 17
+    400022: Group#1 18
+    400024: Group#1 19
+    400026: Group#1 2
+    400028: Group#1 20
+    400030: Group#1 21
+    400032: Group#1 22
+    400034: Group#1 23
+    400036: Group#1 24
+    400038: Group#1 25
+    400040: Group#1 26
+    400042: Group#1 27
+    400044: Group#1 28
+    400046: Group#1 29
+    400048: Group#1 3
+    400050: Group#1 30
+    400052: Group#1 31
+    400054: Group#1 32
+    400056: Group#1 33
+    400058: Group#1 34
+    400060: Group#1 35
+    400062: Group#1 36
+    400064: Group#1 37
+    400066: Group#1 38
+    400068: Group#1 39
+    400070: Group#1 4
+    400072: Group#1 40
+    400074: Group#1 41
+    400076: Group#1 42
+    400078: Group#1 43
+    400080: Group#1 44
+    400082: Group#1 45
+    400084: Group#1 46
+    400086: Group#1 47
+    400088: Group#1 48
+    400090: Group#1 49
+    400092: Group#1 5
+    400094: Group#1 50
+    400096: Group#1 51
+    400098: Group#1 52
+    400100: Group#1 53
+    400102: Group#1 54
+    400104: Group#1 55
+    400106: Group#1 56
+    400108: Group#1 57
+    400110: Group#1 58
+    400112: Group#1 59
+    400114: Group#1 6
+    400116: Group#1 7
+    400118: Group#1 8
+    400120: Group#1 9
+    400122: Group#2
+    400124: Group#2 1
+    400126: Group#2 10
+    400128: Group#2 11
+    400130: Group#2 12
+    400132: Group#2 13
+    400134: Group#2 14
+    400136: Group#2 15
+    400138: Group#2 16
+    400140: Group#2 17
+    400142: Group#2 18
+    400144: Group#2 19
+    400146: Group#2 2
+    400148: Group#2 20
+    400150: Group#2 21
+    400152: Group#2 22
+    400154: Group#2 23
+    400156: Group#2 24
+    400158: Group#2 25
+    400160: Group#2 26
+    400162: Group#2 27
+    400164: Group#2 28
+    400166: Group#2 29
+    400168: Group#2 3
+    400170: Group#2 4
+    400172: Group#2 5
+    400174: Group#2 6
+    400176: Group#2 7
+    400178: Group#2 8
+    400180: Group#2 9
+    400182: Group#3
+    400184: Group#3 1
+    400186: //RootNode
+    2100000: _defaultMat
+    2100002: _4
+    2100004: '[Color_000]'
+    2100006: ckk1
+    2100008: _1
+    2100010: _2
+    2100012: Google Earth Snapshot1
+    2100014: _5
+    2100016: _7
+    2100018: _8
+    2100020: _6
+    2300000: Google Earth Terrain
+    2300002: Group#1
+    2300004: Group#1 1
+    2300006: Group#1 10
+    2300008: Group#1 11
+    2300010: Group#1 12
+    2300012: Group#1 13
+    2300014: Group#1 14
+    2300016: Group#1 15
+    2300018: Group#1 16
+    2300020: Group#1 17
+    2300022: Group#1 18
+    2300024: Group#1 19
+    2300026: Group#1 2
+    2300028: Group#1 20
+    2300030: Group#1 21
+    2300032: Group#1 22
+    2300034: Group#1 23
+    2300036: Group#1 24
+    2300038: Group#1 25
+    2300040: Group#1 26
+    2300042: Group#1 27
+    2300044: Group#1 28
+    2300046: Group#1 29
+    2300048: Group#1 3
+    2300050: Group#1 30
+    2300052: Group#1 31
+    2300054: Group#1 32
+    2300056: Group#1 33
+    2300058: Group#1 34
+    2300060: Group#1 35
+    2300062: Group#1 36
+    2300064: Group#1 37
+    2300066: Group#1 38
+    2300068: Group#1 39
+    2300070: Group#1 4
+    2300072: Group#1 40
+    2300074: Group#1 41
+    2300076: Group#1 42
+    2300078: Group#1 43
+    2300080: Group#1 44
+    2300082: Group#1 45
+    2300084: Group#1 46
+    2300086: Group#1 47
+    2300088: Group#1 48
+    2300090: Group#1 49
+    2300092: Group#1 5
+    2300094: Group#1 50
+    2300096: Group#1 51
+    2300098: Group#1 52
+    2300100: Group#1 53
+    2300102: Group#1 54
+    2300104: Group#1 55
+    2300106: Group#1 56
+    2300108: Group#1 57
+    2300110: Group#1 58
+    2300112: Group#1 59
+    2300114: Group#1 6
+    2300116: Group#1 7
+    2300118: Group#1 8
+    2300120: Group#1 9
+    2300122: Group#2
+    2300124: Group#2 1
+    2300126: Group#2 10
+    2300128: Group#2 11
+    2300130: Group#2 12
+    2300132: Group#2 13
+    2300134: Group#2 14
+    2300136: Group#2 15
+    2300138: Group#2 16
+    2300140: Group#2 17
+    2300142: Group#2 18
+    2300144: Group#2 19
+    2300146: Group#2 2
+    2300148: Group#2 20
+    2300150: Group#2 21
+    2300152: Group#2 22
+    2300154: Group#2 23
+    2300156: Group#2 24
+    2300158: Group#2 25
+    2300160: Group#2 26
+    2300162: Group#2 27
+    2300164: Group#2 28
+    2300166: Group#2 29
+    2300168: Group#2 3
+    2300170: Group#2 4
+    2300172: Group#2 5
+    2300174: Group#2 6
+    2300176: Group#2 7
+    2300178: Group#2 8
+    2300180: Group#2 9
+    2300182: Group#3
+    2300184: Group#3 1
+    2300186: //RootNode
+    3300000: Google Earth Terrain
+    3300002: Group#1
+    3300004: Group#1 1
+    3300006: Group#1 10
+    3300008: Group#1 11
+    3300010: Group#1 12
+    3300012: Group#1 13
+    3300014: Group#1 14
+    3300016: Group#1 15
+    3300018: Group#1 16
+    3300020: Group#1 17
+    3300022: Group#1 18
+    3300024: Group#1 19
+    3300026: Group#1 2
+    3300028: Group#1 20
+    3300030: Group#1 21
+    3300032: Group#1 22
+    3300034: Group#1 23
+    3300036: Group#1 24
+    3300038: Group#1 25
+    3300040: Group#1 26
+    3300042: Group#1 27
+    3300044: Group#1 28
+    3300046: Group#1 29
+    3300048: Group#1 3
+    3300050: Group#1 30
+    3300052: Group#1 31
+    3300054: Group#1 32
+    3300056: Group#1 33
+    3300058: Group#1 34
+    3300060: Group#1 35
+    3300062: Group#1 36
+    3300064: Group#1 37
+    3300066: Group#1 38
+    3300068: Group#1 39
+    3300070: Group#1 4
+    3300072: Group#1 40
+    3300074: Group#1 41
+    3300076: Group#1 42
+    3300078: Group#1 43
+    3300080: Group#1 44
+    3300082: Group#1 45
+    3300084: Group#1 46
+    3300086: Group#1 47
+    3300088: Group#1 48
+    3300090: Group#1 49
+    3300092: Group#1 5
+    3300094: Group#1 50
+    3300096: Group#1 51
+    3300098: Group#1 52
+    3300100: Group#1 53
+    3300102: Group#1 54
+    3300104: Group#1 55
+    3300106: Group#1 56
+    3300108: Group#1 57
+    3300110: Group#1 58
+    3300112: Group#1 59
+    3300114: Group#1 6
+    3300116: Group#1 7
+    3300118: Group#1 8
+    3300120: Group#1 9
+    3300122: Group#2
+    3300124: Group#2 1
+    3300126: Group#2 10
+    3300128: Group#2 11
+    3300130: Group#2 12
+    3300132: Group#2 13
+    3300134: Group#2 14
+    3300136: Group#2 15
+    3300138: Group#2 16
+    3300140: Group#2 17
+    3300142: Group#2 18
+    3300144: Group#2 19
+    3300146: Group#2 2
+    3300148: Group#2 20
+    3300150: Group#2 21
+    3300152: Group#2 22
+    3300154: Group#2 23
+    3300156: Group#2 24
+    3300158: Group#2 25
+    3300160: Group#2 26
+    3300162: Group#2 27
+    3300164: Group#2 28
+    3300166: Group#2 29
+    3300168: Group#2 3
+    3300170: Group#2 4
+    3300172: Group#2 5
+    3300174: Group#2 6
+    3300176: Group#2 7
+    3300178: Group#2 8
+    3300180: Group#2 9
+    3300182: Group#3
+    3300184: Group#3 1
+    3300186: //RootNode
+    4300000: Mesh SportConcertComplexPeterburgsky
+    4300002: Mesh Google Earth Terrain
+    4300004: Mesh Group#1
+    4300006: Mesh Group#2
+    4300008: Mesh Group#3
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 2
+    materialSearch: 0
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 0.0254
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 0
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

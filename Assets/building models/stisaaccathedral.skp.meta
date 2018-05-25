@@ -1,0 +1,803 @@
+fileFormatVersion: 2
+guid: 532db4bdbee6d47288b85960bbc6c8e8
+timeCreated: 1522336062
+licenseType: Free
+SketchUpImporter:
+  generateBackFace: 0
+  mergeCoplanarFaces: 0
+  selectedNodes: 00000000010000000400000005000000060000000700000008000000090000000a0000000b0000000c0000000d0000000e0000000f000000100000001100000012000000130000001400000015000000160000001700000018000000190000001a0000001b0000001c0000001d0000001e0000001f000000200000002100000022000000230000002400000025000000260000002700000028000000290000002a0000002b0000002c0000002d0000002e0000002f000000300000003100000032000000330000003400000035000000360000003700000038000000390000003a0000003b0000003c0000003d0000003e0000003f000000400000004100000042000000430000004400000045000000460000004700000048000000490000004a0000004b0000004c0000004d0000004e0000004f000000500000005100000052000000530000005400000055000000560000005700000058000000590000005a0000005b0000005c0000005d0000005e0000005f000000600000006100000062000000630000006400000065000000660000006700000068000000690000006a0000006b0000006c0000006d0000006e0000006f000000700000007100000072000000730000007400000075000000760000007700000078000000790000007a0000007b0000007c0000007d0000007e0000007f000000800000008100000082000000830000008400000085000000860000008700000088000000890000008a0000008b0000008c0000008d0000008e0000008f000000900000009100000092000000930000009400000095000000960000009700000098000000990000009a0000009b0000009c0000009d0000009e0000009f000000a0000000a1000000a2000000a3000000a4000000a5000000a6000000a7000000a8000000a9000000aa000000ab000000ac000000ad000000ae000000af000000b0000000b1000000b2000000b3000000b4000000b5000000b6000000b7000000b8000000b9000000ba000000bb000000bc000000bd000000be000000bf000000c0000000c1000000c2000000c3000000c4000000c5000000c6000000c7000000c8000000c9000000ca000000cb000000cc000000cd000000ce000000cf000000d0000000d1000000d2000000d3000000d4000000d5000000d6000000d7000000d8000000d9000000da000000db000000dc000000dd000000de000000df000000e0000000e1000000e2000000e3000000e4000000e5000000e6000000e7000000e8000000e9000000ea000000eb000000ec000000ed000000ee000000ef000000f0000000f1000000f2000000f3000000f4000000f5000000f6000000f7000000f8000000f9000000fa000000fb000000fc000000fd000000fe000000ff000000000100000101000002010000030100000401000005010000060100000701000008010000090100000a0100000b0100000c0100000d0100000e0100000f010000100100001101000012010000130100001401000015010000160100001701000018010000190100001a0100001b0100001c0100001d0100001e0100001f010000200100002101000022010000230100002401000025010000260100002701000028010000290100002a0100002b0100002c0100002d0100002e0100002f010000300100003101000032010000330100003401000035010000360100003701000038010000390100003a0100003b0100003c0100003d0100003e0100003f010000400100004101000042010000430100004401000045010000460100004701000048010000490100004a0100004b0100004c0100004d0100004e0100004f010000
+  assetHash:
+    serializedVersion: 2
+    Hash: f35835da6e1faf2d49102ad928547811
+  longitude: 30.306205414327113
+  latitude: 59.93419295428712
+  northCorrection: -0
+  fileUnit: 0
+  sketchUpImportData:
+    defaultCamera:
+      position: {x: 184.76224, y: 65.43675, z: -123.25583}
+      lookAt: {x: 130.31271, y: 59.863174, z: -95.41399}
+      up: {x: -0.08081089, y: 0.99587256, z: 0.041321296}
+      fov: 29.895166
+      aspectRatio: 0
+      orthoSize: 1
+      isPerspective: 1
+    scenes:
+    - camera:
+        position: {x: 215.36401, y: 37.068104, z: -88.41887}
+        lookAt: {x: 179.92596, y: 39.185307, z: -73.50089}
+        up: {x: 0.050673734, y: 0.9984875, z: -0.021331592}
+        fov: 29.895166
+        aspectRatio: 0
+        orthoSize: 1
+        isPerspective: 1
+      name: Scene 1
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Google Earth Snapshot
+    100002: Group 10
+    100004: Group 102
+    100006: Group 106
+    100008: Group 110
+    100010: Group 114
+    100012: Group 118
+    100014: Group 122
+    100016: Group 126
+    100018: Group 130
+    100020: Group 134
+    100022: Group 138
+    100024: Group 14
+    100026: Group 142
+    100028: Group 146
+    100030: Group 150
+    100032: Group 154
+    100034: Group 158
+    100036: Group 162
+    100038: Group 166
+    100040: Group 170
+    100042: Group 174
+    100044: Group 178
+    100046: Group 18
+    100048: Group 182
+    100050: Group 186
+    100052: Group 190
+    100054: Group 194
+    100056: Group 198
+    100058: Group 202
+    100060: Group 206
+    100062: Group 210
+    100064: Group 214
+    100066: Group 218
+    100068: Group 22
+    100070: Group 222
+    100072: Group 226
+    100074: Group 230
+    100076: Group 234
+    100078: Group 238
+    100080: Group 242
+    100082: Group 246
+    100084: Group 250
+    100086: Group 254
+    100088: Group 258
+    100090: Group 26
+    100092: Group 262
+    100094: Group 266
+    100096: Group 270
+    100098: Group 274
+    100100: Group 278
+    100102: Group 282
+    100104: Group 286
+    100106: Group 290
+    100108: Group 294
+    100110: Group 298
+    100112: Group 30
+    100114: Group 302
+    100116: Group 306
+    100118: Group 310
+    100120: Group 314
+    100122: Group 318
+    100124: Group 322
+    100126: Group 326
+    100128: Group 330
+    100130: Group 334
+    100132: Group 34
+    100134: Group 38
+    100136: Group 42
+    100138: Group 46
+    100140: Group 50
+    100142: Group 54
+    100144: Group 58
+    100146: Group 62
+    100148: Group 66
+    100150: Group 70
+    100152: Group 74
+    100154: Group 78
+    100156: Group 82
+    100158: Group 86
+    100160: Group 90
+    100162: Group 94
+    100164: Group 98
+    100166: Group#1
+    100168: Group#1 1
+    100170: Group#1 2
+    100172: Group#1 3
+    100174: Group#3
+    100176: Group#3 1
+    100178: Group#3 10
+    100180: Group#3 11
+    100182: Group#3 12
+    100184: Group#3 13
+    100186: Group#3 14
+    100188: Group#3 15
+    100190: Group#3 16
+    100192: Group#3 17
+    100194: Group#3 18
+    100196: Group#3 19
+    100198: Group#3 2
+    100200: Group#3 20
+    100202: Group#3 21
+    100204: Group#3 22
+    100206: Group#3 23
+    100208: Group#3 24
+    100210: Group#3 25
+    100212: Group#3 26
+    100214: Group#3 27
+    100216: Group#3 28
+    100218: Group#3 29
+    100220: Group#3 3
+    100222: Group#3 30
+    100224: Group#3 31
+    100226: Group#3 32
+    100228: Group#3 33
+    100230: Group#3 34
+    100232: Group#3 35
+    100234: Group#3 36
+    100236: Group#3 37
+    100238: Group#3 38
+    100240: Group#3 39
+    100242: Group#3 4
+    100244: Group#3 40
+    100246: Group#3 41
+    100248: Group#3 42
+    100250: Group#3 43
+    100252: Group#3 44
+    100254: Group#3 45
+    100256: Group#3 46
+    100258: Group#3 47
+    100260: Group#3 48
+    100262: Group#3 49
+    100264: Group#3 5
+    100266: Group#3 50
+    100268: Group#3 51
+    100270: Group#3 52
+    100272: Group#3 53
+    100274: Group#3 54
+    100276: Group#3 55
+    100278: Group#3 56
+    100280: Group#3 57
+    100282: Group#3 58
+    100284: Group#3 59
+    100286: Group#3 6
+    100288: Group#3 60
+    100290: Group#3 61
+    100292: Group#3 62
+    100294: Group#3 63
+    100296: Group#3 64
+    100298: Group#3 65
+    100300: Group#3 66
+    100302: Group#3 67
+    100304: Group#3 68
+    100306: Group#3 69
+    100308: Group#3 7
+    100310: Group#3 70
+    100312: Group#3 71
+    100314: Group#3 8
+    100316: Group#3 9
+    100318: Group#5
+    100320: Group#5 1
+    100322: Group#5 2
+    100324: Group#5 3
+    100326: Group#5 4
+    100328: Group#5 5
+    100330: sphere
+    100332: //RootNode
+    400000: Google Earth Snapshot
+    400002: Group 10
+    400004: Group 102
+    400006: Group 106
+    400008: Group 110
+    400010: Group 114
+    400012: Group 118
+    400014: Group 122
+    400016: Group 126
+    400018: Group 130
+    400020: Group 134
+    400022: Group 138
+    400024: Group 14
+    400026: Group 142
+    400028: Group 146
+    400030: Group 150
+    400032: Group 154
+    400034: Group 158
+    400036: Group 162
+    400038: Group 166
+    400040: Group 170
+    400042: Group 174
+    400044: Group 178
+    400046: Group 18
+    400048: Group 182
+    400050: Group 186
+    400052: Group 190
+    400054: Group 194
+    400056: Group 198
+    400058: Group 202
+    400060: Group 206
+    400062: Group 210
+    400064: Group 214
+    400066: Group 218
+    400068: Group 22
+    400070: Group 222
+    400072: Group 226
+    400074: Group 230
+    400076: Group 234
+    400078: Group 238
+    400080: Group 242
+    400082: Group 246
+    400084: Group 250
+    400086: Group 254
+    400088: Group 258
+    400090: Group 26
+    400092: Group 262
+    400094: Group 266
+    400096: Group 270
+    400098: Group 274
+    400100: Group 278
+    400102: Group 282
+    400104: Group 286
+    400106: Group 290
+    400108: Group 294
+    400110: Group 298
+    400112: Group 30
+    400114: Group 302
+    400116: Group 306
+    400118: Group 310
+    400120: Group 314
+    400122: Group 318
+    400124: Group 322
+    400126: Group 326
+    400128: Group 330
+    400130: Group 334
+    400132: Group 34
+    400134: Group 38
+    400136: Group 42
+    400138: Group 46
+    400140: Group 50
+    400142: Group 54
+    400144: Group 58
+    400146: Group 62
+    400148: Group 66
+    400150: Group 70
+    400152: Group 74
+    400154: Group 78
+    400156: Group 82
+    400158: Group 86
+    400160: Group 90
+    400162: Group 94
+    400164: Group 98
+    400166: Group#1
+    400168: Group#1 1
+    400170: Group#1 2
+    400172: Group#1 3
+    400174: Group#3
+    400176: Group#3 1
+    400178: Group#3 10
+    400180: Group#3 11
+    400182: Group#3 12
+    400184: Group#3 13
+    400186: Group#3 14
+    400188: Group#3 15
+    400190: Group#3 16
+    400192: Group#3 17
+    400194: Group#3 18
+    400196: Group#3 19
+    400198: Group#3 2
+    400200: Group#3 20
+    400202: Group#3 21
+    400204: Group#3 22
+    400206: Group#3 23
+    400208: Group#3 24
+    400210: Group#3 25
+    400212: Group#3 26
+    400214: Group#3 27
+    400216: Group#3 28
+    400218: Group#3 29
+    400220: Group#3 3
+    400222: Group#3 30
+    400224: Group#3 31
+    400226: Group#3 32
+    400228: Group#3 33
+    400230: Group#3 34
+    400232: Group#3 35
+    400234: Group#3 36
+    400236: Group#3 37
+    400238: Group#3 38
+    400240: Group#3 39
+    400242: Group#3 4
+    400244: Group#3 40
+    400246: Group#3 41
+    400248: Group#3 42
+    400250: Group#3 43
+    400252: Group#3 44
+    400254: Group#3 45
+    400256: Group#3 46
+    400258: Group#3 47
+    400260: Group#3 48
+    400262: Group#3 49
+    400264: Group#3 5
+    400266: Group#3 50
+    400268: Group#3 51
+    400270: Group#3 52
+    400272: Group#3 53
+    400274: Group#3 54
+    400276: Group#3 55
+    400278: Group#3 56
+    400280: Group#3 57
+    400282: Group#3 58
+    400284: Group#3 59
+    400286: Group#3 6
+    400288: Group#3 60
+    400290: Group#3 61
+    400292: Group#3 62
+    400294: Group#3 63
+    400296: Group#3 64
+    400298: Group#3 65
+    400300: Group#3 66
+    400302: Group#3 67
+    400304: Group#3 68
+    400306: Group#3 69
+    400308: Group#3 7
+    400310: Group#3 70
+    400312: Group#3 71
+    400314: Group#3 8
+    400316: Group#3 9
+    400318: Group#5
+    400320: Group#5 1
+    400322: Group#5 2
+    400324: Group#5 3
+    400326: Group#5 4
+    400328: Group#5 5
+    400330: sphere
+    400332: //RootNode
+    2100000: _defaultMat
+    2100002: _1
+    2100004: St Isaac cathedralmimg1
+    2100006: _Charcoal_
+    2100008: Google Earth Snapshot1
+    2100010: Saint_Isaac's_Cathedral1
+    2100012: _Beige_1
+    2100014: _2
+    2100016: St Isaac cathedralmimg1#1
+    2100018: St Isaac cathedralmimg1#2
+    2300000: Google Earth Snapshot
+    2300002: Group 10
+    2300004: Group 102
+    2300006: Group 106
+    2300008: Group 110
+    2300010: Group 114
+    2300012: Group 118
+    2300014: Group 122
+    2300016: Group 126
+    2300018: Group 130
+    2300020: Group 134
+    2300022: Group 138
+    2300024: Group 14
+    2300026: Group 142
+    2300028: Group 146
+    2300030: Group 150
+    2300032: Group 154
+    2300034: Group 158
+    2300036: Group 162
+    2300038: Group 166
+    2300040: Group 170
+    2300042: Group 174
+    2300044: Group 178
+    2300046: Group 18
+    2300048: Group 182
+    2300050: Group 186
+    2300052: Group 190
+    2300054: Group 194
+    2300056: Group 198
+    2300058: Group 202
+    2300060: Group 206
+    2300062: Group 210
+    2300064: Group 214
+    2300066: Group 218
+    2300068: Group 22
+    2300070: Group 222
+    2300072: Group 226
+    2300074: Group 230
+    2300076: Group 234
+    2300078: Group 238
+    2300080: Group 242
+    2300082: Group 246
+    2300084: Group 250
+    2300086: Group 254
+    2300088: Group 258
+    2300090: Group 26
+    2300092: Group 262
+    2300094: Group 266
+    2300096: Group 270
+    2300098: Group 274
+    2300100: Group 278
+    2300102: Group 282
+    2300104: Group 286
+    2300106: Group 290
+    2300108: Group 294
+    2300110: Group 298
+    2300112: Group 30
+    2300114: Group 302
+    2300116: Group 306
+    2300118: Group 310
+    2300120: Group 314
+    2300122: Group 318
+    2300124: Group 322
+    2300126: Group 326
+    2300128: Group 330
+    2300130: Group 334
+    2300132: Group 34
+    2300134: Group 38
+    2300136: Group 42
+    2300138: Group 46
+    2300140: Group 50
+    2300142: Group 54
+    2300144: Group 58
+    2300146: Group 62
+    2300148: Group 66
+    2300150: Group 70
+    2300152: Group 74
+    2300154: Group 78
+    2300156: Group 82
+    2300158: Group 86
+    2300160: Group 90
+    2300162: Group 94
+    2300164: Group 98
+    2300166: Group#1
+    2300168: Group#1 1
+    2300170: Group#1 2
+    2300172: Group#1 3
+    2300174: Group#3
+    2300176: Group#3 1
+    2300178: Group#3 10
+    2300180: Group#3 11
+    2300182: Group#3 12
+    2300184: Group#3 13
+    2300186: Group#3 14
+    2300188: Group#3 15
+    2300190: Group#3 16
+    2300192: Group#3 17
+    2300194: Group#3 18
+    2300196: Group#3 19
+    2300198: Group#3 2
+    2300200: Group#3 20
+    2300202: Group#3 21
+    2300204: Group#3 22
+    2300206: Group#3 23
+    2300208: Group#3 24
+    2300210: Group#3 25
+    2300212: Group#3 26
+    2300214: Group#3 27
+    2300216: Group#3 28
+    2300218: Group#3 29
+    2300220: Group#3 3
+    2300222: Group#3 30
+    2300224: Group#3 31
+    2300226: Group#3 32
+    2300228: Group#3 33
+    2300230: Group#3 34
+    2300232: Group#3 35
+    2300234: Group#3 36
+    2300236: Group#3 37
+    2300238: Group#3 38
+    2300240: Group#3 39
+    2300242: Group#3 4
+    2300244: Group#3 40
+    2300246: Group#3 41
+    2300248: Group#3 42
+    2300250: Group#3 43
+    2300252: Group#3 44
+    2300254: Group#3 45
+    2300256: Group#3 46
+    2300258: Group#3 47
+    2300260: Group#3 48
+    2300262: Group#3 49
+    2300264: Group#3 5
+    2300266: Group#3 50
+    2300268: Group#3 51
+    2300270: Group#3 52
+    2300272: Group#3 53
+    2300274: Group#3 54
+    2300276: Group#3 55
+    2300278: Group#3 56
+    2300280: Group#3 57
+    2300282: Group#3 58
+    2300284: Group#3 59
+    2300286: Group#3 6
+    2300288: Group#3 60
+    2300290: Group#3 61
+    2300292: Group#3 62
+    2300294: Group#3 63
+    2300296: Group#3 64
+    2300298: Group#3 65
+    2300300: Group#3 66
+    2300302: Group#3 67
+    2300304: Group#3 68
+    2300306: Group#3 69
+    2300308: Group#3 7
+    2300310: Group#3 70
+    2300312: Group#3 71
+    2300314: Group#3 8
+    2300316: Group#3 9
+    2300318: Group#5
+    2300320: Group#5 1
+    2300322: Group#5 2
+    2300324: Group#5 3
+    2300326: Group#5 4
+    2300328: Group#5 5
+    2300330: sphere
+    2300332: //RootNode
+    3300000: Google Earth Snapshot
+    3300002: Group 10
+    3300004: Group 102
+    3300006: Group 106
+    3300008: Group 110
+    3300010: Group 114
+    3300012: Group 118
+    3300014: Group 122
+    3300016: Group 126
+    3300018: Group 130
+    3300020: Group 134
+    3300022: Group 138
+    3300024: Group 14
+    3300026: Group 142
+    3300028: Group 146
+    3300030: Group 150
+    3300032: Group 154
+    3300034: Group 158
+    3300036: Group 162
+    3300038: Group 166
+    3300040: Group 170
+    3300042: Group 174
+    3300044: Group 178
+    3300046: Group 18
+    3300048: Group 182
+    3300050: Group 186
+    3300052: Group 190
+    3300054: Group 194
+    3300056: Group 198
+    3300058: Group 202
+    3300060: Group 206
+    3300062: Group 210
+    3300064: Group 214
+    3300066: Group 218
+    3300068: Group 22
+    3300070: Group 222
+    3300072: Group 226
+    3300074: Group 230
+    3300076: Group 234
+    3300078: Group 238
+    3300080: Group 242
+    3300082: Group 246
+    3300084: Group 250
+    3300086: Group 254
+    3300088: Group 258
+    3300090: Group 26
+    3300092: Group 262
+    3300094: Group 266
+    3300096: Group 270
+    3300098: Group 274
+    3300100: Group 278
+    3300102: Group 282
+    3300104: Group 286
+    3300106: Group 290
+    3300108: Group 294
+    3300110: Group 298
+    3300112: Group 30
+    3300114: Group 302
+    3300116: Group 306
+    3300118: Group 310
+    3300120: Group 314
+    3300122: Group 318
+    3300124: Group 322
+    3300126: Group 326
+    3300128: Group 330
+    3300130: Group 334
+    3300132: Group 34
+    3300134: Group 38
+    3300136: Group 42
+    3300138: Group 46
+    3300140: Group 50
+    3300142: Group 54
+    3300144: Group 58
+    3300146: Group 62
+    3300148: Group 66
+    3300150: Group 70
+    3300152: Group 74
+    3300154: Group 78
+    3300156: Group 82
+    3300158: Group 86
+    3300160: Group 90
+    3300162: Group 94
+    3300164: Group 98
+    3300166: Group#1
+    3300168: Group#1 1
+    3300170: Group#1 2
+    3300172: Group#1 3
+    3300174: Group#3
+    3300176: Group#3 1
+    3300178: Group#3 10
+    3300180: Group#3 11
+    3300182: Group#3 12
+    3300184: Group#3 13
+    3300186: Group#3 14
+    3300188: Group#3 15
+    3300190: Group#3 16
+    3300192: Group#3 17
+    3300194: Group#3 18
+    3300196: Group#3 19
+    3300198: Group#3 2
+    3300200: Group#3 20
+    3300202: Group#3 21
+    3300204: Group#3 22
+    3300206: Group#3 23
+    3300208: Group#3 24
+    3300210: Group#3 25
+    3300212: Group#3 26
+    3300214: Group#3 27
+    3300216: Group#3 28
+    3300218: Group#3 29
+    3300220: Group#3 3
+    3300222: Group#3 30
+    3300224: Group#3 31
+    3300226: Group#3 32
+    3300228: Group#3 33
+    3300230: Group#3 34
+    3300232: Group#3 35
+    3300234: Group#3 36
+    3300236: Group#3 37
+    3300238: Group#3 38
+    3300240: Group#3 39
+    3300242: Group#3 4
+    3300244: Group#3 40
+    3300246: Group#3 41
+    3300248: Group#3 42
+    3300250: Group#3 43
+    3300252: Group#3 44
+    3300254: Group#3 45
+    3300256: Group#3 46
+    3300258: Group#3 47
+    3300260: Group#3 48
+    3300262: Group#3 49
+    3300264: Group#3 5
+    3300266: Group#3 50
+    3300268: Group#3 51
+    3300270: Group#3 52
+    3300272: Group#3 53
+    3300274: Group#3 54
+    3300276: Group#3 55
+    3300278: Group#3 56
+    3300280: Group#3 57
+    3300282: Group#3 58
+    3300284: Group#3 59
+    3300286: Group#3 6
+    3300288: Group#3 60
+    3300290: Group#3 61
+    3300292: Group#3 62
+    3300294: Group#3 63
+    3300296: Group#3 64
+    3300298: Group#3 65
+    3300300: Group#3 66
+    3300302: Group#3 67
+    3300304: Group#3 68
+    3300306: Group#3 69
+    3300308: Group#3 7
+    3300310: Group#3 70
+    3300312: Group#3 71
+    3300314: Group#3 8
+    3300316: Group#3 9
+    3300318: Group#5
+    3300320: Group#5 1
+    3300322: Group#5 2
+    3300324: Group#5 3
+    3300326: Group#5 4
+    3300328: Group#5 5
+    3300330: sphere
+    3300332: //RootNode
+    4300000: Mesh stisaaccathedral
+    4300002: Mesh Google Earth Snapshot
+    4300004: Mesh sphere
+    4300006: Mesh Group#1
+    4300008: Mesh Group 10
+    4300010: Mesh Group#3
+    4300012: Mesh Group 14
+    4300014: Mesh Group#5
+    4300016: Mesh Group 218
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 2
+    materialSearch: 0
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 0.0254
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 0
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

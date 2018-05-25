@@ -1,0 +1,142 @@
+fileFormatVersion: 2
+guid: e05a25485675b47b38c3d0e89a23553d
+timeCreated: 1522336102
+licenseType: Free
+SketchUpImporter:
+  generateBackFace: 0
+  mergeCoplanarFaces: 0
+  selectedNodes: 000000000100000002000000030000000400000005000000060000000700000008000000090000000a000000
+  assetHash:
+    serializedVersion: 2
+    Hash: 11b4b9f32a68abb6f0f95483e496b35c
+  longitude: 30.33190289145075
+  latitude: 59.93127501686133
+  northCorrection: 357.6903466463419
+  fileUnit: 0
+  sketchUpImportData:
+    defaultCamera:
+      position: {x: -84.5904, y: 48.033558, z: 125.95429}
+      lookAt: {x: 69.990814, y: -6.907513, z: -59.680027}
+      up: {x: 0.14191262, y: 0.9750987, z: -0.17042078}
+      fov: 35
+      aspectRatio: 0
+      orthoSize: 1
+      isPerspective: 1
+    scenes: []
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Component#1
+    100002: Component#1 1
+    100004: Component#2
+    100006: Google Earth Snapshot
+    100008: Google Earth Terrain
+    100010: //RootNode
+    400000: Component#1
+    400002: Component#1 1
+    400004: Component#2
+    400006: Google Earth Snapshot
+    400008: Google Earth Terrain
+    400010: //RootNode
+    2100000: _defaultMat
+    2100002: Google Earth Snapshot1
+    2100004: window
+    2100006: building1
+    2100008: buildingcentr
+    2100010: vorontsovpalacemap
+    2100012: '[Cladding_Stucco_White]'
+    2100014: window#1
+    2300000: Component#1
+    2300002: Component#1 1
+    2300004: Component#2
+    2300006: Google Earth Snapshot
+    2300008: Google Earth Terrain
+    3300000: Component#1
+    3300002: Component#1 1
+    3300004: Component#2
+    3300006: Google Earth Snapshot
+    3300008: Google Earth Terrain
+    4300000: Mesh Google Earth Terrain
+    4300002: Mesh Google Earth Snapshot
+    4300004: Mesh Component#2
+    4300006: Mesh Component#1
+    4300008: Mesh Component#1
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 2
+    materialSearch: 0
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 0.0254
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 0
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

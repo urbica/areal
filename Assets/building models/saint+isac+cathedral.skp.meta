@@ -1,0 +1,974 @@
+fileFormatVersion: 2
+guid: 1bfeb24bb362d4981a4b7d8a0fb81c01
+timeCreated: 1522336058
+licenseType: Free
+SketchUpImporter:
+  generateBackFace: 0
+  mergeCoplanarFaces: 0
+  selectedNodes: 000000000100000002000000030000000400000005000000060000000700000008000000090000000a0000000b0000000c0000000d0000000e0000000f000000100000001100000012000000130000001400000015000000160000001700000018000000190000001a0000001b0000001c0000001d0000001e0000001f000000200000002100000022000000230000002400000025000000260000002700000028000000290000002a0000002b0000002c0000002d0000002e0000002f000000300000003100000032000000330000003400000035000000360000003700000038000000390000003a0000003b0000003c0000003d0000003e0000003f000000400000004100000042000000430000004400000045000000460000004700000048000000490000004a0000004b0000004c0000004d0000004e0000004f000000500000005100000052000000530000005400000055000000560000005700000058000000590000005a0000005b0000005c0000005d0000005e0000005f000000600000006100000062000000630000006400000065000000660000006700000068000000690000006a0000006b0000006c0000006d0000006e0000006f000000700000007100000072000000730000007400000075000000760000007700000078000000790000007a0000007b0000007c0000007d0000007e0000007f000000800000008100000082000000830000008400000085000000860000008700000088000000890000008a0000008b0000008c0000008d0000008e0000008f000000900000009100000092000000930000009400000095000000960000009700000098000000990000009a0000009b0000009c0000009d0000009e0000009f000000a0000000a1000000a2000000a3000000a4000000a5000000a6000000a7000000a8000000a9000000aa000000ab000000ac000000ad000000ae000000af000000b0000000b1000000b2000000b3000000b4000000b5000000b6000000b7000000b8000000b9000000ba000000bb000000bc000000bd000000be000000bf000000c0000000c1000000c2000000c3000000c4000000c5000000c6000000c7000000c8000000c9000000ca000000cb000000cc000000cd000000ce000000cf000000d0000000d1000000d2000000d3000000d4000000d5000000d6000000d7000000d8000000d9000000da000000db000000dc000000dd000000de000000df000000e0000000e1000000e2000000e3000000e4000000e5000000e6000000e7000000e8000000e9000000ea000000eb000000ec000000ed000000ee000000ef000000f0000000f1000000f2000000f3000000f4000000f5000000f6000000f7000000f8000000f9000000fa000000fb000000fc000000fd000000fe000000ff000000000100000101000002010000030100000401000005010000060100000701000008010000090100000a0100000b0100000c0100000d0100000e0100000f010000100100001101000012010000130100001401000015010000160100001701000018010000190100001a0100001b0100001c0100001d0100001e0100001f010000200100002101000022010000230100002401000025010000260100002701000028010000290100002a0100002b0100002c0100002d0100002e0100002f010000300100003101000032010000330100003401000035010000360100003701000038010000390100003a0100003b0100003c0100003d0100003e0100003f010000400100004101000042010000430100004401000045010000460100004701000048010000490100004a0100004b0100004c0100004d0100004e0100004f010000500100005101000052010000530100005401000055010000560100005701000058010000590100005a0100005b0100005c0100005d0100005e0100005f010000600100006101000062010000630100006401000065010000660100006701000068010000690100006a0100006b0100006c0100006d0100006e0100006f010000700100007101000072010000730100007401000075010000760100007701000078010000790100007a0100007b0100007c0100007d0100007e0100007f010000800100008101000082010000830100008401000085010000860100008701000088010000890100008a0100008b0100008c0100008d0100008e0100008f01000090010000910100009401000095010000
+  assetHash:
+    serializedVersion: 2
+    Hash: c6c65e6bcc34f6fd60734ab4b5be29a2
+  longitude: 30.305668
+  latitude: 59.933997
+  northCorrection: 357.6676998019523
+  fileUnit: 0
+  sketchUpImportData:
+    defaultCamera:
+      position: {x: 210.00157, y: 28.964542, z: -0.7627662}
+      lookAt: {x: -136.23618, y: 61.575905, z: 26.882288}
+      up: {x: 0.09318132, y: 0.9956214, z: -0.007439982}
+      fov: 35
+      aspectRatio: 0
+      orthoSize: 1
+      isPerspective: 1
+    scenes: []
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Google Earth Terrain
+    100002: Group 1
+    100004: Group 11
+    100006: Group 112
+    100008: Group 13
+    100010: Group 131
+    100012: Group 133
+    100014: Group 135
+    100016: Group 15
+    100018: Group 154
+    100020: Group 155
+    100022: Group 156
+    100024: Group 165
+    100026: Group 17
+    100028: Group 170
+    100030: Group 175
+    100032: Group 19
+    100034: Group 208
+    100036: Group 209
+    100038: Group 21
+    100040: Group 211
+    100042: Group 213
+    100044: Group 215
+    100046: Group 217
+    100048: Group 219
+    100050: Group 221
+    100052: Group 223
+    100054: Group 225
+    100056: Group 227
+    100058: Group 229
+    100060: Group 23
+    100062: Group 231
+    100064: Group 233
+    100066: Group 235
+    100068: Group 237
+    100070: Group 239
+    100072: Group 241
+    100074: Group 243
+    100076: Group 245
+    100078: Group 25
+    100080: Group 264
+    100082: Group 27
+    100084: Group 283
+    100086: Group 29
+    100088: Group 3
+    100090: Group 302
+    100092: Group 304
+    100094: Group 306
+    100096: Group 308
+    100098: Group 31
+    100100: Group 310
+    100102: Group 312
+    100104: Group 314
+    100106: Group 316
+    100108: Group 33
+    100110: Group 35
+    100112: Group 37
+    100114: Group 39
+    100116: Group 404
+    100118: Group 41
+    100120: Group 43
+    100122: Group 45
+    100124: Group 47
+    100126: Group 49
+    100128: Group 5
+    100130: Group 51
+    100132: Group 53
+    100134: Group 55
+    100136: Group 7
+    100138: Group 74
+    100140: Group 9
+    100142: Group 93
+    100144: Group#11
+    100146: //RootNode
+    100148: stub gornji
+    100150: stub gornji 1
+    100152: stub gornji 10
+    100154: stub gornji 100
+    100156: stub gornji 101
+    100158: stub gornji 102
+    100160: stub gornji 103
+    100162: stub gornji 104
+    100164: stub gornji 105
+    100166: stub gornji 106
+    100168: stub gornji 107
+    100170: stub gornji 108
+    100172: stub gornji 109
+    100174: stub gornji 11
+    100176: stub gornji 110
+    100178: stub gornji 111
+    100180: stub gornji 112
+    100182: stub gornji 113
+    100184: stub gornji 114
+    100186: stub gornji 115
+    100188: stub gornji 116
+    100190: stub gornji 117
+    100192: stub gornji 118
+    100194: stub gornji 119
+    100196: stub gornji 12
+    100198: stub gornji 120
+    100200: stub gornji 121
+    100202: stub gornji 122
+    100204: stub gornji 123
+    100206: stub gornji 124
+    100208: stub gornji 125
+    100210: stub gornji 126
+    100212: stub gornji 127
+    100214: stub gornji 128
+    100216: stub gornji 129
+    100218: stub gornji 13
+    100220: stub gornji 130
+    100222: stub gornji 131
+    100224: stub gornji 132
+    100226: stub gornji 133
+    100228: stub gornji 134
+    100230: stub gornji 135
+    100232: stub gornji 14
+    100234: stub gornji 15
+    100236: stub gornji 16
+    100238: stub gornji 17
+    100240: stub gornji 18
+    100242: stub gornji 19
+    100244: stub gornji 2
+    100246: stub gornji 20
+    100248: stub gornji 21
+    100250: stub gornji 22
+    100252: stub gornji 23
+    100254: stub gornji 24
+    100256: stub gornji 25
+    100258: stub gornji 26
+    100260: stub gornji 27
+    100262: stub gornji 28
+    100264: stub gornji 29
+    100266: stub gornji 3
+    100268: stub gornji 30
+    100270: stub gornji 31
+    100272: stub gornji 32
+    100274: stub gornji 33
+    100276: stub gornji 34
+    100278: stub gornji 35
+    100280: stub gornji 36
+    100282: stub gornji 37
+    100284: stub gornji 38
+    100286: stub gornji 39
+    100288: stub gornji 4
+    100290: stub gornji 40
+    100292: stub gornji 41
+    100294: stub gornji 42
+    100296: stub gornji 43
+    100298: stub gornji 44
+    100300: stub gornji 45
+    100302: stub gornji 46
+    100304: stub gornji 47
+    100306: stub gornji 48
+    100308: stub gornji 49
+    100310: stub gornji 5
+    100312: stub gornji 50
+    100314: stub gornji 51
+    100316: stub gornji 52
+    100318: stub gornji 53
+    100320: stub gornji 54
+    100322: stub gornji 55
+    100324: stub gornji 56
+    100326: stub gornji 57
+    100328: stub gornji 58
+    100330: stub gornji 59
+    100332: stub gornji 6
+    100334: stub gornji 60
+    100336: stub gornji 61
+    100338: stub gornji 62
+    100340: stub gornji 63
+    100342: stub gornji 64
+    100344: stub gornji 65
+    100346: stub gornji 66
+    100348: stub gornji 67
+    100350: stub gornji 68
+    100352: stub gornji 69
+    100354: stub gornji 7
+    100356: stub gornji 70
+    100358: stub gornji 71
+    100360: stub gornji 72
+    100362: stub gornji 73
+    100364: stub gornji 74
+    100366: stub gornji 75
+    100368: stub gornji 76
+    100370: stub gornji 77
+    100372: stub gornji 78
+    100374: stub gornji 79
+    100376: stub gornji 8
+    100378: stub gornji 80
+    100380: stub gornji 81
+    100382: stub gornji 82
+    100384: stub gornji 83
+    100386: stub gornji 84
+    100388: stub gornji 85
+    100390: stub gornji 86
+    100392: stub gornji 87
+    100394: stub gornji 88
+    100396: stub gornji 89
+    100398: stub gornji 9
+    100400: stub gornji 90
+    100402: stub gornji 91
+    100404: stub gornji 92
+    100406: stub gornji 93
+    100408: stub gornji 94
+    100410: stub gornji 95
+    100412: stub gornji 96
+    100414: stub gornji 97
+    100416: stub gornji 98
+    100418: stub gornji 99
+    400000: Google Earth Terrain
+    400002: Group 1
+    400004: Group 11
+    400006: Group 112
+    400008: Group 13
+    400010: Group 131
+    400012: Group 133
+    400014: Group 135
+    400016: Group 15
+    400018: Group 154
+    400020: Group 155
+    400022: Group 156
+    400024: Group 165
+    400026: Group 17
+    400028: Group 170
+    400030: Group 175
+    400032: Group 19
+    400034: Group 208
+    400036: Group 209
+    400038: Group 21
+    400040: Group 211
+    400042: Group 213
+    400044: Group 215
+    400046: Group 217
+    400048: Group 219
+    400050: Group 221
+    400052: Group 223
+    400054: Group 225
+    400056: Group 227
+    400058: Group 229
+    400060: Group 23
+    400062: Group 231
+    400064: Group 233
+    400066: Group 235
+    400068: Group 237
+    400070: Group 239
+    400072: Group 241
+    400074: Group 243
+    400076: Group 245
+    400078: Group 25
+    400080: Group 264
+    400082: Group 27
+    400084: Group 283
+    400086: Group 29
+    400088: Group 3
+    400090: Group 302
+    400092: Group 304
+    400094: Group 306
+    400096: Group 308
+    400098: Group 31
+    400100: Group 310
+    400102: Group 312
+    400104: Group 314
+    400106: Group 316
+    400108: Group 33
+    400110: Group 35
+    400112: Group 37
+    400114: Group 39
+    400116: Group 404
+    400118: Group 41
+    400120: Group 43
+    400122: Group 45
+    400124: Group 47
+    400126: Group 49
+    400128: Group 5
+    400130: Group 51
+    400132: Group 53
+    400134: Group 55
+    400136: Group 7
+    400138: Group 74
+    400140: Group 9
+    400142: Group 93
+    400144: Group#11
+    400146: //RootNode
+    400148: stub gornji
+    400150: stub gornji 1
+    400152: stub gornji 10
+    400154: stub gornji 100
+    400156: stub gornji 101
+    400158: stub gornji 102
+    400160: stub gornji 103
+    400162: stub gornji 104
+    400164: stub gornji 105
+    400166: stub gornji 106
+    400168: stub gornji 107
+    400170: stub gornji 108
+    400172: stub gornji 109
+    400174: stub gornji 11
+    400176: stub gornji 110
+    400178: stub gornji 111
+    400180: stub gornji 112
+    400182: stub gornji 113
+    400184: stub gornji 114
+    400186: stub gornji 115
+    400188: stub gornji 116
+    400190: stub gornji 117
+    400192: stub gornji 118
+    400194: stub gornji 119
+    400196: stub gornji 12
+    400198: stub gornji 120
+    400200: stub gornji 121
+    400202: stub gornji 122
+    400204: stub gornji 123
+    400206: stub gornji 124
+    400208: stub gornji 125
+    400210: stub gornji 126
+    400212: stub gornji 127
+    400214: stub gornji 128
+    400216: stub gornji 129
+    400218: stub gornji 13
+    400220: stub gornji 130
+    400222: stub gornji 131
+    400224: stub gornji 132
+    400226: stub gornji 133
+    400228: stub gornji 134
+    400230: stub gornji 135
+    400232: stub gornji 14
+    400234: stub gornji 15
+    400236: stub gornji 16
+    400238: stub gornji 17
+    400240: stub gornji 18
+    400242: stub gornji 19
+    400244: stub gornji 2
+    400246: stub gornji 20
+    400248: stub gornji 21
+    400250: stub gornji 22
+    400252: stub gornji 23
+    400254: stub gornji 24
+    400256: stub gornji 25
+    400258: stub gornji 26
+    400260: stub gornji 27
+    400262: stub gornji 28
+    400264: stub gornji 29
+    400266: stub gornji 3
+    400268: stub gornji 30
+    400270: stub gornji 31
+    400272: stub gornji 32
+    400274: stub gornji 33
+    400276: stub gornji 34
+    400278: stub gornji 35
+    400280: stub gornji 36
+    400282: stub gornji 37
+    400284: stub gornji 38
+    400286: stub gornji 39
+    400288: stub gornji 4
+    400290: stub gornji 40
+    400292: stub gornji 41
+    400294: stub gornji 42
+    400296: stub gornji 43
+    400298: stub gornji 44
+    400300: stub gornji 45
+    400302: stub gornji 46
+    400304: stub gornji 47
+    400306: stub gornji 48
+    400308: stub gornji 49
+    400310: stub gornji 5
+    400312: stub gornji 50
+    400314: stub gornji 51
+    400316: stub gornji 52
+    400318: stub gornji 53
+    400320: stub gornji 54
+    400322: stub gornji 55
+    400324: stub gornji 56
+    400326: stub gornji 57
+    400328: stub gornji 58
+    400330: stub gornji 59
+    400332: stub gornji 6
+    400334: stub gornji 60
+    400336: stub gornji 61
+    400338: stub gornji 62
+    400340: stub gornji 63
+    400342: stub gornji 64
+    400344: stub gornji 65
+    400346: stub gornji 66
+    400348: stub gornji 67
+    400350: stub gornji 68
+    400352: stub gornji 69
+    400354: stub gornji 7
+    400356: stub gornji 70
+    400358: stub gornji 71
+    400360: stub gornji 72
+    400362: stub gornji 73
+    400364: stub gornji 74
+    400366: stub gornji 75
+    400368: stub gornji 76
+    400370: stub gornji 77
+    400372: stub gornji 78
+    400374: stub gornji 79
+    400376: stub gornji 8
+    400378: stub gornji 80
+    400380: stub gornji 81
+    400382: stub gornji 82
+    400384: stub gornji 83
+    400386: stub gornji 84
+    400388: stub gornji 85
+    400390: stub gornji 86
+    400392: stub gornji 87
+    400394: stub gornji 88
+    400396: stub gornji 89
+    400398: stub gornji 9
+    400400: stub gornji 90
+    400402: stub gornji 91
+    400404: stub gornji 92
+    400406: stub gornji 93
+    400408: stub gornji 94
+    400410: stub gornji 95
+    400412: stub gornji 96
+    400414: stub gornji 97
+    400416: stub gornji 98
+    400418: stub gornji 99
+    2100000: _defaultMat
+    2100002: 14
+    2100004: 13223942521705679055718797750_b
+    2100006: 4
+    2100008: 2
+    2100010: 5
+    2100012: 15
+    2100014: 13
+    2100016: 16
+    2100018: 22
+    2100020: 23
+    2100022: 32
+    2100024: 25
+    2100026: texture36
+    2100028: "\u201A4"
+    2100030: 27
+    2100032: 31
+    2100034: 12
+    2100036: 33
+    2100038: 10#1
+    2100040: "\u201A2"
+    2100042: 17
+    2100044: 24
+    2100046: 11
+    2100048: 26
+    2100050: 37#1
+    2100052: 8
+    2100054: 7
+    2100056: "\u201A3"
+    2100058: 34
+    2100060: 35
+    2100062: 20
+    2100064: 28
+    2100066: 29
+    2100068: 19
+    2100070: "\u201A1"
+    2100072: 39
+    2100074: 40
+    2100076: 9
+    2100078: 21
+    2100080: "\u201A5"
+    2100082: 38
+    2100084: Google Earth Snapshot#2
+    2300000: Google Earth Terrain
+    2300002: Group 1
+    2300004: Group 11
+    2300006: Group 13
+    2300008: Group 131
+    2300010: Group 133
+    2300012: Group 15
+    2300014: Group 17
+    2300016: Group 19
+    2300018: Group 209
+    2300020: Group 21
+    2300022: Group 211
+    2300024: Group 213
+    2300026: Group 215
+    2300028: Group 217
+    2300030: Group 219
+    2300032: Group 221
+    2300034: Group 223
+    2300036: Group 225
+    2300038: Group 227
+    2300040: Group 229
+    2300042: Group 23
+    2300044: Group 231
+    2300046: Group 233
+    2300048: Group 235
+    2300050: Group 237
+    2300052: Group 239
+    2300054: Group 241
+    2300056: Group 243
+    2300058: Group 25
+    2300060: Group 27
+    2300062: Group 29
+    2300064: Group 3
+    2300066: Group 302
+    2300068: Group 304
+    2300070: Group 306
+    2300072: Group 308
+    2300074: Group 31
+    2300076: Group 310
+    2300078: Group 312
+    2300080: Group 314
+    2300082: Group 316
+    2300084: Group 33
+    2300086: Group 35
+    2300088: Group 37
+    2300090: Group 39
+    2300092: Group 404
+    2300094: Group 41
+    2300096: Group 43
+    2300098: Group 45
+    2300100: Group 47
+    2300102: Group 49
+    2300104: Group 5
+    2300106: Group 51
+    2300108: Group 53
+    2300110: Group 7
+    2300112: Group 9
+    2300114: Group#11
+    2300116: stub gornji
+    2300118: stub gornji 1
+    2300120: stub gornji 10
+    2300122: stub gornji 100
+    2300124: stub gornji 101
+    2300126: stub gornji 102
+    2300128: stub gornji 103
+    2300130: stub gornji 104
+    2300132: stub gornji 105
+    2300134: stub gornji 106
+    2300136: stub gornji 107
+    2300138: stub gornji 108
+    2300140: stub gornji 109
+    2300142: stub gornji 11
+    2300144: stub gornji 110
+    2300146: stub gornji 111
+    2300148: stub gornji 112
+    2300150: stub gornji 113
+    2300152: stub gornji 114
+    2300154: stub gornji 115
+    2300156: stub gornji 116
+    2300158: stub gornji 117
+    2300160: stub gornji 118
+    2300162: stub gornji 119
+    2300164: stub gornji 12
+    2300166: stub gornji 120
+    2300168: stub gornji 121
+    2300170: stub gornji 122
+    2300172: stub gornji 123
+    2300174: stub gornji 124
+    2300176: stub gornji 125
+    2300178: stub gornji 126
+    2300180: stub gornji 127
+    2300182: stub gornji 128
+    2300184: stub gornji 129
+    2300186: stub gornji 13
+    2300188: stub gornji 130
+    2300190: stub gornji 131
+    2300192: stub gornji 132
+    2300194: stub gornji 133
+    2300196: stub gornji 134
+    2300198: stub gornji 135
+    2300200: stub gornji 14
+    2300202: stub gornji 15
+    2300204: stub gornji 16
+    2300206: stub gornji 17
+    2300208: stub gornji 18
+    2300210: stub gornji 19
+    2300212: stub gornji 2
+    2300214: stub gornji 20
+    2300216: stub gornji 21
+    2300218: stub gornji 22
+    2300220: stub gornji 23
+    2300222: stub gornji 24
+    2300224: stub gornji 25
+    2300226: stub gornji 26
+    2300228: stub gornji 27
+    2300230: stub gornji 28
+    2300232: stub gornji 29
+    2300234: stub gornji 3
+    2300236: stub gornji 30
+    2300238: stub gornji 31
+    2300240: stub gornji 32
+    2300242: stub gornji 33
+    2300244: stub gornji 34
+    2300246: stub gornji 35
+    2300248: stub gornji 36
+    2300250: stub gornji 37
+    2300252: stub gornji 38
+    2300254: stub gornji 39
+    2300256: stub gornji 4
+    2300258: stub gornji 40
+    2300260: stub gornji 41
+    2300262: stub gornji 42
+    2300264: stub gornji 43
+    2300266: stub gornji 44
+    2300268: stub gornji 45
+    2300270: stub gornji 46
+    2300272: stub gornji 47
+    2300274: stub gornji 48
+    2300276: stub gornji 49
+    2300278: stub gornji 5
+    2300280: stub gornji 50
+    2300282: stub gornji 51
+    2300284: stub gornji 52
+    2300286: stub gornji 53
+    2300288: stub gornji 54
+    2300290: stub gornji 55
+    2300292: stub gornji 56
+    2300294: stub gornji 57
+    2300296: stub gornji 58
+    2300298: stub gornji 59
+    2300300: stub gornji 6
+    2300302: stub gornji 60
+    2300304: stub gornji 61
+    2300306: stub gornji 62
+    2300308: stub gornji 63
+    2300310: stub gornji 64
+    2300312: stub gornji 65
+    2300314: stub gornji 66
+    2300316: stub gornji 67
+    2300318: stub gornji 68
+    2300320: stub gornji 69
+    2300322: stub gornji 7
+    2300324: stub gornji 70
+    2300326: stub gornji 71
+    2300328: stub gornji 72
+    2300330: stub gornji 73
+    2300332: stub gornji 74
+    2300334: stub gornji 75
+    2300336: stub gornji 76
+    2300338: stub gornji 77
+    2300340: stub gornji 78
+    2300342: stub gornji 79
+    2300344: stub gornji 8
+    2300346: stub gornji 80
+    2300348: stub gornji 81
+    2300350: stub gornji 82
+    2300352: stub gornji 83
+    2300354: stub gornji 84
+    2300356: stub gornji 85
+    2300358: stub gornji 86
+    2300360: stub gornji 87
+    2300362: stub gornji 88
+    2300364: stub gornji 89
+    2300366: stub gornji 9
+    2300368: stub gornji 90
+    2300370: stub gornji 91
+    2300372: stub gornji 92
+    2300374: stub gornji 93
+    2300376: stub gornji 94
+    2300378: stub gornji 95
+    2300380: stub gornji 96
+    2300382: stub gornji 97
+    2300384: stub gornji 98
+    2300386: stub gornji 99
+    3300000: Google Earth Terrain
+    3300002: Group 1
+    3300004: Group 11
+    3300006: Group 13
+    3300008: Group 131
+    3300010: Group 133
+    3300012: Group 15
+    3300014: Group 17
+    3300016: Group 19
+    3300018: Group 209
+    3300020: Group 21
+    3300022: Group 211
+    3300024: Group 213
+    3300026: Group 215
+    3300028: Group 217
+    3300030: Group 219
+    3300032: Group 221
+    3300034: Group 223
+    3300036: Group 225
+    3300038: Group 227
+    3300040: Group 229
+    3300042: Group 23
+    3300044: Group 231
+    3300046: Group 233
+    3300048: Group 235
+    3300050: Group 237
+    3300052: Group 239
+    3300054: Group 241
+    3300056: Group 243
+    3300058: Group 25
+    3300060: Group 27
+    3300062: Group 29
+    3300064: Group 3
+    3300066: Group 302
+    3300068: Group 304
+    3300070: Group 306
+    3300072: Group 308
+    3300074: Group 31
+    3300076: Group 310
+    3300078: Group 312
+    3300080: Group 314
+    3300082: Group 316
+    3300084: Group 33
+    3300086: Group 35
+    3300088: Group 37
+    3300090: Group 39
+    3300092: Group 404
+    3300094: Group 41
+    3300096: Group 43
+    3300098: Group 45
+    3300100: Group 47
+    3300102: Group 49
+    3300104: Group 5
+    3300106: Group 51
+    3300108: Group 53
+    3300110: Group 7
+    3300112: Group 9
+    3300114: Group#11
+    3300116: stub gornji
+    3300118: stub gornji 1
+    3300120: stub gornji 10
+    3300122: stub gornji 100
+    3300124: stub gornji 101
+    3300126: stub gornji 102
+    3300128: stub gornji 103
+    3300130: stub gornji 104
+    3300132: stub gornji 105
+    3300134: stub gornji 106
+    3300136: stub gornji 107
+    3300138: stub gornji 108
+    3300140: stub gornji 109
+    3300142: stub gornji 11
+    3300144: stub gornji 110
+    3300146: stub gornji 111
+    3300148: stub gornji 112
+    3300150: stub gornji 113
+    3300152: stub gornji 114
+    3300154: stub gornji 115
+    3300156: stub gornji 116
+    3300158: stub gornji 117
+    3300160: stub gornji 118
+    3300162: stub gornji 119
+    3300164: stub gornji 12
+    3300166: stub gornji 120
+    3300168: stub gornji 121
+    3300170: stub gornji 122
+    3300172: stub gornji 123
+    3300174: stub gornji 124
+    3300176: stub gornji 125
+    3300178: stub gornji 126
+    3300180: stub gornji 127
+    3300182: stub gornji 128
+    3300184: stub gornji 129
+    3300186: stub gornji 13
+    3300188: stub gornji 130
+    3300190: stub gornji 131
+    3300192: stub gornji 132
+    3300194: stub gornji 133
+    3300196: stub gornji 134
+    3300198: stub gornji 135
+    3300200: stub gornji 14
+    3300202: stub gornji 15
+    3300204: stub gornji 16
+    3300206: stub gornji 17
+    3300208: stub gornji 18
+    3300210: stub gornji 19
+    3300212: stub gornji 2
+    3300214: stub gornji 20
+    3300216: stub gornji 21
+    3300218: stub gornji 22
+    3300220: stub gornji 23
+    3300222: stub gornji 24
+    3300224: stub gornji 25
+    3300226: stub gornji 26
+    3300228: stub gornji 27
+    3300230: stub gornji 28
+    3300232: stub gornji 29
+    3300234: stub gornji 3
+    3300236: stub gornji 30
+    3300238: stub gornji 31
+    3300240: stub gornji 32
+    3300242: stub gornji 33
+    3300244: stub gornji 34
+    3300246: stub gornji 35
+    3300248: stub gornji 36
+    3300250: stub gornji 37
+    3300252: stub gornji 38
+    3300254: stub gornji 39
+    3300256: stub gornji 4
+    3300258: stub gornji 40
+    3300260: stub gornji 41
+    3300262: stub gornji 42
+    3300264: stub gornji 43
+    3300266: stub gornji 44
+    3300268: stub gornji 45
+    3300270: stub gornji 46
+    3300272: stub gornji 47
+    3300274: stub gornji 48
+    3300276: stub gornji 49
+    3300278: stub gornji 5
+    3300280: stub gornji 50
+    3300282: stub gornji 51
+    3300284: stub gornji 52
+    3300286: stub gornji 53
+    3300288: stub gornji 54
+    3300290: stub gornji 55
+    3300292: stub gornji 56
+    3300294: stub gornji 57
+    3300296: stub gornji 58
+    3300298: stub gornji 59
+    3300300: stub gornji 6
+    3300302: stub gornji 60
+    3300304: stub gornji 61
+    3300306: stub gornji 62
+    3300308: stub gornji 63
+    3300310: stub gornji 64
+    3300312: stub gornji 65
+    3300314: stub gornji 66
+    3300316: stub gornji 67
+    3300318: stub gornji 68
+    3300320: stub gornji 69
+    3300322: stub gornji 7
+    3300324: stub gornji 70
+    3300326: stub gornji 71
+    3300328: stub gornji 72
+    3300330: stub gornji 73
+    3300332: stub gornji 74
+    3300334: stub gornji 75
+    3300336: stub gornji 76
+    3300338: stub gornji 77
+    3300340: stub gornji 78
+    3300342: stub gornji 79
+    3300344: stub gornji 8
+    3300346: stub gornji 80
+    3300348: stub gornji 81
+    3300350: stub gornji 82
+    3300352: stub gornji 83
+    3300354: stub gornji 84
+    3300356: stub gornji 85
+    3300358: stub gornji 86
+    3300360: stub gornji 87
+    3300362: stub gornji 88
+    3300364: stub gornji 89
+    3300366: stub gornji 9
+    3300368: stub gornji 90
+    3300370: stub gornji 91
+    3300372: stub gornji 92
+    3300374: stub gornji 93
+    3300376: stub gornji 94
+    3300378: stub gornji 95
+    3300380: stub gornji 96
+    3300382: stub gornji 97
+    3300384: stub gornji 98
+    3300386: stub gornji 99
+    4300000: Mesh Group 1
+    4300002: Mesh Group 3
+    4300004: Mesh Group 5
+    4300006: Mesh Group 7
+    4300008: Mesh stub gornji
+    4300010: Mesh Group 131
+    4300012: Mesh Group 133
+    4300014: Mesh stub gornji
+    4300016: Mesh Group 209
+    4300018: Mesh Group 233
+    4300020: Mesh Group 235
+    4300022: Mesh Group 237
+    4300024: Mesh Group 308
+    4300026: Mesh Group#11
+    4300028: Mesh Google Earth Terrain
+    4300030: Mesh Group 404
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 2
+    materialSearch: 0
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 0.0254
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 0
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

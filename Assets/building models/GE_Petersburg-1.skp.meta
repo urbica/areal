@@ -1,0 +1,1886 @@
+fileFormatVersion: 2
+guid: dc64d7317d1a74ba9a4981c6202c6450
+timeCreated: 1522335702
+licenseType: Free
+SketchUpImporter:
+  generateBackFace: 0
+  mergeCoplanarFaces: 0
+  selectedNodes: 0000000005000000060000000700000008000000090000000a0000000b0000000c0000000f000000100000001100000012000000150000001600000017000000180000001b0000001c0000001d0000001e000000210000002200000023000000240000002700000028000000290000002a0000002d0000002e0000002f0000003000000033000000340000003500000036000000390000003a0000003b0000003c0000003d0000003e0000003f000000400000004100000042000000430000004400000045000000460000004700000048000000490000004a0000004b0000004c0000004d0000004e0000004f000000500000005100000052000000530000005400000055000000560000005700000058000000590000005a0000005b0000005c0000005d0000005e0000005f000000600000006100000062000000630000006400000065000000660000006700000068000000690000006a0000006b0000006c0000006d0000006e0000006f000000700000007100000072000000730000007400000075000000760000007700000078000000790000007a0000007b0000007c0000007d0000007e0000007f000000800000008100000082000000830000008400000085000000860000008700000088000000890000008a0000008b0000008c0000008d0000008e0000008f000000900000009100000092000000930000009400000095000000960000009700000098000000990000009a0000009b0000009c0000009d0000009e0000009f000000a0000000a1000000a2000000a3000000a4000000a5000000a6000000a7000000a8000000a9000000aa000000ab000000ac000000ad000000ae000000af000000b0000000b1000000b2000000b3000000b4000000b5000000b6000000b7000000b8000000b9000000ba000000bb000000bc000000bd000000be000000bf000000c0000000c1000000c2000000c3000000c4000000c5000000c6000000c7000000c8000000c9000000ca000000cb000000cc000000cd000000ce000000cf000000d0000000d1000000d2000000d3000000d4000000d5000000d6000000d7000000d8000000d9000000da000000db000000dc000000dd000000de000000df000000e0000000e1000000e2000000e3000000e4000000e5000000e6000000e7000000e8000000e9000000ea000000eb000000ec000000ed000000ee000000ef000000f0000000f1000000f2000000f3000000f4000000f5000000f6000000f7000000f8000000f9000000fa000000fb000000fc000000fd000000fe000000ff000000000100000101000002010000030100000401000005010000060100000701000008010000090100000a0100000b0100000c0100000d0100000e0100000f010000100100001101000012010000130100001401000015010000160100001701000018010000190100001a0100001b0100001c0100001d0100001e0100001f010000200100002101000022010000230100002401000025010000260100002701000028010000290100002a0100002b0100002c0100002d0100002e0100002f010000300100003101000032010000330100003401000035010000360100003701000038010000390100003a0100003b0100003c0100003d0100003e0100003f010000400100004101000042010000430100004401000045010000460100004701000048010000490100004a0100004b0100004c0100004d0100004e0100004f010000500100005101000052010000530100005401000055010000560100005701000058010000590100005a0100005b0100005c0100005d0100005e0100005f0100006001000061010000620100006301000064010000650100006601000067010000680100006d0100006e0100006f010000700100007101000072010000730100007401000075010000760100007701000078010000790100007a0100007b0100007c0100007d0100007e0100007f010000800100008101000082010000830100008401000085010000860100008701000088010000890100008a0100008b0100008c0100008d0100008e0100008f010000900100009101000092010000930100009401000095010000960100009701000098010000990100009a0100009b0100009c0100009d0100009e0100009f010000a0010000a1010000a2010000a3010000a4010000a5010000a6010000a7010000a8010000a9010000aa010000ab010000ac010000ad010000ae010000af010000b0010000b1010000b2010000b3010000b4010000b5010000b6010000b7010000b8010000b9010000ba010000bb010000bc010000bd010000be010000bf010000c0010000c1010000c2010000c3010000c4010000c5010000c6010000c7010000c8010000c9010000ca010000cb010000cc010000cd010000ce010000cf010000d0010000d1010000d2010000d3010000d4010000d5010000d6010000d7010000d8010000d9010000da010000db010000dc010000dd010000de010000df010000e0010000e1010000e2010000e3010000e4010000e5010000e6010000e7010000e8010000e9010000ea010000eb010000ec010000ed010000ee010000ef010000f0010000f1010000f2010000f3010000f4010000f5010000f6010000f7010000f8010000f9010000fa010000fb010000fc010000fd010000fe010000ff010000000200000102000002020000030200000402000005020000060200000702000008020000090200000a0200000b0200000c0200000d0200000e0200000f020000100200001102000012020000130200001402000015020000160200001702000018020000190200001a0200001b0200001c0200001d0200001e0200001f020000200200002102000022020000230200002402000025020000260200002702000028020000290200002a0200002b0200002c0200002d0200002e0200002f020000300200003102000032020000330200003402000035020000360200003702000038020000390200003a0200003b0200003c0200003d0200003e0200003f020000400200004102000042020000430200004402000045020000460200004702000048020000490200004a0200004b0200004c0200004d0200004e0200004f020000500200005102000052020000530200005402000055020000560200005702000058020000590200005a0200005b0200005c0200005d0200005e0200005f020000600200006102000062020000630200006402000065020000660200006702000068020000690200006a0200006b0200006c0200006d0200006e0200006f020000700200007102000072020000730200007402000075020000760200007702000078020000790200007a0200007b0200007c0200007d0200007e0200007f020000800200008102000082020000830200008402000085020000860200008702000088020000890200008a0200008b0200008c0200008d0200008e0200008f020000900200009102000092020000930200009402000095020000960200009702000098020000990200009a0200009b0200009c0200009d0200009e0200009f020000a0020000a1020000a2020000a3020000a4020000a5020000a6020000a7020000a8020000a9020000aa020000ab020000ac020000ad020000ae020000af020000b0020000b1020000b6020000b7020000b8020000b9020000ba020000bb020000bc020000bd020000be020000bf020000c0020000c1020000c2020000c3020000c4020000c5020000c6020000c7020000c8020000c9020000ca020000cb020000cc020000cd020000ce020000cf020000d0020000d1020000d2020000d3020000d4020000d5020000
+  assetHash:
+    serializedVersion: 2
+    Hash: 5c7a5759c8a8a38fbd0e03b30df02fb5
+  longitude: 30.328740111095797
+  latitude: 59.940124404827884
+  northCorrection: -0
+  fileUnit: 0
+  sketchUpImportData:
+    defaultCamera:
+      position: {x: -27.765028, y: 26.59078, z: -44.807304}
+      lookAt: {x: -12.994057, y: 32.12072, z: -18.16766}
+      up: {x: -0.0866182, y: 0.9839174, z: -0.15621711}
+      fov: 35
+      aspectRatio: 0
+      orthoSize: 1
+      isPerspective: 1
+    scenes:
+    - camera:
+        position: {x: -32.755295, y: 24.645796, z: -54.41091}
+        lookAt: {x: -17.984327, y: 30.175734, z: -27.771269}
+        up: {x: -0.0866182, y: 0.9839174, z: -0.15621711}
+        fov: 35
+        aspectRatio: 0
+        orthoSize: 1
+        isPerspective: 1
+      name: Home
+    - camera:
+        position: {x: -59.538082, y: 8.238683, z: 13.934514}
+        lookAt: {x: 99.58446, y: 35.39887, z: -28.350115}
+        up: {x: -0.1573031, y: 0.9866653, z: 0.041801136}
+        fov: 35
+        aspectRatio: 0
+        orthoSize: 1
+        isPerspective: 1
+      name: START
+    - camera:
+        position: {x: -41.628292, y: 6.8386455, z: 17.015972}
+        lookAt: {x: 82.17667, y: 29.129925, z: -92.62471}
+        up: {x: -0.1000059, y: 0.9910374, z: 0.088564426}
+        fov: 35
+        aspectRatio: 0
+        orthoSize: 1
+        isPerspective: 1
+      name: Scene 2
+    - camera:
+        position: {x: -61.837234, y: 35.50312, z: -32.89964}
+        lookAt: {x: 72.17604, y: -26.77313, z: 44.610092}
+        up: {x: 0.32305905, y: 0.9277502, z: 0.1868488}
+        fov: 35
+        aspectRatio: 0
+        orthoSize: 1
+        isPerspective: 1
+      name: Scene 3
+    - camera:
+        position: {x: -15.716095, y: 29.972889, z: -52.268585}
+        lookAt: {x: 22.43666, y: -2.027689, z: 106.998405}
+        up: {x: 0.044674806, y: 0.98144, z: 0.18649301}
+        fov: 35
+        aspectRatio: 0
+        orthoSize: 1
+        isPerspective: 1
+      name: Scene 4
+    - camera:
+        position: {x: 44.856792, y: 54.544254, z: -78.10232}
+        lookAt: {x: -27.902725, y: -2.848022, z: 60.67025}
+        up: {x: -0.15970671, y: 0.93899393, z: 0.30460498}
+        fov: 35
+        aspectRatio: 0
+        orthoSize: 1
+        isPerspective: 1
+      name: Scene 5
+    - camera:
+        position: {x: 86.32502, y: 106.17053, z: -56.511295}
+        lookAt: {x: -28.177362, y: 7.4694486, z: 14.149489}
+        up: {x: -0.50335413, y: 0.8063165, z: 0.31062588}
+        fov: 35
+        aspectRatio: 0
+        orthoSize: 1
+        isPerspective: 1
+      name: Scene 6
+    - camera:
+        position: {x: 49.105717, y: 3.6189861, z: -11.5777235}
+        lookAt: {x: -106.18694, y: 51.996017, z: 25.698238}
+        up: {x: 0.28190073, y: 0.95705444, z: -0.06766657}
+        fov: 35
+        aspectRatio: 0
+        orthoSize: 1
+        isPerspective: 1
+      name: Scene 7
+    - camera:
+        position: {x: 26.3699, y: 8.47118, z: 1.787262}
+        lookAt: {x: -85.24445, y: 130.21748, z: 2.628779}
+        up: {x: 0.7370827, y: 0.6757797, z: -0.0055572395}
+        fov: 35
+        aspectRatio: 0
+        orthoSize: 1
+        isPerspective: 1
+      name: Scene 8
+    - camera:
+        position: {x: 9.215014, y: 33.275303, z: 52.610786}
+        lookAt: {x: -30.247808, y: 13.84479, z: -106.59279}
+        up: {x: -0.028303755, y: 0.99305624, z: -0.11418491}
+        fov: 35
+        aspectRatio: 0
+        orthoSize: 1
+        isPerspective: 1
+      name: Scene 9
+    - camera:
+        position: {x: -1.1098365, y: 36.570606, z: 4.1128225}
+        lookAt: {x: -42.553345, y: 23.198046, z: -155.21152}
+        up: {x: -0.020381898, y: 0.9967171, z: -0.07835564}
+        fov: 45
+        aspectRatio: 0
+        orthoSize: 1
+        isPerspective: 1
+      name: Scene 10
+    - camera:
+        position: {x: -5.4271846, y: 32.749363, z: 0.021896726}
+        lookAt: {x: -138.98778, y: 124.20648, z: 32.851707}
+        up: {x: 0.537714, y: 0.8327029, z: -0.1321726}
+        fov: 55
+        aspectRatio: 0
+        orthoSize: 1
+        isPerspective: 1
+      name: Scene 11
+    - camera:
+        position: {x: -10.269927, y: 38.00378, z: 1.4157721}
+        lookAt: {x: -136.13045, y: 139.31865, z: 35.694923}
+        up: {x: 0.59184456, y: 0.78976995, z: -0.16119376}
+        fov: 55
+        aspectRatio: 0
+        orthoSize: 1
+        isPerspective: 1
+      name: Scene 12
+    - camera:
+        position: {x: -24.923553, y: 27.969734, z: 23.312803}
+        lookAt: {x: 66.88717, y: 106.52147, z: -89.29736}
+        up: {x: -0.30052125, y: 0.87966955, z: 0.36860344}
+        fov: 55
+        aspectRatio: 0
+        orthoSize: 1
+        isPerspective: 1
+      name: Scene 13
+    - camera:
+        position: {x: -26.144978, y: 20.355742, z: 39.987335}
+        lookAt: {x: 42.105267, y: -10.713731, z: -107.1766}
+        up: {x: 0.07914191, y: 0.9821484, z: -0.17064899}
+        fov: 45
+        aspectRatio: 0
+        orthoSize: 1
+        isPerspective: 1
+      name: Scene 14
+    - camera:
+        position: {x: -25.220577, y: 8.395185, z: 32.71225}
+        lookAt: {x: 44.266148, y: 6.8117647, z: -117.12007}
+        up: {x: 0.0040333294, y: 0.99995404, z: -0.0086969575}
+        fov: 45
+        aspectRatio: 0
+        orthoSize: 1
+        isPerspective: 1
+      name: Scene 15
+    - camera:
+        position: {x: -39.730946, y: 3.42892, z: 8.563707}
+        lookAt: {x: 114.3489, y: 53.00442, z: -24.33472}
+        up: {x: -0.29353467, y: 0.9538917, z: 0.06267419}
+        fov: 35
+        aspectRatio: 0
+        orthoSize: 1
+        isPerspective: 1
+      name: Scene 16
+    - camera:
+        position: {x: -107.38445, y: 80.335045, z: -96.436264}
+        lookAt: {x: -11.645049, y: 14.575381, z: -5.2848377}
+        up: {x: 0.3225735, y: 0.895336, z: 0.30711532}
+        fov: 35
+        aspectRatio: 0
+        orthoSize: 1
+        isPerspective: 1
+      name: Scene 17
+    - camera:
+        position: {x: -389.6677, y: 0, z: -725.7872}
+        lookAt: {x: 2161.5093, y: 4.709142, z: 4000.6309}
+        up: {x: -0.00041646027, y: 0.99999964, z: -0.00077155186}
+        fov: 35
+        aspectRatio: 0
+        orthoSize: 1
+        isPerspective: 1
+      name: Scene 18
+    - camera:
+        position: {x: -6372.8613, y: 0, z: -11829.263}
+        lookAt: {x: -3821.6843, y: 4.709142, z: -7102.844}
+        up: {x: -0.00041646027, y: 0.99999964, z: -0.00077155186}
+        fov: 35
+        aspectRatio: 0
+        orthoSize: 1
+        isPerspective: 1
+      name: Scene 19
+    - camera:
+        position: {x: -23542.4, y: 0, z: -43656.73}
+        lookAt: {x: -20991.225, y: 4.709142, z: -38930.31}
+        up: {x: -0.00041646027, y: 0.99999964, z: -0.00077155186}
+        fov: 35
+        aspectRatio: 0
+        orthoSize: 1
+        isPerspective: 1
+      name: END
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: ABSIDE_Absidiola
+    100002: ABSIDE_Absidiola 1
+    100004: ABSIDE_LatoAlto
+    100006: ABSIDE_LatoAlto 1
+    100008: ABSIDE_LatoAlto 2
+    100010: ABSIDE_LatoAlto 3
+    100012: ABSIDE_LatoAlto 4
+    100014: ABSIDE_LatoAlto 5
+    100016: ABSIDE_LatoAlto 6
+    100018: ABSIDE_Lunetta
+    100020: ABSIDE_Lunetta 1
+    100022: ABSIDE_Lunetta 2
+    100024: ABSIDE_Lunetta 3
+    100026: ABSIDE_Lunetta 4
+    100028: ABSIDE_Lunetta 5
+    100030: ABSIDE_Lunetta 6
+    100032: ABSIDE_Lunetta 7
+    100034: ABSIDE_Lunetta 8
+    100036: ABSIDE_Lunetta 9
+    100038: ABSIDE_Lunette
+    100040: ABSIDE_Lunette 1
+    100042: Cathedral
+    100044: Corpo_Base
+    100046: CORPO_Luna
+    100048: CORPO_Luna 1
+    100050: CORPO_Luna 2
+    100052: Corpo_Mezzo
+    100054: Corpo_Mezzo 1
+    100056: CORPO_Torretta
+    100058: CORPO_Torretta 1
+    100060: CORPO_Torretta 2
+    100062: CORPO_Torretta 3
+    100064: Corpo_Torrione
+    100066: CORPO_Torrione_Lato
+    100068: CORPO_Torrione_Lato 1
+    100070: CORPO_Torrione_Lato 2
+    100072: CORPO_Torrione_Lato 3
+    100074: CORPO_Torrione_Lato 4
+    100076: CORPO_Torrione_Lato 5
+    100078: CORPO_Torrione_Lato 6
+    100080: CORPO_Torrione_Lato 7
+    100082: CROCE_Croce
+    100084: CROCE_Croce 1
+    100086: CROCE_Croce 2
+    100088: CROCE_Croce 3
+    100090: CROCE_Croce 4
+    100092: CROCE_Croce 5
+    100094: CROCE_Croce 6
+    100096: CROCE_Croce 7
+    100098: CROCE_Croce 8
+    100100: CROCE_Puntale
+    100102: CROCE_Puntale 1
+    100104: CROCE_Sfera
+    100106: CROCE_Sfera 1
+    100108: CROCE_Sfera 2
+    100110: CROCE_Sfera 3
+    100112: CROCE_Sfera 4
+    100114: CROCE_Sfera 5
+    100116: CROCE_Sfera 6
+    100118: CROCE_Sfera 7
+    100120: CROCE_Sfera 8
+    100122: CROCE_Tiranti
+    100124: CROCE_Tiranti 1
+    100126: CROCE_Tiranti 2
+    100128: CROCE_Tiranti 3
+    100130: CROCE_Tiranti 4
+    100132: CROCE_Tiranti 5
+    100134: Dome1_Bianco
+    100136: Dome1_Bianco 1
+    100138: Dome1_Bianco 2
+    100140: Dome1_Bianco 3
+    100142: Dome1_BLUE
+    100144: Dome1_BLUE 1
+    100146: Dome1_BLUE 2
+    100148: Dome1_BLUE 3
+    100150: Dome1_GREEN
+    100152: Dome1_GREEN 1
+    100154: Dome1_GREEN 2
+    100156: Dome1_GREEN 3
+    100158: //RootNode
+    100160: Group 100
+    100162: Group 126
+    100164: Group 128
+    100166: Group 130
+    100168: Group 132
+    100170: Group 134
+    100172: Group 136
+    100174: Group 138
+    100176: Group 139
+    100178: Group 144
+    100180: Group 146
+    100182: Group 148
+    100184: Group 15
+    100186: Group 150
+    100188: Group 154
+    100190: Group 155
+    100192: Group 160
+    100194: Group 162
+    100196: Group 164
+    100198: Group 166
+    100200: Group 170
+    100202: Group 174
+    100204: Group 176
+    100206: Group 178
+    100208: Group 180
+    100210: Group 186
+    100212: Group 187
+    100214: Group 192
+    100216: Group 194
+    100218: Group 196
+    100220: Group 198
+    100222: Group 202
+    100224: Group 203
+    100226: Group 204
+    100228: Group 205
+    100230: Group 207
+    100232: Group 209
+    100234: Group 21
+    100236: Group 210
+    100238: Group 211
+    100240: Group 213
+    100242: Group 219
+    100244: Group 223
+    100246: Group 225
+    100248: Group 227
+    100250: Group 229
+    100252: Group 237
+    100254: Group 239
+    100256: Group 241
+    100258: Group 243
+    100260: Group 251
+    100262: Group 252
+    100264: Group 254
+    100266: Group 256
+    100268: Group 258
+    100270: Group 262
+    100272: Group 264
+    100274: Group 266
+    100276: Group 268
+    100278: Group 27
+    100280: Group 272
+    100282: Group 273
+    100284: Group 282
+    100286: Group 291
+    100288: Group 293
+    100290: Group 295
+    100292: Group 297
+    100294: Group 299
+    100296: Group 301
+    100298: Group 303
+    100300: Group 305
+    100302: Group 306
+    100304: Group 33
+    100306: Group 331
+    100308: Group 333
+    100310: Group 335
+    100312: Group 337
+    100314: Group 340
+    100316: Group 346
+    100318: Group 348
+    100320: Group 350
+    100322: Group 352
+    100324: Group 355
+    100326: Group 357
+    100328: Group 359
+    100330: Group 365
+    100332: Group 366
+    100334: Group 367
+    100336: Group 368
+    100338: Group 370
+    100340: Group 372
+    100342: Group 373
+    100344: Group 375
+    100346: Group 381
+    100348: Group 39
+    100350: Group 390
+    100352: Group 391
+    100354: Group 393
+    100356: Group 395
+    100358: Group 397
+    100360: Group 399
+    100362: Group 401
+    100364: Group 403
+    100366: Group 405
+    100368: Group 407
+    100370: Group 409
+    100372: Group 411
+    100374: Group 413
+    100376: Group 415
+    100378: Group 417
+    100380: Group 419
+    100382: Group 421
+    100384: Group 423
+    100386: Group 425
+    100388: Group 427
+    100390: Group 429
+    100392: Group 431
+    100394: Group 433
+    100396: Group 435
+    100398: Group 437
+    100400: Group 439
+    100402: Group 441
+    100404: Group 443
+    100406: Group 445
+    100408: Group 449
+    100410: Group 45
+    100412: Group 451
+    100414: Group 452
+    100416: Group 454
+    100418: Group 456
+    100420: Group 458
+    100422: Group 459
+    100424: Group 461
+    100426: Group 463
+    100428: Group 465
+    100430: Group 467
+    100432: Group 469
+    100434: Group 471
+    100436: Group 475
+    100438: Group 477
+    100440: Group 478
+    100442: Group 480
+    100444: Group 482
+    100446: Group 484
+    100448: Group 485
+    100450: Group 487
+    100452: Group 489
+    100454: Group 491
+    100456: Group 493
+    100458: Group 495
+    100460: Group 497
+    100462: Group 502
+    100464: Group 503
+    100466: Group 505
+    100468: Group 507
+    100470: Group 509
+    100472: Group 51
+    100474: Group 511
+    100476: Group 513
+    100478: Group 515
+    100480: Group 517
+    100482: Group 519
+    100484: Group 521
+    100486: Group 523
+    100488: Group 525
+    100490: Group 527
+    100492: Group 529
+    100494: Group 531
+    100496: Group 533
+    100498: Group 535
+    100500: Group 537
+    100502: Group 539
+    100504: Group 541
+    100506: Group 543
+    100508: Group 545
+    100510: Group 547
+    100512: Group 549
+    100514: Group 551
+    100516: Group 553
+    100518: Group 555
+    100520: Group 557
+    100522: Group 561
+    100524: Group 563
+    100526: Group 564
+    100528: Group 566
+    100530: Group 568
+    100532: Group 57
+    100534: Group 570
+    100536: Group 571
+    100538: Group 573
+    100540: Group 575
+    100542: Group 577
+    100544: Group 579
+    100546: Group 581
+    100548: Group 583
+    100550: Group 587
+    100552: Group 589
+    100554: Group 59
+    100556: Group 590
+    100558: Group 592
+    100560: Group 594
+    100562: Group 596
+    100564: Group 597
+    100566: Group 599
+    100568: Group 601
+    100570: Group 603
+    100572: Group 605
+    100574: Group 607
+    100576: Group 609
+    100578: Group 61
+    100580: Group 613
+    100582: Group 615
+    100584: Group 617
+    100586: Group 619
+    100588: Group 62
+    100590: Group 621
+    100592: Group 623
+    100594: Group 625
+    100596: Group 627
+    100598: Group 631
+    100600: Group 633
+    100602: Group 635
+    100604: Group 637
+    100606: Group 639
+    100608: Group 64
+    100610: Group 641
+    100612: Group 643
+    100614: Group 645
+    100616: Group 649
+    100618: Group 651
+    100620: Group 653
+    100622: Group 655
+    100624: Group 657
+    100626: Group 659
+    100628: Group 66
+    100630: Group 661
+    100632: Group 663
+    100634: Group 667
+    100636: Group 669
+    100638: Group 671
+    100640: Group 673
+    100642: Group 675
+    100644: Group 677
+    100646: Group 679
+    100648: Group 68
+    100650: Group 681
+    100652: Group 684
+    100654: Group 686
+    100656: Group 688
+    100658: Group 694
+    100660: Group 695
+    100662: Group 696
+    100664: Group 697
+    100666: Group 699
+    100668: Group 70
+    100670: Group 701
+    100672: Group 702
+    100674: Group 704
+    100676: Group 710
+    100678: Group 72
+    100680: Group 75
+    100682: Group 77
+    100684: Group 79
+    100686: Group 81
+    100688: Group 94
+    100690: Group 96
+    100692: Group 98
+    100694: PRONAO_Ingresso
+    100696: PRONAO_Ingresso 1
+    100698: Pronao_Lunette
+    100700: Pronao_PilastroQuarto
+    100702: Pronao_PilastroQuarto 1
+    100704: Pronao_PilastroQuarto 2
+    100706: Pronao_PilastroQuarto 3
+    100708: Pronao_PilastroQuarto 4
+    100710: Pronao_PilastroQuarto 5
+    100712: Pronao_PilastroQuarto 6
+    100714: Pronao_PilastroQuarto 7
+    100716: PRONAO_Portalino
+    100718: PRONAO_Portalino 1
+    100720: PRONAO_Portalino 2
+    100722: PRONAO_Portalino 3
+    100724: PRONAO_PrimaTorre_Lato
+    100726: PRONAO_PrimaTorre_Lato 1
+    100728: PRONAO_PrimaTorre_Lato 2
+    100730: PRONAO_PrimaTorre_Lato 3
+    100732: PRONAO_PrimaTorre_Lato 4
+    100734: PRONAO_PrimaTorre_Lato 5
+    100736: PRONAO_PrimaTorre_Lato 6
+    100738: PRONAO_PrimaTorre_Lato 7
+    100740: PRONAO_TriLunetta
+    100742: PRONAO_TriLunetta 1
+    100744: PRONAO_TriLunetta 2
+    100746: UserTerrain
+    400000: ABSIDE_Absidiola
+    400002: ABSIDE_Absidiola 1
+    400004: ABSIDE_LatoAlto
+    400006: ABSIDE_LatoAlto 1
+    400008: ABSIDE_LatoAlto 2
+    400010: ABSIDE_LatoAlto 3
+    400012: ABSIDE_LatoAlto 4
+    400014: ABSIDE_LatoAlto 5
+    400016: ABSIDE_LatoAlto 6
+    400018: ABSIDE_Lunetta
+    400020: ABSIDE_Lunetta 1
+    400022: ABSIDE_Lunetta 2
+    400024: ABSIDE_Lunetta 3
+    400026: ABSIDE_Lunetta 4
+    400028: ABSIDE_Lunetta 5
+    400030: ABSIDE_Lunetta 6
+    400032: ABSIDE_Lunetta 7
+    400034: ABSIDE_Lunetta 8
+    400036: ABSIDE_Lunetta 9
+    400038: ABSIDE_Lunette
+    400040: ABSIDE_Lunette 1
+    400042: Cathedral
+    400044: Corpo_Base
+    400046: CORPO_Luna
+    400048: CORPO_Luna 1
+    400050: CORPO_Luna 2
+    400052: Corpo_Mezzo
+    400054: Corpo_Mezzo 1
+    400056: CORPO_Torretta
+    400058: CORPO_Torretta 1
+    400060: CORPO_Torretta 2
+    400062: CORPO_Torretta 3
+    400064: Corpo_Torrione
+    400066: CORPO_Torrione_Lato
+    400068: CORPO_Torrione_Lato 1
+    400070: CORPO_Torrione_Lato 2
+    400072: CORPO_Torrione_Lato 3
+    400074: CORPO_Torrione_Lato 4
+    400076: CORPO_Torrione_Lato 5
+    400078: CORPO_Torrione_Lato 6
+    400080: CORPO_Torrione_Lato 7
+    400082: CROCE_Croce
+    400084: CROCE_Croce 1
+    400086: CROCE_Croce 2
+    400088: CROCE_Croce 3
+    400090: CROCE_Croce 4
+    400092: CROCE_Croce 5
+    400094: CROCE_Croce 6
+    400096: CROCE_Croce 7
+    400098: CROCE_Croce 8
+    400100: CROCE_Puntale
+    400102: CROCE_Puntale 1
+    400104: CROCE_Sfera
+    400106: CROCE_Sfera 1
+    400108: CROCE_Sfera 2
+    400110: CROCE_Sfera 3
+    400112: CROCE_Sfera 4
+    400114: CROCE_Sfera 5
+    400116: CROCE_Sfera 6
+    400118: CROCE_Sfera 7
+    400120: CROCE_Sfera 8
+    400122: CROCE_Tiranti
+    400124: CROCE_Tiranti 1
+    400126: CROCE_Tiranti 2
+    400128: CROCE_Tiranti 3
+    400130: CROCE_Tiranti 4
+    400132: CROCE_Tiranti 5
+    400134: Dome1_Bianco
+    400136: Dome1_Bianco 1
+    400138: Dome1_Bianco 2
+    400140: Dome1_Bianco 3
+    400142: Dome1_BLUE
+    400144: Dome1_BLUE 1
+    400146: Dome1_BLUE 2
+    400148: Dome1_BLUE 3
+    400150: Dome1_GREEN
+    400152: Dome1_GREEN 1
+    400154: Dome1_GREEN 2
+    400156: Dome1_GREEN 3
+    400158: //RootNode
+    400160: Group 100
+    400162: Group 126
+    400164: Group 128
+    400166: Group 130
+    400168: Group 132
+    400170: Group 134
+    400172: Group 136
+    400174: Group 138
+    400176: Group 139
+    400178: Group 144
+    400180: Group 146
+    400182: Group 148
+    400184: Group 15
+    400186: Group 150
+    400188: Group 154
+    400190: Group 155
+    400192: Group 160
+    400194: Group 162
+    400196: Group 164
+    400198: Group 166
+    400200: Group 170
+    400202: Group 174
+    400204: Group 176
+    400206: Group 178
+    400208: Group 180
+    400210: Group 186
+    400212: Group 187
+    400214: Group 192
+    400216: Group 194
+    400218: Group 196
+    400220: Group 198
+    400222: Group 202
+    400224: Group 203
+    400226: Group 204
+    400228: Group 205
+    400230: Group 207
+    400232: Group 209
+    400234: Group 21
+    400236: Group 210
+    400238: Group 211
+    400240: Group 213
+    400242: Group 219
+    400244: Group 223
+    400246: Group 225
+    400248: Group 227
+    400250: Group 229
+    400252: Group 237
+    400254: Group 239
+    400256: Group 241
+    400258: Group 243
+    400260: Group 251
+    400262: Group 252
+    400264: Group 254
+    400266: Group 256
+    400268: Group 258
+    400270: Group 262
+    400272: Group 264
+    400274: Group 266
+    400276: Group 268
+    400278: Group 27
+    400280: Group 272
+    400282: Group 273
+    400284: Group 282
+    400286: Group 291
+    400288: Group 293
+    400290: Group 295
+    400292: Group 297
+    400294: Group 299
+    400296: Group 301
+    400298: Group 303
+    400300: Group 305
+    400302: Group 306
+    400304: Group 33
+    400306: Group 331
+    400308: Group 333
+    400310: Group 335
+    400312: Group 337
+    400314: Group 340
+    400316: Group 346
+    400318: Group 348
+    400320: Group 350
+    400322: Group 352
+    400324: Group 355
+    400326: Group 357
+    400328: Group 359
+    400330: Group 365
+    400332: Group 366
+    400334: Group 367
+    400336: Group 368
+    400338: Group 370
+    400340: Group 372
+    400342: Group 373
+    400344: Group 375
+    400346: Group 381
+    400348: Group 39
+    400350: Group 390
+    400352: Group 391
+    400354: Group 393
+    400356: Group 395
+    400358: Group 397
+    400360: Group 399
+    400362: Group 401
+    400364: Group 403
+    400366: Group 405
+    400368: Group 407
+    400370: Group 409
+    400372: Group 411
+    400374: Group 413
+    400376: Group 415
+    400378: Group 417
+    400380: Group 419
+    400382: Group 421
+    400384: Group 423
+    400386: Group 425
+    400388: Group 427
+    400390: Group 429
+    400392: Group 431
+    400394: Group 433
+    400396: Group 435
+    400398: Group 437
+    400400: Group 439
+    400402: Group 441
+    400404: Group 443
+    400406: Group 445
+    400408: Group 449
+    400410: Group 45
+    400412: Group 451
+    400414: Group 452
+    400416: Group 454
+    400418: Group 456
+    400420: Group 458
+    400422: Group 459
+    400424: Group 461
+    400426: Group 463
+    400428: Group 465
+    400430: Group 467
+    400432: Group 469
+    400434: Group 471
+    400436: Group 475
+    400438: Group 477
+    400440: Group 478
+    400442: Group 480
+    400444: Group 482
+    400446: Group 484
+    400448: Group 485
+    400450: Group 487
+    400452: Group 489
+    400454: Group 491
+    400456: Group 493
+    400458: Group 495
+    400460: Group 497
+    400462: Group 502
+    400464: Group 503
+    400466: Group 505
+    400468: Group 507
+    400470: Group 509
+    400472: Group 51
+    400474: Group 511
+    400476: Group 513
+    400478: Group 515
+    400480: Group 517
+    400482: Group 519
+    400484: Group 521
+    400486: Group 523
+    400488: Group 525
+    400490: Group 527
+    400492: Group 529
+    400494: Group 531
+    400496: Group 533
+    400498: Group 535
+    400500: Group 537
+    400502: Group 539
+    400504: Group 541
+    400506: Group 543
+    400508: Group 545
+    400510: Group 547
+    400512: Group 549
+    400514: Group 551
+    400516: Group 553
+    400518: Group 555
+    400520: Group 557
+    400522: Group 561
+    400524: Group 563
+    400526: Group 564
+    400528: Group 566
+    400530: Group 568
+    400532: Group 57
+    400534: Group 570
+    400536: Group 571
+    400538: Group 573
+    400540: Group 575
+    400542: Group 577
+    400544: Group 579
+    400546: Group 581
+    400548: Group 583
+    400550: Group 587
+    400552: Group 589
+    400554: Group 59
+    400556: Group 590
+    400558: Group 592
+    400560: Group 594
+    400562: Group 596
+    400564: Group 597
+    400566: Group 599
+    400568: Group 601
+    400570: Group 603
+    400572: Group 605
+    400574: Group 607
+    400576: Group 609
+    400578: Group 61
+    400580: Group 613
+    400582: Group 615
+    400584: Group 617
+    400586: Group 619
+    400588: Group 62
+    400590: Group 621
+    400592: Group 623
+    400594: Group 625
+    400596: Group 627
+    400598: Group 631
+    400600: Group 633
+    400602: Group 635
+    400604: Group 637
+    400606: Group 639
+    400608: Group 64
+    400610: Group 641
+    400612: Group 643
+    400614: Group 645
+    400616: Group 649
+    400618: Group 651
+    400620: Group 653
+    400622: Group 655
+    400624: Group 657
+    400626: Group 659
+    400628: Group 66
+    400630: Group 661
+    400632: Group 663
+    400634: Group 667
+    400636: Group 669
+    400638: Group 671
+    400640: Group 673
+    400642: Group 675
+    400644: Group 677
+    400646: Group 679
+    400648: Group 68
+    400650: Group 681
+    400652: Group 684
+    400654: Group 686
+    400656: Group 688
+    400658: Group 694
+    400660: Group 695
+    400662: Group 696
+    400664: Group 697
+    400666: Group 699
+    400668: Group 70
+    400670: Group 701
+    400672: Group 702
+    400674: Group 704
+    400676: Group 710
+    400678: Group 72
+    400680: Group 75
+    400682: Group 77
+    400684: Group 79
+    400686: Group 81
+    400688: Group 94
+    400690: Group 96
+    400692: Group 98
+    400694: PRONAO_Ingresso
+    400696: PRONAO_Ingresso 1
+    400698: Pronao_Lunette
+    400700: Pronao_PilastroQuarto
+    400702: Pronao_PilastroQuarto 1
+    400704: Pronao_PilastroQuarto 2
+    400706: Pronao_PilastroQuarto 3
+    400708: Pronao_PilastroQuarto 4
+    400710: Pronao_PilastroQuarto 5
+    400712: Pronao_PilastroQuarto 6
+    400714: Pronao_PilastroQuarto 7
+    400716: PRONAO_Portalino
+    400718: PRONAO_Portalino 1
+    400720: PRONAO_Portalino 2
+    400722: PRONAO_Portalino 3
+    400724: PRONAO_PrimaTorre_Lato
+    400726: PRONAO_PrimaTorre_Lato 1
+    400728: PRONAO_PrimaTorre_Lato 2
+    400730: PRONAO_PrimaTorre_Lato 3
+    400732: PRONAO_PrimaTorre_Lato 4
+    400734: PRONAO_PrimaTorre_Lato 5
+    400736: PRONAO_PrimaTorre_Lato 6
+    400738: PRONAO_PrimaTorre_Lato 7
+    400740: PRONAO_TriLunetta
+    400742: PRONAO_TriLunetta 1
+    400744: PRONAO_TriLunetta 2
+    400746: UserTerrain
+    2100000: _defaultMat
+    2100002: _FEDERA
+    2100004: Google Earth Snapshot1
+    2100006: JPG_Pala_Sinistra
+    2100008: JPG_Ingresso_Pala_A
+    2100010: JPG_Ingresso_Pala_B
+    2100012: JPG_Ingresso_Pala_D
+    2100014: JPG_Ingresso_Pala_C
+    2100016: JPG_MuroMattoni
+    2100018: JPG_Pala_Destra
+    2100020: _GEN_CopVerde_Scura
+    2100022: _GEN_InternoScuro
+    2100024: JPG_Corpo_Torrione_Lato
+    2100026: JPG_Torrione_Finestra
+    2100028: JPG_Torrione_Finestra_INTERNA
+    2100030: JPG_CopVerde_Chiara
+    2100032: JPG_TorrioneLato_part
+    2100034: JPG_Absidiola_Lato
+    2100036: JPG_Absidiola_Lato_Racc
+    2100038: JPG_Abside_NicchiaBassa
+    2100040: JPG_Abside_Porta
+    2100042: '[Stone_Masonry_Multi]'
+    2100044: JPG_Abside_Lunette_LOW1
+    2100046: JPG_Abside_FregioLaterale
+    2100048: JPG_Abside_LatoAlto
+    2100050: JPG_Abside_Cristo
+    2100052: JPG_Abside_ColonninaLunette
+    2100054: JPG_Abside_CopAlta_Alt
+    2100056: JPG_Abside_CopAlta1
+    2100058: JPG_Abside_TorreLato2
+    2100060: DOME_D3_02
+    2100062: DOME_D5
+    2100064: JPG_PuntaleConPalla1
+    2100066: PNG_CROCE_3A
+    2100068: _GEN_ORO
+    2100070: PNG_GEN_Tirante
+    2100072: JPG_Pronao_TriLunetta
+    2100074: JPG_PrimaTorre_Lato1
+    2100076: _GEN_InternoScuro_MOLTO
+    2100078: DOME_O1
+    2100080: JPG_Pronao_BASE
+    2100082: JPG_Pronao_FormelleNORD
+    2100084: JPG_Pronao_FormelleSUD
+    2100086: JPG_Fianco_Cornicione
+    2100088: JPG_Ingresso_Lato
+    2100090: JPG_Pronao_Formelle_IconaSU
+    2100092: JPG_Crocefisso
+    2100094: PNG_Crocifisso_Cornice
+    2100096: JPG_Crocefisso_Esterno
+    2100098: JPG_Crocefisso_Volta2
+    2100100: PNG_Grcocefisso_FerroBattut
+    2100102: DOME_D1_BLUE
+    2100104: DOME_D1_WHITE
+    2100106: DOME_D1_GREEN
+    2100108: DOME_D4
+    2100110: DOME_O3_Grande_10
+    2100112: JPG_Abside_CopBassa
+    2100114: JPG_Abside_CopBassa_Lin
+    2100116: JPG_Abside_CappaLato
+    2100118: PNG_Abside_PortaFregio_Spigo
+    2100120: PNG_Abside_PortaFregio
+    2100122: __TARGA
+    2100124: JPG_Fianco_2
+    2100126: JPG_Fianco_Racc
+    2100128: DOME_D2
+    2100130: JPG_Absidiola_LatoTorre
+    2100132: Dome_O2_B
+    2100134: JPG_Absidiola_CopLat_1
+    2100136: JPG_Absidiola_Copertura_2
+    2100138: Dome_O2_DESTRO_1
+    2100140: JPG_Corpo_CoppiaNicchie
+    2100142: JPG_Ingresso_ParetiAngolo
+    2100144: JPG_Ingresso_PortoneColonne
+    2100146: JPG_Ingresso_Cornicione1
+    2100148: PNG_Ingresso_Aquila
+    2100150: JPG_MuroMattoni_SCURI
+    2100152: JPG_Ingresso_Piramide
+    2100154: PNG_Ingresso_TrinaPunta
+    2100156: JPG_Ingresso_Pilastro
+    2100158: JPG_IngrSinistro_FacciaLat
+    2100160: JPG_Ingresso_LatoPerPala
+    2100162: PNG_Ingresso_TrinaAlta_NEW
+    2100164: JPG_Ingresso_SemiTetto1
+    2100166: PNG_Ingresso_SemiTrina
+    2100168: PNG_Ingresso_TrinaOrizz
+    2100170: JPG_Corpo_Torretta_Bifora
+    2100172: JPG_Corpo_CoppiaNicchie_Sec
+    2100174: JPG_GEN_AngeliVari
+    2100176: JPG_Torretta_Lato
+    2100178: JPG_Torretta_Angelo
+    2300000: ABSIDE_LatoAlto
+    2300002: ABSIDE_LatoAlto 1
+    2300004: ABSIDE_LatoAlto 2
+    2300006: ABSIDE_LatoAlto 3
+    2300008: ABSIDE_LatoAlto 4
+    2300010: ABSIDE_LatoAlto 5
+    2300012: ABSIDE_LatoAlto 6
+    2300014: ABSIDE_Lunetta
+    2300016: ABSIDE_Lunetta 1
+    2300018: ABSIDE_Lunetta 2
+    2300020: ABSIDE_Lunetta 3
+    2300022: ABSIDE_Lunetta 4
+    2300024: ABSIDE_Lunetta 5
+    2300026: ABSIDE_Lunetta 6
+    2300028: ABSIDE_Lunetta 7
+    2300030: ABSIDE_Lunetta 8
+    2300032: ABSIDE_Lunetta 9
+    2300034: Cathedral
+    2300036: CORPO_Luna
+    2300038: CORPO_Luna 1
+    2300040: CORPO_Luna 2
+    2300042: Corpo_Mezzo
+    2300044: Corpo_Mezzo 1
+    2300046: CORPO_Torretta
+    2300048: CORPO_Torretta 1
+    2300050: CORPO_Torretta 2
+    2300052: CORPO_Torretta 3
+    2300054: Corpo_Torrione
+    2300056: CORPO_Torrione_Lato
+    2300058: CORPO_Torrione_Lato 1
+    2300060: CORPO_Torrione_Lato 2
+    2300062: CORPO_Torrione_Lato 3
+    2300064: CORPO_Torrione_Lato 4
+    2300066: CORPO_Torrione_Lato 5
+    2300068: CORPO_Torrione_Lato 6
+    2300070: CORPO_Torrione_Lato 7
+    2300072: CROCE_Croce
+    2300074: CROCE_Croce 1
+    2300076: CROCE_Croce 2
+    2300078: CROCE_Croce 3
+    2300080: CROCE_Croce 4
+    2300082: CROCE_Croce 5
+    2300084: CROCE_Croce 6
+    2300086: CROCE_Croce 7
+    2300088: CROCE_Croce 8
+    2300090: CROCE_Puntale
+    2300092: CROCE_Puntale 1
+    2300094: CROCE_Sfera
+    2300096: CROCE_Sfera 1
+    2300098: CROCE_Sfera 2
+    2300100: CROCE_Sfera 3
+    2300102: CROCE_Sfera 4
+    2300104: CROCE_Sfera 5
+    2300106: CROCE_Sfera 6
+    2300108: CROCE_Sfera 7
+    2300110: CROCE_Sfera 8
+    2300112: Dome1_Bianco
+    2300114: Dome1_Bianco 1
+    2300116: Dome1_Bianco 2
+    2300118: Dome1_Bianco 3
+    2300120: Dome1_BLUE
+    2300122: Dome1_BLUE 1
+    2300124: Dome1_BLUE 2
+    2300126: Dome1_BLUE 3
+    2300128: Dome1_GREEN
+    2300130: Dome1_GREEN 1
+    2300132: Dome1_GREEN 2
+    2300134: Dome1_GREEN 3
+    2300136: Group 100
+    2300138: Group 126
+    2300140: Group 128
+    2300142: Group 130
+    2300144: Group 132
+    2300146: Group 134
+    2300148: Group 136
+    2300150: Group 139
+    2300152: Group 144
+    2300154: Group 146
+    2300156: Group 148
+    2300158: Group 15
+    2300160: Group 150
+    2300162: Group 155
+    2300164: Group 160
+    2300166: Group 162
+    2300168: Group 164
+    2300170: Group 166
+    2300172: Group 174
+    2300174: Group 176
+    2300176: Group 178
+    2300178: Group 180
+    2300180: Group 187
+    2300182: Group 192
+    2300184: Group 194
+    2300186: Group 196
+    2300188: Group 198
+    2300190: Group 205
+    2300192: Group 207
+    2300194: Group 21
+    2300196: Group 211
+    2300198: Group 213
+    2300200: Group 223
+    2300202: Group 225
+    2300204: Group 227
+    2300206: Group 229
+    2300208: Group 237
+    2300210: Group 239
+    2300212: Group 241
+    2300214: Group 243
+    2300216: Group 252
+    2300218: Group 254
+    2300220: Group 256
+    2300222: Group 262
+    2300224: Group 264
+    2300226: Group 266
+    2300228: Group 268
+    2300230: Group 27
+    2300232: Group 291
+    2300234: Group 293
+    2300236: Group 295
+    2300238: Group 297
+    2300240: Group 299
+    2300242: Group 301
+    2300244: Group 303
+    2300246: Group 33
+    2300248: Group 331
+    2300250: Group 333
+    2300252: Group 335
+    2300254: Group 337
+    2300256: Group 340
+    2300258: Group 346
+    2300260: Group 348
+    2300262: Group 350
+    2300264: Group 352
+    2300266: Group 355
+    2300268: Group 357
+    2300270: Group 359
+    2300272: Group 368
+    2300274: Group 370
+    2300276: Group 373
+    2300278: Group 375
+    2300280: Group 381
+    2300282: Group 39
+    2300284: Group 391
+    2300286: Group 393
+    2300288: Group 395
+    2300290: Group 397
+    2300292: Group 399
+    2300294: Group 401
+    2300296: Group 403
+    2300298: Group 405
+    2300300: Group 407
+    2300302: Group 409
+    2300304: Group 411
+    2300306: Group 413
+    2300308: Group 415
+    2300310: Group 417
+    2300312: Group 419
+    2300314: Group 421
+    2300316: Group 423
+    2300318: Group 425
+    2300320: Group 427
+    2300322: Group 429
+    2300324: Group 431
+    2300326: Group 433
+    2300328: Group 435
+    2300330: Group 437
+    2300332: Group 439
+    2300334: Group 441
+    2300336: Group 443
+    2300338: Group 445
+    2300340: Group 449
+    2300342: Group 45
+    2300344: Group 452
+    2300346: Group 454
+    2300348: Group 456
+    2300350: Group 459
+    2300352: Group 461
+    2300354: Group 463
+    2300356: Group 465
+    2300358: Group 467
+    2300360: Group 469
+    2300362: Group 471
+    2300364: Group 475
+    2300366: Group 478
+    2300368: Group 480
+    2300370: Group 482
+    2300372: Group 485
+    2300374: Group 487
+    2300376: Group 489
+    2300378: Group 491
+    2300380: Group 493
+    2300382: Group 495
+    2300384: Group 497
+    2300386: Group 503
+    2300388: Group 505
+    2300390: Group 507
+    2300392: Group 509
+    2300394: Group 51
+    2300396: Group 511
+    2300398: Group 513
+    2300400: Group 515
+    2300402: Group 517
+    2300404: Group 519
+    2300406: Group 521
+    2300408: Group 523
+    2300410: Group 525
+    2300412: Group 527
+    2300414: Group 529
+    2300416: Group 531
+    2300418: Group 533
+    2300420: Group 535
+    2300422: Group 537
+    2300424: Group 539
+    2300426: Group 541
+    2300428: Group 543
+    2300430: Group 545
+    2300432: Group 547
+    2300434: Group 549
+    2300436: Group 551
+    2300438: Group 553
+    2300440: Group 555
+    2300442: Group 557
+    2300444: Group 561
+    2300446: Group 564
+    2300448: Group 566
+    2300450: Group 568
+    2300452: Group 57
+    2300454: Group 571
+    2300456: Group 573
+    2300458: Group 575
+    2300460: Group 577
+    2300462: Group 579
+    2300464: Group 581
+    2300466: Group 583
+    2300468: Group 587
+    2300470: Group 59
+    2300472: Group 590
+    2300474: Group 592
+    2300476: Group 594
+    2300478: Group 597
+    2300480: Group 599
+    2300482: Group 601
+    2300484: Group 603
+    2300486: Group 605
+    2300488: Group 607
+    2300490: Group 609
+    2300492: Group 613
+    2300494: Group 615
+    2300496: Group 617
+    2300498: Group 619
+    2300500: Group 62
+    2300502: Group 621
+    2300504: Group 623
+    2300506: Group 625
+    2300508: Group 627
+    2300510: Group 631
+    2300512: Group 633
+    2300514: Group 635
+    2300516: Group 637
+    2300518: Group 639
+    2300520: Group 64
+    2300522: Group 641
+    2300524: Group 643
+    2300526: Group 645
+    2300528: Group 649
+    2300530: Group 651
+    2300532: Group 653
+    2300534: Group 655
+    2300536: Group 657
+    2300538: Group 659
+    2300540: Group 66
+    2300542: Group 661
+    2300544: Group 663
+    2300546: Group 667
+    2300548: Group 669
+    2300550: Group 671
+    2300552: Group 673
+    2300554: Group 675
+    2300556: Group 677
+    2300558: Group 679
+    2300560: Group 68
+    2300562: Group 681
+    2300564: Group 684
+    2300566: Group 686
+    2300568: Group 688
+    2300570: Group 697
+    2300572: Group 699
+    2300574: Group 70
+    2300576: Group 702
+    2300578: Group 704
+    2300580: Group 710
+    2300582: Group 72
+    2300584: Group 75
+    2300586: Group 77
+    2300588: Group 79
+    2300590: Group 81
+    2300592: Group 94
+    2300594: Group 96
+    2300596: Group 98
+    2300598: Pronao_Lunette
+    2300600: Pronao_PilastroQuarto
+    2300602: Pronao_PilastroQuarto 1
+    2300604: Pronao_PilastroQuarto 2
+    2300606: Pronao_PilastroQuarto 3
+    2300608: Pronao_PilastroQuarto 4
+    2300610: Pronao_PilastroQuarto 5
+    2300612: Pronao_PilastroQuarto 6
+    2300614: Pronao_PilastroQuarto 7
+    2300616: PRONAO_Portalino
+    2300618: PRONAO_Portalino 1
+    2300620: PRONAO_Portalino 2
+    2300622: PRONAO_Portalino 3
+    2300624: PRONAO_PrimaTorre_Lato
+    2300626: PRONAO_PrimaTorre_Lato 1
+    2300628: PRONAO_PrimaTorre_Lato 2
+    2300630: PRONAO_PrimaTorre_Lato 3
+    2300632: PRONAO_PrimaTorre_Lato 4
+    2300634: PRONAO_PrimaTorre_Lato 5
+    2300636: PRONAO_PrimaTorre_Lato 6
+    2300638: PRONAO_PrimaTorre_Lato 7
+    2300640: PRONAO_TriLunetta
+    2300642: PRONAO_TriLunetta 1
+    2300644: PRONAO_TriLunetta 2
+    2300646: UserTerrain
+    3300000: ABSIDE_LatoAlto
+    3300002: ABSIDE_LatoAlto 1
+    3300004: ABSIDE_LatoAlto 2
+    3300006: ABSIDE_LatoAlto 3
+    3300008: ABSIDE_LatoAlto 4
+    3300010: ABSIDE_LatoAlto 5
+    3300012: ABSIDE_LatoAlto 6
+    3300014: ABSIDE_Lunetta
+    3300016: ABSIDE_Lunetta 1
+    3300018: ABSIDE_Lunetta 2
+    3300020: ABSIDE_Lunetta 3
+    3300022: ABSIDE_Lunetta 4
+    3300024: ABSIDE_Lunetta 5
+    3300026: ABSIDE_Lunetta 6
+    3300028: ABSIDE_Lunetta 7
+    3300030: ABSIDE_Lunetta 8
+    3300032: ABSIDE_Lunetta 9
+    3300034: Cathedral
+    3300036: CORPO_Luna
+    3300038: CORPO_Luna 1
+    3300040: CORPO_Luna 2
+    3300042: Corpo_Mezzo
+    3300044: Corpo_Mezzo 1
+    3300046: CORPO_Torretta
+    3300048: CORPO_Torretta 1
+    3300050: CORPO_Torretta 2
+    3300052: CORPO_Torretta 3
+    3300054: Corpo_Torrione
+    3300056: CORPO_Torrione_Lato
+    3300058: CORPO_Torrione_Lato 1
+    3300060: CORPO_Torrione_Lato 2
+    3300062: CORPO_Torrione_Lato 3
+    3300064: CORPO_Torrione_Lato 4
+    3300066: CORPO_Torrione_Lato 5
+    3300068: CORPO_Torrione_Lato 6
+    3300070: CORPO_Torrione_Lato 7
+    3300072: CROCE_Croce
+    3300074: CROCE_Croce 1
+    3300076: CROCE_Croce 2
+    3300078: CROCE_Croce 3
+    3300080: CROCE_Croce 4
+    3300082: CROCE_Croce 5
+    3300084: CROCE_Croce 6
+    3300086: CROCE_Croce 7
+    3300088: CROCE_Croce 8
+    3300090: CROCE_Puntale
+    3300092: CROCE_Puntale 1
+    3300094: CROCE_Sfera
+    3300096: CROCE_Sfera 1
+    3300098: CROCE_Sfera 2
+    3300100: CROCE_Sfera 3
+    3300102: CROCE_Sfera 4
+    3300104: CROCE_Sfera 5
+    3300106: CROCE_Sfera 6
+    3300108: CROCE_Sfera 7
+    3300110: CROCE_Sfera 8
+    3300112: Dome1_Bianco
+    3300114: Dome1_Bianco 1
+    3300116: Dome1_Bianco 2
+    3300118: Dome1_Bianco 3
+    3300120: Dome1_BLUE
+    3300122: Dome1_BLUE 1
+    3300124: Dome1_BLUE 2
+    3300126: Dome1_BLUE 3
+    3300128: Dome1_GREEN
+    3300130: Dome1_GREEN 1
+    3300132: Dome1_GREEN 2
+    3300134: Dome1_GREEN 3
+    3300136: Group 100
+    3300138: Group 126
+    3300140: Group 128
+    3300142: Group 130
+    3300144: Group 132
+    3300146: Group 134
+    3300148: Group 136
+    3300150: Group 139
+    3300152: Group 144
+    3300154: Group 146
+    3300156: Group 148
+    3300158: Group 15
+    3300160: Group 150
+    3300162: Group 155
+    3300164: Group 160
+    3300166: Group 162
+    3300168: Group 164
+    3300170: Group 166
+    3300172: Group 174
+    3300174: Group 176
+    3300176: Group 178
+    3300178: Group 180
+    3300180: Group 187
+    3300182: Group 192
+    3300184: Group 194
+    3300186: Group 196
+    3300188: Group 198
+    3300190: Group 205
+    3300192: Group 207
+    3300194: Group 21
+    3300196: Group 211
+    3300198: Group 213
+    3300200: Group 223
+    3300202: Group 225
+    3300204: Group 227
+    3300206: Group 229
+    3300208: Group 237
+    3300210: Group 239
+    3300212: Group 241
+    3300214: Group 243
+    3300216: Group 252
+    3300218: Group 254
+    3300220: Group 256
+    3300222: Group 262
+    3300224: Group 264
+    3300226: Group 266
+    3300228: Group 268
+    3300230: Group 27
+    3300232: Group 291
+    3300234: Group 293
+    3300236: Group 295
+    3300238: Group 297
+    3300240: Group 299
+    3300242: Group 301
+    3300244: Group 303
+    3300246: Group 33
+    3300248: Group 331
+    3300250: Group 333
+    3300252: Group 335
+    3300254: Group 337
+    3300256: Group 340
+    3300258: Group 346
+    3300260: Group 348
+    3300262: Group 350
+    3300264: Group 352
+    3300266: Group 355
+    3300268: Group 357
+    3300270: Group 359
+    3300272: Group 368
+    3300274: Group 370
+    3300276: Group 373
+    3300278: Group 375
+    3300280: Group 381
+    3300282: Group 39
+    3300284: Group 391
+    3300286: Group 393
+    3300288: Group 395
+    3300290: Group 397
+    3300292: Group 399
+    3300294: Group 401
+    3300296: Group 403
+    3300298: Group 405
+    3300300: Group 407
+    3300302: Group 409
+    3300304: Group 411
+    3300306: Group 413
+    3300308: Group 415
+    3300310: Group 417
+    3300312: Group 419
+    3300314: Group 421
+    3300316: Group 423
+    3300318: Group 425
+    3300320: Group 427
+    3300322: Group 429
+    3300324: Group 431
+    3300326: Group 433
+    3300328: Group 435
+    3300330: Group 437
+    3300332: Group 439
+    3300334: Group 441
+    3300336: Group 443
+    3300338: Group 445
+    3300340: Group 449
+    3300342: Group 45
+    3300344: Group 452
+    3300346: Group 454
+    3300348: Group 456
+    3300350: Group 459
+    3300352: Group 461
+    3300354: Group 463
+    3300356: Group 465
+    3300358: Group 467
+    3300360: Group 469
+    3300362: Group 471
+    3300364: Group 475
+    3300366: Group 478
+    3300368: Group 480
+    3300370: Group 482
+    3300372: Group 485
+    3300374: Group 487
+    3300376: Group 489
+    3300378: Group 491
+    3300380: Group 493
+    3300382: Group 495
+    3300384: Group 497
+    3300386: Group 503
+    3300388: Group 505
+    3300390: Group 507
+    3300392: Group 509
+    3300394: Group 51
+    3300396: Group 511
+    3300398: Group 513
+    3300400: Group 515
+    3300402: Group 517
+    3300404: Group 519
+    3300406: Group 521
+    3300408: Group 523
+    3300410: Group 525
+    3300412: Group 527
+    3300414: Group 529
+    3300416: Group 531
+    3300418: Group 533
+    3300420: Group 535
+    3300422: Group 537
+    3300424: Group 539
+    3300426: Group 541
+    3300428: Group 543
+    3300430: Group 545
+    3300432: Group 547
+    3300434: Group 549
+    3300436: Group 551
+    3300438: Group 553
+    3300440: Group 555
+    3300442: Group 557
+    3300444: Group 561
+    3300446: Group 564
+    3300448: Group 566
+    3300450: Group 568
+    3300452: Group 57
+    3300454: Group 571
+    3300456: Group 573
+    3300458: Group 575
+    3300460: Group 577
+    3300462: Group 579
+    3300464: Group 581
+    3300466: Group 583
+    3300468: Group 587
+    3300470: Group 59
+    3300472: Group 590
+    3300474: Group 592
+    3300476: Group 594
+    3300478: Group 597
+    3300480: Group 599
+    3300482: Group 601
+    3300484: Group 603
+    3300486: Group 605
+    3300488: Group 607
+    3300490: Group 609
+    3300492: Group 613
+    3300494: Group 615
+    3300496: Group 617
+    3300498: Group 619
+    3300500: Group 62
+    3300502: Group 621
+    3300504: Group 623
+    3300506: Group 625
+    3300508: Group 627
+    3300510: Group 631
+    3300512: Group 633
+    3300514: Group 635
+    3300516: Group 637
+    3300518: Group 639
+    3300520: Group 64
+    3300522: Group 641
+    3300524: Group 643
+    3300526: Group 645
+    3300528: Group 649
+    3300530: Group 651
+    3300532: Group 653
+    3300534: Group 655
+    3300536: Group 657
+    3300538: Group 659
+    3300540: Group 66
+    3300542: Group 661
+    3300544: Group 663
+    3300546: Group 667
+    3300548: Group 669
+    3300550: Group 671
+    3300552: Group 673
+    3300554: Group 675
+    3300556: Group 677
+    3300558: Group 679
+    3300560: Group 68
+    3300562: Group 681
+    3300564: Group 684
+    3300566: Group 686
+    3300568: Group 688
+    3300570: Group 697
+    3300572: Group 699
+    3300574: Group 70
+    3300576: Group 702
+    3300578: Group 704
+    3300580: Group 710
+    3300582: Group 72
+    3300584: Group 75
+    3300586: Group 77
+    3300588: Group 79
+    3300590: Group 81
+    3300592: Group 94
+    3300594: Group 96
+    3300596: Group 98
+    3300598: Pronao_Lunette
+    3300600: Pronao_PilastroQuarto
+    3300602: Pronao_PilastroQuarto 1
+    3300604: Pronao_PilastroQuarto 2
+    3300606: Pronao_PilastroQuarto 3
+    3300608: Pronao_PilastroQuarto 4
+    3300610: Pronao_PilastroQuarto 5
+    3300612: Pronao_PilastroQuarto 6
+    3300614: Pronao_PilastroQuarto 7
+    3300616: PRONAO_Portalino
+    3300618: PRONAO_Portalino 1
+    3300620: PRONAO_Portalino 2
+    3300622: PRONAO_Portalino 3
+    3300624: PRONAO_PrimaTorre_Lato
+    3300626: PRONAO_PrimaTorre_Lato 1
+    3300628: PRONAO_PrimaTorre_Lato 2
+    3300630: PRONAO_PrimaTorre_Lato 3
+    3300632: PRONAO_PrimaTorre_Lato 4
+    3300634: PRONAO_PrimaTorre_Lato 5
+    3300636: PRONAO_PrimaTorre_Lato 6
+    3300638: PRONAO_PrimaTorre_Lato 7
+    3300640: PRONAO_TriLunetta
+    3300642: PRONAO_TriLunetta 1
+    3300644: PRONAO_TriLunetta 2
+    3300646: UserTerrain
+    4300000: Mesh UserTerrain
+    4300002: Mesh Cathedral
+    4300004: Mesh Corpo_Torrione
+    4300006: Mesh CORPO_Torrione_Lato
+    4300008: Mesh Group 15
+    4300010: Mesh Group 59
+    4300012: Mesh Group 62
+    4300014: Mesh Group 64
+    4300016: Mesh Group 66
+    4300018: Mesh Group 68
+    4300020: Mesh Group 70
+    4300022: Mesh Group 75
+    4300024: Mesh Group 77
+    4300026: Mesh Group 79
+    4300028: Mesh Group 81
+    4300030: Mesh ABSIDE_Lunetta
+    4300032: Mesh ABSIDE_LatoAlto
+    4300034: Mesh Group 126
+    4300036: Mesh Group 128
+    4300038: Mesh Group 130
+    4300040: Mesh Group 132
+    4300042: Mesh Group 134
+    4300044: Mesh Group 136
+    4300046: Mesh Group 139
+    4300048: Mesh CROCE_Croce
+    4300050: Mesh Group 144
+    4300052: Mesh Group 146
+    4300054: Mesh Group 148
+    4300056: Mesh Group 150
+    4300058: Mesh CROCE_Sfera
+    4300060: Mesh Group 155
+    4300062: Mesh CROCE_Puntale
+    4300064: Mesh Group 187
+    4300066: Mesh Pronao_Lunette
+    4300068: Mesh Group 237
+    4300070: Mesh PRONAO_TriLunetta
+    4300072: Mesh Group 252
+    4300074: Mesh Group 254
+    4300076: Mesh Group 256
+    4300078: Mesh Pronao_PilastroQuarto
+    4300080: Mesh Group 291
+    4300082: Mesh Group 293
+    4300084: Mesh Group 295
+    4300086: Mesh Group 297
+    4300088: Mesh Group 299
+    4300090: Mesh Group 301
+    4300092: Mesh Group 303
+    4300094: Mesh Dome1_BLUE
+    4300096: Mesh Dome1_Bianco
+    4300098: Mesh Dome1_GREEN
+    4300100: Mesh Group 331
+    4300102: Mesh Group 333
+    4300104: Mesh Group 335
+    4300106: Mesh Group 337
+    4300108: Mesh Group 340
+    4300110: Mesh Corpo_Mezzo
+    4300112: Mesh Group 346
+    4300114: Mesh Group 348
+    4300116: Mesh Group 350
+    4300118: Mesh Group 352
+    4300120: Mesh Group 355
+    4300122: Mesh Group 357
+    4300124: Mesh Group 359
+    4300126: Mesh Group 368
+    4300128: Mesh Group 370
+    4300130: Mesh CROCE_Croce
+    4300132: Mesh CROCE_Sfera
+    4300134: Mesh Group 381
+    4300136: Mesh CORPO_Luna
+    4300138: Mesh Group 391
+    4300140: Mesh Group 393
+    4300142: Mesh Group 395
+    4300144: Mesh Group 397
+    4300146: Mesh Group 409
+    4300148: Mesh Group 411
+    4300150: Mesh Group 419
+    4300152: Mesh Group 423
+    4300154: Mesh Group 429
+    4300156: Mesh Group 431
+    4300158: Mesh Group 437
+    4300160: Mesh Group 441
+    4300162: Mesh Group 443
+    4300164: Mesh Group 445
+    4300166: Mesh PRONAO_Portalino
+    4300168: Mesh Group 449
+    4300170: Mesh Group 452
+    4300172: Mesh Group 454
+    4300174: Mesh Group 456
+    4300176: Mesh Group 459
+    4300178: Mesh Group 461
+    4300180: Mesh Group 465
+    4300182: Mesh Group 467
+    4300184: Mesh Group 469
+    4300186: Mesh Group 471
+    4300188: Mesh PRONAO_PrimaTorre_Lato
+    4300190: Mesh CORPO_Torretta
+    4300192: Mesh Group 613
+    4300194: Mesh Group 615
+    4300196: Mesh Group 617
+    4300198: Mesh Group 619
+    4300200: Mesh Group 621
+    4300202: Mesh Group 623
+    4300204: Mesh Group 625
+    4300206: Mesh Group 627
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 2
+    materialSearch: 0
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 0.0254
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 0
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

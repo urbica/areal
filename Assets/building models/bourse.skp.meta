@@ -1,0 +1,395 @@
+fileFormatVersion: 2
+guid: d3f44b8cb752b4125a4f775e284c96f0
+timeCreated: 1522336102
+licenseType: Free
+SketchUpImporter:
+  generateBackFace: 0
+  mergeCoplanarFaces: 0
+  selectedNodes: 00000000030000000400000005000000060000000700000008000000090000000a0000000b0000000c0000000d0000000e0000000f000000100000001100000012000000130000001400000015000000160000001700000018000000190000001a0000001b0000001c0000001d0000001e0000001f000000200000002100000022000000230000002400000025000000260000002700000028000000290000002a0000002b0000002c0000002d0000002e0000002f000000300000003100000032000000330000003400000035000000360000003700000038000000390000003a0000003b0000003c0000003d0000003e0000003f000000400000004100000042000000430000004400000045000000460000004700000048000000490000004a0000004b0000004c0000004d0000004e0000004f000000500000005100000052000000530000005400000055000000560000005700000058000000590000005a0000005b0000005c0000005d0000005e0000005f000000600000006100000062000000630000006400000065000000660000006700000068000000690000006a0000006b0000006c0000006d0000006e0000006f00000070000000710000007200000073000000740000007500000076000000
+  assetHash:
+    serializedVersion: 2
+    Hash: f18e5c342383ed268fe8e67709b8fb43
+  longitude: 30.304621237339802
+  latitude: 59.94356808478249
+  northCorrection: -0
+  fileUnit: 0
+  sketchUpImportData:
+    defaultCamera:
+      position: {x: 45.826477, y: 35.202003, z: 134.77539}
+      lookAt: {x: -170.19495, y: -123.954346, z: -553.14215}
+      up: {x: -0.06457644, y: 0.9764942, z: -0.2056429}
+      fov: 20.151556
+      aspectRatio: 0
+      orthoSize: 1
+      isPerspective: 1
+    scenes:
+    - camera:
+        position: {x: 45.090755, y: 1.4846966, z: 35.849762}
+        lookAt: {x: 3.258448, y: 9.36748, z: -1.6651152}
+        up: {x: 0.10845733, y: 0.9902744, z: 0.08714137}
+        fov: 20.151556
+        aspectRatio: 2.368421
+        orthoSize: 1
+        isPerspective: 1
+      name: bourse
+    - camera:
+        position: {x: 31.642223, y: 25.059027, z: 124.17993}
+        lookAt: {x: -73.03353, y: -88.48295, z: -597.885}
+        up: {x: -0.022060823, y: 0.9881069, z: -0.15217799}
+        fov: 20.151556
+        aspectRatio: 0
+        orthoSize: 1
+        isPerspective: 1
+      name: Scene 2
+    - camera:
+        position: {x: 47.32862, y: 16.932308, z: 13.768084}
+        lookAt: {x: -610.90186, y: 94.85004, z: 339.1725}
+        up: {x: 0.094595134, y: 0.99441683, z: -0.04676428}
+        fov: 20.151556
+        aspectRatio: 0
+        orthoSize: 1
+        isPerspective: 1
+      name: Scene 3
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Bryce
+    100004: Bryce 1
+    100006: Bryce 2
+    100008: Bryce 3
+    100010: Google Earth Snapshot
+    100012: Group 5
+    100014: Group#1
+    100016: Group#1 1
+    100018: Group#1 2
+    100020: Group#1 3
+    100022: Group#2
+    100024: Group#2 1
+    100026: Group#2 10
+    100028: Group#2 11
+    100030: Group#2 12
+    100032: Group#2 13
+    100034: Group#2 14
+    100036: Group#2 15
+    100038: Group#2 16
+    100040: Group#2 17
+    100042: Group#2 18
+    100044: Group#2 19
+    100046: Group#2 2
+    100048: Group#2 20
+    100050: Group#2 21
+    100052: Group#2 22
+    100054: Group#2 23
+    100056: Group#2 24
+    100058: Group#2 25
+    100060: Group#2 26
+    100062: Group#2 27
+    100064: Group#2 28
+    100066: Group#2 29
+    100068: Group#2 3
+    100070: Group#2 30
+    100072: Group#2 31
+    100074: Group#2 32
+    100076: Group#2 33
+    100078: Group#2 34
+    100080: Group#2 35
+    100082: Group#2 36
+    100084: Group#2 37
+    100086: Group#2 38
+    100088: Group#2 39
+    100090: Group#2 4
+    100092: Group#2 40
+    100094: Group#2 41
+    100096: Group#2 42
+    100098: Group#2 43
+    100100: Group#2 44
+    100102: Group#2 45
+    100104: Group#2 46
+    100106: Group#2 47
+    100108: Group#2 5
+    100110: Group#2 6
+    100112: Group#2 7
+    100114: Group#2 8
+    100116: Group#2 9
+    400000: //RootNode
+    400002: Bryce
+    400004: Bryce 1
+    400006: Bryce 2
+    400008: Bryce 3
+    400010: Google Earth Snapshot
+    400012: Group 5
+    400014: Group#1
+    400016: Group#1 1
+    400018: Group#1 2
+    400020: Group#1 3
+    400022: Group#2
+    400024: Group#2 1
+    400026: Group#2 10
+    400028: Group#2 11
+    400030: Group#2 12
+    400032: Group#2 13
+    400034: Group#2 14
+    400036: Group#2 15
+    400038: Group#2 16
+    400040: Group#2 17
+    400042: Group#2 18
+    400044: Group#2 19
+    400046: Group#2 2
+    400048: Group#2 20
+    400050: Group#2 21
+    400052: Group#2 22
+    400054: Group#2 23
+    400056: Group#2 24
+    400058: Group#2 25
+    400060: Group#2 26
+    400062: Group#2 27
+    400064: Group#2 28
+    400066: Group#2 29
+    400068: Group#2 3
+    400070: Group#2 30
+    400072: Group#2 31
+    400074: Group#2 32
+    400076: Group#2 33
+    400078: Group#2 34
+    400080: Group#2 35
+    400082: Group#2 36
+    400084: Group#2 37
+    400086: Group#2 38
+    400088: Group#2 39
+    400090: Group#2 4
+    400092: Group#2 40
+    400094: Group#2 41
+    400096: Group#2 42
+    400098: Group#2 43
+    400100: Group#2 44
+    400102: Group#2 45
+    400104: Group#2 46
+    400106: Group#2 47
+    400108: Group#2 5
+    400110: Group#2 6
+    400112: Group#2 7
+    400114: Group#2 8
+    400116: Group#2 9
+    2100000: _defaultMat
+    2100002: Google Earth Snapshot1
+    2100004: _1
+    2100006: bourse1
+    2100008: _4
+    2100010: _7
+    2100012: _2
+    2100014: _9
+    2100016: _6
+    2100018: _8
+    2100020: _11
+    2100022: _5
+    2100024: _3
+    2100026: _10
+    2100028: _DarkGoldenrod_
+    2100030: _Gray6_
+    2100032: _Beige_1
+    2100034: _Brown_
+    2100036: _Charcoal_
+    2100038: _Black_
+    2100040: _Redwood_
+    2100042: jean blue
+    2300000: Bryce
+    2300002: Bryce 1
+    2300004: Bryce 2
+    2300006: Bryce 3
+    2300008: Google Earth Snapshot
+    2300010: Group 5
+    2300012: Group#1
+    2300014: Group#1 1
+    2300016: Group#1 2
+    2300018: Group#1 3
+    2300020: Group#2
+    2300022: Group#2 1
+    2300024: Group#2 10
+    2300026: Group#2 11
+    2300028: Group#2 12
+    2300030: Group#2 13
+    2300032: Group#2 14
+    2300034: Group#2 15
+    2300036: Group#2 16
+    2300038: Group#2 17
+    2300040: Group#2 18
+    2300042: Group#2 19
+    2300044: Group#2 2
+    2300046: Group#2 20
+    2300048: Group#2 21
+    2300050: Group#2 22
+    2300052: Group#2 23
+    2300054: Group#2 24
+    2300056: Group#2 25
+    2300058: Group#2 26
+    2300060: Group#2 27
+    2300062: Group#2 28
+    2300064: Group#2 29
+    2300066: Group#2 3
+    2300068: Group#2 30
+    2300070: Group#2 31
+    2300072: Group#2 32
+    2300074: Group#2 33
+    2300076: Group#2 34
+    2300078: Group#2 35
+    2300080: Group#2 36
+    2300082: Group#2 37
+    2300084: Group#2 38
+    2300086: Group#2 39
+    2300088: Group#2 4
+    2300090: Group#2 40
+    2300092: Group#2 41
+    2300094: Group#2 42
+    2300096: Group#2 43
+    2300098: Group#2 44
+    2300100: Group#2 45
+    2300102: Group#2 46
+    2300104: Group#2 47
+    2300106: Group#2 5
+    2300108: Group#2 6
+    2300110: Group#2 7
+    2300112: Group#2 8
+    2300114: Group#2 9
+    3300000: Bryce
+    3300002: Bryce 1
+    3300004: Bryce 2
+    3300006: Bryce 3
+    3300008: Google Earth Snapshot
+    3300010: Group 5
+    3300012: Group#1
+    3300014: Group#1 1
+    3300016: Group#1 2
+    3300018: Group#1 3
+    3300020: Group#2
+    3300022: Group#2 1
+    3300024: Group#2 10
+    3300026: Group#2 11
+    3300028: Group#2 12
+    3300030: Group#2 13
+    3300032: Group#2 14
+    3300034: Group#2 15
+    3300036: Group#2 16
+    3300038: Group#2 17
+    3300040: Group#2 18
+    3300042: Group#2 19
+    3300044: Group#2 2
+    3300046: Group#2 20
+    3300048: Group#2 21
+    3300050: Group#2 22
+    3300052: Group#2 23
+    3300054: Group#2 24
+    3300056: Group#2 25
+    3300058: Group#2 26
+    3300060: Group#2 27
+    3300062: Group#2 28
+    3300064: Group#2 29
+    3300066: Group#2 3
+    3300068: Group#2 30
+    3300070: Group#2 31
+    3300072: Group#2 32
+    3300074: Group#2 33
+    3300076: Group#2 34
+    3300078: Group#2 35
+    3300080: Group#2 36
+    3300082: Group#2 37
+    3300084: Group#2 38
+    3300086: Group#2 39
+    3300088: Group#2 4
+    3300090: Group#2 40
+    3300092: Group#2 41
+    3300094: Group#2 42
+    3300096: Group#2 43
+    3300098: Group#2 44
+    3300100: Group#2 45
+    3300102: Group#2 46
+    3300104: Group#2 47
+    3300106: Group#2 5
+    3300108: Group#2 6
+    3300110: Group#2 7
+    3300112: Group#2 8
+    3300114: Group#2 9
+    4300000: Mesh Google Earth Snapshot
+    4300002: Mesh Group 5
+    4300004: Mesh Group#1
+    4300006: Mesh Bryce
+    4300008: Mesh Group#2
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 2
+    materialSearch: 0
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 0.0254
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 0
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

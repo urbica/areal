@@ -1,0 +1,156 @@
+fileFormatVersion: 2
+guid: ace8e735d1dc74804ad5fe0f2d83a07f
+timeCreated: 1522336100
+licenseType: Free
+SketchUpImporter:
+  generateBackFace: 0
+  mergeCoplanarFaces: 0
+  selectedNodes: 00000000030000000400000005000000060000000700000008000000090000000a0000000b0000000c0000000d0000000e000000
+  assetHash:
+    serializedVersion: 2
+    Hash: adf21a6b63ce3d69594c03c72e520415
+  longitude: 30.333039104572645
+  latitude: 59.944353261349214
+  northCorrection: -0
+  fileUnit: 0
+  sketchUpImportData:
+    defaultCamera:
+      position: {x: -1225.14, y: 1068.6847, z: -1092.3116}
+      lookAt: {x: -91.79195, y: 177.80019, z: -84.89105}
+      up: {x: 0.3786051, y: 0.8622067, z: 0.3365379}
+      fov: 45
+      aspectRatio: 0
+      orthoSize: 17110.213
+      isPerspective: 0
+    scenes: []
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Bryce
+    100002: Flag
+    100004: Google Earth Snapshot
+    100006: Group 8
+    100008: redflag
+    100010: tat-temp
+    100012: //RootNode
+    100014: Tatlin-Tower#1
+    400000: Bryce
+    400002: Flag
+    400004: Google Earth Snapshot
+    400006: Group 8
+    400008: redflag
+    400010: tat-temp
+    400012: //RootNode
+    400014: Tatlin-Tower#1
+    2100000: Google Earth Snapshot1
+    2100002: Metal_Rough
+    2100004: Metal_Seamed
+    2100006: Metal_Steel_Textured
+    2100008: Translucent_Glass_Sky_Reflection
+    2100010: Color_A19
+    2100012: Translucent_Glass_Corrugated
+    2100014: Translucent_Glass_Tinted
+    2100016: Translucent_Glass_Blue
+    2100018: _DarkGoldenrod_
+    2100020: _Gray6_
+    2100022: _Beige_1
+    2100024: _Brown_
+    2100026: _Charcoal_
+    2100028: _Black_
+    2100030: _Redwood_
+    2100032: jean blue
+    2100034: _Red_
+    2300000: Bryce
+    2300002: Flag
+    2300004: Google Earth Snapshot
+    2300006: Group 8
+    2300008: Tatlin-Tower#1
+    3300000: Bryce
+    3300002: Flag
+    3300004: Google Earth Snapshot
+    3300006: Group 8
+    3300008: Tatlin-Tower#1
+    4300000: Mesh Google Earth Snapshot
+    4300002: Mesh Tatlin-Tower#1
+    4300004: Mesh Group 8
+    4300006: Mesh Bryce
+    4300008: Mesh Flag
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 2
+    materialSearch: 0
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 0.0254
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 0
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

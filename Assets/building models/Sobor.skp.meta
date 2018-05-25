@@ -1,0 +1,162 @@
+fileFormatVersion: 2
+guid: 94ecf62c340c64dae8130a6bec386aed
+timeCreated: 1522336071
+licenseType: Free
+SketchUpImporter:
+  generateBackFace: 0
+  mergeCoplanarFaces: 0
+  selectedNodes: 0000000001000000
+  assetHash:
+    serializedVersion: 2
+    Hash: f00090949ecf9996b72b336441f5a201
+  longitude: 30.348514
+  latitude: 59.928336
+  northCorrection: 357.7047994088044
+  fileUnit: 0
+  sketchUpImportData:
+    defaultCamera:
+      position: {x: -157.03172, y: 76.109795, z: 33.043026}
+      lookAt: {x: 233313.73, y: -98695.42, z: -22369.773}
+      up: {x: 0.38633764, y: 0.92161214, z: -0.037071247}
+      fov: 35
+      aspectRatio: 0
+      orthoSize: 1
+      isPerspective: 1
+    scenes: []
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: //RootNode
+    400000: //RootNode
+    2100000: _defaultMat
+    2100002: 36
+    2100004: 01
+    2100006: '[Cladding_Stucco_White]'
+    2100008: 39
+    2100010: 1
+    2100012: 37
+    2100014: '[Metal_Aluminum_Anodized]'
+    2100016: 2
+    2100018: 4
+    2100020: 3
+    2100022: 7
+    2100024: 5
+    2100026: 8
+    2100028: 9
+    2100030: 45
+    2100032: 10
+    2100034: 11
+    2100036: 12
+    2100038: 14
+    2100040: 02
+    2100042: 38
+    2100044: 17
+    2100046: 16
+    2100048: 19-1
+    2100050: 20-1
+    2100052: 27
+    2100054: 28
+    2100056: 24
+    2100058: 26
+    2100060: 19-1#1
+    2100062: 22
+    2100064: 19-1#3
+    2100066: 21
+    2100068: 19-1#2
+    2100070: 23
+    2100072: 25
+    2100074: 6
+    2100076: 31
+    2100078: 29-1
+    2100080: 30-3
+    2100082: 35
+    2100084: 30-3#1
+    2100086: 32
+    2100088: 34
+    2100090: 33
+    2100092: 41
+    2100094: 42
+    2100096: 43
+    2100098: 44
+    2300000: //RootNode
+    3300000: //RootNode
+    4300000: Mesh Sobor
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 2
+    materialSearch: 0
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 0.0254
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 0
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

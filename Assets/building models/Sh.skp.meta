@@ -1,0 +1,234 @@
+fileFormatVersion: 2
+guid: 472a2664c9d6146a1b134eac3b6963de
+timeCreated: 1522336061
+licenseType: Free
+SketchUpImporter:
+  generateBackFace: 0
+  mergeCoplanarFaces: 0
+  selectedNodes: 00000000010000000e0000000f000000100000001100000012000000130000001400000015000000160000001700000018000000190000001a0000001b0000001c0000001d0000001e0000001f000000200000002100000022000000230000002400000025000000260000002700000028000000290000002a0000002b0000002c0000002d0000002e0000002f000000300000003100000032000000330000003400000035000000360000003700000038000000390000003a0000003b0000003c0000003d0000003e0000003f000000
+  assetHash:
+    serializedVersion: 2
+    Hash: 5b8ca078abaa8a85b9bee8c7ccda5435
+  longitude: 30.477136914344374
+  latitude: 59.96644538267047
+  northCorrection: -0
+  fileUnit: 0
+  sketchUpImportData:
+    defaultCamera:
+      position: {x: -54.75826, y: 21.057503, z: 27.920544}
+      lookAt: {x: -11.9810295, y: 6.017883, z: 8.967836}
+      up: {x: 0.27979037, y: 0.95202446, z: -0.1239628}
+      fov: 35
+      aspectRatio: 0
+      orthoSize: 1
+      isPerspective: 1
+    scenes: []
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: FoofTube200f17
+    100002: Light116
+    100004: Light116 1
+    100006: Light116 2
+    100008: Light116 3
+    100010: Light116 4
+    100012: Light116 5
+    100014: Light116 6
+    100016: Litter-Bin116
+    100018: Litter-Bin116 1
+    100020: Roof2Tube200f13
+    100022: RoofTube200
+    100024: RoofTube200 1
+    100026: RuufTube200f20
+    100028: //RootNode
+    100030: Transformator116
+    100032: Tube116#1
+    100034: Vodostok116
+    100036: Vodostok116 1
+    100038: Vodostok116 2
+    100040: Vodostok116 3
+    100042: Vodostok116 4
+    100044: Vodostok116 5
+    100046: Vodostok116 6
+    100048: Vodostok116 7
+    100050: Vodostok116 8
+    400000: FoofTube200f17
+    400002: Light116
+    400004: Light116 1
+    400006: Light116 2
+    400008: Light116 3
+    400010: Light116 4
+    400012: Light116 5
+    400014: Light116 6
+    400016: Litter-Bin116
+    400018: Litter-Bin116 1
+    400020: Roof2Tube200f13
+    400022: RoofTube200
+    400024: RoofTube200 1
+    400026: RuufTube200f20
+    400028: //RootNode
+    400030: Transformator116
+    400032: Tube116#1
+    400034: Vodostok116
+    400036: Vodostok116 1
+    400038: Vodostok116 2
+    400040: Vodostok116 3
+    400042: Vodostok116 4
+    400044: Vodostok116 5
+    400046: Vodostok116 6
+    400048: Vodostok116 7
+    400050: Vodostok116 8
+    2100000: _defaultMat
+    2100002: Roofing116
+    2100004: Brick116
+    2100006: '[Translucent_Glass_Sky_Reflection]'
+    2100008: '[Concrete_Aggregate_Smoke]'
+    2100010: '[Color_004]'
+    2100012: '[Concrete_Block_Retaining_Gray]'
+    2100014: '[Color_001]'
+    2100016: '[Brick_Rough_Dark]1'
+    2100018: '[Metal_Seamed]'
+    2100020: Blinds116
+    2100022: '[Concrete_Scored_Jointless]'
+    2100024: Metal_Aluminum_Anodized_RoofTube116
+    2300000: FoofTube200f17
+    2300002: Light116
+    2300004: Light116 1
+    2300006: Light116 2
+    2300008: Light116 3
+    2300010: Light116 4
+    2300012: Light116 5
+    2300014: Light116 6
+    2300016: Litter-Bin116
+    2300018: Litter-Bin116 1
+    2300020: Roof2Tube200f13
+    2300022: RoofTube200
+    2300024: RoofTube200 1
+    2300026: RuufTube200f20
+    2300028: //RootNode
+    2300030: Transformator116
+    2300032: Tube116#1
+    2300034: Vodostok116
+    2300036: Vodostok116 1
+    2300038: Vodostok116 2
+    2300040: Vodostok116 3
+    2300042: Vodostok116 4
+    2300044: Vodostok116 5
+    2300046: Vodostok116 6
+    2300048: Vodostok116 7
+    2300050: Vodostok116 8
+    3300000: FoofTube200f17
+    3300002: Light116
+    3300004: Light116 1
+    3300006: Light116 2
+    3300008: Light116 3
+    3300010: Light116 4
+    3300012: Light116 5
+    3300014: Light116 6
+    3300016: Litter-Bin116
+    3300018: Litter-Bin116 1
+    3300020: Roof2Tube200f13
+    3300022: RoofTube200
+    3300024: RoofTube200 1
+    3300026: RuufTube200f20
+    3300028: //RootNode
+    3300030: Transformator116
+    3300032: Tube116#1
+    3300034: Vodostok116
+    3300036: Vodostok116 1
+    3300038: Vodostok116 2
+    3300040: Vodostok116 3
+    3300042: Vodostok116 4
+    3300044: Vodostok116 5
+    3300046: Vodostok116 6
+    3300048: Vodostok116 7
+    3300050: Vodostok116 8
+    4300000: Mesh Sh
+    4300002: Mesh Vodostok116
+    4300004: Mesh Litter-Bin116
+    4300006: Mesh Transformator116
+    4300008: Mesh Tube116#1
+    4300010: Mesh Light116
+    4300012: Mesh RoofTube200
+    4300014: Mesh RuufTube200f20
+    4300016: Mesh FoofTube200f17
+    4300018: Mesh Roof2Tube200f13
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 2
+    materialSearch: 0
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 0.0254
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 0
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,1176 @@
+fileFormatVersion: 2
+guid: 0c56b40ee4d614cd6af809dc1cd7dae9
+timeCreated: 1522336052
+licenseType: Free
+SketchUpImporter:
+  generateBackFace: 0
+  mergeCoplanarFaces: 0
+  selectedNodes: 000000000100000002000000030000000400000005000000060000000700000008000000090000000a0000000b0000000e0000000f000000100000001100000012000000130000001400000015000000160000001700000018000000190000001a0000001b0000001c0000001d0000001e0000001f000000200000002100000022000000230000002400000025000000260000002700000028000000290000002a0000002b0000002c0000002d0000002e0000002f000000300000003100000032000000330000003400000035000000360000003700000038000000390000003a0000003b0000003c0000003d0000003e0000003f000000400000004100000042000000430000004400000045000000460000004700000048000000490000004a0000004b0000004c0000004d0000004e0000004f000000500000005100000052000000530000005400000055000000560000005700000058000000590000005a0000005b0000005c0000005d0000005e0000005f000000600000006100000062000000630000006400000065000000660000006700000068000000690000006a0000006b0000006c0000006d0000006e0000006f000000700000007100000072000000730000007400000075000000760000007700000078000000790000007a0000007b0000007c0000007d0000007e0000007f000000800000008100000082000000830000008400000085000000860000008700000088000000890000008a0000008b0000008c0000008d0000008e0000008f000000900000009100000092000000930000009400000095000000960000009700000098000000990000009a0000009b0000009c0000009d0000009e0000009f000000a0000000a1000000a2000000a3000000a4000000a5000000a6000000a7000000a8000000a9000000aa000000ab000000ac000000ad000000ae000000af000000b0000000b1000000b2000000b3000000b4000000b5000000b6000000b7000000b8000000b9000000ba000000bb000000bc000000bd000000be000000bf000000c0000000c1000000c2000000c3000000c4000000c5000000c6000000c7000000c8000000c9000000ca000000cb000000cc000000cd000000ce000000cf000000d0000000d1000000d2000000d3000000d4000000d5000000d6000000d7000000d8000000d9000000da000000db000000dc000000dd000000de000000df000000e0000000e1000000e2000000e3000000e4000000e5000000e6000000e7000000e8000000e9000000ea000000eb000000ec000000ed000000ee000000ef000000f0000000f1000000f2000000f3000000f4000000f5000000f6000000f7000000f8000000f9000000fa000000fb000000fc000000fd000000fe000000ff000000000100000101000002010000030100000401000005010000060100000701000008010000090100000a0100000b0100000c0100000d0100000e0100000f010000100100001101000012010000130100001401000015010000160100001701000018010000190100001a0100001b0100001c0100001d0100001e0100001f01000020010000210100002201000023010000240100002501000026010000270100002801000029010000
+  assetHash:
+    serializedVersion: 2
+    Hash: 34ed873fca007d9881d138072183922c
+  longitude: 30.319229399393965
+  latitude: 59.93359442007116
+  northCorrection: -0
+  fileUnit: 0
+  sketchUpImportData:
+    defaultCamera:
+      position: {x: -35.52293, y: 0.733713, z: 116.3146}
+      lookAt: {x: 31.835598, y: 12.114059, z: 115.33099}
+      up: {x: -0.1665559, y: 0.986029, z: 0.0024321338}
+      fov: 35
+      aspectRatio: 0
+      orthoSize: 1
+      isPerspective: 1
+    scenes:
+    - camera:
+        position: {x: -92.95401, y: 80.083275, z: 349.76614}
+        lookAt: {x: -74.63646, y: 67.51145, z: 285.1591}
+        up: {x: 0.050193515, y: 0.9829238, z: -0.17703535}
+        fov: 35
+        aspectRatio: 0
+        orthoSize: 1
+        isPerspective: 1
+      name: "\u043D\u0430\u0431. \u0440.\u041C\u043E\u0439\u043A\u0438"
+    - camera:
+        position: {x: -31.104607, y: 1.280361, z: 122.02811}
+        lookAt: {x: 35.196663, y: 17.494276, z: 119.04456}
+        up: {x: -0.23708245, y: 0.97143096, z: 0.01066866}
+        fov: 35
+        aspectRatio: 0
+        orthoSize: 1
+        isPerspective: 1
+      name: "\u0426\u0435\u043D\u0442\u0440\u0430\u043B\u044C\u043D\u044B\u0435 \u0432\u043E\u0440\u043E\u0442\u0430"
+    - camera:
+        position: {x: -12.957922, y: 2.2931585, z: 93.77608}
+        lookAt: {x: 52.8891, y: 17.58432, z: 103.67564}
+        up: {x: -0.22132874, y: 0.9746314, z: -0.03327496}
+        fov: 35
+        aspectRatio: 0
+        orthoSize: 1
+        isPerspective: 1
+      name: "\u041A\u043E\u0440\u043F\u0443\u0441 \u21165 - \u0444\u0430\u0441\u0430\u0434"
+    - camera:
+        position: {x: 237.86443, y: 69.83343, z: 79.53288}
+        lookAt: {x: 175.96901, y: 41.122936, z: 83.04259}
+        up: {x: -0.41956025, y: 0.9074157, z: 0.023790661}
+        fov: 35
+        aspectRatio: 0
+        orthoSize: 1
+        isPerspective: 1
+      name: "\u041A\u043E\u0440\u043F\u0443\u0441 \u21165 - \u0432\u0438\u0434 \u0441\u0437\u0430\u0434\u0438"
+    - camera:
+        position: {x: 16.910454, y: 28.466238, z: 150.06772}
+        lookAt: {x: 76.911385, y: -4.2005405, z: 149.41917}
+        up: {x: 0.4781143, y: 0.8782824, z: -0.005167908}
+        fov: 35
+        aspectRatio: 0
+        orthoSize: 1
+        isPerspective: 1
+      name: "\u0411\u0438\u0431\u043B\u0438\u043E\u0442\u0435\u043A\u0430"
+    - camera:
+        position: {x: 83.709274, y: 55.40855, z: 189.18552}
+        lookAt: {x: 54.81081, y: 0.24050063, z: 161.09608}
+        up: {x: -0.5790309, y: 0.58987796, z: -0.56282073}
+        fov: 35
+        aspectRatio: 0
+        orthoSize: 1
+        isPerspective: 1
+      name: "\u041A\u043E\u0440\u043F\u0443\u0441 \u211610"
+    - camera:
+        position: {x: 38.955208, y: 41.58563, z: 171.50021}
+        lookAt: {x: 81.91659, y: -6.0915565, z: 194.92792}
+        up: {x: 0.61267316, y: 0.71624506, z: 0.334103}
+        fov: 35
+        aspectRatio: 0
+        orthoSize: 1
+        isPerspective: 1
+      name: "\u041A\u043E\u0440\u043F\u0443\u0441 \u21169"
+    - camera:
+        position: {x: 206.08153, y: 7.9606056, z: 164.27194}
+        lookAt: {x: 147.06937, y: 11.542139, z: 130.0318}
+        up: {x: 0.045342952, y: 0.998625, z: 0.026308963}
+        fov: 35
+        aspectRatio: 0
+        orthoSize: 1
+        isPerspective: 1
+      name: "\u041A\u043E\u0440\u043F\u0443\u0441 \u21166"
+    - camera:
+        position: {x: 110.54547, y: 77.058495, z: -51.20371}
+        lookAt: {x: 64.94315, y: 44.300198, z: -12.281046}
+        up: {x: -0.36470112, y: 0.8775518, z: 0.31128109}
+        fov: 35
+        aspectRatio: 0
+        orthoSize: 1
+        isPerspective: 1
+      name: "\u041A\u043B\u0443\u0431"
+    - camera:
+        position: {x: -42.53688, y: 19.641548, z: 34.36695}
+        lookAt: {x: 22.875412, y: 1.0536447, z: 27.781132}
+        up: {x: 0.27070183, y: 0.9622774, z: -0.0272547}
+        fov: 35
+        aspectRatio: 0
+        orthoSize: 1
+        isPerspective: 1
+      name: "\u041A\u043B\u0443\u0431 - \u0432\u0445\u043E\u0434"
+    - camera:
+        position: {x: -8.592994, y: 24.631197, z: 72.47491}
+        lookAt: {x: 19.10509, y: -8.404685, z: 19.47398}
+        up: {x: 0.22396007, y: 0.87531966, z: -0.42855278}
+        fov: 35
+        aspectRatio: 0
+        orthoSize: 1
+        isPerspective: 1
+      name: "\u0444\u0430\u043A. \u0444\u0438\u0437. \u043A\u0443\u043B\u044C\u0442\u0443\u0440\u044B"
+    - camera:
+        position: {x: -9.205317, y: 43.077026, z: 45.771282}
+        lookAt: {x: 22.834646, y: 20.148403, z: -10.044219}
+        up: {x: 0.16707806, y: 0.9420027, z: -0.29105982}
+        fov: 35
+        aspectRatio: 0
+        orthoSize: 1
+        isPerspective: 1
+      name: "\u041A\u043E\u0440\u043F\u0443\u0441 \u21163"
+    - camera:
+        position: {x: -82.816376, y: 13.956273, z: -9.532363}
+        lookAt: {x: -16.491034, y: 13.180593, z: -25.903008}
+        up: {x: 0.011022821, y: 0.99993557, z: -0.0027206896}
+        fov: 35
+        aspectRatio: 0
+        orthoSize: 1
+        isPerspective: 1
+      name: "\u041A\u043E\u0440\u043F\u0443\u0441 \u21162"
+    - camera:
+        position: {x: -46.688942, y: 55.530643, z: -130.40169}
+        lookAt: {x: -43.13545, y: 24.754744, z: -69.50942}
+        up: {x: 0.026243163, y: 0.89279383, z: 0.44970042}
+        fov: 35
+        aspectRatio: 0
+        orthoSize: 1
+        isPerspective: 1
+      name: "\u041A\u043E\u0440\u043F\u0443\u0441 \u21162 - \u0432\u0438\u0434 \u0441\u0437\u0430\u0434\u0438"
+    - camera:
+        position: {x: -157.25142, y: 41.575317, z: -74.05326}
+        lookAt: {x: -92.4066, y: 21.63125, z: -82.11766}
+        up: {x: 0.28968886, y: 0.9564426, z: -0.03602705}
+        fov: 35
+        aspectRatio: 0
+        orthoSize: 1
+        isPerspective: 1
+      name: "\u041A\u043E\u0440\u043F\u0443\u0441 \u21161"
+    - camera:
+        position: {x: 2.1732523, y: 30.059166, z: 38.413826}
+        lookAt: {x: -57.124935, y: -0.12915927, z: 22.920563}
+        up: {x: -0.42751387, y: 0.89708143, z: -0.1116996}
+        fov: 35
+        aspectRatio: 0
+        orthoSize: 1
+        isPerspective: 1
+      name: "\u041A\u043E\u0440\u043F\u0443\u0441 \u211611"
+    - camera:
+        position: {x: -86.13861, y: 29.874264, z: 29.37452}
+        lookAt: {x: -95.41138, y: 1.0003985, z: -31.846125}
+        up: {x: -0.06329096, y: 0.9063044, z: -0.4178595}
+        fov: 35
+        aspectRatio: 0
+        orthoSize: 1
+        isPerspective: 1
+      name: "\u041A\u043E\u0440\u043F\u0443\u0441 \u211612"
+    - camera:
+        position: {x: -72.4373, y: 35.054165, z: -45.377502}
+        lookAt: {x: -128.42163, y: 6.855121, z: -72.54772}
+        up: {x: -0.37132815, y: 0.9108452, z: -0.18021236}
+        fov: 35
+        aspectRatio: 0
+        orthoSize: 1
+        isPerspective: 1
+      name: "\u041A\u043E\u0440\u043F\u0443\u0441 \u211613"
+    - camera:
+        position: {x: -85.39439, y: 32.395653, z: -128.4255}
+        lookAt: {x: -147.74112, y: 7.6162047, z: -115.52143}
+        up: {x: -0.3551682, y: 0.9319076, z: 0.07351018}
+        fov: 35
+        aspectRatio: 0
+        orthoSize: 1
+        isPerspective: 1
+      name: "\u041A\u043E\u0440\u043F\u0443\u0441 \u211620"
+    - camera:
+        position: {x: -117.272865, y: 51.177036, z: -184.31833}
+        lookAt: {x: -119.06988, y: 6.994404, z: -132.23842}
+        up: {x: -0.022301042, y: 0.762745, z: 0.6463147}
+        fov: 35
+        aspectRatio: 0
+        orthoSize: 1
+        isPerspective: 1
+      name: "\u041F\u043E\u043B\u0438\u043A\u043B\u0438\u043D\u0438\u043A\u0430"
+    - camera:
+        position: {x: -198.2182, y: 33.498127, z: -193.34117}
+        lookAt: {x: -163.45164, y: 21.891495, z: -135.68509}
+        up: {x: 0.08772615, y: 0.9854638, z: 0.14548305}
+        fov: 35
+        aspectRatio: 0
+        orthoSize: 1
+        isPerspective: 1
+      name: "\u0425\u0440\u0430\u043C"
+    - camera:
+        position: {x: -109.880905, y: 26.355274, z: -145.1708}
+        lookAt: {x: -81.91635, y: -24.059855, z: -181.83073}
+        up: {x: 0.44754988, y: 0.6748838, z: -0.5867121}
+        fov: 35
+        aspectRatio: 0
+        orthoSize: 1
+        isPerspective: 1
+      name: "\u041A\u043E\u043D\u0444\u0443\u0446\u0438\u0439"
+    - camera:
+        position: {x: -89.15205, y: 34.67224, z: -111.26388}
+        lookAt: {x: -90.983665, y: -1.5056968, z: -169.19016}
+        up: {x: -0.01673546, y: 0.8482881, z: -0.5292704}
+        fov: 35
+        aspectRatio: 0
+        orthoSize: 1
+        isPerspective: 1
+      name: "\u041A\u043E\u0440\u043F\u0443\u0441 \u211620\u0410"
+    - camera:
+        position: {x: 45.644043, y: 42.309036, z: -184.46606}
+        lookAt: {x: -15.935305, y: 12.820177, z: -182.00787}
+        up: {x: -0.43128365, y: 0.9020521, z: 0.01721647}
+        fov: 35
+        aspectRatio: 0
+        orthoSize: 1
+        isPerspective: 1
+      name: "\u041A\u043E\u0440\u043F\u0443\u0441 \u211614"
+    - camera:
+        position: {x: -58.192062, y: 48.784946, z: -132.03557}
+        lookAt: {x: -22.074808, y: 15.940246, z: -179.83118}
+        up: {x: 0.28983548, y: 0.8768596, z: -0.38355258}
+        fov: 35
+        aspectRatio: 0
+        orthoSize: 1
+        isPerspective: 1
+      name: "\u041A\u043E\u0440\u043F\u0443\u0441 \u211616"
+    - camera:
+        position: {x: -121.55275, y: 3.1027012, z: -45.745922}
+        lookAt: {x: -58.994884, y: 5.778245, z: -73.07732}
+        up: {x: -0.035886317, y: 0.9992329, z: 0.015678655}
+        fov: 35
+        aspectRatio: 0
+        orthoSize: 1
+        isPerspective: 1
+      name: "\u0411\u044E\u0441\u0442 \u0418.\u0418.\u0411\u0435\u0446\u043A\u043E\u0433\u043E"
+    - camera:
+        position: {x: -16.177965, y: 6.4050403, z: 67.61307}
+        lookAt: {x: -47.63362, y: -2.9979835, z: 127.5278}
+        up: {x: -0.06397653, y: 0.9904835, z: 0.12185844}
+        fov: 35
+        aspectRatio: 0
+        orthoSize: 1
+        isPerspective: 1
+      name: "\u041C\u0435\u043C\u043E\u0440\u0438\u0430\u043B \"\u0413\u0435\u0440\u043E\u044F\u043C-\u0433\u0435\u0440\u0446\u0435\u043D\u043E\u0432\u0446\u0430\u043C\""
+    - camera:
+        position: {x: -7.2706633, y: 4.5124516, z: 110.30782}
+        lookAt: {x: 60.652565, y: 1.522511, z: 117.02696}
+        up: {x: 0.04355107, y: 0.999042, z: 0.004308186}
+        fov: 35
+        aspectRatio: 0
+        orthoSize: 1
+        isPerspective: 1
+      name: "\u041F\u0430\u043C\u044F\u0442\u043D\u0438\u043A \u041A.\u0414.\u0423\u0448\u0438\u043D\u0441\u043A\u043E\u043C\u0443"
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: 4k_hx
+    100002: 4k_hx 1
+    100004: 4k_hx 2
+    100006: 5k_back
+    100008: 5k_back 1
+    100010: 5k_back 2
+    100012: Bezkoy
+    100014: Clock
+    100016: Column 20k
+    100018: Column 20k 1
+    100020: Column 20k 2
+    100022: Column 20k 3
+    100024: Column 20k 4
+    100026: Column 20k 5
+    100028: Column 20k 6
+    100030: Column 20k 7
+    100032: Column 20k 8
+    100034: Column 20k 9
+    100036: Column 2k_sm
+    100038: Column 2k_sm 1
+    100040: Column 2k_sm 10
+    100042: Column 2k_sm 11
+    100044: Column 2k_sm 2
+    100046: Column 2k_sm 3
+    100048: Column 2k_sm 4
+    100050: Column 2k_sm 5
+    100052: Column 2k_sm 6
+    100054: Column 2k_sm 7
+    100056: Column 2k_sm 8
+    100058: Column 2k_sm 9
+    100060: Column_1k
+    100062: Column_1k 1
+    100064: Column_1k 2
+    100066: Column_1k 3
+    100068: Column_1k 4
+    100070: Column_1k 5
+    100072: Column_2k
+    100074: Column_2k 1
+    100076: Column_2k 2
+    100078: Column_2k 3
+    100080: Column_2k 4
+    100082: Column_2k 5
+    100084: Column_5k
+    100086: Column_5k 1
+    100088: Column_5k 10
+    100090: Column_5k 11
+    100092: Column_5k 12
+    100094: Column_5k 13
+    100096: Column_5k 14
+    100098: Column_5k 15
+    100100: Column_5k 16
+    100102: Column_5k 2
+    100104: Column_5k 3
+    100106: Column_5k 4
+    100108: Column_5k 5
+    100110: Column_5k 6
+    100112: Column_5k 7
+    100114: Column_5k 8
+    100116: Column_5k 9
+    100118: Column_Gate
+    100120: Column_Gate 1
+    100122: Column_Gate 2
+    100124: Column_Gate 3
+    100126: Column_Gate 4
+    100128: Column_Gate 5
+    100130: Column_Gate 6
+    100132: Column_Gate 7
+    100134: Confucian
+    100136: door_10,11k
+    100138: door_10,11k 1
+    100140: door_10,11k 2
+    100142: door_12k
+    100144: Google Earth Snapshot
+    100146: HalfColumn_11,12k
+    100148: HalfColumn_11,12k 1
+    100150: HalfColumn_11,12k 10
+    100152: HalfColumn_11,12k 11
+    100154: HalfColumn_11,12k 12
+    100156: HalfColumn_11,12k 13
+    100158: HalfColumn_11,12k 14
+    100160: HalfColumn_11,12k 15
+    100162: HalfColumn_11,12k 16
+    100164: HalfColumn_11,12k 17
+    100166: HalfColumn_11,12k 18
+    100168: HalfColumn_11,12k 19
+    100170: HalfColumn_11,12k 2
+    100172: HalfColumn_11,12k 20
+    100174: HalfColumn_11,12k 21
+    100176: HalfColumn_11,12k 22
+    100178: HalfColumn_11,12k 23
+    100180: HalfColumn_11,12k 24
+    100182: HalfColumn_11,12k 25
+    100184: HalfColumn_11,12k 26
+    100186: HalfColumn_11,12k 27
+    100188: HalfColumn_11,12k 28
+    100190: HalfColumn_11,12k 29
+    100192: HalfColumn_11,12k 3
+    100194: HalfColumn_11,12k 30
+    100196: HalfColumn_11,12k 31
+    100198: HalfColumn_11,12k 32
+    100200: HalfColumn_11,12k 33
+    100202: HalfColumn_11,12k 34
+    100204: HalfColumn_11,12k 35
+    100206: HalfColumn_11,12k 36
+    100208: HalfColumn_11,12k 37
+    100210: HalfColumn_11,12k 38
+    100212: HalfColumn_11,12k 39
+    100214: HalfColumn_11,12k 4
+    100216: HalfColumn_11,12k 5
+    100218: HalfColumn_11,12k 6
+    100220: HalfColumn_11,12k 7
+    100222: HalfColumn_11,12k 8
+    100224: HalfColumn_11,12k 9
+    100226: //RootNode
+    100228: Image 10
+    100230: Image 11
+    100232: Image 2
+    100234: Image 255
+    100236: Image 257
+    100238: Image 259
+    100240: Image 281
+    100242: Image 283
+    100244: Image 285
+    100246: Image 287
+    100248: Image 289
+    100250: Image 291
+    100252: Image 293
+    100254: Image 295
+    100256: Image 297
+    100258: Image 3
+    100260: Image 4
+    100262: Image 5
+    100264: Image 6
+    100266: Image 7
+    100268: Image 8
+    100270: Image 9
+    100272: lapm
+    100274: lapm 1
+    100276: lapm 2
+    100278: lapm 3
+    100280: lapm 4
+    100282: lapm 5
+    100284: lapm 6
+    100286: lapm 7
+    100288: lapm 8
+    100290: MainGate_up
+    100292: MainGate_up 1
+    100294: minicolumn_2k
+    100296: minicolumn_2k 1
+    100298: minicolumn_2k 10
+    100300: minicolumn_2k 11
+    100302: minicolumn_2k 2
+    100304: minicolumn_2k 3
+    100306: minicolumn_2k 4
+    100308: minicolumn_2k 5
+    100310: minicolumn_2k 6
+    100312: minicolumn_2k 7
+    100314: minicolumn_2k 8
+    100316: minicolumn_2k 9
+    100318: minicolumn_2k_back
+    100320: minicolumn_2k_back 1
+    100322: minicolumn_2k_back 2
+    100324: minicolumn_2k_back 3
+    100326: minicolumn_2k_back 4
+    100328: Ushinsky
+    400000: 4k_hx
+    400002: 4k_hx 1
+    400004: 4k_hx 2
+    400006: 5k_back
+    400008: 5k_back 1
+    400010: 5k_back 2
+    400012: Bezkoy
+    400014: Clock
+    400016: Column 20k
+    400018: Column 20k 1
+    400020: Column 20k 2
+    400022: Column 20k 3
+    400024: Column 20k 4
+    400026: Column 20k 5
+    400028: Column 20k 6
+    400030: Column 20k 7
+    400032: Column 20k 8
+    400034: Column 20k 9
+    400036: Column 2k_sm
+    400038: Column 2k_sm 1
+    400040: Column 2k_sm 10
+    400042: Column 2k_sm 11
+    400044: Column 2k_sm 2
+    400046: Column 2k_sm 3
+    400048: Column 2k_sm 4
+    400050: Column 2k_sm 5
+    400052: Column 2k_sm 6
+    400054: Column 2k_sm 7
+    400056: Column 2k_sm 8
+    400058: Column 2k_sm 9
+    400060: Column_1k
+    400062: Column_1k 1
+    400064: Column_1k 2
+    400066: Column_1k 3
+    400068: Column_1k 4
+    400070: Column_1k 5
+    400072: Column_2k
+    400074: Column_2k 1
+    400076: Column_2k 2
+    400078: Column_2k 3
+    400080: Column_2k 4
+    400082: Column_2k 5
+    400084: Column_5k
+    400086: Column_5k 1
+    400088: Column_5k 10
+    400090: Column_5k 11
+    400092: Column_5k 12
+    400094: Column_5k 13
+    400096: Column_5k 14
+    400098: Column_5k 15
+    400100: Column_5k 16
+    400102: Column_5k 2
+    400104: Column_5k 3
+    400106: Column_5k 4
+    400108: Column_5k 5
+    400110: Column_5k 6
+    400112: Column_5k 7
+    400114: Column_5k 8
+    400116: Column_5k 9
+    400118: Column_Gate
+    400120: Column_Gate 1
+    400122: Column_Gate 2
+    400124: Column_Gate 3
+    400126: Column_Gate 4
+    400128: Column_Gate 5
+    400130: Column_Gate 6
+    400132: Column_Gate 7
+    400134: Confucian
+    400136: door_10,11k
+    400138: door_10,11k 1
+    400140: door_10,11k 2
+    400142: door_12k
+    400144: Google Earth Snapshot
+    400146: HalfColumn_11,12k
+    400148: HalfColumn_11,12k 1
+    400150: HalfColumn_11,12k 10
+    400152: HalfColumn_11,12k 11
+    400154: HalfColumn_11,12k 12
+    400156: HalfColumn_11,12k 13
+    400158: HalfColumn_11,12k 14
+    400160: HalfColumn_11,12k 15
+    400162: HalfColumn_11,12k 16
+    400164: HalfColumn_11,12k 17
+    400166: HalfColumn_11,12k 18
+    400168: HalfColumn_11,12k 19
+    400170: HalfColumn_11,12k 2
+    400172: HalfColumn_11,12k 20
+    400174: HalfColumn_11,12k 21
+    400176: HalfColumn_11,12k 22
+    400178: HalfColumn_11,12k 23
+    400180: HalfColumn_11,12k 24
+    400182: HalfColumn_11,12k 25
+    400184: HalfColumn_11,12k 26
+    400186: HalfColumn_11,12k 27
+    400188: HalfColumn_11,12k 28
+    400190: HalfColumn_11,12k 29
+    400192: HalfColumn_11,12k 3
+    400194: HalfColumn_11,12k 30
+    400196: HalfColumn_11,12k 31
+    400198: HalfColumn_11,12k 32
+    400200: HalfColumn_11,12k 33
+    400202: HalfColumn_11,12k 34
+    400204: HalfColumn_11,12k 35
+    400206: HalfColumn_11,12k 36
+    400208: HalfColumn_11,12k 37
+    400210: HalfColumn_11,12k 38
+    400212: HalfColumn_11,12k 39
+    400214: HalfColumn_11,12k 4
+    400216: HalfColumn_11,12k 5
+    400218: HalfColumn_11,12k 6
+    400220: HalfColumn_11,12k 7
+    400222: HalfColumn_11,12k 8
+    400224: HalfColumn_11,12k 9
+    400226: //RootNode
+    400228: Image 10
+    400230: Image 11
+    400232: Image 2
+    400234: Image 255
+    400236: Image 257
+    400238: Image 259
+    400240: Image 281
+    400242: Image 283
+    400244: Image 285
+    400246: Image 287
+    400248: Image 289
+    400250: Image 291
+    400252: Image 293
+    400254: Image 295
+    400256: Image 297
+    400258: Image 3
+    400260: Image 4
+    400262: Image 5
+    400264: Image 6
+    400266: Image 7
+    400268: Image 8
+    400270: Image 9
+    400272: lapm
+    400274: lapm 1
+    400276: lapm 2
+    400278: lapm 3
+    400280: lapm 4
+    400282: lapm 5
+    400284: lapm 6
+    400286: lapm 7
+    400288: lapm 8
+    400290: MainGate_up
+    400292: MainGate_up 1
+    400294: minicolumn_2k
+    400296: minicolumn_2k 1
+    400298: minicolumn_2k 10
+    400300: minicolumn_2k 11
+    400302: minicolumn_2k 2
+    400304: minicolumn_2k 3
+    400306: minicolumn_2k 4
+    400308: minicolumn_2k 5
+    400310: minicolumn_2k 6
+    400312: minicolumn_2k 7
+    400314: minicolumn_2k 8
+    400316: minicolumn_2k 9
+    400318: minicolumn_2k_back
+    400320: minicolumn_2k_back 1
+    400322: minicolumn_2k_back 2
+    400324: minicolumn_2k_back 3
+    400326: minicolumn_2k_back 4
+    400328: Ushinsky
+    2100000: _defaultMat
+    2100002: roof_red_1
+    2100004: 6k_bordur1
+    2100006: 6k_fasad_up
+    2100008: yellow1
+    2100010: roof_silver_1
+    2100012: 10korp_up_window
+    2100014: '[Metal_Panel]'
+    2100016: '[Fencing_Metal_Straight]'
+    2100018: Clock
+    2100020: Clock_side
+    2100022: 10k_bordur
+    2100024: '[0053_Ivory]'
+    2100026: 10k_bordur_down
+    2100028: 14k_bordur
+    2100030: 6k_fasad_down1
+    2100032: 10korp_back_side_tall
+    2100034: 5k_back_simple
+    2100036: 5k_back_details
+    2100038: 5k_back_front
+    2100040: 5k_front_15may
+    2100042: 5k_front_mid-column
+    2100044: 5k_mid+halfcolumn
+    2100046: roof_green
+    2100048: 5k_front_left
+    2100050: 5k_front_right
+    2100052: 4k_front_left1
+    2100054: grey2
+    2100056: 4k_front_left2
+    2100058: 4k_front
+    2100060: 4k_back
+    2100062: 5k_back_simple_left_bigwinds
+    2100064: back_component_front
+    2100066: 1k_side1
+    2100068: 1k_side2
+    2100070: 1k_front_center
+    2100072: 2k_front_side
+    2100074: 2k_front_side-mid
+    2100076: 10k_front-side
+    2100078: yellow_5k
+    2100080: 4k_side_sm
+    2100082: back_up
+    2100084: 5k_broun
+    2100086: 4k_back_up1
+    2100088: '[Color_000]'
+    2100090: 5k_front_lib
+    2100092: balcon
+    2100094: 5k_back_right
+    2100096: yellow_gate
+    2100098: front
+    2100100: windows
+    2100102: side
+    2100104: '[0052_FloralWhite]'
+    2100106: Gates
+    2100108: 4k_front_yellow
+    2100110: 5k_front_fizcult
+    2100112: 4k_side_bg
+    2100114: yell_4k
+    2100116: 4k_front_yellow_2
+    2100118: grey
+    2100120: 4k_back_yell_high
+    2100122: 3k_front_2win
+    2100124: 3k_bordur
+    2100126: 3k_up
+    2100128: 2k_back_relief
+    2100130: 3k_front_1win
+    2100132: 1k_fron_side_bordur
+    2100134: 2k_front_mid
+    2100136: 2k_blue-green
+    2100138: 2k_front_mid2
+    2100140: beton
+    2100142: 2k_lamp
+    2100144: 2k_front_up-win
+    2100146: 2k_back_up-win
+    2100148: 2k_back_side
+    2100150: 2k_back_front
+    2100152: 2k_back_up-2
+    2100154: 1k_up_2
+    2100156: 1k_fron_centr_bordur
+    2100158: 1k_front_side
+    2100160: 2k_front_up-2
+    2100162: 1k_side3
+    2100164: 1k_front_bordur
+    2100166: 1k_up_left
+    2100168: 1k_up_mid
+    2100170: 1k_side4
+    2100172: 9,5korp_wall
+    2100174: 9k_front
+    2100176: 9k_side
+    2100178: brickwall
+    2100180: 10k_back_side_low1
+    2100182: 2k_back_side-center
+    2100184: 2k_back_side2
+    2100186: 10k_front-side-mid
+    2100188: 11k_square_sm
+    2100190: 11k_square_wide
+    2100192: 11k_bordur
+    2100194: 11k_column
+    2100196: 13k_front
+    2100198: 13k_back-no_line
+    2100200: 13k_back-line
+    2100202: 20k_out_lr
+    2100204: 20k_in_r
+    2100206: 20k_out_mid
+    2100208: 20k_in_l
+    2100210: 20k_up_in
+    2100212: 20k_up_out1
+    2100214: 20k_up_out
+    2100216: 20k_20a
+    2100218: 2k_doors
+    2100220: '[Wood_Cherry_Original]'
+    2100222: 14k_side1
+    2100224: 14k_mid2
+    2100226: 14k_side2
+    2100228: 20k_xram_door
+    2100230: 14k_up
+    2100232: 14k_mid1
+    2100234: '[Tile_Travertine_2inch]'
+    2100236: heroes_front
+    2100238: heroes_f-2
+    2100240: heroes_back
+    2100242: '[Concrete_Aggregate_Smoke]'
+    2100244: Ush_bordur
+    2100246: Granit
+    2100248: 10k_front-side_empty
+    2100250: doors_left
+    2100252: 21k_wall1
+    2100254: 21k_wall_up
+    2100256: 16k_wall
+    2100258: Material 129
+    2100260: Material 130
+    2100262: Material 131
+    2100264: Material 132
+    2100266: Material 133
+    2100268: Material 134
+    2100270: Material 135
+    2100272: Material 136
+    2100274: Material 137
+    2100276: Material 138
+    2100278: Google Earth Snapshot1
+    2100280: up_up
+    2100282: column_high
+    2100284: 20k_Column
+    2100286: Material 143
+    2100288: Material 144
+    2100290: Material 145
+    2100292: 10k_wind_gold
+    2100294: 10k_door_gold
+    2100296: Material 148
+    2300000: 4k_hx
+    2300002: 4k_hx 1
+    2300004: 4k_hx 2
+    2300006: 5k_back
+    2300008: 5k_back 1
+    2300010: 5k_back 2
+    2300012: Clock
+    2300014: Column 20k
+    2300016: Column 20k 1
+    2300018: Column 20k 2
+    2300020: Column 20k 3
+    2300022: Column 20k 4
+    2300024: Column 20k 5
+    2300026: Column 20k 6
+    2300028: Column 20k 7
+    2300030: Column 20k 8
+    2300032: Column 20k 9
+    2300034: Column 2k_sm
+    2300036: Column 2k_sm 1
+    2300038: Column 2k_sm 10
+    2300040: Column 2k_sm 11
+    2300042: Column 2k_sm 2
+    2300044: Column 2k_sm 3
+    2300046: Column 2k_sm 4
+    2300048: Column 2k_sm 5
+    2300050: Column 2k_sm 6
+    2300052: Column 2k_sm 7
+    2300054: Column 2k_sm 8
+    2300056: Column 2k_sm 9
+    2300058: Column_1k
+    2300060: Column_1k 1
+    2300062: Column_1k 2
+    2300064: Column_1k 3
+    2300066: Column_1k 4
+    2300068: Column_1k 5
+    2300070: Column_2k
+    2300072: Column_2k 1
+    2300074: Column_2k 2
+    2300076: Column_2k 3
+    2300078: Column_2k 4
+    2300080: Column_2k 5
+    2300082: Column_5k
+    2300084: Column_5k 1
+    2300086: Column_5k 10
+    2300088: Column_5k 11
+    2300090: Column_5k 12
+    2300092: Column_5k 13
+    2300094: Column_5k 14
+    2300096: Column_5k 15
+    2300098: Column_5k 16
+    2300100: Column_5k 2
+    2300102: Column_5k 3
+    2300104: Column_5k 4
+    2300106: Column_5k 5
+    2300108: Column_5k 6
+    2300110: Column_5k 7
+    2300112: Column_5k 8
+    2300114: Column_5k 9
+    2300116: Column_Gate
+    2300118: Column_Gate 1
+    2300120: Column_Gate 2
+    2300122: Column_Gate 3
+    2300124: Column_Gate 4
+    2300126: Column_Gate 5
+    2300128: Column_Gate 6
+    2300130: Column_Gate 7
+    2300132: door_10,11k
+    2300134: door_10,11k 1
+    2300136: door_10,11k 2
+    2300138: door_12k
+    2300140: Google Earth Snapshot
+    2300142: HalfColumn_11,12k
+    2300144: HalfColumn_11,12k 1
+    2300146: HalfColumn_11,12k 10
+    2300148: HalfColumn_11,12k 11
+    2300150: HalfColumn_11,12k 12
+    2300152: HalfColumn_11,12k 13
+    2300154: HalfColumn_11,12k 14
+    2300156: HalfColumn_11,12k 15
+    2300158: HalfColumn_11,12k 16
+    2300160: HalfColumn_11,12k 17
+    2300162: HalfColumn_11,12k 18
+    2300164: HalfColumn_11,12k 19
+    2300166: HalfColumn_11,12k 2
+    2300168: HalfColumn_11,12k 20
+    2300170: HalfColumn_11,12k 21
+    2300172: HalfColumn_11,12k 22
+    2300174: HalfColumn_11,12k 23
+    2300176: HalfColumn_11,12k 24
+    2300178: HalfColumn_11,12k 25
+    2300180: HalfColumn_11,12k 26
+    2300182: HalfColumn_11,12k 27
+    2300184: HalfColumn_11,12k 28
+    2300186: HalfColumn_11,12k 29
+    2300188: HalfColumn_11,12k 3
+    2300190: HalfColumn_11,12k 30
+    2300192: HalfColumn_11,12k 31
+    2300194: HalfColumn_11,12k 32
+    2300196: HalfColumn_11,12k 33
+    2300198: HalfColumn_11,12k 34
+    2300200: HalfColumn_11,12k 35
+    2300202: HalfColumn_11,12k 36
+    2300204: HalfColumn_11,12k 37
+    2300206: HalfColumn_11,12k 38
+    2300208: HalfColumn_11,12k 39
+    2300210: HalfColumn_11,12k 4
+    2300212: HalfColumn_11,12k 5
+    2300214: HalfColumn_11,12k 6
+    2300216: HalfColumn_11,12k 7
+    2300218: HalfColumn_11,12k 8
+    2300220: HalfColumn_11,12k 9
+    2300222: //RootNode
+    2300224: Image 10
+    2300226: Image 11
+    2300228: Image 2
+    2300230: Image 255
+    2300232: Image 257
+    2300234: Image 259
+    2300236: Image 281
+    2300238: Image 283
+    2300240: Image 285
+    2300242: Image 287
+    2300244: Image 289
+    2300246: Image 291
+    2300248: Image 293
+    2300250: Image 295
+    2300252: Image 297
+    2300254: Image 3
+    2300256: Image 4
+    2300258: Image 5
+    2300260: Image 6
+    2300262: Image 7
+    2300264: Image 8
+    2300266: Image 9
+    2300268: MainGate_up
+    2300270: MainGate_up 1
+    2300272: minicolumn_2k
+    2300274: minicolumn_2k 1
+    2300276: minicolumn_2k 10
+    2300278: minicolumn_2k 11
+    2300280: minicolumn_2k 2
+    2300282: minicolumn_2k 3
+    2300284: minicolumn_2k 4
+    2300286: minicolumn_2k 5
+    2300288: minicolumn_2k 6
+    2300290: minicolumn_2k 7
+    2300292: minicolumn_2k 8
+    2300294: minicolumn_2k 9
+    2300296: minicolumn_2k_back
+    2300298: minicolumn_2k_back 1
+    2300300: minicolumn_2k_back 2
+    2300302: minicolumn_2k_back 3
+    2300304: minicolumn_2k_back 4
+    3300000: 4k_hx
+    3300002: 4k_hx 1
+    3300004: 4k_hx 2
+    3300006: 5k_back
+    3300008: 5k_back 1
+    3300010: 5k_back 2
+    3300012: Clock
+    3300014: Column 20k
+    3300016: Column 20k 1
+    3300018: Column 20k 2
+    3300020: Column 20k 3
+    3300022: Column 20k 4
+    3300024: Column 20k 5
+    3300026: Column 20k 6
+    3300028: Column 20k 7
+    3300030: Column 20k 8
+    3300032: Column 20k 9
+    3300034: Column 2k_sm
+    3300036: Column 2k_sm 1
+    3300038: Column 2k_sm 10
+    3300040: Column 2k_sm 11
+    3300042: Column 2k_sm 2
+    3300044: Column 2k_sm 3
+    3300046: Column 2k_sm 4
+    3300048: Column 2k_sm 5
+    3300050: Column 2k_sm 6
+    3300052: Column 2k_sm 7
+    3300054: Column 2k_sm 8
+    3300056: Column 2k_sm 9
+    3300058: Column_1k
+    3300060: Column_1k 1
+    3300062: Column_1k 2
+    3300064: Column_1k 3
+    3300066: Column_1k 4
+    3300068: Column_1k 5
+    3300070: Column_2k
+    3300072: Column_2k 1
+    3300074: Column_2k 2
+    3300076: Column_2k 3
+    3300078: Column_2k 4
+    3300080: Column_2k 5
+    3300082: Column_5k
+    3300084: Column_5k 1
+    3300086: Column_5k 10
+    3300088: Column_5k 11
+    3300090: Column_5k 12
+    3300092: Column_5k 13
+    3300094: Column_5k 14
+    3300096: Column_5k 15
+    3300098: Column_5k 16
+    3300100: Column_5k 2
+    3300102: Column_5k 3
+    3300104: Column_5k 4
+    3300106: Column_5k 5
+    3300108: Column_5k 6
+    3300110: Column_5k 7
+    3300112: Column_5k 8
+    3300114: Column_5k 9
+    3300116: Column_Gate
+    3300118: Column_Gate 1
+    3300120: Column_Gate 2
+    3300122: Column_Gate 3
+    3300124: Column_Gate 4
+    3300126: Column_Gate 5
+    3300128: Column_Gate 6
+    3300130: Column_Gate 7
+    3300132: door_10,11k
+    3300134: door_10,11k 1
+    3300136: door_10,11k 2
+    3300138: door_12k
+    3300140: Google Earth Snapshot
+    3300142: HalfColumn_11,12k
+    3300144: HalfColumn_11,12k 1
+    3300146: HalfColumn_11,12k 10
+    3300148: HalfColumn_11,12k 11
+    3300150: HalfColumn_11,12k 12
+    3300152: HalfColumn_11,12k 13
+    3300154: HalfColumn_11,12k 14
+    3300156: HalfColumn_11,12k 15
+    3300158: HalfColumn_11,12k 16
+    3300160: HalfColumn_11,12k 17
+    3300162: HalfColumn_11,12k 18
+    3300164: HalfColumn_11,12k 19
+    3300166: HalfColumn_11,12k 2
+    3300168: HalfColumn_11,12k 20
+    3300170: HalfColumn_11,12k 21
+    3300172: HalfColumn_11,12k 22
+    3300174: HalfColumn_11,12k 23
+    3300176: HalfColumn_11,12k 24
+    3300178: HalfColumn_11,12k 25
+    3300180: HalfColumn_11,12k 26
+    3300182: HalfColumn_11,12k 27
+    3300184: HalfColumn_11,12k 28
+    3300186: HalfColumn_11,12k 29
+    3300188: HalfColumn_11,12k 3
+    3300190: HalfColumn_11,12k 30
+    3300192: HalfColumn_11,12k 31
+    3300194: HalfColumn_11,12k 32
+    3300196: HalfColumn_11,12k 33
+    3300198: HalfColumn_11,12k 34
+    3300200: HalfColumn_11,12k 35
+    3300202: HalfColumn_11,12k 36
+    3300204: HalfColumn_11,12k 37
+    3300206: HalfColumn_11,12k 38
+    3300208: HalfColumn_11,12k 39
+    3300210: HalfColumn_11,12k 4
+    3300212: HalfColumn_11,12k 5
+    3300214: HalfColumn_11,12k 6
+    3300216: HalfColumn_11,12k 7
+    3300218: HalfColumn_11,12k 8
+    3300220: HalfColumn_11,12k 9
+    3300222: //RootNode
+    3300224: Image 10
+    3300226: Image 11
+    3300228: Image 2
+    3300230: Image 255
+    3300232: Image 257
+    3300234: Image 259
+    3300236: Image 281
+    3300238: Image 283
+    3300240: Image 285
+    3300242: Image 287
+    3300244: Image 289
+    3300246: Image 291
+    3300248: Image 293
+    3300250: Image 295
+    3300252: Image 297
+    3300254: Image 3
+    3300256: Image 4
+    3300258: Image 5
+    3300260: Image 6
+    3300262: Image 7
+    3300264: Image 8
+    3300266: Image 9
+    3300268: MainGate_up
+    3300270: MainGate_up 1
+    3300272: minicolumn_2k
+    3300274: minicolumn_2k 1
+    3300276: minicolumn_2k 10
+    3300278: minicolumn_2k 11
+    3300280: minicolumn_2k 2
+    3300282: minicolumn_2k 3
+    3300284: minicolumn_2k 4
+    3300286: minicolumn_2k 5
+    3300288: minicolumn_2k 6
+    3300290: minicolumn_2k 7
+    3300292: minicolumn_2k 8
+    3300294: minicolumn_2k 9
+    3300296: minicolumn_2k_back
+    3300298: minicolumn_2k_back 1
+    3300300: minicolumn_2k_back 2
+    3300302: minicolumn_2k_back 3
+    3300304: minicolumn_2k_back 4
+    4300000: Mesh herzen-3d_earth
+    4300002: Mesh herzen-3d_earth
+    4300004: Mesh herzen-3d_earth
+    4300006: Mesh herzen-3d_earth
+    4300008: Mesh herzen-3d_earth
+    4300010: Mesh herzen-3d_earth
+    4300012: Mesh herzen-3d_earth
+    4300014: Mesh herzen-3d_earth
+    4300016: Mesh herzen-3d_earth
+    4300018: Mesh herzen-3d_earth
+    4300020: Mesh herzen-3d_earth
+    4300022: Mesh Google Earth Snapshot
+    4300024: Mesh Column_5k
+    4300026: Mesh 4k_hx
+    4300028: Mesh 5k_back
+    4300030: Mesh MainGate_up
+    4300032: Mesh Column_Gate
+    4300034: Mesh Clock
+    4300036: Mesh Column_2k
+    4300038: Mesh Column 2k_sm
+    4300040: Mesh Column 2k_sm
+    4300042: Mesh minicolumn_2k
+    4300044: Mesh Column_1k
+    4300046: Mesh minicolumn_2k_back
+    4300048: Mesh HalfColumn_11,12k
+    4300050: Mesh Column 20k
+    4300052: Mesh Ushinsky
+    4300054: Mesh Bezkoy
+    4300056: Mesh Confucian
+    4300058: Mesh door_10,11k
+    4300060: Mesh door_12k
+    4300062: Mesh lapm
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 2
+    materialSearch: 0
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 0.0254
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 0
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

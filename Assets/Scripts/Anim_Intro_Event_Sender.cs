@@ -7,9 +7,14 @@ public class Anim_Intro_Event_Sender : MonoBehaviour {
 
 	public UnityARGeneratePlane script;
 
+	public CanvasController ccontroller;
+
 
 	void show_findSurface_scene(){
-		Debug.Log("LGOGOGOGOG");
 		script.initStart();
+		
+	}
+	void show_about_map(){
+		ccontroller.show_about_map_text();
 	}
 }

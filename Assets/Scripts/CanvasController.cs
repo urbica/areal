@@ -9,6 +9,8 @@ public class CanvasController : MonoBehaviour {
 
 	private AnimationComponent component;
 
+	public UnityARGeneratePlane generatePlaneScript;
+
 	public Button ok_intro;
 //	public Text intro;
 
@@ -78,10 +80,12 @@ public class CanvasController : MonoBehaviour {
 	}
 
 	public void hide_about_map_text(){
-		about_map_Panel.SetActive (false);
+		component.playAnimation(about_map_Panel,"PutMapHelp_Exit_Anim");
+//		about_map_Panel.SetActive (false);
 	}
 	public void show_about_map_text(){
 		about_map_Panel.SetActive (true);
+		component.playAnimation(about_map_Panel,"PutMapHelp_Anim");
 	}
 
 	public void show_about_pins(){
@@ -110,6 +114,8 @@ public class CanvasController : MonoBehaviour {
 	}
 	public void show_reload_btn(){
 		reload_Button.transform.localScale = new Vector3 (1f,1f,1f);
+//		component.playButtonAnimation(reload_Button,"PutMapHelp_Anim");
+		
 	}
 
 	public void show_about_Isaac_info(){
@@ -136,13 +142,16 @@ public class CanvasController : MonoBehaviour {
 		component.playAnimation(find_surface_Panel,"findPlane_AnimA");
 	}
 	public void hide_find_surface_info(){
-		find_surface_Panel.SetActive(false);
+		component.playAnimation(find_surface_Panel,"findPlane_Exit_Anim");
+//		find_surface_Panel.SetActive(false);
 	}
 
 
 
 	private void close_intro(){
-		component.playAnimation(intro_Panel,"intro_anim_transit");
+		Debug.Log("Introooo gooo");
+	//	component.playAnimation(this.gameObject,"Intro_AnimC");
+		component.playCanvasAnimation(GetComponent<Animator>(),"Intro_AnimC");
 		ok_intro.transform.localScale = new Vector3 (0, 0, 0);
 //		intro_Panel.SetActive(false);
 
@@ -155,14 +164,18 @@ public class CanvasController : MonoBehaviour {
     private void initUI(){
 
         intro_Panel.SetActive(true);
-        about_map_Panel.SetActive(true);
+//        about_map_Panel.SetActive(true);
         about_pins_Panel.SetActive(true);
         about_model_Panel.SetActive(true);
         about_isaac_Panel.SetActive(true);
-		find_surface_Panel.SetActive(true);
+//		find_surface_Panel.SetActive(true);
 		
     }
 
 	public AnimationComponent getAnimScript(){return component;}
+
+	void startGeneratePlane(){
+		generatePlaneScript.initStart();
+	}
 		
 }

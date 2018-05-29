@@ -40,13 +40,7 @@ namespace UnityEngine.XR.iOS
 				arpag.gameObject = go;
 				planeAnchorMap.Add (arPlaneAnchor.identifier, arpag);
 
-
 				//modified
-//				hitObj.SetActive (true);
-//				scriptik.enabled = true;
-		
-
-				Debug.Log ("arrku addAnchor");
 				PlaneAppearDetector detector = generatedPlane;
 				detector.planeDetect ();
 				detector = hitScript;
@@ -55,9 +49,6 @@ namespace UnityEngine.XR.iOS
 				switcher.turn_on_Detector (false);
 				shouldCreatePlane = false;
 				
-
-
-//				hitTest.enabled = true;
 //			}
 
 		}

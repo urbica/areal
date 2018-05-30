@@ -62,7 +62,7 @@ public class clicker : MonoBehaviour {
 		map.transform.parent.gameObject.GetComponent<LeanScale>().enabled = value;
 		SpawnOnMap script = map.GetComponent<SpawnOnMap> ();
 		if (!value)
-			script.setPinsScale (0);			
+			script.setPinsScale (0);	
 		else
 			script.setPinsScale (0.02f);
 	}

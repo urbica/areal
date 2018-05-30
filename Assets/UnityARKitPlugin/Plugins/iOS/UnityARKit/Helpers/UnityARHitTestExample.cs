@@ -38,10 +38,11 @@ namespace UnityEngine.XR.iOS
 						map = m_HitTransform.GetChild (i);
 						if (map.name == "Map") {
 							spawnScript = map.GetComponent<SpawnOnMap> ();
-							map.GetComponent<Animator> ().Play ("MapAnimationScalerQQ");
+//							map.GetComponent<Animator> ().Play ("MapAnimationScalerQQ");
 //							map.GetComponent<Animator> ().Play ("none");
-//							showPins();
+							showPins();
 							switchCloud(false);
+							m_HitTransform.gameObject.GetComponent<LeanScale>().enabled = true;
 
 						}
 					}

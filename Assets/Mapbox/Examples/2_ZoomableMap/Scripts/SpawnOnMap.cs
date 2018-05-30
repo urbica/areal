@@ -28,19 +28,20 @@
 		public clicker clicker;
 
 		private bool pinsShown = false;
+		private List<string>collidersID;
 
 		void Start()
 		{
 			
 			_locations = new Vector2d[_locationStrings.Length];
 			_spawnedObjects = new List<GameObject>();
-			for (int i = 0; i < _locationStrings.Length; i++)
+			for (int i = 0; i < _locationStrings.Length - 1; i++)
 			{
 				var locationString = _locationStrings[i];
 				_locations[i] = Conversions.StringToLatLon(locationString);
 				var instance = Instantiate(_markerPrefab);
 				instance.transform.localPosition = _map.GeoToWorldPosition(_locations[i], true);
-				instance.transform.localScale = new Vector3(_spawnScale, _spawnScale, _spawnScale);
+				instance.transform.localScale = new Vector3(0, 0, 0);
 				_spawnedObjects.Add(instance);
 				_markerPrefab.transform.localScale = new Vector3 (0, 0, 0);
 
@@ -55,8 +56,8 @@
 
 				if (Physics.Raycast (raycast, out raycastHit)) {
 					int touchs = Input.touchCount;
-					if (raycastHit.collider.name == "mcollider" && touchs != 2) {
-						clicker.OnClickPin (_spawnedObjects);
+					if (collidersID.Contains(raycastHit.collider.name) && touchs < 2) {
+						clicker.OnClickPin (_spawnedObjects,raycastHit.collider.name);
 					}
 				}
 			}
@@ -66,12 +67,13 @@
 				for (int i = 0; i < count; i++) {
 					var spawnedObject = _spawnedObjects [i];
 					var location = _locations [i];
+					Debug.Log("Pinstouched:  " + i);
 
 					spawnedObject.transform.localPosition = _map.GeoToWorldPosition (location, true);
 					float _x = spawnedObject.transform.position.x;
 					float _z = spawnedObject.transform.position.z;
 					spawnedObject.transform.localScale = new Vector3 (_spawnScale, _spawnScale, _spawnScale);
-					spawnedObject.transform.localPosition = new Vector3 (_x, _map.transform.position.y, _z);
+					spawnedObject.transform.localPosition = new Vector3 (_x, _map.transform.position.y + 0.01f, _z);
 				}
 				if (_spawnScale == 0) {
 					pinsShown = false;
@@ -84,14 +86,17 @@
 		public void showPinsOnMap(){
 			int count = _spawnedObjects.Count;
 			switchPins(true);
+			collidersID = new List<string>{};
 			for (int i = 0; i < count; i++)
 			{
 				var spawnedObject = _spawnedObjects [i];
 
+				spawnedObject.transform.localScale = new Vector3(0,0,0);
 				var boxCollider = spawnedObject.AddComponent<BoxCollider> ();
 				boxCollider.transform.localPosition = spawnedObject.transform.localPosition;
 				boxCollider.transform.localScale += new Vector3 (0.1f, 0.1f, 0.1f);
-				boxCollider.name = "mcollider";
+				boxCollider.name = i.ToString();
+				collidersID.Add(boxCollider.name);
 
 				pinsShown = true;
 			}

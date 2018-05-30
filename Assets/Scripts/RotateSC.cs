@@ -33,11 +33,11 @@ public class RotateSC : MonoBehaviour {
 				currentSwipe.Normalize ();
 
 				if (currentSwipe.x < 0 && currentSwipe.y > -0.5f && currentSwipe.y < 0.5f) {
-					obj.transform.Rotate (new Vector3 (0,resultSpeed,0));
+					transform.Rotate (new Vector3 (0,resultSpeed,0));
 				}
 				//swipe right
 				if (currentSwipe.x > 0 && currentSwipe.y > -0.5f && currentSwipe.y < 0.5f) {
-					obj.transform.Rotate (new Vector3 (0,-resultSpeed,0));
+					transform.Rotate (new Vector3 (0,-resultSpeed,0));
 				}
 			}
 		}

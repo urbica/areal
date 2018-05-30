@@ -31,16 +31,16 @@ namespace UnityEngine.XR.iOS
                 foreach (var hitResult in hitResults) {
                     m_HitTransform.position = UnityARMatrixOps.GetPosition (hitResult.worldTransform);
                     m_HitTransform.rotation = UnityARMatrixOps.GetRotation (hitResult.worldTransform);
-					m_HitTransform.localScale = new Vector3 (0.1f, 0.1f, 0.1f);
+					m_HitTransform.localScale = new Vector3 (0.08f, 0.08f, 0.08f);
 
 					Transform map;
 					for (int i = 0; i < m_HitTransform.childCount; i++) {
 						map = m_HitTransform.GetChild (i);
 						if (map.name == "Map") {
 							spawnScript = map.GetComponent<SpawnOnMap> ();
-	//						map.GetComponent<Animator> ().Play ("MapAnimationScalerQQ");
-	//						map.GetComponent<Animator> ().Play ("none");
-							showPins();
+							map.GetComponent<Animator> ().Play ("MapAnimationScalerQQ");
+//							map.GetComponent<Animator> ().Play ("none");
+//							showPins();
 							switchCloud(false);
 
 						}
@@ -122,9 +122,6 @@ namespace UnityEngine.XR.iOS
 			m_HitTransform.localScale = new Vector3 (0, 0, 0);
 			for (int i = 0; i < m_HitTransform.childCount; i++) {
 				Transform child = m_HitTransform.GetChild (i);
-				if (child.name == "Isaaс") {
-					child.gameObject.SetActive (false);
-				}
 				if (child.name == "Map") {
 					child.gameObject.SetActive (true);
 				}

@@ -18,8 +18,6 @@ public class UnityARCameraManager : MonoBehaviour,PlaneDetectorSwitcher {
 	public bool enableAutoFocus = true;
 	private bool sessionStarted = false;
 
-	public CanvasController ccontroller;
-
 	// Use this for initialization
 	void Start () {
 

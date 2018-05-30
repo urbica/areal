@@ -80,12 +80,12 @@ public class CanvasController : MonoBehaviour {
 	}
 
 	public void hide_about_map_text(){
-		component.playAnimation(about_map_Panel,"PutMapHelp_Exit_Anim");
-//		about_map_Panel.SetActive (false);
+//		component.playAnimation(about_map_Panel,"PutMapHelp_Exit_Anim");
+		about_map_Panel.SetActive (false);
 	}
 	public void show_about_map_text(){
 		about_map_Panel.SetActive (true);
-		component.playAnimation(about_map_Panel,"PutMapHelp_Anim");
+//		component.playAnimation(about_map_Panel,"PutMapHelp_Anim");
 	}
 
 	public void show_about_pins(){
@@ -139,21 +139,20 @@ public class CanvasController : MonoBehaviour {
 	}
 	public void show_find_surface_info(){
 		find_surface_Panel.SetActive(true);
-		component.playAnimation(find_surface_Panel,"findPlane_AnimA");
+//		component.playAnimation(find_surface_Panel,"findPlane_AnimA");
 	}
 	public void hide_find_surface_info(){
-		component.playAnimation(find_surface_Panel,"findPlane_Exit_Anim");
-//		find_surface_Panel.SetActive(false);
+//		component.playAnimation(find_surface_Panel,"findPlane_Exit_Anim");
+		find_surface_Panel.SetActive(false);
 	}
 
 
 
 	private void close_intro(){
-		Debug.Log("Introooo gooo");
 	//	component.playAnimation(this.gameObject,"Intro_AnimC");
-		component.playCanvasAnimation(GetComponent<Animator>(),"Intro_AnimC");
+//		component.playCanvasAnimation(GetComponent<Animator>(),"Intro_AnimC");
 		ok_intro.transform.localScale = new Vector3 (0, 0, 0);
-//		intro_Panel.SetActive(false);
+		intro_Panel.SetActive(false);
 
 	}
 	private void show_intro(){

@@ -16,6 +16,8 @@ public class clicker : MonoBehaviour {
 
 	public RotateSC rotateScript;
 
+	private List<GameObject>pinsList;
+
 
 	public GameObject modelsCollection;
 	private List<GameObject>modelList;
@@ -36,18 +38,20 @@ public class clicker : MonoBehaviour {
 
 	void TaskOnClick()
 	{
-		map.SetActive(true);
-		switchPins (true);
+		SpawnOnMap script = map.GetComponent<SpawnOnMap> ();
+		script.switchPins(true);
+		
+		setMapActive(true);
+		destroyCurrentModel();
 
-		currentModel.transform.localScale = new Vector3 (0,0,0);
 		ccontroller.hide_back_Button ();
 		ccontroller.hide_info_btn ();
+
 	}
 
 	public void OnClickPin(List<GameObject> list,string id){
-		switchPins (false);
-
-		map.SetActive (false);
+		pinsList = list;
+		setMapActive(false);
 		currentModel = Instantiate(modelsCollection.transform.GetChild(Convert.ToInt32(id)).gameObject);
 		
 		currentModel.transform.position = map.transform.position;
@@ -58,16 +62,12 @@ public class clicker : MonoBehaviour {
 		ccontroller.hide_about_pins ();
 	}
 
-	private void switchPins(bool value){
-		map.transform.parent.gameObject.GetComponent<LeanScale>().enabled = value;
-		SpawnOnMap script = map.GetComponent<SpawnOnMap> ();
-		if (!value)
-			script.setPinsScale (0);	
-		else
-			script.setPinsScale (0.02f);
-	}
-
 	public void destroyCurrentModel(){
 		Destroy(currentModel);
+	}
+
+	private void setMapActive(bool value){
+		map.SetActive (value);
+		map.transform.parent.gameObject.GetComponent<LeanScale>().enabled = value;
 	}
 }

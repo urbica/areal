@@ -37,10 +37,11 @@ namespace UnityEngine.XR.iOS
 					for (int i = 0; i < m_HitTransform.childCount; i++) {
 						map = m_HitTransform.GetChild (i);
 						if (map.name == "Map") {
-							spawnScript = map.GetComponent<SpawnOnMap> ();
+							
 //							map.GetComponent<Animator> ().Play ("MapAnimationScalerQQ");
 //							map.GetComponent<Animator> ().Play ("none");
-							showPins();
+							spawnScript = map.GetComponent<SpawnOnMap> ();
+							spawnScript.showPinsOnMap ();
 							switchCloud(false);
 							m_HitTransform.gameObject.GetComponent<LeanScale>().enabled = true;
 
@@ -137,9 +138,6 @@ namespace UnityEngine.XR.iOS
 			ccontroller.hide_info_btn ();
 		}
 			
-		public void showPins(){
-			spawnScript.showPinsOnMap ();
-		}	
 
 		private void switchCloud(bool value){
 				UnityPointCloudExample cloud = pointCloud.GetComponent<UnityPointCloudExample>();

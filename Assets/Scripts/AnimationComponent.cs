@@ -11,13 +11,6 @@ public class AnimationComponent  {
     {
     }
 
-    // public AnimationComponent GetAnimInstance()
-    // {
-    //     Debug.Log("animo get instance");
-    //     if (animInastance == null) animInastance = new AnimationComponent();
-    //     return animInastance;
-    // }
-
     public void playAnimation(GameObject obj, string anim){
 		obj.GetComponent<Animator>().Play(anim);
 	}

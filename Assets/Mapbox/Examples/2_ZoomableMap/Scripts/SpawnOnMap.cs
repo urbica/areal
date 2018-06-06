@@ -33,26 +33,36 @@
 		private Vector3 currentPinsScale;
 		private Vector3 startPinsScale;
 
+		private bool pinsSpawned;
+
 		void Start()
 		{
+			pinsSpawned = false;
 			
-			_locations = new Vector2d[_locationStrings.Length];
-			_spawnedObjects = new List<GameObject>();
-			startPinsScale = _markerPrefab.transform.localScale;
-			currentPinsScale = startPinsScale;
-			for (int i = 0; i < _locationStrings.Length - 1; i++)
-			{
-				var locationString = _locationStrings[i];
-				_locations[i] = Conversions.StringToLatLon(locationString);
-				var instance = Instantiate(_markerPrefab);
-				instance.transform.localPosition = _map.GeoToWorldPosition(_locations[i], true);
-//				instance.transform.localScale = new Vector3(0, 0, 0);
-				instance.transform.localScale = _markerPrefab.transform.localScale;
-				instance.AddComponent<LeanScale>();
-				_spawnedObjects.Add(instance);
-//				_markerPrefab.transform.localScale = new Vector3 (0, 0, 0);
 
+		}
+
+		public void spawnPins(){
+			if(!pinsSpawned){
+				_locations = new Vector2d[_locationStrings.Length];
+				_spawnedObjects = new List<GameObject>();
+				startPinsScale = _markerPrefab.transform.localScale;
+				currentPinsScale = startPinsScale;
+				for (int i = 0; i < _locationStrings.Length - 1; i++)
+				{
+					var locationString = _locationStrings[i];
+					_locations[i] = Conversions.StringToLatLon(locationString);
+					var instance = Instantiate(_markerPrefab);
+					instance.transform.localPosition = _map.GeoToWorldPosition(_locations[i], true);
+					instance.transform.localScale = _markerPrefab.transform.localScale;
+					instance.AddComponent<LeanScale>();
+					_spawnedObjects.Add(instance);
+//					_markerPrefab.transform.localScale = new Vector3 (0, 0, 0);
+
+				}
 			}
+			pinsSpawned = true;
+			showPinsOnMap();
 		}
 
 		private void Update()
@@ -80,7 +90,6 @@
 					spawnedObject.transform.localPosition = _map.GeoToWorldPosition (location, true);
 					float _x = spawnedObject.transform.position.x;
 					float _z = spawnedObject.transform.position.z;
-//					spawnedObject.transform.localScale = new Vector3 (_spawnScale, _spawnScale, _spawnScale);
 					
 					spawnedObject.transform.localPosition = new Vector3 (_x, _map.transform.position.y, _z);
 				}
@@ -111,7 +120,6 @@
 				if (!value){
 					currentPinsScale = pin.transform.localScale;
 				}
-				Debug.Log("scale: " + currentPinsScale.magnitude + "auruu");
 				pin.transform.localScale = value ? 	currentPinsScale : new Vector3(0,0,0);
 			}		
 		}

@@ -240,7 +240,7 @@ AnimationClip:
   m_GenerateMotionCurves: 0
   m_Events:
   - time: 0.5833333
-    functionName: showPins
+    functionName: spawnPins
     data: 
     objectReferenceParameter: {fileID: 11500000, guid: 6941ec02ead994c9b848d640887441f1,
       type: 3}

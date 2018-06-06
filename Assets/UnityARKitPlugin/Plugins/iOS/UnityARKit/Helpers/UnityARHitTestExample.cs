@@ -38,12 +38,13 @@ namespace UnityEngine.XR.iOS
 						map = m_HitTransform.GetChild (i);
 						if (map.name == "Map") {
 							
-//							map.GetComponent<Animator> ().Play ("MapAnimationScalerQQ");
+							map.GetComponent<Animator> ().Play ("MapAnimationScalerQQ");
 //							map.GetComponent<Animator> ().Play ("none");
 							spawnScript = map.GetComponent<SpawnOnMap> ();
-							spawnScript.showPinsOnMap ();
+//							spawnScript.showPinsOnMap ();
 							switchCloud(false);
 							m_HitTransform.gameObject.GetComponent<LeanScale>().enabled = true;
+							
 
 						}
 					}
@@ -52,7 +53,7 @@ namespace UnityEngine.XR.iOS
 
  //                   Debug.Log (string.Format ("x:{0:0.######} y:{1:0.######} z:{2:0.######}", m_HitTransform.position.x, m_HitTransform.position.y, m_HitTransform.position.z));
 					ccontroller.hide_about_map_text ();
-					ccontroller.show_about_pins ();
+		//			ccontroller.show_about_pins ();
 					ccontroller.show_reload_btn ();
 					ccontroller.show_screenShot_btn ();
 					return true;

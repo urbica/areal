@@ -15,11 +15,16 @@ namespace UnityEngine.XR.iOS
 
 		public GameObject pointCloud;
 
+		private GameObject MAP;
+
 
 		private bool mapWasShown = false;
 		private bool planeAppeared = false;
 		private GameObject planeObj;
 		private SpawnOnMap spawnScript;
+
+		private static int SHOW_MAP_ANIM = 1;
+		private static int HIDE_MAP_ANIM = 2;
 
 
         bool HitTestWithResultType (ARPoint point, ARHitTestResultType resultTypes)
@@ -37,11 +42,9 @@ namespace UnityEngine.XR.iOS
 					for (int i = 0; i < m_HitTransform.childCount; i++) {
 						map = m_HitTransform.GetChild (i);
 						if (map.name == "Map") {
-							
-							map.GetComponent<Animator> ().Play ("MapAnimationScalerQQ");
-//							map.GetComponent<Animator> ().Play ("none");
-							spawnScript = map.GetComponent<SpawnOnMap> ();
-//							spawnScript.showPinsOnMap ();
+							MAP = map.gameObject;
+							MAP.GetComponent<Animator>().SetInteger("mapAnimTransition",SHOW_MAP_ANIM);
+							spawnScript = MAP.GetComponent<SpawnOnMap> ();
 							switchCloud(false);
 							m_HitTransform.gameObject.GetComponent<LeanScale>().enabled = true;
 							
@@ -51,9 +54,11 @@ namespace UnityEngine.XR.iOS
 					generate_script.getManager ().HidePrefabs ();
 						
 
- //                   Debug.Log (string.Format ("x:{0:0.######} y:{1:0.######} z:{2:0.######}", m_HitTransform.position.x, m_HitTransform.position.y, m_HitTransform.position.z));
-					ccontroller.hide_about_map_text ();
-		//			ccontroller.show_about_pins ();
+
+					if(ccontroller.about_map_Panel.activeInHierarchy) //check if panel was not closed manually, so next panel will be shown by event from animation clip
+						ccontroller.hide_about_map_text (false);
+					else
+						ccontroller.show_about_pins(); //else - show next panel from code patently
 					ccontroller.show_reload_btn ();
 					ccontroller.show_screenShot_btn ();
 					return true;
@@ -118,23 +123,27 @@ namespace UnityEngine.XR.iOS
 
 		void PlaneAppearDetector.planeDetect(){
 			planeAppeared = true;
+			
 		}
 
 		public void reload_map(){
 			mapWasShown = false;
 			m_HitTransform.localScale = new Vector3 (0, 0, 0);
-			for (int i = 0; i < m_HitTransform.childCount; i++) {
-				Transform child = m_HitTransform.GetChild (i);
-				if (child.name == "Map") {
-					child.gameObject.SetActive (true);
-				}
-			}
+			MAP.GetComponent<Animator>().SetInteger("mapAnimTransition",0);
+// 			for (int i = 0; i < m_HitTransform.childCount; i++) {
+// 				Transform child = m_HitTransform.GetChild (i);
+// 				if (child.name == "Map") {
+					
+// //					child.localScale = new Vector3(0,0,0);
+// //					child.gameObject.SetActive (true);
+// 				}
+// 			}
 			
 			switchCloud(true);
 			ccontroller.hide_back_Button ();
 			ccontroller.hide_reload_btn ();
 			ccontroller.hide_about_model ();
-			ccontroller.hide_about_map_text ();
+			ccontroller.hide_about_map_text (false);
 			ccontroller.hide_about_Isaac_info ();
 			ccontroller.hide_info_btn ();
 		}
@@ -145,9 +154,9 @@ namespace UnityEngine.XR.iOS
 				cloud.setCloudWorks(false);
 				List<GameObject> list = cloud.getCloud();
 				foreach (GameObject ob in list){
-				float v = value ? 0.002f : 0;
-				ob.transform.localScale = new Vector3(v,v,v);
-			}
+					float v = value ? 0.002f : 0;
+					ob.transform.localScale = new Vector3(v,v,v);
+				}
 		}
 	}
 }

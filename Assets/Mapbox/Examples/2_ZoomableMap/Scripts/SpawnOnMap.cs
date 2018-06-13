@@ -34,12 +34,11 @@
 		private Vector3 startPinsScale;
 
 		private bool pinsSpawned;
+		private string clickedCollider;
 
 		void Start()
 		{
 			pinsSpawned = false;
-			
-
 		}
 
 		public void spawnPins(){
@@ -60,9 +59,15 @@
 //					_markerPrefab.transform.localScale = new Vector3 (0, 0, 0);
 
 				}
+				clicker.setPinsList(_spawnedObjects);
+				showPinsOnMap();
 			}
-			pinsSpawned = true;
-			showPinsOnMap();
+			else {
+//				clicker.resetMap();
+				switchPins(true);
+			}
+//			pinsSpawned = true;
+			
 		}
 
 		private void Update()
@@ -75,7 +80,8 @@
 					int touchs = Input.touchCount;
 					if (collidersID.Contains(raycastHit.collider.name) && touchs < 2) {
 						switchPins(false);
-						clicker.OnClickPin (_spawnedObjects,raycastHit.collider.name);
+						clickedCollider = raycastHit.collider.name;
+						_map.GetComponent<Animator>().SetInteger("mapAnimTransition",2);
 						
 					}
 				}
@@ -126,6 +132,9 @@
 
 		public void resetPinsScale(){
 			currentPinsScale = startPinsScale;
+		}
+		public void clickPins(){
+			clicker.OnClickPin (clickedCollider);
 		}
 	}
 }

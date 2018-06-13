@@ -49,6 +49,8 @@ public class CanvasController : MonoBehaviour {
 
 	private bool first_Enter = true;
 
+	private bool clickedFromUI;
+
 
 
 
@@ -57,6 +59,7 @@ public class CanvasController : MonoBehaviour {
 //		initUI();
 		_animator = GetComponent<Animator>();
 		component = new AnimationComponent();
+		clickedFromUI = false;
 		if (first_Enter) {
 
 			show_intro ();
@@ -99,16 +102,33 @@ public class CanvasController : MonoBehaviour {
 		find_surface_Panel.SetActive(true);
 		setCanvasAnimatorParametr(FIND_SURFACE_PANEL_ENTER);
 	}
-	public void hide_find_surface_info(){
+	public void hide_find_surface_info(bool fromUI){
+		clickedFromUI = fromUI;
 		setCanvasAnimatorParametr(FIND_SURFACE_PANEL_EXIT);
+	}
+
+	public void EVENT_surface_info_exit(){
+		find_surface_Panel.SetActive(false);
+		if(!clickedFromUI){
+			show_about_map_text();
+		}
+		clickedFromUI = false;
+
 	}
 
 	public void show_about_map_text(){
 		about_map_Panel.SetActive (true);
 		setCanvasAnimatorParametr(PUT_MAP_PANEL_ENTER);
 	}
-	public void hide_about_map_text(){
+	public void hide_about_map_text(bool fromUI){
+		clickedFromUI = fromUI;
 		setCanvasAnimatorParametr(PUT_MAP_PANEL_EXIT);
+	}
+	public void EVENT_put_map_exit(){
+		about_map_Panel.SetActive(false);
+		if(!clickedFromUI)
+			show_about_pins();
+		clickedFromUI = false;
 	}
 
 	public void show_about_pins(){
@@ -117,6 +137,9 @@ public class CanvasController : MonoBehaviour {
 	}
 	public void hide_about_pins(){
 		setCanvasAnimatorParametr(TOUCH_PIN_PANEL_EXIT);
+	}
+	public void EVENT_about_pins_exit(){
+		about_pins_Panel.SetActive(false);
 	}
 
 
@@ -176,12 +199,12 @@ public class CanvasController : MonoBehaviour {
 
     private void initUI(){
 
-        intro_Panel.SetActive(true);
-        about_map_Panel.SetActive(true);
-        about_pins_Panel.SetActive(true);
-        about_model_Panel.SetActive(true);
-        about_isaac_Panel.SetActive(true);
-		find_surface_Panel.SetActive(true);
+         intro_Panel.SetActive(true);
+        // about_map_Panel.SetActive(true);
+        // about_pins_Panel.SetActive(true);
+        // about_model_Panel.SetActive(true);
+        // about_isaac_Panel.SetActive(true);
+		// find_surface_Panel.SetActive(true);
 
     }
 

@@ -81,6 +81,7 @@
 				if (Physics.Raycast (raycast, out raycastHit)) {
 					int touchs = Input.touchCount;
 					if (collidersID.Contains(raycastHit.collider.name) && touchs < 2) {
+						Debug.Log("Collider clicked: " + raycastHit.collider.name);
 						switchPins(false);
 						clickedCollider = raycastHit.collider.name;
 						_map.GetComponent<Animator>().SetInteger("mapAnimTransition",2);
@@ -112,8 +113,8 @@
 			for (int i = 0; i < count; i++)
 			{
 				var spawnedObject = _spawnedObjects [i];				
-				var boxCollider = spawnedObject.AddComponent<BoxCollider> ();
-				boxCollider.transform.localPosition = spawnedObject.transform.localPosition;
+				var boxCollider = spawnedObject.GetComponent<BoxCollider> ();
+//				boxCollider.transform.localPosition = spawnedObject.transform.localPosition;
 				boxCollider.name = i.ToString();
 				collidersID.Add(boxCollider.name);
 				

@@ -55,12 +55,14 @@
 					instance.transform.localPosition = _map.GeoToWorldPosition(_locations[i], true);
 					instance.transform.localScale = _markerPrefab.transform.localScale;
 					instance.AddComponent<LeanScale>();
+					instance.GetComponent<LeanScale>().ScaleMin = startPinsScale;
 					_spawnedObjects.Add(instance);
 //					_markerPrefab.transform.localScale = new Vector3 (0, 0, 0);
 
 				}
 				clicker.setPinsList(_spawnedObjects);
 				showPinsOnMap();
+				pinsSpawned = true;
 			}
 			else {
 //				clicker.resetMap();

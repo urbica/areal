@@ -9,6 +9,22 @@ using System;
  */
 
 public class ShareFun : MonoBehaviour {
+
+	public void onClickSS(){
+		StartCoroutine(takeCapture());
+	}
+
+	private IEnumerator takeCapture(){
+		yield return new WaitForEndOfFrame();
+
+		Texture2D img = new Texture2D((int)width, (int)height, TextureFormat.RGB24, false);
+		img.ReadPixels(new Rect(0, 0, width, height), 0, 0, false);
+		img.Apply();
+		NativeGallery.SaveImageToGallery( img,"MyGallary","maimga{}.png" );
+
+		Destroy(img);
+	}
+
 	public string ScreenshotName = "screenshot.png";
 
 	public void ShareScreenshotWithText(string text)
@@ -18,7 +34,7 @@ public class ShareFun : MonoBehaviour {
 
 		ScreenCapture.CaptureScreenshot(ScreenshotName);
 
-		StartCoroutine(delayedShare(screenShotPath, text));
+//		StartCoroutine(delayedShare(screenShotPath, text));
 	}
 
 	//CaptureScreenshot runs asynchronously, so you'll need to either capture the screenshot early and wait a fixed time
@@ -79,7 +95,7 @@ public class ShareFun : MonoBehaviour {
 		File.WriteAllBytes(screenShotPath, screenshot.EncodeToPNG());
 
 		// Native Share
-		StartCoroutine(DelayedShare_Image(screenShotPath));
+//		StartCoroutine(DelayedShare_Image(screenShotPath));
 	}
 
 	//---------- Clear Saved Screenshots ----------//

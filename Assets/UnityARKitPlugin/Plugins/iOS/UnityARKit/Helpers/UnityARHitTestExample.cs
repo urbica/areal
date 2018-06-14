@@ -45,7 +45,7 @@ namespace UnityEngine.XR.iOS
 							MAP = map.gameObject;
 							MAP.GetComponent<Animator>().SetInteger("mapAnimTransition",SHOW_MAP_ANIM);
 							spawnScript = MAP.GetComponent<SpawnOnMap> ();
-							switchCloud(false);
+						//	switchCloud(false);
 							m_HitTransform.gameObject.GetComponent<LeanScale>().enabled = true;
 							
 
@@ -123,7 +123,7 @@ namespace UnityEngine.XR.iOS
 
 		void PlaneAppearDetector.planeDetect(){
 			planeAppeared = true;
-			
+			switchCloud(false);
 		}
 
 		public void reload_map(){

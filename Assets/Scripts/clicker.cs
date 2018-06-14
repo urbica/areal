@@ -24,6 +24,7 @@ public class clicker : MonoBehaviour {
 	private GameObject currentModel;
 	private Animator _animator;
 	private bool enterState;
+	private Vector3 modelParentStartScale;
 
 
 	// Use this for initialization
@@ -32,6 +33,9 @@ public class clicker : MonoBehaviour {
 		Button btn = but.GetComponent<Button>();
 		btn.onClick.AddListener(TaskOnClick);
 		_animator = modelsCollection.GetComponent<Animator>();
+		modelParentStartScale = modelsCollection.transform.localScale;
+		modelsCollection.AddComponent<LeanScale>();
+		modelsCollection.GetComponent<LeanScale>().enabled = false;
 		
 	}
 
@@ -44,7 +48,9 @@ public class clicker : MonoBehaviour {
 	}
 
 	public void OnClickPin(string id){
+		modelsCollection.GetComponent<LeanScale>().enabled = true;
 		Vector3 mapPosition = map.transform.position;
+		modelsCollection.transform.localPosition = mapPosition;
 		setMapActive(false);
 //		currentModel = Instantiate(modelsCollection.transform.GetChild(Convert.ToInt32(id)).gameObject);
 		int currentid = Convert.ToInt32(id);
@@ -71,6 +77,8 @@ public class clicker : MonoBehaviour {
 			Invoke("hideModel_EVENT",0.4f);
 	}
 	public void hideModel_EVENT(){
+		modelsCollection.transform.localScale = modelParentStartScale;
+		modelsCollection.GetComponent<LeanScale>().enabled = false;
 		setMapActive(true);
 		map.GetComponent<Animator>().SetInteger("mapAnimTransition",1);
 	}

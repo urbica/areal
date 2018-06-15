@@ -22,52 +22,79 @@ public class clicker : MonoBehaviour {
 	public GameObject modelsCollection;
 	private List<GameObject>modelList;
 	private GameObject currentModel;
+	private Animator _animator;
+	private bool enterState;
+	private Vector3 modelParentStartScale;
 
 
 	// Use this for initialization
 	void Start () {
-
+		enterState = true;
 		Button btn = but.GetComponent<Button>();
 		btn.onClick.AddListener(TaskOnClick);
+		_animator = modelsCollection.GetComponent<Animator>();
+		modelParentStartScale = modelsCollection.transform.localScale;
+		modelsCollection.AddComponent<LeanScale>();
+		modelsCollection.GetComponent<LeanScale>().enabled = false;
 		
 	}
-	
-	// Update is called once per frame
-	void Update () {
-	}
 
+	public void setPinsList(List<GameObject> list){
+		pinsList = list;
+	}
 	void TaskOnClick()
 	{
-		SpawnOnMap script = map.GetComponent<SpawnOnMap> ();
-		script.switchPins(true);
-		
-		setMapActive(true);
-		destroyCurrentModel();
-
-		ccontroller.hide_back_Button ();
-		ccontroller.hide_info_btn ();
-
+		hideCurrentModel(true);
 	}
 
-	public void OnClickPin(List<GameObject> list,string id){
-		pinsList = list;
+	public void OnClickPin(string id){
+		modelsCollection.GetComponent<LeanScale>().enabled = true;
+		Vector3 mapPosition = map.transform.position;
+		modelsCollection.transform.localPosition = mapPosition;
 		setMapActive(false);
-		currentModel = Instantiate(modelsCollection.transform.GetChild(Convert.ToInt32(id)).gameObject);
+//		currentModel = Instantiate(modelsCollection.transform.GetChild(Convert.ToInt32(id)).gameObject);
+		int currentid = Convert.ToInt32(id);
+		currentModel = modelsCollection.transform.GetChild(currentid).gameObject;
 		
-		currentModel.transform.position = map.transform.position;
+		
+		
+		currentModel.transform.position = mapPosition;
+		enterState = true;
+		_animator.SetInteger("modelAnim",currentid + 1);
 		currentModel.AddComponent<LeanScale>();
 		currentModel.AddComponent<RotateSC>();
 
-		ccontroller.show_back_Button ();
 		ccontroller.hide_about_pins ();
+		ccontroller.hide_reload_btn();
+
+		ccontroller.show_back_Button ();
+
 	}
 
-	public void destroyCurrentModel(){
-		Destroy(currentModel);
+	public void hideCurrentModel(bool invokeMap){
+		_animator.SetInteger("modelAnim",0);
+		if(invokeMap)
+			Invoke("hideModel_EVENT",0.4f);
+	}
+	public void hideModel_EVENT(){
+		modelsCollection.transform.localScale = modelParentStartScale;
+		modelsCollection.GetComponent<LeanScale>().enabled = false;
+		setMapActive(true);
+		map.GetComponent<Animator>().SetInteger("mapAnimTransition",1);
 	}
 
 	private void setMapActive(bool value){
 		map.SetActive (value);
 		map.transform.parent.gameObject.GetComponent<LeanScale>().enabled = value;
+
+		if(value){
+			ccontroller.show_reload_btn();
+			ccontroller.hide_back_Button();
+		}else{
+			ccontroller.hide_reload_btn();
+			ccontroller.show_back_Button();
+		}
+
 	}
+
 }

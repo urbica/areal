@@ -11,10 +11,10 @@ public class Anim_Intro_Event_Sender : MonoBehaviour {
 
 
 	void show_findSurface_scene(){
-		script.initStart();
+//		script.initStart();
 		
 	}
 	void show_about_map(){
-		ccontroller.show_about_map_text();
+//		ccontroller.show_about_map_text();
 	}
 }

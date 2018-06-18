@@ -40,13 +40,16 @@ namespace UnityEngine.XR.iOS
 				arpag.gameObject = go;
 				planeAnchorMap.Add (arPlaneAnchor.identifier, arpag);
 
+				UnityARSessionNativeInterface.ARAnchorAddedEvent -= AddAnchor;
+
+
 				//modified
 				PlaneAppearDetector detector = generatedPlane;
 				detector.planeDetect ();
 				detector = hitScript;
 				detector.planeDetect ();
 				PlaneDetectorSwitcher switcher = Camera_managerScrpt;
-				switcher.turn_on_Detector (false);
+//				switcher.turn_on_Detector (false);
 				shouldCreatePlane = false;
 				
 //			}
@@ -104,6 +107,8 @@ namespace UnityEngine.XR.iOS
 
 		public void reload_plane(){
 			shouldCreatePlane = true;
+			UnityARSessionNativeInterface.ARAnchorAddedEvent += AddAnchor;
+
 		}
 	}
 

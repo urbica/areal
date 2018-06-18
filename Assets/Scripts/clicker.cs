@@ -68,11 +68,14 @@ public class clicker : MonoBehaviour {
 		ccontroller.hide_reload_btn();
 
 		ccontroller.show_back_Button ();
+		ccontroller.setModelName(currentModel.name);
+		ccontroller.show_about_model();
 
 	}
 
 	public void hideCurrentModel(bool invokeMap){
 		_animator.SetInteger("modelAnim",0);
+		ccontroller.hide_about_model();
 		if(invokeMap)
 			Invoke("hideModel_EVENT",0.4f);
 	}

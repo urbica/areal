@@ -51,6 +51,9 @@ public class CanvasController : MonoBehaviour {
 
 	private bool clickedFromUI;
 
+	[SerializeField]
+	private Text modelName;
+
 
 
 
@@ -216,6 +219,10 @@ public class CanvasController : MonoBehaviour {
 	}
 	private void setCanvasAnimatorParametr(int transitionState){
 		_animator.SetInteger(CANVAS_ANIMATOR_STATE,transitionState);
+	}
+
+	public void setModelName(string text){
+		modelName.text = text;
 	}
 
 

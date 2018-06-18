@@ -26,7 +26,8 @@ public class ARKitPlaneMeshRender : MonoBehaviour {
             planeMesh.vertices = arPlaneAnchor.planeGeometry.vertices;
             planeMesh.uv = arPlaneAnchor.planeGeometry.textureCoordinates;
             planeMesh.triangles = arPlaneAnchor.planeGeometry.triangleIndices;
-
+			
+			
             lineRenderer.positionCount = arPlaneAnchor.planeGeometry.boundaryVertexCount;
             lineRenderer.SetPositions(arPlaneAnchor.planeGeometry.boundaryVertices);
 

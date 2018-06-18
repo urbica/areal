@@ -9,6 +9,8 @@ namespace UnityEngine.XR.iOS
 		private MeshFilter meshFilter; //declared to avoid code stripping of class
 		private static GameObject planePrefab = null;
 
+		private float minX,minY = 10f;
+
 		public static void InitializePlanePrefab(GameObject go)
 		{
 			planePrefab = go;
@@ -48,6 +50,19 @@ namespace UnityEngine.XR.iOS
 
 
 			MeshFilter mf = plane.GetComponentInChildren<MeshFilter> ();
+			Vector2 textureScale = plane.GetComponentInChildren<MeshRenderer>().material.mainTextureScale;
+			Debug.Log("AroAr texture X: " + textureScale.x + " Y: " + textureScale.y);
+			Debug.Log("AroAr arplaneanchor X: " + arPlaneAnchor.extent.x + " Y: " + arPlaneAnchor.extent.y + " Z:" + arPlaneAnchor.extent.z);
+
+			int textureScaleX = (int)(arPlaneAnchor.extent.x * 50);
+			int textureScaleY = (int)(arPlaneAnchor.extent.z * 50);
+			Debug.Log("AroAr countedScale: X - " + textureScaleX + ", Y - " + textureScaleY);
+			// textureScaleX = textureScaleX > 10 ? textureScaleX : 10;
+			// textureScaleY = textureScaleY > 10 ? textureScaleY : 10;
+			
+			textureScale = new Vector2(textureScaleX,textureScaleY);
+			plane.GetComponentInChildren<MeshRenderer>().material.mainTextureScale = textureScale;
+
 
 			if (mf != null) {
 				if (apmr == null) {

@@ -11,26 +11,26 @@ public class SaveManager : MonoBehaviour {
 		DontDestroyOnLoad(gameObject);
 		Instance = this;
 		Load();
-
-		Debug.Log("SaveState - " + SaveHelper.Serialize<SaveState>(state));
 	}
 
 	public void Save() {
-		PlayerPrefs.SetString("save", SaveHelper.Serialize<SaveState>(state));
+		state.isFirstEnter = false;
+		PlayerPrefs.SetString("let", SaveHelper.Serialize<SaveState>(state));
 	}
 
 	public void Load() {
-		if(PlayerPrefs.HasKey("save"))
+		if(PlayerPrefs.HasKey("let"))
 		{
-			
-			state = SaveHelper.Deserialize<SaveState>(PlayerPrefs.GetString("save"));
-			Debug.Log("SaveState HasKey with value " + state.isFirstEnter.ToString());
-		} else 
-		{
-			Debug.Log("SaveState Has NO Key");
+			state = SaveHelper.Deserialize<SaveState>(PlayerPrefs.GetString("let"));
+		} else {
 			state = new SaveState();
-			Save();
+			state.isFirstEnter = true;
 		}
+		// else {
+		// 	state = new SaveState();
+		// 	state.setState(true);
+		// 	Save();
+		// }
 	}
 
 }

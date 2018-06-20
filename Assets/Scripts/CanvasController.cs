@@ -15,7 +15,8 @@ public class CanvasController : MonoBehaviour {
 	private const int PUT_MAP_PANEL_ENTER = 4;
 	private const int PUT_MAP_PANEL_EXIT = 5;
 	private const int TOUCH_PIN_PANEL_ENTER = 6;
-	private const int TOUCH_PIN_PANEL_EXIT= 7;
+	private const int TOUCH_PIN_PANEL_EXIT = 7;
+	private const int SCREENSHOT_ANIM = 8;
 
 	private Animator _animator;
 
@@ -42,6 +43,7 @@ public class CanvasController : MonoBehaviour {
 	public GameObject about_model_Panel;
 	public GameObject about_isaac_Panel;
 	public GameObject find_surface_Panel;
+	public GameObject screenShot_Panel;
 
 
 	public UnityARAnchorManager anchManager;
@@ -57,18 +59,21 @@ public class CanvasController : MonoBehaviour {
 
 
 
+
 	// Use this for initialization
 	void Start () {
 //		initUI();
 		_animator = GetComponent<Animator>();
 		component = new AnimationComponent();
+		
 		clickedFromUI = false;
-		if (first_Enter) {
+		if (SaveManager.Instance.state.isFirstEnter) {
 
 			show_intro ();
 		}
 		else {
-			close_intro ();
+//			close_intro ();
+			startGeneratePlane();
 			}
 		hide_back_Button ();
 		hide_back_toIntro_btn ();
@@ -193,6 +198,15 @@ public class CanvasController : MonoBehaviour {
 	}
 	public void show_screenShot_btn(){
 		screenShot_Button.transform.localScale = new Vector3 (1f, 1f, 1f);
+	}
+
+	public void screenShot_Flash(){
+		screenShot_Panel.SetActive(true);
+		screenShot_Panel.GetComponent<Animator>().Play("screenCupture_anim");
+		Invoke("screenshot_anim_EVENT",0.5f);
+	}
+	private void screenshot_anim_EVENT(){
+		screenShot_Panel.SetActive(false);
 	}
 
 

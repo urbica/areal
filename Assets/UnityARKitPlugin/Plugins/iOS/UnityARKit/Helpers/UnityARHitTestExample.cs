@@ -59,6 +59,7 @@ namespace UnityEngine.XR.iOS
 						ccontroller.hide_about_map_text (false);
 					else
 						ccontroller.show_about_pins(); //else - show next panel from code patently
+
 					ccontroller.show_reload_btn ();
 					ccontroller.show_screenShot_btn ();
 					return true;

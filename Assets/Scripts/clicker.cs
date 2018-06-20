@@ -16,6 +16,8 @@ public class clicker : MonoBehaviour {
 
 	public RotateSC rotateScript;
 
+	public GameObject modelText;
+
 	private List<GameObject>pinsList;
 
 
@@ -30,6 +32,7 @@ public class clicker : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		enterState = true;
+		modelText.SetActive(false);
 		Button btn = but.GetComponent<Button>();
 		btn.onClick.AddListener(TaskOnClick);
 		_animator = modelsCollection.GetComponent<Animator>();
@@ -53,29 +56,38 @@ public class clicker : MonoBehaviour {
 		modelsCollection.transform.localPosition = mapPosition;
 		setMapActive(false);
 //		currentModel = Instantiate(modelsCollection.transform.GetChild(Convert.ToInt32(id)).gameObject);
+
+
 		int currentid = Convert.ToInt32(id);
 		currentModel = modelsCollection.transform.GetChild(currentid).gameObject;
 		
 		
-		
 		currentModel.transform.position = mapPosition;
+		setTextModelPosition(modelText.transform.position, currentModel.transform.localScale.z);
+
+		modelText.transform.GetChild(0).GetComponent<TextMesh>().text = currentModel.name;
+
 		enterState = true;
 		_animator.SetInteger("modelAnim",currentid + 1);
-		currentModel.AddComponent<LeanScale>();
+	//	currentModel.AddComponent<LeanScale>();
 		currentModel.AddComponent<RotateSC>();
 
 		ccontroller.hide_about_pins ();
 		ccontroller.hide_reload_btn();
 
 		ccontroller.show_back_Button ();
-		ccontroller.setModelName(currentModel.name);
-		ccontroller.show_about_model();
+//		ccontroller.setModelName(currentModel.name);
+//		ccontroller.show_about_model();
+
+		//save enter
+		SaveManager.Instance.Save();
 
 	}
 
 	public void hideCurrentModel(bool invokeMap){
 		_animator.SetInteger("modelAnim",0);
-		ccontroller.hide_about_model();
+//		ccontroller.hide_about_model();
+		modelText.SetActive(false);
 		if(invokeMap)
 			Invoke("hideModel_EVENT",0.4f);
 	}
@@ -97,6 +109,16 @@ public class clicker : MonoBehaviour {
 			ccontroller.hide_reload_btn();
 			ccontroller.show_back_Button();
 		}
+
+	}
+
+	private void setTextModelPosition(Vector3 currentModelPosition,float zScale){
+		float x = currentModelPosition.x;
+		float y = currentModelPosition.y;
+		float z = currentModelPosition.z;
+		modelText.SetActive(true);
+		modelText.transform.localPosition = new Vector3(x,y,z);
+
 
 	}
 

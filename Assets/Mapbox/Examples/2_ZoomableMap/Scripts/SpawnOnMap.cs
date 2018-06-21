@@ -35,6 +35,7 @@
 
 		private bool pinsSpawned;
 		private string clickedCollider;
+		private Transform clickedTransform;
 
 		void Start()
 		{
@@ -52,14 +53,14 @@
 					var locationString = _locationStrings[i];
 					_locations[i] = Conversions.StringToLatLon(locationString);
 					var instance = Instantiate(_markerPrefab);
-					instance.transform.localPosition = _map.GeoToWorldPosition(_locations[i], true);
-					instance.transform.localScale = _markerPrefab.transform.localScale;
+//					instance.transform.localPosition = _map.GeoToWorldPosition(_locations[i], true);
+					instance.transform.localScale = new Vector3(0,0,0);
 					instance.AddComponent<LeanScale>();
 //					instance.GetComponent<LeanScale>().ScaleMin = startPinsScale;
 //					Pinclass pin = new Pinclass();
 //					pin.mObject = instance;
 					_spawnedObjects.Add(instance);
-					instance.GetComponent<Animator>().Play("star_rotate_anim");
+					
 //					_markerPrefab.transform.localScale = new Vector3 (0, 0, 0);
 
 				}
@@ -85,7 +86,9 @@
 					int touchs = Input.touchCount;
 					if (collidersID.Contains(raycastHit.collider.name) && touchs < 2) {
 						switchPins(false);
-						clickedCollider = raycastHit.collider.name;
+						// Transform transform = raycastHit.collider.gameObject.transform;
+						// clickedCollider = raycastHit.collider.name;
+						clickedTransform = raycastHit.collider.transform;
 						_map.GetComponent<Animator>().SetInteger("mapAnimTransition",2);
 						
 					}
@@ -132,13 +135,21 @@
 		}
 
 		public void switchPins(bool value){
+			bool q = true;
 			pinsShown = value;
 			foreach(GameObject pin in _spawnedObjects){
 				pin.GetComponent<LeanScale>().enabled = value;
 				if (!value){
 					currentPinsScale = pin.transform.localScale;
+				} 
+				else {
+					pin.GetComponent<Animator>().Play("star_rotate_anim");
 				}
 				pin.transform.localScale = value ? 	currentPinsScale : new Vector3(0,0,0);
+				if(q){
+					Debug.Log("Pinsqq" + currentPinsScale);
+					q = false;
+				}
 			}		
 		}
 
@@ -146,7 +157,7 @@
 			currentPinsScale = startPinsScale;
 		}
 		public void clickPins(){
-			clicker.OnClickPin (clickedCollider);
+			clicker.OnClickPin (clickedTransform);
 		}
 	}
 }

@@ -69,6 +69,7 @@ namespace UnityEngine.XR.iOS
 			}
 //			controller.show_find_surface_info();
 		}
+		public UnityARAnchorManager getAnchorManager(){ return unityARAnchorManager;}
 	}
 }
 

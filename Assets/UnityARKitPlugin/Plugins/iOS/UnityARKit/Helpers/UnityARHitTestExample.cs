@@ -12,6 +12,7 @@ namespace UnityEngine.XR.iOS
 		public LayerMask collisionLayer = 1 << 10;  //ARKitPlane layer
 		public CanvasController ccontroller;
 		public UnityARGeneratePlane generate_script;
+		public UnityARCameraManager camera_manager;
 
 		public GameObject pointCloud;
 
@@ -26,6 +27,12 @@ namespace UnityEngine.XR.iOS
 		private static int SHOW_MAP_ANIM = 1;
 		private static int HIDE_MAP_ANIM = 2;
 
+/* example of correct scale with such distance between camera and plane. To get correct resultScale need use ratio of this const fields data 
+ to calculate result*/
+		private const float normalScale = 0.1f;
+		private const float normalDistance = 0.4f;
+		private float resultScale = normalScale;
+
 
         bool HitTestWithResultType (ARPoint point, ARHitTestResultType resultTypes)
         {
@@ -36,12 +43,15 @@ namespace UnityEngine.XR.iOS
                 foreach (var hitResult in hitResults) {
                     m_HitTransform.position = UnityARMatrixOps.GetPosition (hitResult.worldTransform);
                     m_HitTransform.rotation = UnityARMatrixOps.GetRotation (hitResult.worldTransform);
-					m_HitTransform.localScale = new Vector3 (0.08f, 0.08f, 0.08f);
+					m_HitTransform.localScale = new Vector3 (resultScale, resultScale, resultScale);
 
 					Transform map;
 					for (int i = 0; i < m_HitTransform.childCount; i++) {
 						map = m_HitTransform.GetChild (i);
 						if (map.name == "Map") {
+
+							
+
 							MAP = map.gameObject;
 							MAP.GetComponent<Animator>().SetInteger("mapAnimTransition",SHOW_MAP_ANIM);
 							spawnScript = MAP.GetComponent<SpawnOnMap> ();
@@ -125,6 +135,20 @@ namespace UnityEngine.XR.iOS
 		void PlaneAppearDetector.planeDetect(){
 			planeAppeared = true;
 			switchCloud(false);
+
+			//calculate distancce
+			Vector3 cameraPostiton = camera_manager.transform.position;
+			Vector3 planePosition = new Vector3(0,0,0); 
+			LinkedList<ARPlaneAnchorGameObject> o = generate_script.getAnchorManager().GetCurrentPlaneAnchors();
+						foreach (ARPlaneAnchorGameObject arpag in o) {
+				planePosition = arpag.gameObject.transform.position;
+			}
+			float distance = planePosition.magnitude - cameraPostiton.magnitude;
+			calculateResultScale(distance);
+
+
+//			Debug.Log("SeeDistance: camera - " + cameraPostiton.magnitude + "; plane - " + planePosition.magnitude + "; distance - " + distance);
+			
 		}
 
 		public void reload_map(){
@@ -159,6 +183,13 @@ namespace UnityEngine.XR.iOS
 					ob.transform.localScale = new Vector3(v,v,v);
 				}
 		}
+
+		private void calculateResultScale(float distance){
+			if(distance > normalDistance)
+				resultScale = (normalScale * distance) / (2 * normalDistance);
+				Debug.Log("SeeDistance: distance - " + distance + "resulrScale" + resultScale);
+		}
+	
 	}
 }
 

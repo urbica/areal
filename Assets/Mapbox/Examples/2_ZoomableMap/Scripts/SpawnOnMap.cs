@@ -55,8 +55,11 @@
 					instance.transform.localPosition = _map.GeoToWorldPosition(_locations[i], true);
 					instance.transform.localScale = _markerPrefab.transform.localScale;
 					instance.AddComponent<LeanScale>();
-					instance.GetComponent<LeanScale>().ScaleMin = startPinsScale;
+//					instance.GetComponent<LeanScale>().ScaleMin = startPinsScale;
+//					Pinclass pin = new Pinclass();
+//					pin.mObject = instance;
 					_spawnedObjects.Add(instance);
+					instance.GetComponent<Animator>().Play("star_rotate_anim");
 //					_markerPrefab.transform.localScale = new Vector3 (0, 0, 0);
 
 				}
@@ -100,6 +103,13 @@
 					float _z = spawnedObject.transform.position.z;
 					
 					spawnedObject.transform.localPosition = new Vector3 (_x, _map.transform.position.y, _z);
+//					spawnedObject.GetComponent<Animator>().SetBool("RotateAfterSpawned",true);
+//					if (!spawnedObject.wasAnimated){
+						
+//						spawnedObject.wasAnimated = true;
+//					}
+					
+					
 				}
 			} 
 		}

@@ -36,6 +36,8 @@ public class clicker : MonoBehaviour {
 		Button btn = but.GetComponent<Button>();
 		btn.onClick.AddListener(TaskOnClick);
 		_animator = modelsCollection.GetComponent<Animator>();
+
+		//save default scale of models parent
 		modelParentStartScale = modelsCollection.transform.localScale;
 		modelsCollection.AddComponent<LeanScale>();
 		modelsCollection.GetComponent<LeanScale>().enabled = false;
@@ -63,7 +65,7 @@ public class clicker : MonoBehaviour {
 		
 		
 		currentModel.transform.position = mapPosition;
-		setTextModelPosition(modelText.transform.position, currentModel.transform.localScale.z);
+	//	setTextModelPosition(modelText.transform.position, currentModel.transform.localScale.z);
 
 		modelText.transform.GetChild(0).GetComponent<TextMesh>().text = currentModel.name;
 

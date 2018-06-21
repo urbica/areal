@@ -1,0 +1,144 @@
+fileFormatVersion: 2
+guid: 8efda883eea7b444cb4309f332e1f686
+SketchUpImporter:
+  generateBackFace: 0
+  mergeCoplanarFaces: 0
+  selectedNodes: 00000000010000000400000005000000060000000b0000000c000000
+  assetHash:
+    serializedVersion: 2
+    Hash: db375c0c7af8d76d9972afa8bd15692c
+  longitude: 30.315794771971753
+  latitude: 59.939080386262134
+  northCorrection: 357.6762144569538
+  fileUnit: 0
+  sketchUpImportData:
+    defaultCamera:
+      position: {x: -8.416921, y: 53.869858, z: 24.82863}
+      lookAt: {x: -8.120393, y: -12.790675, z: -35.283688}
+      up: {x: 0.0036633024, y: 0.66969424, z: -0.7426279}
+      fov: 77.4449
+      aspectRatio: 0
+      orthoSize: 1
+      isPerspective: 1
+    scenes: []
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Aleksandriyskaya colonna
+    100002: Google Earth Snapshot
+    100004: Group 11
+    100006: //RootNode
+    400000: Aleksandriyskaya colonna
+    400002: Google Earth Snapshot
+    400004: Group 11
+    400006: //RootNode
+    2100000: _defaultMat
+    2100002: _20
+    2100004: _Charcoal_
+    2100006: _Burnt Umber_1
+    2100008: Google Earth Snapshot1
+    2100010: '[Groundcover_Gravel_Indian]'
+    2100012: _6
+    2100014: '[Groundcover_Brick_Crushed]'
+    2100016: "\u041D\u0430\u043A\u043B\u0430\u0434\u043A\u0430"
+    2100018: "\u0441\u043B\u0435\u0432\u0430"
+    2100020: _4
+    2100022: "\u0441\u043F\u0435\u0440\u0435\u0434\u0438"
+    2100024: "\u0441\u043F\u0440\u0430\u0432\u0430"
+    2100026: "\u0441\u0437\u0430\u0434\u0438"
+    2100028: _8
+    2100030: '[Metal_Rough]'
+    2100032: _9
+    2100034: _3
+    2100036: _2
+    2100038: _10
+    2300000: Google Earth Snapshot
+    2300002: Group 11
+    2300004: //RootNode
+    3300000: Google Earth Snapshot
+    3300002: Group 11
+    3300004: //RootNode
+    4300000: Mesh Untitled (1)
+    4300002: Mesh Google Earth Snapshot
+    4300004: Mesh Group 11
+    4300006: Mesh 3. Stolp
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 2
+    materialSearch: 0
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 0.0254
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 0
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

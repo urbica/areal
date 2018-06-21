@@ -50,21 +50,23 @@ public class clicker : MonoBehaviour {
 	void TaskOnClick()
 	{
 		hideCurrentModel(true);
+		
 	}
 
-	public void OnClickPin(string id){
+	public void OnClickPin(Transform transform){
 		modelsCollection.GetComponent<LeanScale>().enabled = true;
 		Vector3 mapPosition = map.transform.position;
-		modelsCollection.transform.localPosition = mapPosition;
+		modelsCollection.transform.localPosition = transform.position;
 		setMapActive(false);
 //		currentModel = Instantiate(modelsCollection.transform.GetChild(Convert.ToInt32(id)).gameObject);
 
 
-		int currentid = Convert.ToInt32(id);
+		int currentid = Convert.ToInt32(transform.GetComponent<BoxCollider>().name);
 		currentModel = modelsCollection.transform.GetChild(currentid).gameObject;
 		
 		
-		currentModel.transform.position = mapPosition;
+		currentModel.transform.position = transform.position;
+		Debug.Log("FindPosition position:" +currentModel.transform.position + " local:" + transform.localPosition );
 	//	setTextModelPosition(modelText.transform.position, currentModel.transform.localScale.z);
 
 		modelText.transform.GetChild(0).GetComponent<TextMesh>().text = currentModel.name;

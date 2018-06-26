@@ -11,18 +11,15 @@ namespace UnityEngine.XR.iOS
         private UnityARAnchorManager unityARAnchorManager;
 //		public UnityARHitTestExample hitTest;
 		public GameObject hitParent;
-//		public GameObject map;
-//		private UnityARHitTestExample scrpt;
 		public UnityARCameraManager Camera_managerScrpt;
 
 
 		public void initStart(){
-//			planePrefab.SetActive (true);
+			planePrefab.SetActive (true);
 			UnityARHitTestExample hitScript = hitParent.GetComponentInChildren<UnityARHitTestExample>();
-//			scrpt = map.GetComponent<UnityARHitTestExample>();
 			unityARAnchorManager = new UnityARAnchorManager(this,hitParent,hitScript,Camera_managerScrpt);
 			UnityARUtility.InitializePlanePrefab (planePrefab);
-			controller.show_find_surface_info();
+//			controller.show_find_surface_info();
 
 		}
 
@@ -46,15 +43,15 @@ namespace UnityEngine.XR.iOS
             }
         }
 		void PlaneAppearDetector.planeDetect(){
-//			controller.hide_screenShot_btn ();
 
 			controller.show_reload_btn ();
+			controller.hide_find_surface_info();
 			
-			if(controller.find_surface_Panel.activeInHierarchy){//check if panel was not closed manually, so next panel will be shown by event from animation clip
-				controller.hide_find_surface_info(false);
-			}else{
-				controller.show_about_map_text (); //else - show next panel from code patently
-			}
+			// if(controller.find_surface_Panel.activeInHierarchy){//check if panel was not closed manually, so next panel will be shown by event from animation clip
+			// 	controller.hide_find_surface_info(false);
+			// }else{
+			// 	controller.show_about_map_text (); //else - show next panel from code patently
+			// }
 		}
 
 		public void reload_plane(){

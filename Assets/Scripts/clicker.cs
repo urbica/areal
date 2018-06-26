@@ -66,8 +66,6 @@ public class clicker : MonoBehaviour {
 		
 		
 		currentModel.transform.position = transform.position;
-		Debug.Log("FindPosition position:" +currentModel.transform.position + " local:" + transform.localPosition );
-	//	setTextModelPosition(modelText.transform.position, currentModel.transform.localScale.z);
 
 		modelText.transform.GetChild(0).GetComponent<TextMesh>().text = currentModel.name;
 
@@ -77,11 +75,8 @@ public class clicker : MonoBehaviour {
 		currentModel.AddComponent<RotateSC>();
 
 		ccontroller.hide_about_pins ();
-		ccontroller.hide_reload_btn();
 
 		ccontroller.show_back_Button ();
-//		ccontroller.setModelName(currentModel.name);
-//		ccontroller.show_about_model();
 
 		//save enter
 		SaveManager.Instance.Save();

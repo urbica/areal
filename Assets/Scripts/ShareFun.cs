@@ -9,8 +9,11 @@ using System;
  */
 
 public class ShareFun : MonoBehaviour {
+	[SerializeField]
+	private Canvas canvas;
 
 	public void onClickSS(){
+		canvas.gameObject.SetActive(false);
 		StartCoroutine(takeCapture());
 	}
 
@@ -23,6 +26,9 @@ public class ShareFun : MonoBehaviour {
 		NativeGallery.SaveImageToGallery( img,"MyGallary","maimga{}.png" );
 
 		Destroy(img);
+
+		canvas.gameObject.SetActive(true);
+		canvas.GetComponent<CanvasController>().screenShot_Flash();
 	}
 
 	public string ScreenshotName = "screenshot.png";

@@ -50,12 +50,9 @@ namespace UnityEngine.XR.iOS
 						map = m_HitTransform.GetChild (i);
 						if (map.name == "Map") {
 
-							
-
 							MAP = map.gameObject;
 							MAP.GetComponent<Animator>().SetInteger("mapAnimTransition",SHOW_MAP_ANIM);
 							spawnScript = MAP.GetComponent<SpawnOnMap> ();
-						//	switchCloud(false);
 							m_HitTransform.gameObject.GetComponent<LeanScale>().enabled = true;
 							
 
@@ -70,7 +67,6 @@ namespace UnityEngine.XR.iOS
 					else
 						ccontroller.show_about_pins(); //else - show next panel from code patently
 
-					ccontroller.show_reload_btn ();
 					ccontroller.show_screenShot_btn ();
 					return true;
                 }
@@ -155,22 +151,12 @@ namespace UnityEngine.XR.iOS
 			mapWasShown = false;
 			m_HitTransform.localScale = new Vector3 (0, 0, 0);
 			MAP.GetComponent<Animator>().SetInteger("mapAnimTransition",0);
-// 			for (int i = 0; i < m_HitTransform.childCount; i++) {
-// 				Transform child = m_HitTransform.GetChild (i);
-// 				if (child.name == "Map") {
-					
-// //					child.localScale = new Vector3(0,0,0);
-// //					child.gameObject.SetActive (true);
-// 				}
-// 			}
 			
 			switchCloud(true);
-			ccontroller.hide_back_Button ();
-			ccontroller.hide_reload_btn ();
-			ccontroller.hide_about_model ();
+
 			ccontroller.hide_about_map_text (false);
-			ccontroller.hide_about_Isaac_info ();
-			ccontroller.hide_info_btn ();
+			ccontroller.hide_screenShot_btn();
+
 		}
 			
 
@@ -187,7 +173,6 @@ namespace UnityEngine.XR.iOS
 		private void calculateResultScale(float distance){
 			if(distance > normalDistance)
 				resultScale = (normalScale * distance) / (2 * normalDistance);
-				Debug.Log("SeeDistance: distance - " + distance + "resulrScale" + resultScale);
 		}
 	
 	}

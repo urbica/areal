@@ -69,11 +69,8 @@
 				pinsSpawned = true;
 			}
 			else {
-//				clicker.resetMap();
 				switchPins(true);
-			}
-//			pinsSpawned = true;
-			
+			}			
 		}
 
 		private void Update()
@@ -106,12 +103,6 @@
 					float _z = spawnedObject.transform.position.z;
 					
 					spawnedObject.transform.localPosition = new Vector3 (_x, _map.transform.position.y, _z);
-//					spawnedObject.GetComponent<Animator>().SetBool("RotateAfterSpawned",true);
-//					if (!spawnedObject.wasAnimated){
-						
-//						spawnedObject.wasAnimated = true;
-//					}
-					
 					
 				}
 			} 
@@ -135,7 +126,6 @@
 		}
 
 		public void switchPins(bool value){
-			bool q = true;
 			pinsShown = value;
 			foreach(GameObject pin in _spawnedObjects){
 				pin.GetComponent<LeanScale>().enabled = value;
@@ -146,10 +136,6 @@
 					pin.GetComponent<Animator>().Play("star_rotate_anim");
 				}
 				pin.transform.localScale = value ? 	currentPinsScale : new Vector3(0,0,0);
-				if(q){
-					Debug.Log("Pinsqq" + currentPinsScale);
-					q = false;
-				}
 			}		
 		}
 

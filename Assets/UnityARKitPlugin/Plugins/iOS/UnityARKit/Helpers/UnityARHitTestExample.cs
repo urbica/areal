@@ -62,11 +62,12 @@ namespace UnityEngine.XR.iOS
 						
 
 
-					if(ccontroller.about_map_Panel.activeInHierarchy) //check if panel was not closed manually, so next panel will be shown by event from animation clip
-						ccontroller.hide_about_map_text (false);
-					else
-						ccontroller.show_about_pins(); //else - show next panel from code patently
+					// if(ccontroller.about_map_Panel.activeInHierarchy) //check if panel was not closed manually, so next panel will be shown by event from animation clip
+					// 	ccontroller.hide_about_map_text ();
+					// else
+					// 	ccontroller.show_about_pins(); //else - show next panel from code patently
 
+					ccontroller.hide_about_map_text();
 					ccontroller.show_screenShot_btn ();
 					return true;
                 }
@@ -141,9 +142,6 @@ namespace UnityEngine.XR.iOS
 			}
 			float distance = planePosition.magnitude - cameraPostiton.magnitude;
 			calculateResultScale(distance);
-
-
-//			Debug.Log("SeeDistance: camera - " + cameraPostiton.magnitude + "; plane - " + planePosition.magnitude + "; distance - " + distance);
 			
 		}
 
@@ -154,7 +152,7 @@ namespace UnityEngine.XR.iOS
 			
 			switchCloud(true);
 
-			ccontroller.hide_about_map_text (false);
+			ccontroller.hide_about_map_text ();
 			ccontroller.hide_screenShot_btn();
 
 		}

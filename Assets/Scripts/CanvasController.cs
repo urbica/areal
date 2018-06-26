@@ -59,7 +59,6 @@ public class CanvasController : MonoBehaviour {
 		_animator = GetComponent<Animator>();
 		component = new AnimationComponent();
 		
-		clickedFromUI = false;
 		show_intro();
 
 		hide_back_Button ();
@@ -99,7 +98,6 @@ public class CanvasController : MonoBehaviour {
 		startGeneratePlane();
 	}
 	public void hide_find_surface_info(){
-//		clickedFromUI = fromUI;
 		setCanvasAnimatorParametr(ANIM_EXIT);
 		Invoke("EVENT_surface_info_exit",0.4f);
 	}
@@ -113,15 +111,12 @@ public class CanvasController : MonoBehaviour {
 		about_map_Panel.SetActive (true);
 		setCanvasAnimatorParametr(PUT_MAP_PANEL_ENTER);
 	}
-	public void hide_about_map_text(bool fromUI){
-		clickedFromUI = fromUI;
+	public void hide_about_map_text(){
 		setCanvasAnimatorParametr(ANIM_EXIT);
 	}
 	public void EVENT_put_map_exit(){
 		about_map_Panel.SetActive(false);
-		if(!clickedFromUI)
-			show_about_pins();
-		clickedFromUI = false;
+		show_about_pins();
 	}
 
 	public void show_about_pins(){

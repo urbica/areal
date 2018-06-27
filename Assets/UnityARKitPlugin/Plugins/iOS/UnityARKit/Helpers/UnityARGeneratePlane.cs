@@ -19,7 +19,6 @@ namespace UnityEngine.XR.iOS
 			UnityARHitTestExample hitScript = hitParent.GetComponentInChildren<UnityARHitTestExample>();
 			unityARAnchorManager = new UnityARAnchorManager(this,hitParent,hitScript,Camera_managerScrpt);
 			UnityARUtility.InitializePlanePrefab (planePrefab);
-//			controller.show_find_surface_info();
 
 		}
 
@@ -48,12 +47,6 @@ namespace UnityEngine.XR.iOS
 			controller.show_reload_btn ();
 			controller.hide_find_surface_info();
 
-			
-			// if(controller.find_surface_Panel.activeInHierarchy){//check if panel was not closed manually, so next panel will be shown by event from animation clip
-			// 	controller.hide_find_surface_info(false);
-			// }else{
-			// 	controller.show_about_map_text (); //else - show next panel from code patently
-			// }
 		}
 
 		public void reload_plane(){
@@ -66,7 +59,11 @@ namespace UnityEngine.XR.iOS
 					map.transform.localScale = new Vector3 (0, 0, 0);
 				}
 			}
-//			controller.show_find_surface_info();
+
+			if(CanvasController.isFirstSession){
+				controller.resetAnimationState();
+				controller.show_find_surface_info();
+			}
 		}
 		public UnityARAnchorManager getAnchorManager(){ return unityARAnchorManager;}
 	}

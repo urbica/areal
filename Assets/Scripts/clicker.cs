@@ -11,7 +11,6 @@ public class clicker : MonoBehaviour {
 
 	public Button but;
 	public GameObject map;
-	public GameObject originObj;
 	public CanvasController ccontroller;
 
 	public RotateSC rotateScript;

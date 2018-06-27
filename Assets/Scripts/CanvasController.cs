@@ -52,6 +52,8 @@ public class CanvasController : MonoBehaviour {
 	[SerializeField]
 	private Text modelName;
 
+	public static bool isFirstSession;
+
 
 
 
@@ -61,21 +63,20 @@ public class CanvasController : MonoBehaviour {
 		_animator = GetComponent<Animator>();
 		component = new AnimationComponent();
 		
-		show_intro();
 
 		hide_back_Button ();
 		hide_reload_btn ();
 		hide_info_Button();
 		hide_screenShot_btn ();
+		isFirstSession = SaveManager.Instance.state.isFirstEnter;
 
-		// 		if (SaveManager.Instance.state.isFirstEnter) {
 
-// 			show_intro ();
-// 		}
-// 		else {
-// //			close_intro ();
-// 			startGeneratePlane();
-// 			}
+		if (isFirstSession) {
+			show_intro ();
+		}
+		else {
+			startGeneratePlane();
+		}
 	}
 	
 	// Update is called once per frame
@@ -107,7 +108,8 @@ public class CanvasController : MonoBehaviour {
 
 	public void EVENT_surface_info_exit(){
 		find_surface_Panel.SetActive(false);
-		show_about_map_text();
+		if (isFirstSession)
+			show_about_map_text();
 	}
 
 	public void show_about_map_text(){

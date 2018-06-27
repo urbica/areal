@@ -107,6 +107,7 @@ namespace UnityEngine.XR.iOS
 		}
 
 		public void reload_plane(){
+			HidePrefabs();
 			shouldCreatePlane = true;
 			UnityARSessionNativeInterface.ARAnchorAddedEvent += AddAnchor;
 

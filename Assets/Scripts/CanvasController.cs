@@ -33,6 +33,8 @@ public class CanvasController : MonoBehaviour {
 	public Button reload_Button;
 	public Button screenShot_Button;
 
+	public Button info_Button;
+
 	public GameObject intro_Panel;
 	public GameObject about_map_Panel;
 	public GameObject about_pins_Panel;
@@ -63,6 +65,7 @@ public class CanvasController : MonoBehaviour {
 
 		hide_back_Button ();
 		hide_reload_btn ();
+		hide_info_Button();
 		hide_screenShot_btn ();
 
 		// 		if (SaveManager.Instance.state.isFirstEnter) {
@@ -128,6 +131,14 @@ public class CanvasController : MonoBehaviour {
 	}
 	public void EVENT_about_pins_exit(){
 		about_pins_Panel.SetActive(false);
+	}
+
+	public void show_info_Button(){
+		info_Button.gameObject.SetActive(true);
+	}
+
+	public void hide_info_Button(){
+		info_Button.gameObject.SetActive(false);
 	}
 
 

@@ -44,8 +44,10 @@ namespace UnityEngine.XR.iOS
         }
 		void PlaneAppearDetector.planeDetect(){
 
+			controller.show_info_Button();
 			controller.show_reload_btn ();
 			controller.hide_find_surface_info();
+
 			
 			// if(controller.find_surface_Panel.activeInHierarchy){//check if panel was not closed manually, so next panel will be shown by event from animation clip
 			// 	controller.hide_find_surface_info(false);

@@ -26,7 +26,8 @@
 
 		List<GameObject> _spawnedObjects;
 
-		public clicker clicker;
+		// public clicker clicker;
+		public Camera Camera;
 
 		private bool pinsShown = false;
 		private List<string>collidersID;
@@ -36,7 +37,7 @@
 		private bool pinsSpawned;
 		private string clickedCollider;
 		private Transform clickedTransform;
-		private const float scaleCoefficient = 0.013f;
+		private const float scaleCoefficient = 0.008f;
 
 		void Start()
 		{
@@ -53,7 +54,7 @@
 				_locations = new Vector2d[_locationStrings.Length];
 				_spawnedObjects = new List<GameObject>();
 //				startPinsScale = _markerPrefab.transform.localScale;
-
+				
 				currentPinsScale = startPinsScale;
 				for (int i = 0; i < _locationStrings.Length - 1; i++)
 				{
@@ -61,15 +62,18 @@
 					_locations[i] = Conversions.StringToLatLon(locationString);
 					var instance = Instantiate(_markerPrefab);
 					instance.transform.localScale = new Vector3(0,0,0);
+					instance.transform.LookAt(Camera.transform);
 					instance.AddComponent<LeanScale>();
 					_spawnedObjects.Add(instance);
 
 				}
-				clicker.setPinsList(_spawnedObjects);
+				Camera.GetComponent<clicker>().setPinsList(_spawnedObjects);
+//				clicker.setPinsList(_spawnedObjects);
 				showPinsOnMap();
 				pinsSpawned = true;
 			}
 			else {
+				resetPinsScale();
 				switchPins(true);
 			}			
 		}
@@ -97,11 +101,13 @@
 					var spawnedObject = _spawnedObjects [i];
 					var location = _locations [i];
 
-					spawnedObject.transform.localPosition = _map.GeoToWorldPosition (location, true);
-					float _x = spawnedObject.transform.position.x;
-					float _z = spawnedObject.transform.position.z;
-					
+					Vector3 pinLocalPosition = _map.GeoToWorldPosition (location, true);
+					float _x = pinLocalPosition.x;
+					float _z = pinLocalPosition.z;
 					spawnedObject.transform.localPosition = new Vector3 (_x, _map.transform.position.y, _z);
+					spawnedObject.transform.LookAt(new Vector3(0,0,0));
+					
+
 					
 				}
 			} 
@@ -131,9 +137,11 @@
 					currentPinsScale = pin.transform.localScale;
 				} 
 				else {
-					pin.GetComponent<Animator>().Play("star_rotate_anim");
+					
+					pin.GetComponent<Animator>().Play("new_star_anim");
 				}
 				pin.transform.localScale = value ? 	currentPinsScale : new Vector3(0,0,0);
+				
 			}		
 		}
 
@@ -142,7 +150,8 @@
 				currentPinsScale = startPinsScale;
 		}
 		public void clickPins(){
-			clicker.OnClickPin (clickedTransform);
+			var x = startPinsScale.x / scaleCoefficient;
+			Camera.GetComponent<clicker>().OnClickPin (clickedTransform,x);
 		}
 	}
 }

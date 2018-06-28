@@ -55,7 +55,6 @@ namespace UnityEngine.XR.iOS
 							spawnScript.setPinCoef(resultScale);
 							m_HitTransform.gameObject.GetComponent<LeanScale>().enabled = true;
 							
-
 						}
 					}
 					generate_script.getManager ().HidePrefabs ();
@@ -171,6 +170,7 @@ namespace UnityEngine.XR.iOS
 		private void calculateResultScale(float distance){
 			if(distance > normalDistance)
 				resultScale = (normalScale * distance) / (2 * normalDistance);
+				Debug.Log("FindScale " + resultScale); //0.128891
 		}
 
 		private void show_first_help(){

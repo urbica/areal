@@ -24,13 +24,11 @@ public class clicker : MonoBehaviour {
 	private List<GameObject>modelList;
 	private GameObject currentModel;
 	private Animator _animator;
-	private bool enterState;
 	private Vector3 modelParentStartScale;
 
 
 	// Use this for initialization
 	void Start () {
-		enterState = true;
 		modelText.SetActive(false);
 		Button btn = but.GetComponent<Button>();
 		btn.onClick.AddListener(TaskOnClick);
@@ -52,10 +50,13 @@ public class clicker : MonoBehaviour {
 		
 	}
 
-	public void OnClickPin(Transform transform){
+	public void OnClickPin(Transform transform,float resultScaleCoef){
 		modelsCollection.GetComponent<LeanScale>().enabled = true;
 		Vector3 mapPosition = map.transform.position;
 		modelsCollection.transform.localPosition = transform.position;
+		float x = resultScaleCoef / 0.12f;
+		modelsCollection.transform.localScale = new Vector3(x,x,x);
+
 		setMapActive(false);
 //		currentModel = Instantiate(modelsCollection.transform.GetChild(Convert.ToInt32(id)).gameObject);
 
@@ -68,9 +69,7 @@ public class clicker : MonoBehaviour {
 
 		modelText.transform.GetChild(0).GetComponent<TextMesh>().text = currentModel.name;
 
-		enterState = true;
 		_animator.SetInteger("modelAnim",currentid + 1);
-	//	currentModel.AddComponent<LeanScale>();
 		currentModel.AddComponent<RotateSC>();
 
 		ccontroller.hide_about_pins ();

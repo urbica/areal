@@ -173,7 +173,8 @@ public class CanvasController : MonoBehaviour {
 	void startGeneratePlane(){
 		intro_Panel.SetActive(false);
 		generatePlaneScript.initStart();
-		show_find_surface_info();
+		if(isFirstSession)
+			show_find_surface_info();
 	}
 	private void setCanvasAnimatorParametr(int transitionState){
 		_animator.SetInteger(CANVAS_ANIMATOR_STATE,transitionState);

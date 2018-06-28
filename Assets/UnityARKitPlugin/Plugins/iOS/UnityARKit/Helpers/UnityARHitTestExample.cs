@@ -52,6 +52,7 @@ namespace UnityEngine.XR.iOS
 							MAP = map.gameObject;
 							MAP.GetComponent<Animator>().SetInteger("mapAnimTransition",SHOW_MAP_ANIM);
 							spawnScript = MAP.GetComponent<SpawnOnMap> ();
+							spawnScript.setPinCoef(resultScale);
 							m_HitTransform.gameObject.GetComponent<LeanScale>().enabled = true;
 							
 
@@ -145,10 +146,10 @@ namespace UnityEngine.XR.iOS
 
 			if(CanvasController.isFirstSession){
 				ccontroller.resetAnimationState();
-				ccontroller.show_find_surface_info();
+
+				Invoke("show_first_help",0.5f);
 			}
 
-			Debug.Log("FindReload hittest");
 			generate_script.reload_plane();
 			if (mapWasShown){
 				SpawnOnMap component = MAP.GetComponent<SpawnOnMap>();
@@ -163,18 +164,17 @@ namespace UnityEngine.XR.iOS
 			
 			pointCloud.GetComponent<UnityPointCloudExample>().switchCloud(true);
 
-
-
 			camera_manager.ResetAr();
-
-
-
 		}
 			
 
 		private void calculateResultScale(float distance){
 			if(distance > normalDistance)
 				resultScale = (normalScale * distance) / (2 * normalDistance);
+		}
+
+		private void show_first_help(){
+			ccontroller.show_find_surface_info();
 		}
 	
 	}

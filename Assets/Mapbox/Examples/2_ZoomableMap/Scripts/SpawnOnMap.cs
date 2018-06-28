@@ -36,17 +36,24 @@
 		private bool pinsSpawned;
 		private string clickedCollider;
 		private Transform clickedTransform;
+		private const float scaleCoefficient = 0.013f;
 
 		void Start()
 		{
 			pinsSpawned = false;
 		}
 
+		public void setPinCoef(float x){
+			var result = scaleCoefficient * x;
+			startPinsScale = new Vector3(result,result,result);
+		}
+
 		public void spawnPins(){
 			if(!pinsSpawned){
 				_locations = new Vector2d[_locationStrings.Length];
 				_spawnedObjects = new List<GameObject>();
-				startPinsScale = _markerPrefab.transform.localScale;
+//				startPinsScale = _markerPrefab.transform.localScale;
+
 				currentPinsScale = startPinsScale;
 				for (int i = 0; i < _locationStrings.Length - 1; i++)
 				{

@@ -93,7 +93,6 @@ public class CanvasController : MonoBehaviour {
 	public void show_find_surface_info(){
 		find_surface_Panel.SetActive(true);
 		setCanvasAnimatorParametr(FIND_SURFACE_PANEL_ENTER);
-		startGeneratePlane();
 	}
 	public void hide_find_surface_info(){
 		setCanvasAnimatorParametr(ANIM_EXIT);
@@ -174,6 +173,7 @@ public class CanvasController : MonoBehaviour {
 	void startGeneratePlane(){
 		intro_Panel.SetActive(false);
 		generatePlaneScript.initStart();
+		show_find_surface_info();
 	}
 	private void setCanvasAnimatorParametr(int transitionState){
 		_animator.SetInteger(CANVAS_ANIMATOR_STATE,transitionState);

@@ -196,7 +196,7 @@ AnimationClip:
   m_GenerateMotionCurves: 0
   m_Events:
   - time: 0.6666667
-    functionName: show_find_surface_info
+    functionName: startGeneratePlane
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0

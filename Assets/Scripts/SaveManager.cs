@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class SaveManager : MonoBehaviour {
-	private const string SAVE_SASSION_KEY = "firstSession4";
+	private const string SAVE_SASSION_KEY = "firstSession6";
 	public static SaveManager Instance { get;set; }
 	public SaveState state;
 
@@ -12,10 +12,10 @@ public class SaveManager : MonoBehaviour {
 		DontDestroyOnLoad(gameObject);
 		Instance = this;
 		Load();
-		//
 	}
 
 	public void Save() {
+		//
 		state.isFirstEnter = false;
 		PlayerPrefs.SetString(SAVE_SASSION_KEY, SaveHelper.Serialize<SaveState>(state));
 	}

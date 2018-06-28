@@ -21,7 +21,6 @@ namespace UnityEngine.XR.iOS
 
 		private bool mapWasShown = false;
 		private bool planeAppeared = false;
-		private GameObject planeObj;
 		private SpawnOnMap spawnScript;
 
 		private static int SHOW_MAP_ANIM = 1;
@@ -59,16 +58,11 @@ namespace UnityEngine.XR.iOS
 						}
 					}
 					generate_script.getManager ().HidePrefabs ();
-						
-
-
-					// if(ccontroller.about_map_Panel.activeInHierarchy) //check if panel was not closed manually, so next panel will be shown by event from animation clip
-					// 	ccontroller.hide_about_map_text ();
-					// else
-					// 	ccontroller.show_about_pins(); //else - show next panel from code patently
 
 					ccontroller.hide_about_map_text();
 					ccontroller.show_screenShot_btn ();
+					ccontroller.show_reload_btn ();
+
 					return true;
                 }
             }
@@ -114,7 +108,7 @@ namespace UnityEngine.XR.iOS
                         //ARHitTestResultType.ARHitTestResultTypeEstimatedHorizontalPlane, 
 						//ARHitTestResultType.ARHitTestResultTypeEstimatedVerticalPlane, 
 						//ARHitTestResultType.ARHitTestResultTypeFeaturePoint
-                    }; 
+                    };
 					
                     foreach (ARHitTestResultType resultType in resultTypes)
                     {
@@ -131,7 +125,7 @@ namespace UnityEngine.XR.iOS
 
 		void PlaneAppearDetector.planeDetect(){
 			planeAppeared = true;
-			switchCloud(false);
+			pointCloud.GetComponent<UnityPointCloudExample>().switchCloud(false);
 
 			//calculate distancce
 			Vector3 cameraPostiton = camera_manager.transform.position;
@@ -146,27 +140,37 @@ namespace UnityEngine.XR.iOS
 		}
 
 		public void reload_map(){
+			ccontroller.hide_reload_btn();
+			ccontroller.hide_screenShot_btn();
+
+			if(CanvasController.isFirstSession){
+				ccontroller.resetAnimationState();
+				ccontroller.show_find_surface_info();
+			}
+
+			Debug.Log("FindReload hittest");
+			generate_script.reload_plane();
+			if (mapWasShown){
+				SpawnOnMap component = MAP.GetComponent<SpawnOnMap>();
+				component.switchPins(false);
+				component.resetPinsScale();
+			}
+
+
 			mapWasShown = false;
 			m_HitTransform.localScale = new Vector3 (0, 0, 0);
 			MAP.GetComponent<Animator>().SetInteger("mapAnimTransition",0);
 			
-			switchCloud(true);
+			pointCloud.GetComponent<UnityPointCloudExample>().switchCloud(true);
 
-			ccontroller.hide_about_map_text ();
-			ccontroller.hide_screenShot_btn();
+
+
+			camera_manager.ResetAr();
+
+
 
 		}
 			
-
-		private void switchCloud(bool value){
-				UnityPointCloudExample cloud = pointCloud.GetComponent<UnityPointCloudExample>();
-				cloud.setCloudWorks(false);
-				List<GameObject> list = cloud.getCloud();
-				foreach (GameObject ob in list){
-					float v = value ? 0.002f : 0;
-					ob.transform.localScale = new Vector3(v,v,v);
-				}
-		}
 
 		private void calculateResultScale(float distance){
 			if(distance > normalDistance)

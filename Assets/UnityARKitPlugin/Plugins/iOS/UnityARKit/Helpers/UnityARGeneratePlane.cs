@@ -12,6 +12,7 @@ namespace UnityEngine.XR.iOS
 //		public UnityARHitTestExample hitTest;
 		public GameObject hitParent;
 		public UnityARCameraManager Camera_managerScrpt;
+		public GameObject pointCloud;
 
 
 		public void initStart(){
@@ -50,7 +51,7 @@ namespace UnityEngine.XR.iOS
 		}
 
 		public void reload_plane(){
-			planePrefab.SetActive (true);
+			Debug.Log("FindReload generateplane");
 			unityARAnchorManager.reload_plane ();
 			Transform map;
 			for (int i = 0; i < hitParent.transform.childCount; i++) {
@@ -58,11 +59,6 @@ namespace UnityEngine.XR.iOS
 				if (map.name == "Map") {
 					map.transform.localScale = new Vector3 (0, 0, 0);
 				}
-			}
-
-			if(CanvasController.isFirstSession){
-				controller.resetAnimationState();
-				controller.show_find_surface_info();
 			}
 		}
 		public UnityARAnchorManager getAnchorManager(){ return unityARAnchorManager;}

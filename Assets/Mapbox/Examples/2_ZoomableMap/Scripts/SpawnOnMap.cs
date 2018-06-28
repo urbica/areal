@@ -53,15 +53,9 @@
 					var locationString = _locationStrings[i];
 					_locations[i] = Conversions.StringToLatLon(locationString);
 					var instance = Instantiate(_markerPrefab);
-//					instance.transform.localPosition = _map.GeoToWorldPosition(_locations[i], true);
 					instance.transform.localScale = new Vector3(0,0,0);
 					instance.AddComponent<LeanScale>();
-//					instance.GetComponent<LeanScale>().ScaleMin = startPinsScale;
-//					Pinclass pin = new Pinclass();
-//					pin.mObject = instance;
 					_spawnedObjects.Add(instance);
-					
-//					_markerPrefab.transform.localScale = new Vector3 (0, 0, 0);
 
 				}
 				clicker.setPinsList(_spawnedObjects);
@@ -83,8 +77,6 @@
 					int touchs = Input.touchCount;
 					if (collidersID.Contains(raycastHit.collider.name) && touchs < 2) {
 						switchPins(false);
-						// Transform transform = raycastHit.collider.gameObject.transform;
-						// clickedCollider = raycastHit.collider.name;
 						clickedTransform = raycastHit.collider.transform;
 						_map.GetComponent<Animator>().SetInteger("mapAnimTransition",2);
 						
@@ -117,7 +109,6 @@
 			{
 				var spawnedObject = _spawnedObjects [i];				
 				var boxCollider = spawnedObject.GetComponent<BoxCollider> ();
-//				boxCollider.transform.localPosition = spawnedObject.transform.localPosition;
 				boxCollider.name = i.ToString();
 				collidersID.Add(boxCollider.name);
 				
@@ -140,7 +131,8 @@
 		}
 
 		public void resetPinsScale(){
-			currentPinsScale = startPinsScale;
+			if(currentPinsScale != null && startPinsScale != null)
+				currentPinsScale = startPinsScale;
 		}
 		public void clickPins(){
 			clicker.OnClickPin (clickedTransform);

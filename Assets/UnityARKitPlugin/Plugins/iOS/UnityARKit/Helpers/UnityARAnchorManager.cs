@@ -8,9 +8,6 @@ namespace UnityEngine.XR.iOS
 	public class UnityARAnchorManager 
 	{
 
-		public bool shouldCreatePlane; //--modified
-
-
 		private LinkedListDictionary<string, ARPlaneAnchorGameObject> planeAnchorMap;
 		private UnityARGeneratePlane generatedPlane;
 		private UnityARHitTestExample hitScript;
@@ -19,7 +16,6 @@ namespace UnityEngine.XR.iOS
 
 		public UnityARAnchorManager (UnityARGeneratePlane plane,GameObject hitParent,UnityARHitTestExample sharp,UnityARCameraManager camera_manager)
 		{
-			shouldCreatePlane = true;
 			planeAnchorMap = new LinkedListDictionary<string,ARPlaneAnchorGameObject> ();
 			UnityARSessionNativeInterface.ARAnchorAddedEvent += AddAnchor;
 			UnityARSessionNativeInterface.ARAnchorUpdatedEvent += UpdateAnchor;
@@ -49,7 +45,6 @@ namespace UnityEngine.XR.iOS
 				detector = hitScript;
 				detector.planeDetect ();
 				PlaneDetectorSwitcher switcher = Camera_managerScrpt;
-				shouldCreatePlane = false;
 				
 //			}
 
@@ -95,8 +90,7 @@ namespace UnityEngine.XR.iOS
 			foreach (ARPlaneAnchorGameObject arpag in GetCurrentPlaneAnchors()) {
 				Debug.Log("Prefabs was hidden unityq");
 				arpag.gameObject.SetActive (false);
-//				GameObject.Destroy(arpag.gameObject);
-				
+		
 			}
 				
 		}
@@ -108,9 +102,8 @@ namespace UnityEngine.XR.iOS
 
 		public void reload_plane(){
 			HidePrefabs();
-			shouldCreatePlane = true;
+			Debug.Log("FindReload anchorManager");
 			UnityARSessionNativeInterface.ARAnchorAddedEvent += AddAnchor;
-
 		}
 	}
 

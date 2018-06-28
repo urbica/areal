@@ -22,18 +22,12 @@ public class CanvasController : MonoBehaviour {
 	private AnimationComponent component;
 
 	public UnityARGeneratePlane generatePlaneScript;
-
 	public Button ok_intro;
-//	public Text intro;
-
-
-
-
 	public Button back_Button;
 	public Button reload_Button;
 	public Button screenShot_Button;
-
 	public Button info_Button;
+
 
 	public GameObject intro_Panel;
 	public GameObject about_map_Panel;
@@ -121,7 +115,8 @@ public class CanvasController : MonoBehaviour {
 	}
 	public void EVENT_put_map_exit(){
 		about_map_Panel.SetActive(false);
-		show_about_pins();
+		if(isFirstSession)
+			show_about_pins();
 	}
 
 	public void show_about_pins(){
@@ -173,10 +168,6 @@ public class CanvasController : MonoBehaviour {
 	private void screenshot_anim_EVENT(){
 		screenShot_Panel.SetActive(false);
 	}
-
-    private void initUI(){
-         intro_Panel.SetActive(true);
-    }
 
 	public AnimationComponent getAnimScript(){return component;}
 

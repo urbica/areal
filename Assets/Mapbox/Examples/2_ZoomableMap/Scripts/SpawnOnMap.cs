@@ -7,6 +7,7 @@
 	using Mapbox.Unity.Utilities;
 	using System.Collections.Generic;
 	using Lean.Touch;
+	using UnityEngine.XR.iOS;
 
 	public class SpawnOnMap : MonoBehaviour
 	{
@@ -37,7 +38,7 @@
 		private bool pinsSpawned;
 		private string clickedCollider;
 		private Transform clickedTransform;
-		private const float scaleCoefficient = 0.008f;
+		private const float normalPinScale = 0.007f;
 
 		void Start()
 		{
@@ -45,7 +46,7 @@
 		}
 
 		public void setPinCoef(float x){
-			var result = scaleCoefficient * x;
+			var result = normalPinScale * x;
 			startPinsScale = new Vector3(result,result,result);
 		}
 
@@ -62,9 +63,10 @@
 					_locations[i] = Conversions.StringToLatLon(locationString);
 					var instance = Instantiate(_markerPrefab);
 					instance.transform.localScale = new Vector3(0,0,0);
-					instance.transform.LookAt(Camera.transform);
+//					instance.transform.LookAt (Camera.main.transform.position);
 					instance.AddComponent<LeanScale>();
 					_spawnedObjects.Add(instance);
+
 
 				}
 				Camera.GetComponent<clicker>().setPinsList(_spawnedObjects);
@@ -73,7 +75,7 @@
 				pinsSpawned = true;
 			}
 			else {
-				resetPinsScale();
+//				resetPinsScale();
 				switchPins(true);
 			}			
 		}
@@ -105,13 +107,22 @@
 					float _x = pinLocalPosition.x;
 					float _z = pinLocalPosition.z;
 					spawnedObject.transform.localPosition = new Vector3 (_x, _map.transform.position.y, _z);
-					spawnedObject.transform.LookAt(new Vector3(0,0,0));
-					
+					// spawnedObject.transform.rotation = UnityARMatrixOps.GetRotation(spawnedObject.transform.localToWorldMatrix);
+					// spawnedObject.transform.LookAt (Camera.main.transform.position);
+					// spawnedObject.transform.eulerAngles = new Vector3 (0, spawnedObject.transform.eulerAngles.y, 0);
 
+					// Vector3 currAngle = spawnedObject.transform.eulerAngles;
+					// if(i == 1)
+					// Debug.Log("Angel before " + spawnedObject.transform.rotation.ToString());
+					// spawnedObject.transform.LookAt(Camera.main.transform.position);
+					// spawnedObject.transform.eulerAngles = new Vector3(currAngle.x,spawnedObject.transform.eulerAngles.y,currAngle.z);
+					// if(i == 1)
+					// Debug.Log("Angel after " + spawnedObject.transform.rotation.ToString());
 					
 				}
 			} 
 		}
+
 
 		public void showPinsOnMap(){
 			int count = _spawnedObjects.Count;
@@ -137,10 +148,15 @@
 					currentPinsScale = pin.transform.localScale;
 				} 
 				else {
+//					pin.transform.LookAt(Camera.transform);
 					
 					pin.GetComponent<Animator>().Play("new_star_anim");
 				}
+
+
 				pin.transform.localScale = value ? 	currentPinsScale : new Vector3(0,0,0);
+
+				// pin.transform.LookAt (Camera.main.transform.position);
 				
 			}		
 		}
@@ -150,8 +166,9 @@
 				currentPinsScale = startPinsScale;
 		}
 		public void clickPins(){
-			var x = startPinsScale.x / scaleCoefficient;
+			var x = startPinsScale.x / normalPinScale;
 			Camera.GetComponent<clicker>().OnClickPin (clickedTransform,x);
 		}
+		
 	}
 }

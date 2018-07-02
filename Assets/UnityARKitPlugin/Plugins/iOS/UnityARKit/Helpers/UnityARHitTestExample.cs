@@ -44,6 +44,10 @@ namespace UnityEngine.XR.iOS
                     m_HitTransform.rotation = UnityARMatrixOps.GetRotation (hitResult.worldTransform);
 					m_HitTransform.localScale = new Vector3 (resultScale, resultScale, resultScale);
 
+					Vector3 currAngle = transform.eulerAngles;
+					transform.LookAt(Camera.main.transform);
+					transform.eulerAngles = new Vector3(currAngle.x,transform.eulerAngles.y,currAngle.z);
+
 					Transform map;
 					for (int i = 0; i < m_HitTransform.childCount; i++) {
 						map = m_HitTransform.GetChild (i);
@@ -145,7 +149,6 @@ namespace UnityEngine.XR.iOS
 
 			if(CanvasController.isFirstSession){
 				ccontroller.resetAnimationState();
-
 				Invoke("show_first_help",0.5f);
 			}
 

@@ -63,19 +63,16 @@
 					_locations[i] = Conversions.StringToLatLon(locationString);
 					var instance = Instantiate(_markerPrefab);
 					instance.transform.localScale = new Vector3(0,0,0);
-//					instance.transform.LookAt (Camera.main.transform.position);
 					instance.AddComponent<LeanScale>();
 					_spawnedObjects.Add(instance);
 
 
 				}
 				Camera.GetComponent<clicker>().setPinsList(_spawnedObjects);
-//				clicker.setPinsList(_spawnedObjects);
 				showPinsOnMap();
 				pinsSpawned = true;
 			}
 			else {
-//				resetPinsScale();
 				switchPins(true);
 			}			
 		}
@@ -148,16 +145,9 @@
 					currentPinsScale = pin.transform.localScale;
 				} 
 				else {
-//					pin.transform.LookAt(Camera.transform);
-					
 					pin.GetComponent<Animator>().Play("new_star_anim");
 				}
-
-
 				pin.transform.localScale = value ? 	currentPinsScale : new Vector3(0,0,0);
-
-				// pin.transform.LookAt (Camera.main.transform.position);
-				
 			}		
 		}
 

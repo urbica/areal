@@ -50,10 +50,10 @@ public class clicker : MonoBehaviour {
 		
 	}
 
-	public void OnClickPin(Transform transform,float resultScaleCoef){
+	public void OnClickPin(Transform mTransform,float resultScaleCoef){
 		modelsCollection.GetComponent<LeanScale>().enabled = true;
 		Vector3 mapPosition = map.transform.position;
-		modelsCollection.transform.localPosition = transform.position;
+		modelsCollection.transform.localPosition = mTransform.position;
 		float x = resultScaleCoef / 0.12f;
 		modelsCollection.transform.localScale = new Vector3(x,x,x);
 
@@ -61,29 +61,35 @@ public class clicker : MonoBehaviour {
 //		currentModel = Instantiate(modelsCollection.transform.GetChild(Convert.ToInt32(id)).gameObject);
 
 
-		int currentid = Convert.ToInt32(transform.GetComponent<BoxCollider>().name);
+		int currentid = Convert.ToInt32(mTransform.GetComponent<BoxCollider>().name);
 		currentModel = modelsCollection.transform.GetChild(currentid).gameObject;
 		
 		
-		currentModel.transform.position = transform.position;
+		currentModel.transform.position = mTransform.position;
 
 		modelText.transform.GetChild(0).GetComponent<TextMesh>().text = currentModel.name;
 
 		_animator.SetInteger("modelAnim",currentid + 1);
 		currentModel.AddComponent<RotateSC>();
 
-		ccontroller.hide_about_pins ();
 
-		ccontroller.show_back_Button ();
+		
+		if(CanvasController.isFirstSession){
+			ccontroller.hide_about_pins ();
+			SaveManager.Instance.Save();
+		} else 
+			ccontroller.show_modelName_Text(currentModel.name);
 
+
+
+//		ccontroller.show_back_Button ();
 		//save enter
-		SaveManager.Instance.Save();
-
+		
 	}
 
 	public void hideCurrentModel(bool invokeMap){
 		_animator.SetInteger("modelAnim",0);
-//		ccontroller.hide_about_model();
+		ccontroller.hide_modelName_Text();
 		modelText.SetActive(false);
 		if(invokeMap)
 			Invoke("hideModel_EVENT",0.4f);
@@ -96,27 +102,21 @@ public class clicker : MonoBehaviour {
 	}
 
 	private void setMapActive(bool value){
-		map.SetActive (value);
-		map.transform.parent.gameObject.GetComponent<LeanScale>().enabled = value;
+		if(!value){
+			map.transform.parent.gameObject.GetComponent<LeanScale>().enabled = value;
+			map.SetActive (value);
+		} else {
+			map.SetActive (value);
+			map.transform.parent.gameObject.GetComponent<LeanScale>().enabled = value;
+		}
 
-		if(value){
+
+		if (value) {
 			ccontroller.show_reload_btn();
 			ccontroller.hide_back_Button();
-		}else{
+		} else {
 			ccontroller.hide_reload_btn();
 			ccontroller.show_back_Button();
 		}
-
 	}
-
-	private void setTextModelPosition(Vector3 currentModelPosition,float zScale){
-		float x = currentModelPosition.x;
-		float y = currentModelPosition.y;
-		float z = currentModelPosition.z;
-		modelText.SetActive(true);
-		modelText.transform.localPosition = new Vector3(x,y,z);
-
-
-	}
-
 }

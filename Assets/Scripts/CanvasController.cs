@@ -13,7 +13,7 @@ public class CanvasController : MonoBehaviour {
 	private const int FIND_SURFACE_PANEL_ENTER = 2;
 	private const int PUT_MAP_PANEL_ENTER = 4;
 	private const int TOUCH_PIN_PANEL_ENTER = 6;
-	private const int SCREENSHOT_ANIM = 8;
+	private const int MODEL_TEXT_ENTER = 8;
 	private const int ANIM_EXIT = 0;
 
 	private Animator _animator;
@@ -34,6 +34,7 @@ public class CanvasController : MonoBehaviour {
 	public GameObject about_pins_Panel;
 	public GameObject find_surface_Panel;
 	public GameObject screenShot_Panel;
+	public Text modelName_Text;
 
 
 	public UnityARAnchorManager anchManager;
@@ -42,10 +43,6 @@ public class CanvasController : MonoBehaviour {
 	private bool first_Enter = true;
 
 	private bool clickedFromUI;
-
-	[SerializeField]
-	private Text modelName;
-
 	public static bool isFirstSession;
 
 
@@ -70,6 +67,7 @@ public class CanvasController : MonoBehaviour {
 		}
 		else {
 			startGeneratePlane();
+			show_info_Button();
 		}
 	}
 	
@@ -91,6 +89,7 @@ public class CanvasController : MonoBehaviour {
 	}
 
 	public void show_find_surface_info(){
+		show_info_Button();
 		find_surface_Panel.SetActive(true);
 		setCanvasAnimatorParametr(FIND_SURFACE_PANEL_ENTER);
 	}
@@ -127,6 +126,19 @@ public class CanvasController : MonoBehaviour {
 	}
 	public void EVENT_about_pins_exit(){
 		about_pins_Panel.SetActive(false);
+	}
+
+	public void show_modelName_Text(string text){
+		modelName_Text.gameObject.SetActive(true);
+		modelName_Text.text = text.ToUpper();
+		setCanvasAnimatorParametr(MODEL_TEXT_ENTER);
+	}
+	public void hide_modelName_Text(){
+		setCanvasAnimatorParametr(ANIM_EXIT);
+		Invoke("hide_modelName_EVENT",0.5f);
+	}
+	private void hide_modelName_EVENT(){
+		modelName_Text.gameObject.SetActive(false);
 	}
 
 	public void show_info_Button(){
@@ -184,10 +196,4 @@ public class CanvasController : MonoBehaviour {
 	public void resetAnimationState(){
 		setCanvasAnimatorParametr(ANIM_EXIT);
 	}
-
-	public void setModelName(string text){
-		modelName.text = text;
-	}
-
-
 }

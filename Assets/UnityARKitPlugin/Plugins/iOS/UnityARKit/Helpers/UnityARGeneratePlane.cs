@@ -44,7 +44,7 @@ namespace UnityEngine.XR.iOS
         }
 		void PlaneAppearDetector.planeDetect(){
 
-			controller.show_info_Button();
+//			controller.show_info_Button();
 			controller.hide_find_surface_info();
 
 		}

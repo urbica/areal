@@ -97,6 +97,7 @@ public class clicker : MonoBehaviour {
 	public void hideModel_EVENT(){
 		modelsCollection.transform.localScale = modelParentStartScale;
 		modelsCollection.GetComponent<LeanScale>().enabled = false;
+		modelsCollection.transform.localPosition = new Vector3(10000f,10000f,10000f);
 		setMapActive(true);
 		map.GetComponent<Animator>().SetInteger("mapAnimTransition",1);
 	}

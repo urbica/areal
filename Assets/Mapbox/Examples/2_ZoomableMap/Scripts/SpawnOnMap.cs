@@ -51,12 +51,13 @@
 		}
 
 		public void spawnPins(){
+
 			if(!pinsSpawned){
+				currentPinsScale = getCurrentScale();
 				_locations = new Vector2d[_locationStrings.Length];
 				_spawnedObjects = new List<GameObject>();
 //				startPinsScale = _markerPrefab.transform.localScale;
 				
-				currentPinsScale = startPinsScale;
 				for (int i = 0; i < _locationStrings.Length - 1; i++)
 				{
 					var locationString = _locationStrings[i];
@@ -141,13 +142,20 @@
 			pinsShown = value;
 			foreach(GameObject pin in _spawnedObjects){
 				pin.GetComponent<LeanScale>().enabled = value;
-				if (!value){
-					currentPinsScale = pin.transform.localScale;
-				} 
-				else {
-					pin.GetComponent<Animator>().Play("new_star_anim");
+				// if (!value){
+				// 	currentPinsScale = pin.transform.localScale;
+				// } 
+				// else {
+				// 	pin.GetComponent<Animator>().Play("new_star_anim");
+				// }
+				if(value){
+					pin.transform.localScale = getCurrentScale();
+				} else {
+//					setCurrentScale();
+					pin.transform.localScale = new Vector3(0,0,0);
+					
 				}
-				pin.transform.localScale = value ? 	currentPinsScale : new Vector3(0,0,0);
+//				pin.transform.localScale = value ? 	currentPinsScale : new Vector3(0,0,0);
 			}		
 		}
 
@@ -158,6 +166,10 @@
 		public void clickPins(){
 			var x = startPinsScale.x / normalPinScale;
 			Camera.GetComponent<clicker>().OnClickPin (clickedTransform,x);
+		}
+		public Vector3 getCurrentScale(){
+			float x = transform.parent.transform.localScale.x * 0.007f;
+			return new Vector3(x,x,x);
 		}
 		
 	}

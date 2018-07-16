@@ -23,7 +23,7 @@ public class ShareFun : MonoBehaviour {
 		Texture2D img = new Texture2D((int)width, (int)height, TextureFormat.RGB24, false);
 		img.ReadPixels(new Rect(0, 0, width, height), 0, 0, false);
 		img.Apply();
-		NativeGallery.SaveImageToGallery( img,"MyGallary","maimga{}.png" );
+		NativeGallery.SaveImageToGallery( img,"AReal","maimga{}.png" );
 
 		Destroy(img);
 

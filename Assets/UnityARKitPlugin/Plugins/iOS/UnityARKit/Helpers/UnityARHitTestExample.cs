@@ -156,7 +156,7 @@ namespace UnityEngine.XR.iOS
 			if (mapWasShown){
 				SpawnOnMap component = MAP.GetComponent<SpawnOnMap>();
 				component.switchPins(false);
-				component.resetPinsScale();
+	//			component.resetPinsScale();
 			}
 
 

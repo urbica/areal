@@ -9,7 +9,6 @@ public class RotateSC : MonoBehaviour {
 	Vector2 secondPressPos;
 	Vector2 currentSwipe;
 	public float rotateSpeed = 2f;
-	public GameObject obj;
 
 	// Use this for initialization
 	void Start () {

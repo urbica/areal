@@ -21,7 +21,6 @@ namespace UnityEngine.XR.iOS
 
 		private bool mapWasShown = false;
 		private bool planeAppeared = false;
-		private GameObject planeObj;
 		private SpawnOnMap spawnScript;
 
 		private static int SHOW_MAP_ANIM = 1;
@@ -45,33 +44,28 @@ namespace UnityEngine.XR.iOS
                     m_HitTransform.rotation = UnityARMatrixOps.GetRotation (hitResult.worldTransform);
 					m_HitTransform.localScale = new Vector3 (resultScale, resultScale, resultScale);
 
+					Vector3 currAngle = transform.eulerAngles;
+					transform.LookAt(Camera.main.transform);
+					transform.eulerAngles = new Vector3(currAngle.x,transform.eulerAngles.y,currAngle.z);
+
 					Transform map;
 					for (int i = 0; i < m_HitTransform.childCount; i++) {
 						map = m_HitTransform.GetChild (i);
 						if (map.name == "Map") {
 
-							
-
 							MAP = map.gameObject;
 							MAP.GetComponent<Animator>().SetInteger("mapAnimTransition",SHOW_MAP_ANIM);
 							spawnScript = MAP.GetComponent<SpawnOnMap> ();
-						//	switchCloud(false);
 							m_HitTransform.gameObject.GetComponent<LeanScale>().enabled = true;
 							
-
 						}
 					}
 					generate_script.getManager ().HidePrefabs ();
-						
 
-
-					if(ccontroller.about_map_Panel.activeInHierarchy) //check if panel was not closed manually, so next panel will be shown by event from animation clip
-						ccontroller.hide_about_map_text (false);
-					else
-						ccontroller.show_about_pins(); //else - show next panel from code patently
-
-					ccontroller.show_reload_btn ();
+					ccontroller.hide_about_map_text();
 					ccontroller.show_screenShot_btn ();
+					ccontroller.show_reload_btn ();
+
 					return true;
                 }
             }
@@ -117,7 +111,7 @@ namespace UnityEngine.XR.iOS
                         //ARHitTestResultType.ARHitTestResultTypeEstimatedHorizontalPlane, 
 						//ARHitTestResultType.ARHitTestResultTypeEstimatedVerticalPlane, 
 						//ARHitTestResultType.ARHitTestResultTypeFeaturePoint
-                    }; 
+                    };
 					
                     foreach (ARHitTestResultType resultType in resultTypes)
                     {
@@ -134,7 +128,7 @@ namespace UnityEngine.XR.iOS
 
 		void PlaneAppearDetector.planeDetect(){
 			planeAppeared = true;
-			switchCloud(false);
+			pointCloud.GetComponent<UnityPointCloudExample>().switchCloud(false);
 
 			//calculate distancce
 			Vector3 cameraPostiton = camera_manager.transform.position;
@@ -145,49 +139,42 @@ namespace UnityEngine.XR.iOS
 			}
 			float distance = planePosition.magnitude - cameraPostiton.magnitude;
 			calculateResultScale(distance);
-
-
-//			Debug.Log("SeeDistance: camera - " + cameraPostiton.magnitude + "; plane - " + planePosition.magnitude + "; distance - " + distance);
 			
 		}
 
 		public void reload_map(){
+			ccontroller.hide_reload_btn();
+			ccontroller.hide_screenShot_btn();
+
+			if(CanvasController.isFirstSession){
+				ccontroller.resetAnimationState();
+				Invoke("show_first_help",0.5f);
+			}
+
+			generate_script.reload_plane();
+			if (mapWasShown){
+				SpawnOnMap component = MAP.GetComponent<SpawnOnMap>();
+				component.switchPins(false);
+			}
+
 			mapWasShown = false;
 			m_HitTransform.localScale = new Vector3 (0, 0, 0);
 			MAP.GetComponent<Animator>().SetInteger("mapAnimTransition",0);
-// 			for (int i = 0; i < m_HitTransform.childCount; i++) {
-// 				Transform child = m_HitTransform.GetChild (i);
-// 				if (child.name == "Map") {
-					
-// //					child.localScale = new Vector3(0,0,0);
-// //					child.gameObject.SetActive (true);
-// 				}
-// 			}
 			
-			switchCloud(true);
-			ccontroller.hide_back_Button ();
-			ccontroller.hide_reload_btn ();
-			ccontroller.hide_about_model ();
-			ccontroller.hide_about_map_text (false);
-			ccontroller.hide_about_Isaac_info ();
-			ccontroller.hide_info_btn ();
-		}
-			
+			pointCloud.GetComponent<UnityPointCloudExample>().switchCloud(true);
 
-		private void switchCloud(bool value){
-				UnityPointCloudExample cloud = pointCloud.GetComponent<UnityPointCloudExample>();
-				cloud.setCloudWorks(false);
-				List<GameObject> list = cloud.getCloud();
-				foreach (GameObject ob in list){
-					float v = value ? 0.002f : 0;
-					ob.transform.localScale = new Vector3(v,v,v);
-				}
+			camera_manager.ResetAr();
 		}
+			
 
 		private void calculateResultScale(float distance){
 			if(distance > normalDistance)
 				resultScale = (normalScale * distance) / (2 * normalDistance);
-				Debug.Log("SeeDistance: distance - " + distance + "resulrScale" + resultScale);
+				Debug.Log("FindScale " + resultScale); //0.128891
+		}
+
+		private void show_first_help(){
+			ccontroller.show_find_surface_info();
 		}
 	
 	}

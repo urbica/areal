@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class SaveManager : MonoBehaviour {
+	private const string SAVE_SASSION_KEY = "firstSession15";
 	public static SaveManager Instance { get;set; }
 	public SaveState state;
 
@@ -14,23 +15,19 @@ public class SaveManager : MonoBehaviour {
 	}
 
 	public void Save() {
+		//
 		state.isFirstEnter = false;
-		PlayerPrefs.SetString("let", SaveHelper.Serialize<SaveState>(state));
+		PlayerPrefs.SetString(SAVE_SASSION_KEY, SaveHelper.Serialize<SaveState>(state));
 	}
 
 	public void Load() {
-		if(PlayerPrefs.HasKey("let"))
+		if(PlayerPrefs.HasKey(SAVE_SASSION_KEY))
 		{
-			state = SaveHelper.Deserialize<SaveState>(PlayerPrefs.GetString("let"));
+			state = SaveHelper.Deserialize<SaveState>(PlayerPrefs.GetString(SAVE_SASSION_KEY));
 		} else {
 			state = new SaveState();
 			state.isFirstEnter = true;
 		}
-		// else {
-		// 	state = new SaveState();
-		// 	state.setState(true);
-		// 	Save();
-		// }
 	}
 
 }

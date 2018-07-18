@@ -9,8 +9,11 @@ using System;
  */
 
 public class ShareFun : MonoBehaviour {
+	[SerializeField]
+	private Canvas canvas;
 
 	public void onClickSS(){
+		canvas.gameObject.SetActive(false);
 		StartCoroutine(takeCapture());
 	}
 
@@ -20,9 +23,12 @@ public class ShareFun : MonoBehaviour {
 		Texture2D img = new Texture2D((int)width, (int)height, TextureFormat.RGB24, false);
 		img.ReadPixels(new Rect(0, 0, width, height), 0, 0, false);
 		img.Apply();
-		NativeGallery.SaveImageToGallery( img,"MyGallary","maimga{}.png" );
+		NativeGallery.SaveImageToGallery( img,"AReal","maimga{}.png" );
 
 		Destroy(img);
+
+		canvas.gameObject.SetActive(true);
+		canvas.GetComponent<CanvasController>().screenShot_Flash();
 	}
 
 	public string ScreenshotName = "screenshot.png";

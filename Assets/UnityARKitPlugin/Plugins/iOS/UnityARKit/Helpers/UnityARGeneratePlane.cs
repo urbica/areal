@@ -11,18 +11,15 @@ namespace UnityEngine.XR.iOS
         private UnityARAnchorManager unityARAnchorManager;
 //		public UnityARHitTestExample hitTest;
 		public GameObject hitParent;
-//		public GameObject map;
-//		private UnityARHitTestExample scrpt;
 		public UnityARCameraManager Camera_managerScrpt;
+		public GameObject pointCloud;
 
 
 		public void initStart(){
-//			planePrefab.SetActive (true);
+			planePrefab.SetActive (true);
 			UnityARHitTestExample hitScript = hitParent.GetComponentInChildren<UnityARHitTestExample>();
-//			scrpt = map.GetComponent<UnityARHitTestExample>();
 			unityARAnchorManager = new UnityARAnchorManager(this,hitParent,hitScript,Camera_managerScrpt);
 			UnityARUtility.InitializePlanePrefab (planePrefab);
-			controller.show_find_surface_info();
 
 		}
 
@@ -46,19 +43,14 @@ namespace UnityEngine.XR.iOS
             }
         }
 		void PlaneAppearDetector.planeDetect(){
-//			controller.hide_screenShot_btn ();
 
-			controller.show_reload_btn ();
-			
-			if(controller.find_surface_Panel.activeInHierarchy){//check if panel was not closed manually, so next panel will be shown by event from animation clip
-				controller.hide_find_surface_info(false);
-			}else{
-				controller.show_about_map_text (); //else - show next panel from code patently
-			}
+//			controller.show_info_Button();
+			controller.hide_find_surface_info();
+
 		}
 
 		public void reload_plane(){
-			planePrefab.SetActive (true);
+			Debug.Log("FindReload generateplane");
 			unityARAnchorManager.reload_plane ();
 			Transform map;
 			for (int i = 0; i < hitParent.transform.childCount; i++) {
@@ -67,7 +59,6 @@ namespace UnityEngine.XR.iOS
 					map.transform.localScale = new Vector3 (0, 0, 0);
 				}
 			}
-//			controller.show_find_surface_info();
 		}
 		public UnityARAnchorManager getAnchorManager(){ return unityARAnchorManager;}
 	}

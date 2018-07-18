@@ -48,4 +48,11 @@ public class UnityPointCloudExample : MonoBehaviour
 
     public List<GameObject> getCloud(){ return pointCloudObjects;}
     public void setCloudWorks(bool value){cloudWorks = value;}
+
+    public void switchCloud(bool value){
+		foreach (GameObject ob in pointCloudObjects){
+			float v = value ? 0.002f : 0;
+			ob.transform.localScale = new Vector3(v,v,v);
+		}
+	}
 }

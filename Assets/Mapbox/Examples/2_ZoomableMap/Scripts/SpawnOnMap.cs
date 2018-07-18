@@ -32,11 +32,9 @@
 
 		private bool pinsShown = false;
 		private List<string>collidersID;
-		private Vector3 currentPinsScale;
 		private Vector3 startPinsScale;
 
 		private bool pinsSpawned;
-		private string clickedCollider;
 		private Transform clickedTransform;
 		private const float normalPinScale = 0.007f;
 
@@ -45,18 +43,11 @@
 			pinsSpawned = false;
 		}
 
-		public void setPinCoef(float x){
-			var result = normalPinScale * x;
-			startPinsScale = new Vector3(result,result,result);
-		}
-
 		public void spawnPins(){
 			if(!pinsSpawned){
 				_locations = new Vector2d[_locationStrings.Length];
 				_spawnedObjects = new List<GameObject>();
-//				startPinsScale = _markerPrefab.transform.localScale;
-				
-				currentPinsScale = startPinsScale;
+
 				for (int i = 0; i < _locationStrings.Length - 1; i++)
 				{
 					var locationString = _locationStrings[i];
@@ -64,8 +55,8 @@
 					var instance = Instantiate(_markerPrefab);
 					instance.transform.localScale = new Vector3(0,0,0);
 					instance.AddComponent<LeanScale>();
+					instance.name = i.ToString();
 					_spawnedObjects.Add(instance);
-
 
 				}
 				Camera.GetComponent<clicker>().setPinsList(_spawnedObjects);
@@ -141,24 +132,34 @@
 			pinsShown = value;
 			foreach(GameObject pin in _spawnedObjects){
 				pin.GetComponent<LeanScale>().enabled = value;
-				if (!value){
-					currentPinsScale = pin.transform.localScale;
-				} 
-				else {
-					pin.GetComponent<Animator>().Play("new_star_anim");
-				}
-				pin.transform.localScale = value ? 	currentPinsScale : new Vector3(0,0,0);
+				// if (!value){
+				// 	currentPinsScale = new Vector3(0,0,0);
+				// } 
+				// else {
+				// 	pin.GetComponent<Animator>().Play("new_star_anim");
+				// }
+
+				pin.transform.localScale = value ? 	getCurrentScale() : new Vector3(0,0,0);
 			}		
 		}
 
-		public void resetPinsScale(){
-			if(currentPinsScale != null && startPinsScale != null)
-				currentPinsScale = startPinsScale;
-		}
 		public void clickPins(){
 			var x = startPinsScale.x / normalPinScale;
 			Camera.GetComponent<clicker>().OnClickPin (clickedTransform,x);
 		}
+
+		private Vector3 getCurrentScale(){
+			float x = transform.parent.transform.localScale.x * 0.007f;
+			return new Vector3(x,x,x);
+		}
+// 	`59.93411, 30.3061` Искаивский собор
+// `59.95, 30.31667` Петропавловская крепость
+// `59.94863, 30.32736` Троицкий мост
+// `59.939032, 30.315737` Столп
+// `59.9401, 30.32889` Спас на крови
+// `59.937995, 30.307875` Адмиралтейство
+// `59.940380, 30.313862` Зимний дворец
+// `59.93637, 30.30223` Петр
 		
 	}
 }

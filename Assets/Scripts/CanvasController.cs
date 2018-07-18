@@ -59,8 +59,8 @@ public class CanvasController : MonoBehaviour {
 		hide_reload_btn ();
 		hide_info_Button();
 		hide_screenShot_btn ();
-//		isFirstSession = SaveManager.Instance.state.isFirstEnter;
-		isFirstSession = true;
+		isFirstSession = SaveManager.Instance.state.isFirstEnter;
+//		isFirstSession = true;
 
 
 		if (isFirstSession) {

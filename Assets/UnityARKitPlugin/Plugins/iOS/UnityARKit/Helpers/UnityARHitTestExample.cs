@@ -56,7 +56,6 @@ namespace UnityEngine.XR.iOS
 							MAP = map.gameObject;
 							MAP.GetComponent<Animator>().SetInteger("mapAnimTransition",SHOW_MAP_ANIM);
 							spawnScript = MAP.GetComponent<SpawnOnMap> ();
-							spawnScript.setPinCoef(resultScale);
 							m_HitTransform.gameObject.GetComponent<LeanScale>().enabled = true;
 							
 						}
@@ -156,7 +155,6 @@ namespace UnityEngine.XR.iOS
 			if (mapWasShown){
 				SpawnOnMap component = MAP.GetComponent<SpawnOnMap>();
 				component.switchPins(false);
-				component.resetPinsScale();
 			}
 
 

@@ -173,7 +173,7 @@ PlayerSettings:
   StripUnusedMeshComponents: 0
   VertexChannelCompressionMask: 214
   iPhoneSdkVersion: 988
-  iOSTargetOSVersionString: 9.0
+  iOSTargetOSVersionString: 11.0
   tvOSSdkVersion: 0
   tvOSRequireExtendedGameController: 0
   tvOSTargetOSVersionString: 9.0
@@ -237,7 +237,7 @@ PlayerSettings:
   iOSManualSigningProvisioningProfileType: 0
   tvOSManualSigningProvisioningProfileType: 0
   appleEnableAutomaticSigning: 1
-  iOSRequireARKit: 0
+  iOSRequireARKit: 1
   appleEnableProMotion: 0
   clonedFromGUID: 00000000000000000000000000000000
   templatePackageId: 
@@ -466,8 +466,8 @@ PlayerSettings:
   enableInternalProfiler: 0
   logObjCUncaughtExceptions: 1
   enableCrashReportAPI: 0
-  cameraUsageDescription: AR BABY
-  locationUsageDescription: wher am I?
+  cameraUsageDescription: Let Areal use camera to create augmented reality
+  locationUsageDescription: Let Areal use your position
   microphoneUsageDescription: 
   switchNetLibKey: 
   switchSocketMemoryPoolSize: 6144

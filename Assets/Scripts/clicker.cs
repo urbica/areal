@@ -35,9 +35,9 @@ public class clicker : MonoBehaviour {
 		_animator = modelsCollection.GetComponent<Animator>();
 
 		//save default scale of models parent
-		modelParentStartScale = modelsCollection.transform.localScale;
-		modelsCollection.AddComponent<LeanScale>();
-		modelsCollection.GetComponent<LeanScale>().enabled = false;
+		 modelParentStartScale = modelsCollection.transform.localScale;
+		 modelsCollection.AddComponent<LeanScale>();
+		 modelsCollection.GetComponent<LeanScale>().enabled = false;
 		
 	}
 
@@ -47,33 +47,28 @@ public class clicker : MonoBehaviour {
 	void TaskOnClick()
 	{
 		hideCurrentModel(true);
-		
 	}
 
 	public void OnClickPin(Transform mTransform,float resultScaleCoef){
+		var id = Convert.ToInt32(mTransform.GetComponent<BoxCollider>().name);
+
 		modelsCollection.GetComponent<LeanScale>().enabled = true;
-		Vector3 mapPosition = map.transform.position;
 		modelsCollection.transform.localPosition = mTransform.position;
-		float x = resultScaleCoef / 0.12f;
-		modelsCollection.transform.localScale = new Vector3(x,x,x);
+		// float x = resultScaleCoef / 0.12f;
+		// modelsCollection.transform.localScale = new Vector3(x,x,x);
 
 		setMapActive(false);
-//		currentModel = Instantiate(modelsCollection.transform.GetChild(Convert.ToInt32(id)).gameObject);
-
-
-		int currentid = Convert.ToInt32(mTransform.GetComponent<BoxCollider>().name);
-		currentModel = modelsCollection.transform.GetChild(currentid).gameObject;
 		
-		
-		currentModel.transform.position = mTransform.position;
+		currentModel = modelsCollection.transform.GetChild(id).gameObject;
+		currentModel.transform.localPosition = mTransform.position;
+		currentModel.AddComponent<RotateSC>().enabled = true;
 
-		modelText.transform.GetChild(0).GetComponent<TextMesh>().text = currentModel.name;
-
-		_animator.SetInteger("modelAnim",currentid + 1);
+//		modelText.transform.GetChild(0).GetComponent<TextMesh>().text = currentModel.name;
 		currentModel.AddComponent<RotateSC>();
 
+		_animator.SetInteger("modelAnim",id + 1);
 
-		
+
 		if(CanvasController.isFirstSession){
 			ccontroller.hide_about_pins ();
 			SaveManager.Instance.Save();
@@ -83,6 +78,7 @@ public class clicker : MonoBehaviour {
 		}
 
 	}
+
 	private void hide_pins_EVENT(){
 		ccontroller.show_modelName_Text(currentModel.name);	
 	}
@@ -97,7 +93,7 @@ public class clicker : MonoBehaviour {
 	public void hideModel_EVENT(){
 		modelsCollection.transform.localScale = modelParentStartScale;
 		modelsCollection.GetComponent<LeanScale>().enabled = false;
-		modelsCollection.transform.localPosition = new Vector3(10000f,10000f,10000f);
+		modelsCollection.transform.position = new Vector3(10000,10000,10000);
 		setMapActive(true);
 		map.GetComponent<Animator>().SetInteger("mapAnimTransition",1);
 	}

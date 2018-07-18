@@ -32,11 +32,9 @@
 
 		private bool pinsShown = false;
 		private List<string>collidersID;
-		private Vector3 currentPinsScale;
 		private Vector3 startPinsScale;
 
 		private bool pinsSpawned;
-		private string clickedCollider;
 		private Transform clickedTransform;
 		private const float normalPinScale = 0.007f;
 
@@ -45,19 +43,12 @@
 			pinsSpawned = false;
 		}
 
-		public void setPinCoef(float x){
-			var result = normalPinScale * x;
-			startPinsScale = new Vector3(result,result,result);
-		}
-
 		public void spawnPins(){
 
 			if(!pinsSpawned){
-				currentPinsScale = getCurrentScale();
+				var currentPinsScale = getCurrentScale();
 				_locations = new Vector2d[_locationStrings.Length];
 				_spawnedObjects = new List<GameObject>();
-//				startPinsScale = _markerPrefab.transform.localScale;
-				
 				for (int i = 0; i < _locationStrings.Length - 1; i++)
 				{
 					var locationString = _locationStrings[i];
@@ -65,8 +56,8 @@
 					var instance = Instantiate(_markerPrefab);
 					instance.transform.localScale = new Vector3(0,0,0);
 					instance.AddComponent<LeanScale>();
+					instance.name = i.ToString();
 					_spawnedObjects.Add(instance);
-
 
 				}
 				Camera.GetComponent<clicker>().setPinsList(_spawnedObjects);
@@ -144,25 +135,17 @@
 				pin.GetComponent<LeanScale>().enabled = value;
 				// if (!value){
 				// 	currentPinsScale = pin.transform.localScale;
+				// 	currentPinsScale = new Vector3(0,0,0);
+
 				// } 
 				// else {
 				// 	pin.GetComponent<Animator>().Play("new_star_anim");
 				// }
-				if(value){
-					pin.transform.localScale = getCurrentScale();
-				} else {
-//					setCurrentScale();
-					pin.transform.localScale = new Vector3(0,0,0);
-					
-				}
-//				pin.transform.localScale = value ? 	currentPinsScale : new Vector3(0,0,0);
+
+				pin.transform.localScale = value ? 	getCurrentScale() : new Vector3(0,0,0);
 			}		
 		}
 
-		public void resetPinsScale(){
-			if(currentPinsScale != null && startPinsScale != null)
-				currentPinsScale = startPinsScale;
-		}
 		public void clickPins(){
 			var x = startPinsScale.x / normalPinScale;
 			Camera.GetComponent<clicker>().OnClickPin (clickedTransform,x);

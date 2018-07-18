@@ -46,10 +46,9 @@
 		public void spawnPins(){
 
 			if(!pinsSpawned){
-				var currentPinsScale = getCurrentScale();
 				_locations = new Vector2d[_locationStrings.Length];
 				_spawnedObjects = new List<GameObject>();
-				for (int i = 0; i < _locationStrings.Length - 1; i++)
+				for (int i = 0; i < _locationStrings.Length; i++)
 				{
 					var locationString = _locationStrings[i];
 					_locations[i] = Conversions.StringToLatLon(locationString);
@@ -60,6 +59,7 @@
 					_spawnedObjects.Add(instance);
 
 				}
+				Debug.Log("spawnedObjects Count is " + _spawnedObjects.Count);
 				Camera.GetComponent<clicker>().setPinsList(_spawnedObjects);
 				showPinsOnMap();
 				pinsSpawned = true;

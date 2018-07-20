@@ -8,6 +8,7 @@
 	using System.Collections.Generic;
 	using Lean.Touch;
 	using UnityEngine.XR.iOS;
+	using UnityEngine.EventSystems;
 
 	public class SpawnOnMap : MonoBehaviour
 	{
@@ -70,7 +71,7 @@
 
 		private void Update()
 		{
-			if ((Input.touchCount > 0) && (Input.GetTouch (0).phase == TouchPhase.Began)) {
+			if ((Input.touchCount > 0) && (Input.GetTouch (0).phase == TouchPhase.Began) && !EventSystem.current.IsPointerOverGameObject()) {
 				Ray raycast = Camera.main.ScreenPointToRay(Input.GetTouch(0).position);
 				RaycastHit raycastHit;
 

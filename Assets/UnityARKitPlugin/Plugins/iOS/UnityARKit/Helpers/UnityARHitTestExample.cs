@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using Lean.Touch;
 using Mapbox.Examples;
+using UnityEngine.EventSystems;
 
 namespace UnityEngine.XR.iOS
 {
@@ -36,7 +37,7 @@ namespace UnityEngine.XR.iOS
         bool HitTestWithResultType (ARPoint point, ARHitTestResultType resultTypes)
         {
             List<ARHitTestResult> hitResults = UnityARSessionNativeInterface.GetARSessionNativeInterface ().HitTest (point, resultTypes);
-			if (hitResults.Count > 0 && !mapWasShown && planeAppeared ) {
+			if (hitResults.Count > 0 && !mapWasShown && planeAppeared && !EventSystem.current.IsPointerOverGameObject()) {
 				mapWasShown = true;
 
                 foreach (var hitResult in hitResults) {
@@ -44,9 +45,9 @@ namespace UnityEngine.XR.iOS
                     m_HitTransform.rotation = UnityARMatrixOps.GetRotation (hitResult.worldTransform);
 					m_HitTransform.localScale = new Vector3 (resultScale, resultScale, resultScale);
 
-					// Vector3 currAngle = transform.eulerAngles;
-					// transform.LookAt(Camera.main.transform);
-					// transform.eulerAngles = new Vector3(currAngle.x,transform.eulerAngles.y,currAngle.z);
+					Vector3 currAngle = m_HitTransform.eulerAngles;
+					m_HitTransform.LookAt(Camera.main.transform);
+					m_HitTransform.eulerAngles = new Vector3(currAngle.x,m_HitTransform.eulerAngles.y + 180f,currAngle.z);
 
 					Transform map;
 					for (int i = 0; i < m_HitTransform.childCount; i++) {

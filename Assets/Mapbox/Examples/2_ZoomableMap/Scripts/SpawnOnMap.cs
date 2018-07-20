@@ -59,7 +59,6 @@
 					_spawnedObjects.Add(instance);
 
 				}
-				Debug.Log("spawnedObjects Count is " + _spawnedObjects.Count);
 				Camera.GetComponent<clicker>().setPinsList(_spawnedObjects);
 				showPinsOnMap();
 				pinsSpawned = true;
@@ -141,8 +140,12 @@
 				// else {
 				// 	pin.GetComponent<Animator>().Play("new_star_anim");
 				// }
+				
 
 				pin.transform.localScale = value ? 	getCurrentScale() : new Vector3(0,0,0);
+				if(value){
+					pin.GetComponent<Animator>().Play("название анимации");
+				}
 			}		
 		}
 
@@ -151,7 +154,7 @@
 			Camera.GetComponent<clicker>().OnClickPin (clickedTransform,x);
 		}
 		public Vector3 getCurrentScale(){
-			float x = transform.parent.transform.localScale.x * 0.007f;
+			float x = transform.parent.transform.localScale.x * 0.005f;
 			return new Vector3(x,x,x);
 		}
 		

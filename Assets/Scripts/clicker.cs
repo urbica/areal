@@ -61,10 +61,13 @@ public class clicker : MonoBehaviour {
 		
 		currentModel = modelsCollection.transform.GetChild(id).gameObject;
 		currentModel.transform.localPosition = mTransform.position;
-		currentModel.AddComponent<RotateSC>().enabled = true;
+//		currentModel.AddComponent<RotateSC>().enabled = true;
 
 //		modelText.transform.GetChild(0).GetComponent<TextMesh>().text = currentModel.name;
-		currentModel.AddComponent<RotateSC>();
+		if (id == 3){
+			currentModel.transform.GetChild(1).gameObject.AddComponent<RotateSC>();
+		} else 
+			currentModel.AddComponent<RotateSC>();
 
 		_animator.SetInteger("modelAnim",id + 1);
 

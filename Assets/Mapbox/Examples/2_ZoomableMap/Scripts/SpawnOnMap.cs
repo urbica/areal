@@ -8,6 +8,7 @@
 	using System.Collections.Generic;
 	using Lean.Touch;
 	using UnityEngine.XR.iOS;
+	using UnityEngine.EventSystems;
 
 	public class SpawnOnMap : MonoBehaviour
 	{
@@ -59,7 +60,6 @@
 					_spawnedObjects.Add(instance);
 
 				}
-				Debug.Log("spawnedObjects Count is " + _spawnedObjects.Count);
 				Camera.GetComponent<clicker>().setPinsList(_spawnedObjects);
 				showPinsOnMap();
 				pinsSpawned = true;
@@ -71,7 +71,7 @@
 
 		private void Update()
 		{
-			if ((Input.touchCount > 0) && (Input.GetTouch (0).phase == TouchPhase.Began)) {
+			if ((Input.touchCount > 0) && (Input.GetTouch (0).phase == TouchPhase.Began) && !EventSystem.current.IsPointerOverGameObject()) {
 				Ray raycast = Camera.main.ScreenPointToRay(Input.GetTouch(0).position);
 				RaycastHit raycastHit;
 
@@ -141,8 +141,12 @@
 				// else {
 				// 	pin.GetComponent<Animator>().Play("new_star_anim");
 				// }
+				
 
 				pin.transform.localScale = value ? 	getCurrentScale() : new Vector3(0,0,0);
+				if(value){
+					pin.GetComponent<Animator>().Play("название анимации");
+				}
 			}		
 		}
 
@@ -151,7 +155,7 @@
 			Camera.GetComponent<clicker>().OnClickPin (clickedTransform,x);
 		}
 		public Vector3 getCurrentScale(){
-			float x = transform.parent.transform.localScale.x * 0.007f;
+			float x = transform.parent.transform.localScale.x * 0.005f;
 			return new Vector3(x,x,x);
 		}
 		

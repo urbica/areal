@@ -139,6 +139,7 @@ namespace UnityEngine.XR.iOS
 				planePosition = arpag.gameObject.transform.position;
 			}
 			float distance = planePosition.magnitude - cameraPostiton.magnitude;
+			camera_manager.m_camera.GetComponent<clicker>().setDistance(distance);
 			calculateResultScale(distance);
 			
 		}
@@ -177,7 +178,6 @@ namespace UnityEngine.XR.iOS
 		private void show_first_help(){
 			ccontroller.show_find_surface_info();
 		}
-	
 	}
 }
 

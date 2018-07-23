@@ -144,7 +144,7 @@
 
 				pin.transform.localScale = value ? 	getCurrentScale() : new Vector3(0,0,0);
 				if(value){
-					pin.GetComponent<Animator>().Play("название анимации");
+					pin.GetComponent<Animator>().Play("new_star_anim");
 				}
 			}		
 		}

@@ -26,11 +26,12 @@ public class clicker : MonoBehaviour {
 
 
 
-	public GameObject modelsCollection;
 	private List<GameObject>modelList;
 	private GameObject currentModel;
 	private Animator _animator;
 	private Vector3 modelParentStartScale;
+
+	private float distance;
 
 
 	// Use this for initialization
@@ -38,10 +39,9 @@ public class clicker : MonoBehaviour {
 		modelText.SetActive(false);
 		Button btn = but.GetComponent<Button>();
 		btn.onClick.AddListener(TaskOnClick);
-		_animator = modelsCollection.GetComponent<Animator>();
 
 		//save default scale of models parent
-		 modelParentStartScale = modelsCollection.transform.localScale;
+	//	 modelParentStartScale = modelsCollection.transform.localScale;
 	//	 Architecture.AddComponent<LeanScale>();
 	//	 Architecture.GetComponent<LeanScale>().enabled = false;
 		
@@ -55,50 +55,42 @@ public class clicker : MonoBehaviour {
 	public void OnClickPin(Transform mTransform,float resultScaleCoef){
 		var id = Convert.ToInt32(mTransform.GetComponent<BoxCollider>().name);
 
-//		Architecture.GetComponent<LeanScale>().enabled = true;
-//		Architecture.transform.localPosition = mTransform.position;
 		// float x = resultScaleCoef / 0.12f;
 		// modelsCollection.transform.localScale = new Vector3(x,x,x);
 
 		setMapActive(false);
+		Debug.Log("Clicked MAZAFAJA");
 		
-//		currentModel = Architecture.transform.GetChild(id).gameObject;
 		var prefab = Architecture.transform.GetChild(id).gameObject;
 		currentModel = Instantiate(prefab);
 		currentModel.transform.localPosition = mTransform.position;
-//		currentModel.AddComponent<RotateSC>().enabled = true;
+		var scale = (2 * distance) / 3;
+		currentModel.transform.localScale = new Vector3(scale,scale,scale);
 
-//		modelText.transform.GetChild(0).GetComponent<TextMesh>().text = currentModel.name;
-		// if (id == 3){
-		// 	currentModel.transform.GetChild(1).gameObject.AddComponent<RotateSC>();
-		// } else 
+
 		currentModel.AddComponent<RotateSC>();
 		currentModel.AddComponent<LeanScale>();
 		currentModel.GetComponent<Animator>().SetBool("showModel",true);
-
-//		_animator.SetInteger("modelAnim",id + 1);
-//		currentModel.SetActive(true);
-
 
 		if(CanvasController.isFirstSession){
 			ccontroller.hide_about_pins ();
 			SaveManager.Instance.Save();
 			Invoke("hide_pins_EVENT",0.5f);
 		} else {
-			ccontroller.show_modelName_Text(getChildName(currentModel));		
+//			ccontroller.show_modelName_Text(getChildName(currentModel));		
 		}
 
 	}
 
 	private void hide_pins_EVENT(){
-		ccontroller.show_modelName_Text(getChildName(currentModel));	
+//		ccontroller.show_modelName_Text(getChildName(currentModel));	
 	}
 
 	public void hideCurrentModel(bool invokeMap){
 //		_animator.SetInteger("modelAnim",0);
 //		currentModel.SetActive(false);
 		currentModel.GetComponent<Animator>().SetBool("showModel",false);
-		ccontroller.hide_modelName_Text();
+//		ccontroller.hide_modelName_Text();
 		modelText.SetActive(false);
 		if(invokeMap)
 			Invoke("hideModel_EVENT",0.4f);
@@ -132,5 +124,8 @@ public class clicker : MonoBehaviour {
 	}
 	private string getChildName(GameObject obj){
 		return obj.transform.GetChild(0).gameObject.name;
+	}
+	public void setDistance(float d){
+		distance = d;
 	}
 }

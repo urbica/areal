@@ -77,20 +77,20 @@ public class clicker : MonoBehaviour {
 			SaveManager.Instance.Save();
 			Invoke("hide_pins_EVENT",0.5f);
 		} else {
-//			ccontroller.show_modelName_Text(getChildName(currentModel));		
+			ccontroller.show_modelName_Text(getChildName(currentModel));		
 		}
 
 	}
 
 	private void hide_pins_EVENT(){
-//		ccontroller.show_modelName_Text(getChildName(currentModel));	
+		ccontroller.show_modelName_Text(getChildName(currentModel));	
 	}
 
 	public void hideCurrentModel(bool invokeMap){
 //		_animator.SetInteger("modelAnim",0);
 //		currentModel.SetActive(false);
 		currentModel.GetComponent<Animator>().SetBool("showModel",false);
-//		ccontroller.hide_modelName_Text();
+		ccontroller.hide_modelName_Text();
 		modelText.SetActive(false);
 		if(invokeMap)
 			Invoke("hideModel_EVENT",0.4f);

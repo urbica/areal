@@ -13,11 +13,17 @@ public class clicker : MonoBehaviour {
 	public GameObject map;
 	public CanvasController ccontroller;
 
-	public RotateSC rotateScript;
+	[SerializeField]
+	private GameObject redLight;
+	[SerializeField]
+	private GameObject whiteLight;
+	[SerializeField]
+	private GameObject Architecture;
+
+
 
 	public GameObject modelText;
 
-	private List<GameObject>pinsList;
 
 
 	public GameObject modelsCollection;
@@ -36,14 +42,11 @@ public class clicker : MonoBehaviour {
 
 		//save default scale of models parent
 		 modelParentStartScale = modelsCollection.transform.localScale;
-		 modelsCollection.AddComponent<LeanScale>();
-		 modelsCollection.GetComponent<LeanScale>().enabled = false;
+	//	 Architecture.AddComponent<LeanScale>();
+	//	 Architecture.GetComponent<LeanScale>().enabled = false;
 		
 	}
 
-	public void setPinsList(List<GameObject> list){
-		pinsList = list;
-	}
 	void TaskOnClick()
 	{
 		hideCurrentModel(true);
@@ -52,24 +55,29 @@ public class clicker : MonoBehaviour {
 	public void OnClickPin(Transform mTransform,float resultScaleCoef){
 		var id = Convert.ToInt32(mTransform.GetComponent<BoxCollider>().name);
 
-		modelsCollection.GetComponent<LeanScale>().enabled = true;
-		modelsCollection.transform.localPosition = mTransform.position;
+//		Architecture.GetComponent<LeanScale>().enabled = true;
+//		Architecture.transform.localPosition = mTransform.position;
 		// float x = resultScaleCoef / 0.12f;
 		// modelsCollection.transform.localScale = new Vector3(x,x,x);
 
 		setMapActive(false);
 		
-		currentModel = modelsCollection.transform.GetChild(id).gameObject;
+//		currentModel = Architecture.transform.GetChild(id).gameObject;
+		var prefab = Architecture.transform.GetChild(id).gameObject;
+		currentModel = Instantiate(prefab);
 		currentModel.transform.localPosition = mTransform.position;
 //		currentModel.AddComponent<RotateSC>().enabled = true;
 
 //		modelText.transform.GetChild(0).GetComponent<TextMesh>().text = currentModel.name;
-		if (id == 3){
-			currentModel.transform.GetChild(1).gameObject.AddComponent<RotateSC>();
-		} else 
-			currentModel.AddComponent<RotateSC>();
+		// if (id == 3){
+		// 	currentModel.transform.GetChild(1).gameObject.AddComponent<RotateSC>();
+		// } else 
+		currentModel.AddComponent<RotateSC>();
+		currentModel.AddComponent<LeanScale>();
+		currentModel.GetComponent<Animator>().SetBool("showModel",true);
 
-		_animator.SetInteger("modelAnim",id + 1);
+//		_animator.SetInteger("modelAnim",id + 1);
+//		currentModel.SetActive(true);
 
 
 		if(CanvasController.isFirstSession){
@@ -77,26 +85,29 @@ public class clicker : MonoBehaviour {
 			SaveManager.Instance.Save();
 			Invoke("hide_pins_EVENT",0.5f);
 		} else {
-			ccontroller.show_modelName_Text(currentModel.name);		
+			ccontroller.show_modelName_Text(getChildName(currentModel));		
 		}
 
 	}
 
 	private void hide_pins_EVENT(){
-		ccontroller.show_modelName_Text(currentModel.name);	
+		ccontroller.show_modelName_Text(getChildName(currentModel));	
 	}
 
 	public void hideCurrentModel(bool invokeMap){
-		_animator.SetInteger("modelAnim",0);
+//		_animator.SetInteger("modelAnim",0);
+//		currentModel.SetActive(false);
+		currentModel.GetComponent<Animator>().SetBool("showModel",false);
 		ccontroller.hide_modelName_Text();
 		modelText.SetActive(false);
 		if(invokeMap)
 			Invoke("hideModel_EVENT",0.4f);
 	}
 	public void hideModel_EVENT(){
-		modelsCollection.transform.localScale = modelParentStartScale;
-		modelsCollection.GetComponent<LeanScale>().enabled = false;
-		modelsCollection.transform.position = new Vector3(10000,10000,10000);
+//		Architecture.transform.localScale = modelParentStartScale;
+//		Architecture.GetComponent<LeanScale>().enabled = false;
+//		Architecture.transform.position = new Vector3(10000,10000,10000);
+		GameObject.Destroy(currentModel);
 		setMapActive(true);
 		map.GetComponent<Animator>().SetInteger("mapAnimTransition",1);
 	}
@@ -118,5 +129,8 @@ public class clicker : MonoBehaviour {
 			ccontroller.hide_reload_btn();
 			ccontroller.show_back_Button();
 		}
+	}
+	private string getChildName(GameObject obj){
+		return obj.transform.GetChild(0).gameObject.name;
 	}
 }

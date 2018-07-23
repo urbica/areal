@@ -60,7 +60,6 @@
 					_spawnedObjects.Add(instance);
 
 				}
-				Camera.GetComponent<clicker>().setPinsList(_spawnedObjects);
 				showPinsOnMap();
 				pinsSpawned = true;
 			}

@@ -1,0 +1,189 @@
+fileFormatVersion: 2
+guid: eb5a439a04a16d441a92318f0ba62730
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Apple_2
+    100002: Balkon-2
+    100004: Bazilka
+    100006: Bild01
+    100008: Cerdachki
+    100010: Column_Entre_1
+    100012: Column_UV015
+    100014: Columns_Bazil
+    100016: Fasad_Entre01
+    100018: Floor_2
+    100020: Karniz002
+    100022: Kolokolchik_Roof01
+    100024: Krest
+    100026: Object020
+    100028: Object103
+    100030: //RootNode
+    100032: Portik_Back01
+    100034: Tower_Big_Petr_Child01
+    100036: Up_Win03
+    100038: Win002
+    100040: Windows_Angelochki
+    400000: Apple_2
+    400002: Balkon-2
+    400004: Bazilka
+    400006: Bild01
+    400008: Cerdachki
+    400010: Column_Entre_1
+    400012: Column_UV015
+    400014: Columns_Bazil
+    400016: Fasad_Entre01
+    400018: Floor_2
+    400020: Karniz002
+    400022: Kolokolchik_Roof01
+    400024: Krest
+    400026: Object020
+    400028: Object103
+    400030: //RootNode
+    400032: Portik_Back01
+    400034: Tower_Big_Petr_Child01
+    400036: Up_Win03
+    400038: Win002
+    400040: Windows_Angelochki
+    2100000: 06___Default
+    2300000: Apple_2
+    2300002: Balkon-2
+    2300004: Bazilka
+    2300006: Bild01
+    2300008: Cerdachki
+    2300010: Column_Entre_1
+    2300012: Column_UV015
+    2300014: Columns_Bazil
+    2300016: Fasad_Entre01
+    2300018: Floor_2
+    2300020: Karniz002
+    2300022: Kolokolchik_Roof01
+    2300024: Krest
+    2300026: Object020
+    2300028: Object103
+    2300030: Portik_Back01
+    2300032: Tower_Big_Petr_Child01
+    2300034: Up_Win03
+    2300036: Win002
+    2300038: Windows_Angelochki
+    3300000: Apple_2
+    3300002: Balkon-2
+    3300004: Bazilka
+    3300006: Bild01
+    3300008: Cerdachki
+    3300010: Column_Entre_1
+    3300012: Column_UV015
+    3300014: Columns_Bazil
+    3300016: Fasad_Entre01
+    3300018: Floor_2
+    3300020: Karniz002
+    3300022: Kolokolchik_Roof01
+    3300024: Krest
+    3300026: Object020
+    3300028: Object103
+    3300030: Portik_Back01
+    3300032: Tower_Big_Petr_Child01
+    3300034: Up_Win03
+    3300036: Win002
+    3300038: Windows_Angelochki
+    4300000: Kolokolchik_Roof01
+    4300002: Tower_Big_Petr_Child01
+    4300004: Fasad_Entre01
+    4300006: Win002
+    4300008: Bild01
+    4300010: Portik_Back01
+    4300012: Up_Win03
+    4300014: Karniz002
+    4300016: Apple_2
+    4300018: Floor_2
+    4300020: Column_Entre_1
+    4300022: Columns_Bazil
+    4300024: Cerdachki
+    4300026: Bazilka
+    4300028: Balkon-2
+    4300030: Krest
+    4300032: Column_UV015
+    4300034: Windows_Angelochki
+    4300036: Object103
+    4300038: Object020
+  externalObjects: {}
+  materials:
+    importMaterials: 0
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 2.7
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 0
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

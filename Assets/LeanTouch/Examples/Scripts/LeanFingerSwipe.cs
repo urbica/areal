@@ -32,6 +32,7 @@ namespace Lean.Touch
 
 				if (Mathf.Abs(Mathf.DeltaAngle(angle, Angle)) >= AngleThreshold * 0.5f)
 				{
+					Debug.Log("FingerCheck");
 					return;
 				}
 			}
@@ -57,6 +58,7 @@ namespace Lean.Touch
 			// Ignore this finger?
 			if (IgnoreGuiFingers == true && finger.StartedOverGui == true)
 			{
+				Debug.Log("FingerSwipe");
 				return;
 			}
 

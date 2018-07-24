@@ -69,8 +69,8 @@
 		}
 
 		private void Update()
-		{
-			if ((Input.touchCount > 0) && (Input.GetTouch (0).phase == TouchPhase.Began) && !EventSystem.current.IsPointerOverGameObject()) {
+		{ //&& EventSystem.current.IsPointerOverGameObject()
+			if ((Input.touchCount > 0) && (Input.GetTouch (0).phase == TouchPhase.Began) ) {
 				Ray raycast = Camera.main.ScreenPointToRay(Input.GetTouch(0).position);
 				RaycastHit raycastHit;
 

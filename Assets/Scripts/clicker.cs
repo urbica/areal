@@ -59,14 +59,12 @@ public class clicker : MonoBehaviour {
 		// modelsCollection.transform.localScale = new Vector3(x,x,x);
 
 		setMapActive(false);
-		Debug.Log("Clicked MAZAFAJA");
 		
 		var prefab = Architecture.transform.GetChild(id).gameObject;
 		currentModel = Instantiate(prefab);
 		currentModel.transform.localPosition = mTransform.position;
 		var scale = (2 * distance) / 3;
 		currentModel.transform.localScale = new Vector3(scale,scale,scale);
-
 
 		currentModel.AddComponent<RotateSC>();
 		currentModel.AddComponent<LeanScale>();

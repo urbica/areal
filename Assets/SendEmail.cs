@@ -8,8 +8,8 @@ public class SendEmail : MonoBehaviour {
 public void sendEmail ()
  {
   string email = "hello@urbica.co";
-  string subject = MyEscapeURL("My Subject");
-  string body = MyEscapeURL("My Body\r\nFull of non-escaped chars");
+  string subject = MyEscapeURL("Areal app");
+  string body = MyEscapeURL("");
   Application.OpenURL("mailto:" + email + "?subject=" + subject + "&body=" + body);
  }
  string MyEscapeURL (string url)

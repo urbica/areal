@@ -19,6 +19,7 @@ public class CanvasController : MonoBehaviour {
 	private Animator _animator;
 
 
+
 	private AnimationComponent component;
 
 	public UnityARGeneratePlane generatePlaneScript;
@@ -70,6 +71,14 @@ public class CanvasController : MonoBehaviour {
 			startGeneratePlane();
 			show_info_Button();
 		}
+		bool isX = UnityEngine.iOS.Device.generation == UnityEngine.iOS.DeviceGeneration.iPhoneX;
+		if(isX){
+			about_map_Panel.transform.position += new Vector3(0,-160f,0);
+			about_pins_Panel.transform.position += new Vector3(0,-160f,0);
+			find_surface_Panel.transform.position += new Vector3(0,-160f,0);			
+		}
+
+//		 iOS.DeviceGeneration
 	}
 	
 	// Update is called once per frame

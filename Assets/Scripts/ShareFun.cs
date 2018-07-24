@@ -3,6 +3,7 @@ using System.Collections;
 using System.Runtime.InteropServices;
 using System.IO;
 using System;
+using UnityEngine.UI;
 
 /*
  * https://github.com/ChrisMaire/unity-native-sharing
@@ -11,6 +12,12 @@ using System;
 public class ShareFun : MonoBehaviour {
 	[SerializeField]
 	private Canvas canvas;
+
+	[SerializeField]
+	private Canvas captureCanvas;
+	public Image mImage;
+
+	private Texture2D image;
 
 	public void onClickSS(){
 		canvas.gameObject.SetActive(false);
@@ -23,13 +30,48 @@ public class ShareFun : MonoBehaviour {
 		Texture2D img = new Texture2D((int)width, (int)height, TextureFormat.RGB24, false);
 		img.ReadPixels(new Rect(0, 0, width, height), 0, 0, false);
 		img.Apply();
-		NativeGallery.SaveImageToGallery( img,"AReal","maimga{}.png" );
+		image = img;
+		var rect = new Rect(0,0,img.width,img.height);
+		Sprite s = Sprite.Create(img,rect,new Vector2(0.5f,0.5f));
 
-		Destroy(img);
+
+
+		// NativeGallery.SaveImageToGallery( img,"AReal","maimga{}.png" );
+
+	//	Destroy(img);
 
 		canvas.gameObject.SetActive(true);
 		canvas.GetComponent<CanvasController>().screenShot_Flash();
+		Invoke("nextStep",0.6f);
+		// yield return new WaitForSeconds(.05f);
+
 	}
+	private void nextStep(){
+		canvas.gameObject.SetActive(false);
+		captureCanvas.gameObject.SetActive(true);
+		var screenImg = captureCanvas.gameObject.transform.GetChild(0).gameObject.GetComponent<Image>();
+		// mImage.
+		// screenImg.GetComponent<RawImage>().texture = image;
+	}
+
+	public void saveCapture(){
+		NativeGallery.SaveImageToGallery( image,"AReal","maimga{}.png" );
+		Destroy(image);
+		returnCanvas();
+	}
+	public void deleteCapture(){
+		Destroy(image);
+		returnCanvas();
+	}
+	public void shareCapture(){ //MediaSaveCallback
+	//	NativeGallery.SaveImageToGallery( image,"AReal","maimga{}.png", callback: new NativeGallery.MediaSaveCallback("") );
+	}
+
+	private void returnCanvas(){
+		captureCanvas.gameObject.SetActive(false);
+		canvas.gameObject.SetActive(true);
+	}
+
 
 	public string ScreenshotName = "screenshot.png";
 
@@ -40,7 +82,7 @@ public class ShareFun : MonoBehaviour {
 
 		ScreenCapture.CaptureScreenshot(ScreenshotName);
 
-//		StartCoroutine(delayedShare(screenShotPath, text));
+		StartCoroutine(delayedShare(screenShotPath, text));
 	}
 
 	//CaptureScreenshot runs asynchronously, so you'll need to either capture the screenshot early and wait a fixed time

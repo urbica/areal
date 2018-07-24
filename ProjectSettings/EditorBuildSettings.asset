@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 0
-    path: Assets/UnityARKitPlugin/Examples/UnityARKitScene/UnityARKitScene.unity
+    path: Assets/ArealMainScene.unity
     guid: c159f2591a9b5c843b0a0442451f78f8
   - enabled: 0
     path: Assets/UnityARKitPlugin/Examples/UnityParticlePainter/UnityParticlePainter.unity
@@ -38,3 +38,4 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/UnityARKitPlugin/Examples/FaceTracking/FaceDirectionalLightEstimate.unity
     guid: 360fd35caee4f4e069485021a27c0b06
+  m_configObjects: {}

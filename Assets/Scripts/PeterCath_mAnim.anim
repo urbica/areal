@@ -39,7 +39,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: PeterundPavel
+    path: Peter and Paul Cathedral
   m_FloatCurves: []
   m_PPtrCurves: []
   m_SampleRate: 60
@@ -50,7 +50,7 @@ AnimationClip:
   m_ClipBindingConstant:
     genericBindings:
     - serializedVersion: 2
-      path: 172520227
+      path: 2471849918
       attribute: 3
       script: {fileID: 0}
       typeID: 4
@@ -103,7 +103,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalScale.x
-    path: PeterundPavel
+    path: Peter and Paul Cathedral
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -131,7 +131,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalScale.y
-    path: PeterundPavel
+    path: Peter and Paul Cathedral
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -159,7 +159,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalScale.z
-    path: PeterundPavel
+    path: Peter and Paul Cathedral
     classID: 4
     script: {fileID: 0}
   m_EulerEditorCurves: []

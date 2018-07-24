@@ -61,7 +61,6 @@ public class CanvasController : MonoBehaviour {
 		hide_info_Button();
 		hide_screenShot_btn ();
 		isFirstSession = SaveManager.Instance.state.isFirstEnter;
-//		isFirstSession = true;
 
 
 		if (isFirstSession) {
@@ -73,12 +72,10 @@ public class CanvasController : MonoBehaviour {
 		}
 		bool isX = UnityEngine.iOS.Device.generation == UnityEngine.iOS.DeviceGeneration.iPhoneX;
 		if(isX){
-			about_map_Panel.transform.position += new Vector3(0,-160f,0);
-			about_pins_Panel.transform.position += new Vector3(0,-160f,0);
-			find_surface_Panel.transform.position += new Vector3(0,-160f,0);			
+			about_map_Panel.transform.position += new Vector3(0,-120f,0);
+			about_pins_Panel.transform.position += new Vector3(0,-120f,0);
+			find_surface_Panel.transform.position += new Vector3(0,-120f,0);			
 		}
-
-//		 iOS.DeviceGeneration
 	}
 	
 	// Update is called once per frame

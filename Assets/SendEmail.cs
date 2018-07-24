@@ -16,4 +16,9 @@ public void sendEmail ()
  {
   return WWW.EscapeURL(url).Replace("+","%20");
  }
+
+public void linkWebSite(){
+    Application.OpenURL("http://urbica.co");
+}
+
 }

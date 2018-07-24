@@ -36,8 +36,9 @@ namespace UnityEngine.XR.iOS
 
         bool HitTestWithResultType (ARPoint point, ARHitTestResultType resultTypes)
         {
+			var overScene = CanvasManager.SCENE_UNDER_CANVAS;
             List<ARHitTestResult> hitResults = UnityARSessionNativeInterface.GetARSessionNativeInterface ().HitTest (point, resultTypes);
-			if (hitResults.Count > 0 && !mapWasShown && planeAppeared && !EventSystem.current.IsPointerOverGameObject()) {
+			if (hitResults.Count > 0 && !mapWasShown && planeAppeared && !overScene) {
 				mapWasShown = true;
 
                 foreach (var hitResult in hitResults) {

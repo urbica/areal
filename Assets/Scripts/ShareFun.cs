@@ -31,18 +31,15 @@ public class ShareFun : MonoBehaviour {
 		img.ReadPixels(new Rect(0, 0, width, height), 0, 0, false);
 		img.Apply();
 		image = img;
-		var rect = new Rect(0,0,img.width,img.height);
-		Sprite s = Sprite.Create(img,rect,new Vector2(0.5f,0.5f));
+		// var rect = new Rect(0,0,img.width,img.height);
+		// Sprite s = Sprite.Create(img,rect,new Vector2(0.5f,0.5f));
 
-
-
-		// NativeGallery.SaveImageToGallery( img,"AReal","maimga{}.png" );
-
-	//	Destroy(img);
+		NativeGallery.SaveImageToGallery( image,"AReal","maimga{}.png" );
+		Destroy(image);
 
 		canvas.gameObject.SetActive(true);
 		canvas.GetComponent<CanvasController>().screenShot_Flash();
-		Invoke("nextStep",0.6f);
+//		Invoke("nextStep",0.6f);
 		// yield return new WaitForSeconds(.05f);
 
 	}

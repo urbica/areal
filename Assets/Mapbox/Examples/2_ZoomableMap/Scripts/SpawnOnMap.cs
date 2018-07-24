@@ -69,8 +69,9 @@
 		}
 
 		private void Update()
-		{ //&& EventSystem.current.IsPointerOverGameObject()
-			if ((Input.touchCount > 0) && (Input.GetTouch (0).phase == TouchPhase.Began) ) {
+		{ //
+			var overScene = CanvasManager.SCENE_UNDER_CANVAS;
+			if ((Input.touchCount > 0) && (Input.GetTouch (0).phase == TouchPhase.Began) && !overScene) {
 				Ray raycast = Camera.main.ScreenPointToRay(Input.GetTouch(0).position);
 				RaycastHit raycastHit;
 

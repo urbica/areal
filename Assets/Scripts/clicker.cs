@@ -14,36 +14,17 @@ public class clicker : MonoBehaviour {
 	public CanvasController ccontroller;
 
 	[SerializeField]
-	private GameObject redLight;
-	[SerializeField]
-	private GameObject whiteLight;
-	[SerializeField]
 	private GameObject Architecture;
 
-
-
-	public GameObject modelText;
-
-
-
-	private List<GameObject>modelList;
 	private GameObject currentModel;
-	private Animator _animator;
-	private Vector3 modelParentStartScale;
 
 	private float distance;
 
 
 	// Use this for initialization
 	void Start () {
-		modelText.SetActive(false);
 		Button btn = but.GetComponent<Button>();
 		btn.onClick.AddListener(TaskOnClick);
-
-		//save default scale of models parent
-	//	 modelParentStartScale = modelsCollection.transform.localScale;
-	//	 Architecture.AddComponent<LeanScale>();
-	//	 Architecture.GetComponent<LeanScale>().enabled = false;
 		
 	}
 
@@ -85,18 +66,12 @@ public class clicker : MonoBehaviour {
 	}
 
 	public void hideCurrentModel(bool invokeMap){
-//		_animator.SetInteger("modelAnim",0);
-//		currentModel.SetActive(false);
 		currentModel.GetComponent<Animator>().SetBool("showModel",false);
 		ccontroller.hide_modelName_Text();
-		modelText.SetActive(false);
 		if(invokeMap)
 			Invoke("hideModel_EVENT",0.4f);
 	}
 	public void hideModel_EVENT(){
-//		Architecture.transform.localScale = modelParentStartScale;
-//		Architecture.GetComponent<LeanScale>().enabled = false;
-//		Architecture.transform.position = new Vector3(10000,10000,10000);
 		GameObject.Destroy(currentModel);
 		setMapActive(true);
 		map.GetComponent<Animator>().SetInteger("mapAnimTransition",1);

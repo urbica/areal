@@ -59,6 +59,9 @@ namespace UnityEngine.XR.iOS
 							MAP.GetComponent<Animator>().SetInteger("mapAnimTransition",SHOW_MAP_ANIM);
 							spawnScript = MAP.GetComponent<SpawnOnMap> ();
 							m_HitTransform.gameObject.GetComponent<LeanScale>().enabled = true;
+							if(CanvasController.isFirstSession){
+								ccontroller.show_info_Button();
+							}
 							
 						}
 					}
@@ -151,7 +154,11 @@ namespace UnityEngine.XR.iOS
 
 			if(CanvasController.isFirstSession){
 				ccontroller.resetAnimationState();
-				Invoke("show_first_help",0.5f);
+				ccontroller.hide_info_Button();
+				if(SaveManager.Instance.state.isFirstEnter){
+					Invoke("show_first_help",0.5f);
+				}
+				
 			}
 
 			generate_script.reload_plane();

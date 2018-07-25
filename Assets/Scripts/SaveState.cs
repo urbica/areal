@@ -1,7 +1,7 @@
 ﻿
 public class SaveState  {
 
-	public bool isFirstEnter;
+	public bool isFirstEnter = true;
 
 	public SaveState(){
 	}

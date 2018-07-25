@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.XR.iOS;
 using UnityEngine.EventSystems;
+using UnityEditor;
 
 
 public class CanvasController : MonoBehaviour {
@@ -37,6 +38,10 @@ public class CanvasController : MonoBehaviour {
 	public GameObject screenShot_Panel;
 	public Text modelName_Text;
 
+	public GameObject mIpadupperPanel;
+	public GameObject mIpadbotPanel;
+
+
 
 	public UnityARAnchorManager anchManager;
 
@@ -65,6 +70,7 @@ public class CanvasController : MonoBehaviour {
 
 		if (isFirstSession) {
 			show_intro ();
+		//	PlayerSettings.SplashScreen.showUnityLogo = false;
 		}
 		else {
 			startGeneratePlane();
@@ -75,6 +81,14 @@ public class CanvasController : MonoBehaviour {
 			about_map_Panel.transform.position += new Vector3(0,-120f,0);
 			about_pins_Panel.transform.position += new Vector3(0,-120f,0);
 			find_surface_Panel.transform.position += new Vector3(0,-120f,0);			
+		}
+		if(UnityEngine.iOS.Device.generation == UnityEngine.iOS.DeviceGeneration.iPadPro2Gen || 
+		UnityEngine.iOS.Device.generation == UnityEngine.iOS.DeviceGeneration.iPadPro1Gen || 
+		UnityEngine.iOS.Device.generation == UnityEngine.iOS.DeviceGeneration.iPadPro10Inch1Gen || 
+		UnityEngine.iOS.Device.generation == UnityEngine.iOS.DeviceGeneration.iPadPro10Inch2Gen || 
+		UnityEngine.iOS.Device.generation == UnityEngine.iOS.DeviceGeneration.iPad5Gen){
+			mIpadupperPanel.transform.position += new Vector3(0,150,0);
+			mIpadbotPanel.transform.position += new Vector3(0,150,0);
 		}
 	}
 	
@@ -96,7 +110,7 @@ public class CanvasController : MonoBehaviour {
 	}
 
 	public void show_find_surface_info(){
-		show_info_Button();
+//		show_info_Button();
 		find_surface_Panel.SetActive(true);
 		setCanvasAnimatorParametr(FIND_SURFACE_PANEL_ENTER);
 	}
@@ -107,7 +121,7 @@ public class CanvasController : MonoBehaviour {
 
 	public void EVENT_surface_info_exit(){
 		find_surface_Panel.SetActive(false);
-		if (isFirstSession)
+		if (SaveManager.Instance.state.isFirstEnter)
 			show_about_map_text();
 	}
 
@@ -120,7 +134,7 @@ public class CanvasController : MonoBehaviour {
 	}
 	public void EVENT_put_map_exit(){
 		about_map_Panel.SetActive(false);
-		if(isFirstSession)
+		if(SaveManager.Instance.state.isFirstEnter)
 			show_about_pins();
 	}
 

@@ -35,10 +35,16 @@ public class ShareFun : MonoBehaviour {
 		// Sprite s = Sprite.Create(img,rect,new Vector2(0.5f,0.5f));
 
 		NativeGallery.SaveImageToGallery( image,"AReal","maimga{}.png" );
+
 		Destroy(image);
 
 		canvas.gameObject.SetActive(true);
 		canvas.GetComponent<CanvasController>().screenShot_Flash();
+
+//		ShareScreenshotWithText("");
+
+		// string screenShotPath = Application.persistentDataPath + "/" + ScreenshotName;
+//		StartCoroutine(delayedShare(screenShotPath, "AR St Peterburg"));
 //		Invoke("nextStep",0.6f);
 		// yield return new WaitForSeconds(.05f);
 
@@ -60,13 +66,11 @@ public class ShareFun : MonoBehaviour {
 		Destroy(image);
 		returnCanvas();
 	}
-	public void shareCapture(){ //MediaSaveCallback
-	//	NativeGallery.SaveImageToGallery( image,"AReal","maimga{}.png", callback: new NativeGallery.MediaSaveCallback("") );
-	}
 
 	private void returnCanvas(){
 		captureCanvas.gameObject.SetActive(false);
 		canvas.gameObject.SetActive(true);
+
 	}
 
 

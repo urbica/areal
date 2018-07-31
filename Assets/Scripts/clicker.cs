@@ -6,6 +6,7 @@ using UnityEngine.XR.iOS;
 using Mapbox.Examples;
 using System;
 using Lean.Touch;
+using UnityEngine.Analytics;
 
 public class clicker : MonoBehaviour {
 
@@ -19,6 +20,8 @@ public class clicker : MonoBehaviour {
 	private GameObject currentModel;
 
 	private float distance;
+	public TimeCounter timerScript;
+	private string modelName;
 
 
 	// Use this for initialization
@@ -31,9 +34,16 @@ public class clicker : MonoBehaviour {
 	void TaskOnClick()
 	{
 		hideCurrentModel(true);
+		var delta = Time.time - timerScript.time_model;
+		Analytics.CustomEvent("model_event",new Dictionary<string,object>{{"model_time",delta},
+																			{"model_name",modelName}});
 	}
 
 	public void OnClickPin(Transform mTransform,float resultScaleCoef){
+		timerScript.time_model = Time.time;
+
+
+
 		var id = Convert.ToInt32(mTransform.GetComponent<BoxCollider>().name);
 
 		// float x = resultScaleCoef / 0.12f;
@@ -47,22 +57,27 @@ public class clicker : MonoBehaviour {
 		var scale = (2 * distance) / 3;
 		currentModel.transform.localScale = new Vector3(scale,scale,scale);
 
+
 		currentModel.AddComponent<RotateSC>();
 		currentModel.AddComponent<LeanScale>();
+		currentModel.GetComponent<LeanScale>().Relative = true;
 		currentModel.GetComponent<Animator>().SetBool("showModel",true);
+
+
+		modelName = getChildName(currentModel);
 
 		if(CanvasController.isFirstSession){
 			ccontroller.hide_about_pins ();
 			SaveManager.Instance.Save();
 			Invoke("hide_pins_EVENT",0.5f);
 		} else {
-			ccontroller.show_modelName_Text(getChildName(currentModel));		
+			ccontroller.show_modelName_Text(modelName);		
 		}
 
 	}
 
 	private void hide_pins_EVENT(){
-		ccontroller.show_modelName_Text(getChildName(currentModel));	
+		ccontroller.show_modelName_Text(modelName);	
 	}
 
 	public void hideCurrentModel(bool invokeMap){

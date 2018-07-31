@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class SaveManager : MonoBehaviour {
-	private const string SAVE_SASSION_KEY = "firstSession17";
+	private const string SAVE_SASSION_KEY = "firstSession18";
 	public static SaveManager Instance { get;set; }
 	public SaveState state;
 

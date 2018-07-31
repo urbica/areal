@@ -82,13 +82,17 @@ public class CanvasController : MonoBehaviour {
 			about_pins_Panel.transform.position += new Vector3(0,-120f,0);
 			find_surface_Panel.transform.position += new Vector3(0,-120f,0);			
 		}
-		if(UnityEngine.iOS.Device.generation == UnityEngine.iOS.DeviceGeneration.iPadPro2Gen || 
-		UnityEngine.iOS.Device.generation == UnityEngine.iOS.DeviceGeneration.iPadPro1Gen || 
-		UnityEngine.iOS.Device.generation == UnityEngine.iOS.DeviceGeneration.iPadPro10Inch1Gen || 
+
+
+		if (UnityEngine.iOS.Device.generation == UnityEngine.iOS.DeviceGeneration.iPadPro10Inch1Gen || 
 		UnityEngine.iOS.Device.generation == UnityEngine.iOS.DeviceGeneration.iPadPro10Inch2Gen || 
 		UnityEngine.iOS.Device.generation == UnityEngine.iOS.DeviceGeneration.iPad5Gen){
-			mIpadupperPanel.transform.position += new Vector3(0,150,0);
-			mIpadbotPanel.transform.position += new Vector3(0,150,0);
+			mIpadupperPanel.transform.position += new Vector3(0,400,0);
+			mIpadbotPanel.transform.position += new Vector3(0,400,0);
+		} else if (UnityEngine.iOS.Device.generation == UnityEngine.iOS.DeviceGeneration.iPadPro2Gen ||
+		UnityEngine.iOS.Device.generation == UnityEngine.iOS.DeviceGeneration.iPadPro1Gen){
+			mIpadupperPanel.transform.position += new Vector3(0,450,0);
+			mIpadbotPanel.transform.position += new Vector3(0,450,0);
 		}
 	}
 	

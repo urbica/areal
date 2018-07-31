@@ -18,7 +18,7 @@ public void sendEmail ()
  }
 
 public void linkWebSite(){
-    Application.OpenURL("http://urbica.co");
+    Application.OpenURL("http://urbica.co?from=app");
 }
 
 }

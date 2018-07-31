@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using UnityEngine.Analytics;
+
 
 namespace UnityEngine.XR.iOS
 {
@@ -14,8 +16,13 @@ namespace UnityEngine.XR.iOS
 		public UnityARCameraManager Camera_managerScrpt;
 		public GameObject pointCloud;
 
+		[SerializeField]
+		private TimeCounter analytic;
+
 
 		public void initStart(){
+	
+			analytic.time_startFindPlane = Time.time;
 			planePrefab.SetActive (true);
 			UnityARHitTestExample hitScript = hitParent.GetComponentInChildren<UnityARHitTestExample>();
 			unityARAnchorManager = new UnityARAnchorManager(this,hitParent,hitScript,Camera_managerScrpt);
@@ -47,9 +54,18 @@ namespace UnityEngine.XR.iOS
 //			controller.show_info_Button();
 			controller.hide_find_surface_info();
 
+
+			var delta = Time.time - analytic.time_startFindPlane;
+
+
+			Debug.Log("FindDelta " + delta);
+			AnalyticsEvent.Custom("plane_find",new Dictionary<string,object>{{"find_time",delta}});
+			
+
 		}
 
 		public void reload_plane(){
+			analytic.time_startFindPlane = Time.time;
 			Debug.Log("FindReload generateplane");
 			unityARAnchorManager.reload_plane ();
 			Transform map;

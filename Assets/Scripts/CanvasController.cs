@@ -50,6 +50,7 @@ public class CanvasController : MonoBehaviour {
 
 	private bool clickedFromUI;
 	public static bool isFirstSession;
+	private int currentCanvasState;
 
 
 
@@ -57,6 +58,7 @@ public class CanvasController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		currentCanvasState = 0;
 		_animator = GetComponent<Animator>();
 		component = new AnimationComponent();
 		
@@ -65,24 +67,23 @@ public class CanvasController : MonoBehaviour {
 		hide_reload_btn ();
 		hide_info_Button();
 		hide_screenShot_btn ();
-		isFirstSession = SaveManager.Instance.state.isFirstEnter;
+		isFirstSession = SaveManager.Instance.session_state.isFirstEnter;
+		Debug.Log("mySession - " + isFirstSession);
 
 
-		if (isFirstSession) {
-			show_intro ();
-		//	PlayerSettings.SplashScreen.showUnityLogo = false;
-		}
-		else {
+
+		if(!isFirstSession){
 			startGeneratePlane();
 			show_info_Button();
-		}
+		} 
+		else show_intro();
+
 		bool isX = UnityEngine.iOS.Device.generation == UnityEngine.iOS.DeviceGeneration.iPhoneX;
 		if(isX){
 			about_map_Panel.transform.position += new Vector3(0,-120f,0);
 			about_pins_Panel.transform.position += new Vector3(0,-120f,0);
 			find_surface_Panel.transform.position += new Vector3(0,-120f,0);			
 		}
-
 
 		if (UnityEngine.iOS.Device.generation == UnityEngine.iOS.DeviceGeneration.iPadPro10Inch1Gen || 
 		UnityEngine.iOS.Device.generation == UnityEngine.iOS.DeviceGeneration.iPadPro10Inch2Gen || 
@@ -95,10 +96,9 @@ public class CanvasController : MonoBehaviour {
 			mIpadbotPanel.transform.position += new Vector3(0,450,0);
 		}
 	}
+
+//
 	
-	// Update is called once per frame
-
-
 	public void close_introduction(){
 		close_intro ();
 	}
@@ -125,7 +125,7 @@ public class CanvasController : MonoBehaviour {
 
 	public void EVENT_surface_info_exit(){
 		find_surface_Panel.SetActive(false);
-		if (SaveManager.Instance.state.isFirstEnter)
+		if (SaveManager.Instance.session_state.isFirstEnter)
 			show_about_map_text();
 	}
 
@@ -138,7 +138,7 @@ public class CanvasController : MonoBehaviour {
 	}
 	public void EVENT_put_map_exit(){
 		about_map_Panel.SetActive(false);
-		if(SaveManager.Instance.state.isFirstEnter)
+		if(SaveManager.Instance.session_state.isFirstEnter)
 			show_about_pins();
 	}
 
@@ -203,6 +203,8 @@ public class CanvasController : MonoBehaviour {
 	}
 	private void screenshot_anim_EVENT(){
 		screenShot_Panel.SetActive(false);
+		setCanvasAnimatorParametr(currentCanvasState);
+		
 	}
 
 	public AnimationComponent getAnimScript(){return component;}
@@ -210,15 +212,23 @@ public class CanvasController : MonoBehaviour {
 	void startGeneratePlane(){
 		intro_Panel.SetActive(false);
 		generatePlaneScript.initStart();
-		if(isFirstSession)
-			show_find_surface_info();
+		show_find_surface_info();
 	}
 	private void setCanvasAnimatorParametr(int transitionState){
 		_animator.SetInteger(CANVAS_ANIMATOR_STATE,transitionState);
+		currentCanvasState = transitionState;
 	}
+	public int getCurrentCanvasState(){ return currentCanvasState;}
 
 
 	public void resetAnimationState(){
 		setCanvasAnimatorParametr(ANIM_EXIT);
+	}
+	public void hideAllHelpers(){
+		if(currentCanvasState == TOUCH_PIN_PANEL_ENTER){
+			var text = about_pins_Panel.transform.GetChild(0).gameObject.GetComponent<Text>();
+			var color = text.color;
+			text.color = new Color(color.r,color.g,color.b,0);
+		}
 	}
 }

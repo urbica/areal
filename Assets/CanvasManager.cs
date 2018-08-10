@@ -10,7 +10,6 @@ public class CanvasManager : MonoBehaviour {
 	private const string animatorControllerParametr = "info_state";
 	private const string mainCanvasButtonsExitAnimatorParametr = "info_state_enter";
 
-	public Text text;
 	
 
 	private int currentState = 0;
@@ -19,11 +18,12 @@ public class CanvasManager : MonoBehaviour {
 
 	public void switchCanvas(){
 		bool isMainVisible = main.gameObject.activeInHierarchy;
-		bool infoTransitionState = isMainVisible ? true : false;
+		bool infoTransitionState = isMainVisible;
+
 		if (isMainVisible){
 			SCENE_UNDER_CANVAS = true;
 			var anim = main.GetComponent<Animator>();
-			if(SaveManager.Instance.state.isFirstEnter){
+			if(SaveManager.Instance.session_state.isFirstEnter){
 				
 				checkState();
 				anim.SetInteger("CanvasState",0);
@@ -43,7 +43,7 @@ public class CanvasManager : MonoBehaviour {
 		var anim = main.GetComponent<Animator>();
 		
 		anim.SetInteger(mainCanvasButtonsExitAnimatorParametr,2);
-		if(SaveManager.Instance.state.isFirstEnter)
+		if(SaveManager.Instance.session_state.isFirstEnter)
 			anim.SetInteger("CanvasState",currentState);
 	}
 	private void turnOfMain(){

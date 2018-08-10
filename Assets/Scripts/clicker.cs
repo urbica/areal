@@ -68,7 +68,7 @@ public class clicker : MonoBehaviour {
 
 		if(CanvasController.isFirstSession){
 			ccontroller.hide_about_pins ();
-			SaveManager.Instance.Save();
+			SaveManager.Instance.SaveSassionEnter();
 			Invoke("hide_pins_EVENT",0.5f);
 		} else {
 			ccontroller.show_modelName_Text(modelName);		

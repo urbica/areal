@@ -155,7 +155,7 @@ namespace UnityEngine.XR.iOS
 			if(CanvasController.isFirstSession){
 				ccontroller.resetAnimationState();
 				ccontroller.hide_info_Button();
-				if(SaveManager.Instance.state.isFirstEnter){
+				if(SaveManager.Instance.session_state.isFirstEnter){
 					Invoke("show_first_help",0.5f);
 				}
 				

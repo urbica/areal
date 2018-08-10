@@ -244,6 +244,7 @@ MonoBehaviour:
   map: {fileID: 165458842}
   ccontroller: {fileID: 2004565153}
   Architecture: {fileID: 685134119}
+  timerScript: {fileID: 482529147}
 --- !u!1 &16
 GameObject:
   m_ObjectHideFlags: 0
@@ -1810,6 +1811,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 482529146}
+  - component: {fileID: 482529147}
   m_Layer: 0
   m_Name: Analytics
   m_TagString: Untagged
@@ -1830,6 +1832,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &482529147
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 482529145}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf6e12bf0e1c44388a2406dc27ec3e3d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &518495069
 GameObject:
   m_ObjectHideFlags: 0
@@ -3591,6 +3604,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66202933627534e6eb72a5df932bbdfd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SCENE: 1
 --- !u!4 &905554978
 Transform:
   m_ObjectHideFlags: 0
@@ -5125,6 +5139,7 @@ MonoBehaviour:
   hitParent: {fileID: 1286139107}
   Camera_managerScrpt: {fileID: 1121666030}
   pointCloud: {fileID: 2101518924}
+  analytic: {fileID: 482529147}
 --- !u!224 &1308259104
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5775,7 +5790,6 @@ MonoBehaviour:
   main: {fileID: 2004565151}
   info: {fileID: 458686861}
   capture: {fileID: 1362913060}
-  text: {fileID: 0}
 --- !u!224 &1515369048
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6875,7 +6889,6 @@ GameObject:
   - component: {fileID: 1984271362}
   - component: {fileID: 1984271361}
   - component: {fileID: 1984271360}
-  - component: {fileID: 1984271363}
   m_Layer: 5
   m_Name: Info_Button
   m_TagString: Untagged
@@ -6952,17 +6965,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1984271363}
-        m_MethodName: TriggerEvent
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1984271361
@@ -6998,21 +7000,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1984271358}
---- !u!114 &1984271363
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1984271358}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 207469858, guid: 220224b43fc464c28bc0e8de8f54a432, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_EventName: Info Pressed
-  m_TrackableProperty:
-    m_Fields: []
-  m_Trigger: 0
 --- !u!1 &1992649129
 GameObject:
   m_ObjectHideFlags: 0
@@ -7196,8 +7183,8 @@ MonoBehaviour:
   find_surface_Panel: {fileID: 1617859127}
   screenShot_Panel: {fileID: 1479550753}
   modelName_Text: {fileID: 687608979}
-  mIpadupperPanel: {fileID: 0}
-  mIpadbotPanel: {fileID: 0}
+  mIpadupperPanel: {fileID: 2046406094}
+  mIpadbotPanel: {fileID: 1824964319}
 --- !u!95 &2004565154
 Animator:
   serializedVersion: 3

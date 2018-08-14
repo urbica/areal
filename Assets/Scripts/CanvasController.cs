@@ -68,15 +68,15 @@ public class CanvasController : MonoBehaviour {
 		hide_info_Button();
 		hide_screenShot_btn ();
 		isFirstSession = SaveManager.Instance.session_state.isFirstEnter;
-		Debug.Log("mySession - " + isFirstSession);
 
 
 
 		if(!isFirstSession){
-			startGeneratePlane();
 			show_info_Button();
 		} 
-		else show_intro();
+
+
+		startGeneratePlane();
 
 		bool isX = UnityEngine.iOS.Device.generation == UnityEngine.iOS.DeviceGeneration.iPhoneX;
 		if(isX){
@@ -85,16 +85,16 @@ public class CanvasController : MonoBehaviour {
 			find_surface_Panel.transform.position += new Vector3(0,-120f,0);			
 		}
 
-		if (UnityEngine.iOS.Device.generation == UnityEngine.iOS.DeviceGeneration.iPadPro10Inch1Gen || 
-		UnityEngine.iOS.Device.generation == UnityEngine.iOS.DeviceGeneration.iPadPro10Inch2Gen || 
-		UnityEngine.iOS.Device.generation == UnityEngine.iOS.DeviceGeneration.iPad5Gen){
-			mIpadupperPanel.transform.position += new Vector3(0,400,0);
-			mIpadbotPanel.transform.position += new Vector3(0,400,0);
-		} else if (UnityEngine.iOS.Device.generation == UnityEngine.iOS.DeviceGeneration.iPadPro2Gen ||
-		UnityEngine.iOS.Device.generation == UnityEngine.iOS.DeviceGeneration.iPadPro1Gen){
-			mIpadupperPanel.transform.position += new Vector3(0,450,0);
-			mIpadbotPanel.transform.position += new Vector3(0,450,0);
-		}
+		// if (UnityEngine.iOS.Device.generation == UnityEngine.iOS.DeviceGeneration.iPadPro10Inch1Gen || 
+		// UnityEngine.iOS.Device.generation == UnityEngine.iOS.DeviceGeneration.iPadPro10Inch2Gen || 
+		// UnityEngine.iOS.Device.generation == UnityEngine.iOS.DeviceGeneration.iPad5Gen){
+		// 	mIpadupperPanel.transform.position += new Vector3(0,400,0);
+		// 	mIpadbotPanel.transform.position += new Vector3(0,400,0);
+		// } else if (UnityEngine.iOS.Device.generation == UnityEngine.iOS.DeviceGeneration.iPadPro2Gen ||
+		// UnityEngine.iOS.Device.generation == UnityEngine.iOS.DeviceGeneration.iPadPro1Gen){
+		// 	mIpadupperPanel.transform.position += new Vector3(0,450,0);
+		// 	mIpadbotPanel.transform.position += new Vector3(0,450,0);
+		// }
 	}
 
 //
@@ -212,6 +212,9 @@ public class CanvasController : MonoBehaviour {
 	void startGeneratePlane(){
 		intro_Panel.SetActive(false);
 		generatePlaneScript.initStart();
+		Invoke("showFirstHelp",0.3f);
+	}
+	private void showFirstHelp(){
 		show_find_surface_info();
 	}
 	private void setCanvasAnimatorParametr(int transitionState){

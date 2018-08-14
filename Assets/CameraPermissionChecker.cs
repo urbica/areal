@@ -7,7 +7,6 @@ using System.IO;
 using UnityEngine.SceneManagement;
 
 public class CameraPermissionChecker : MonoBehaviour {
-    [SerializeField] private Image warningBoard;
 	[SerializeField] private GameObject backGround_Panel;
 
 	[SerializeField] SupCanvasController ccontroller;
@@ -16,36 +15,16 @@ public class CameraPermissionChecker : MonoBehaviour {
 	private bool permissionAsked = false;
 
 
-    private void SampleCallback(string permissionWasGranted)
-    {       
-        if (permissionWasGranted == "true" )
-        {
-			loadScene();
-        }
-        else
-        {
-			warningBoard.gameObject.SetActive(true);
-			ccontroller.hide_backGround_Panel();
-        }
-		SaveManager.Instance.permission_state.isPermissionAsked = true;
-		SaveManager.Instance.SavePermissionRequest();
-    }
+
 
 	void Start () {
-		permissionAsked = SaveManager.Instance.permission_state.isPermissionAsked;
-		Debug.Log("permissionAsked res - " + permissionAsked);
-		ccontroller.setIntroVisible(!permissionAsked);
+		permissionAsked = SaveManager.Instance.session_state.isPermissionRequested;
+		var isFirstSession = SaveManager.Instance.session_state.isFirstEnter;
+		ccontroller.setIntroVisible(isFirstSession);
 
 		if (permissionAsked){
-			verifyPermission();
-			
-			
-		} else {
-			
-			Debug.Log("NoPermission");
-		}
-
-		
+			verifyPermission();	
+		} 
 	}
 
 	public void verifyPermission(){
@@ -55,6 +34,19 @@ public class CameraPermissionChecker : MonoBehaviour {
 	private void loadScene(){
 		SceneManager.LoadScene("ArealMainScene",LoadSceneMode.Single);
 	}
+	    private void SampleCallback(string permissionWasGranted)
+    {       
+        if (permissionWasGranted == "true" )
+        {
+			loadScene();
+        }
+        else
+        {
+			ccontroller.showWarningText();
+        }
+
+		SaveManager.Instance.SavePermissionRequest();
+    }
 }
 
 

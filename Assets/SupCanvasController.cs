@@ -15,6 +15,9 @@ public class SupCanvasController : MonoBehaviour {
 
 	[SerializeField] GameObject upPanel, botPanel,backGround;
 
+	[SerializeField] Text warningTxt, linkTxt;
+	[SerializeField] Button settingsButton;
+
 	void Start(){
 				if (UnityEngine.iOS.Device.generation == UnityEngine.iOS.DeviceGeneration.iPadPro10Inch1Gen || 
 		UnityEngine.iOS.Device.generation == UnityEngine.iOS.DeviceGeneration.iPadPro10Inch2Gen || 
@@ -38,11 +41,17 @@ public class SupCanvasController : MonoBehaviour {
 	}
 
 	public void intro_anim_EVENT(){
+		intro_Panel.SetActive(false);
 		util.GetComponent<CameraPermissionChecker>().verifyPermission();	
 	}
-	public void hide_backGround_Panel(){
-		backGround.SetActive(false);
+	public void showWarningText(){
+		warningTxt.gameObject.SetActive(true);
+		linkTxt.gameObject.SetActive(true);
+		settingsButton.gameObject.SetActive(true);
 	}
 
+	public void openSettings(){
+		NativeSettings.GetSettingsURL_Native();
+	}
 
 }

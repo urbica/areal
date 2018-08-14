@@ -9,10 +9,6 @@ public class SaveManager : MonoBehaviour {
 	public SaveState.PermissionState permission_state;
 	public SaveState session_state;
 
-	public int SCENE = 1;
-
-	private int MAIN_SCENE = 1;
-	private int SUPPORT_SCENE = 0;
 
 	private void Awake() {
 
@@ -27,26 +23,22 @@ public class SaveManager : MonoBehaviour {
 		PlayerPrefs.SetString(SAVE_SASSION_KEY, SaveHelper.Serialize<SaveState>(session_state));
 	}
 	public void SavePermissionRequest(){
+
 		permission_state.isPermissionAsked = true;
 		PlayerPrefs.SetString(SAVE_PERMISSION_REQUEST_KEY, SaveHelper.Serialize<SaveState.PermissionState>(permission_state));
 	}
 
 	public void Load() {
-		if( SCENE == MAIN_SCENE) {
-			if(PlayerPrefs.HasKey(SAVE_SASSION_KEY)){
-				session_state = SaveHelper.Deserialize<SaveState>(PlayerPrefs.GetString(SAVE_SASSION_KEY));
-			}else{
-				session_state = new SaveState();
-				session_state.isFirstEnter = true;
-			}
+		Debug.Log("Checker manager started");
+
+		if(PlayerPrefs.HasKey(SAVE_SASSION_KEY)){
+			session_state = SaveHelper.Deserialize<SaveState>(PlayerPrefs.GetString(SAVE_SASSION_KEY));
+			session_state.isPermissionRequested = true;
+		} else {
+			session_state = new SaveState();
+			session_state.isFirstEnter = true;
+			session_state.isPermissionRequested = false;
+		}
 			
-		} else if (SCENE == SUPPORT_SCENE) {
-			if(PlayerPrefs.HasKey(SAVE_PERMISSION_REQUEST_KEY)){
-				permission_state = SaveHelper.Deserialize<SaveState.PermissionState>(PlayerPrefs.GetString(SAVE_PERMISSION_REQUEST_KEY));
-			} else {
-				permission_state = new SaveState.PermissionState();
-				permission_state.isPermissionAsked = false;
-			}	
-		} 
 	}
 }

@@ -18,11 +18,12 @@ public class CameraPermissionChecker : MonoBehaviour {
 
 
 	void Start () {
-		permissionAsked = SaveManager.Instance.session_state.isPermissionRequested;
-		var isFirstSession = SaveManager.Instance.session_state.isFirstEnter;
-		ccontroller.setIntroVisible(isFirstSession);
 
-		if (permissionAsked){
+		permissionAsked = SaveManager.Instance.session_state.isPermissionRequested;
+		var wasIntroShown = SaveManager.Instance.session_state.wasIntroShown;
+		ccontroller.setIntroVisible(!wasIntroShown);
+
+		if (permissionAsked && wasIntroShown){
 			verifyPermission();	
 		} 
 	}

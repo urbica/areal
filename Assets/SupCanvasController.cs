@@ -38,9 +38,11 @@ public class SupCanvasController : MonoBehaviour {
 
 	public void close_Intro(){
 		GetComponent<Animator>().SetBool("showIntro", true);
+		SaveManager.Instance.SaveIntroState();
 	}
 
 	public void intro_anim_EVENT(){
+//		openSettings();
 		intro_Panel.SetActive(false);
 		util.GetComponent<CameraPermissionChecker>().verifyPermission();	
 	}

@@ -10,6 +10,8 @@ public class CanvasManager : MonoBehaviour {
 	private const string animatorControllerParametr = "info_state";
 	private const string mainCanvasButtonsExitAnimatorParametr = "info_state_enter";
 
+	[SerializeField]
+	private ShareFun shareScript;
 	
 
 	private int currentState = 0;
@@ -53,10 +55,21 @@ public class CanvasManager : MonoBehaviour {
 
 	}
 
-	public void showCaptureCanvas(){
-		main.gameObject.SetActive(false);
-		capture.gameObject.SetActive(true);
+	public void switchCaptureCanvas(bool show){
+		if(show){
+			main.GetComponent<CanvasController>().close_share();
+		}
+		main.gameObject.SetActive(!show);
+		capture.gameObject.SetActive(show);
+		if (show){
+			shareScript.showScreenShot();
+		} else if (SaveManager.Instance.session_state.isFirstEnter && !main.GetComponent<CanvasController>().isModelScene) {
+			main.GetComponent<CanvasController>().show_about_pins();
+		}
+
 	}
+
+
 	private void checkState(){
 		
 			CanvasController ccontroller = main.gameObject.GetComponent<CanvasController>();

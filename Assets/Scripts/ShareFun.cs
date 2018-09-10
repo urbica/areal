@@ -9,18 +9,21 @@ using UnityEngine.UI;
  * https://github.com/ChrisMaire/unity-native-sharing
  */
 
-public class ShareFun : MonoBehaviour {
+public class ShareFun : MonoBehaviour, NativeGallery.PathGetter {
 	[SerializeField]
-	private Canvas canvas;
-
+	private Canvas canvas, shareCanvas;
 	[SerializeField]
-	private Canvas captureCanvas;
-	public Image mImage;
+	private Button b1,b2;
 
 	private Texture2D image;
+	private Texture2D lastImage;
+	private string mainPath;
+
+	private string mCapturePath;
 
 	public void onClickSS(){
-		canvas.gameObject.SetActive(false);
+		canvas.GetComponent<CanvasController>().setUIVisible(false);
+	//	canvas.gameObject.SetActive(false);
 		StartCoroutine(takeCapture());
 	}
 
@@ -34,41 +37,28 @@ public class ShareFun : MonoBehaviour {
 		// var rect = new Rect(0,0,img.width,img.height);
 		// Sprite s = Sprite.Create(img,rect,new Vector2(0.5f,0.5f));
 
-		NativeGallery.SaveImageToGallery( image,"AReal","maimga{}.png" );
+		NativeGallery.SaveImageToGallery( image,"AReal","maimga{}.png",this );
 
-		Destroy(image);
 
-		canvas.gameObject.SetActive(true);
+		lastImage = image;
+//		Destroy(image);
+
+	//	canvas.gameObject.SetActive(true);
 		canvas.GetComponent<CanvasController>().screenShot_Flash();
 
-//		ShareScreenshotWithText("");
-
-		// string screenShotPath = Application.persistentDataPath + "/" + ScreenshotName;
-//		StartCoroutine(delayedShare(screenShotPath, "AR St Peterburg"));
-//		Invoke("nextStep",0.6f);
-		// yield return new WaitForSeconds(.05f);
-
-	}
-	private void nextStep(){
-		canvas.gameObject.SetActive(false);
-		captureCanvas.gameObject.SetActive(true);
-		var screenImg = captureCanvas.gameObject.transform.GetChild(0).gameObject.GetComponent<Image>();
-		// mImage.
-		// screenImg.GetComponent<RawImage>().texture = image;
 	}
 
-	public void saveCapture(){
-		NativeGallery.SaveImageToGallery( image,"AReal","maimga{}.png" );
-		Destroy(image);
-		returnCanvas();
-	}
-	public void deleteCapture(){
-		Destroy(image);
-		returnCanvas();
+	public void showScreenShot(){
+		if (lastImage != null) {
+			Image image = shareCanvas.transform.GetChild(0).gameObject.GetComponent<Image>();
+			var rect = new Rect(0,0,lastImage.width, lastImage.height);
+			Sprite s = Sprite.Create(lastImage,rect, new Vector2(0.5f, 0.5f));
+			image.sprite = s;
+		}
 	}
 
 	private void returnCanvas(){
-		captureCanvas.gameObject.SetActive(false);
+		shareCanvas.gameObject.SetActive(false);
 		canvas.gameObject.SetActive(true);
 
 	}
@@ -78,23 +68,39 @@ public class ShareFun : MonoBehaviour {
 
 	public void ShareScreenshotWithText(string text)
 	{
+
 		string screenShotPath = Application.persistentDataPath + "/" + ScreenshotName;
 		if(File.Exists(screenShotPath)) File.Delete(screenShotPath);
+	//	mainPath = screenShotPath;
+
+		b1.gameObject.SetActive(false);
+		b2.gameObject.SetActive(false);
 
 		ScreenCapture.CaptureScreenshot(ScreenshotName);
-
 		StartCoroutine(delayedShare(screenShotPath, text));
+	//	NativeShare.Share(text, mainPath, "", "", "image/png", true, "");
+	}
+	public void shareMyScreen(){
+		NativeShare.Share("Hello from Areal!", mainPath, "", "", "image/png", true, "");
 	}
 
 	//CaptureScreenshot runs asynchronously, so you'll need to either capture the screenshot early and wait a fixed time
 	//for it to save, or set a unique image name and check if the file has been created yet before sharing.
 	IEnumerator delayedShare(string screenShotPath, string text)
 	{
+		Debug.Log("Sshare delayed");
 		while(!File.Exists(screenShotPath)) {
+			Debug.Log ("Sshare waiting yeild");
 			yield return new WaitForSeconds(.05f);
 		}
-
 		NativeShare.Share(text, screenShotPath, "", "", "image/png", true, "");
+		Invoke("delayedUIVisibility",2f);
+	}
+
+	private void delayedUIVisibility()
+	{
+		b1.gameObject.SetActive(true);
+		b2.gameObject.SetActive(true);
 	}
 
 	//---------- Helper Variables ----------//
@@ -132,6 +138,7 @@ public class ShareFun : MonoBehaviour {
 		screenshot = new Texture2D((int)width, (int)height, TextureFormat.ARGB32, false);
 		screenshot.ReadPixels(new Rect(0, 0, width, height), 0, 0, false);
 		screenshot.Apply();
+		lastImage = screenshot;
 
 		// Save Screenshot
 		Save_Screenshot(screenshot);
@@ -141,6 +148,8 @@ public class ShareFun : MonoBehaviour {
 	private void Save_Screenshot(Texture2D screenshot)
 	{
 		string screenShotPath = Application.persistentDataPath + "/" + DateTime.Now.ToString("dd-MM-yyyy_HH:mm:ss") + "_" + ScreenshotName;
+	//	string screenShotPath = Application.persistentDataPath + "/" +  "Areal";
+		mCapturePath = screenShotPath;
 		File.WriteAllBytes(screenShotPath, screenshot.EncodeToPNG());
 
 		// Native Share
@@ -161,11 +170,17 @@ public class ShareFun : MonoBehaviour {
 		}
 	}
 
+	public void ShareCapture(){
+		Debug.Log("sshare clicked");
+		StartCoroutine(DelayedShare_Image(mCapturePath));
+	}
+
 	//---------- Delayed Share ----------//
 	private IEnumerator DelayedShare_Image(string screenShotPath)
 	{
 		while (!File.Exists(screenShotPath))
 		{
+			Debug.Log("sshare file not exists");
 			yield return new WaitForSeconds(.05f);
 		}
 
@@ -195,4 +210,13 @@ public class ShareFun : MonoBehaviour {
 		// Share
 		NativeShare.Share(text, screenShotPath, url, subject, "image/png", true, title);
 	}
+
+    public void setImagePath(string path)
+    {
+		 mainPath = "file://" + path;//Path.GetFileName( path );
+		 string pathq = "file://" + System.IO.Path.Combine(Application.persistentDataPath, "maimga{}.png");
+		// mainPath = pathq;
+		
+		Debug.Log("MyPath" + mainPath);
+    }
 }

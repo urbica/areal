@@ -196,7 +196,7 @@ public static class NativeGallery
 	#region Save Functions
 	public static Permission SaveImageToGallery( byte[] mediaBytes, string album, string filenameFormatted, MediaSaveCallback callback = null )
 	{
-		return SaveToGallery( mediaBytes, album, filenameFormatted, true, callback );
+		return SaveToGallery( mediaBytes, album, filenameFormatted, true,null, callback );
 	}
 
 	public static Permission SaveImageToGallery( string existingMediaPath, string album, string filenameFormatted, MediaSaveCallback callback = null )
@@ -204,22 +204,22 @@ public static class NativeGallery
 		return SaveToGallery( existingMediaPath, album, filenameFormatted, true, callback );
 	}
 
-	public static Permission SaveImageToGallery( Texture2D image, string album, string filenameFormatted, MediaSaveCallback callback = null )
+	public static Permission SaveImageToGallery( Texture2D image, string album, string filenameFormatted,PathGetter target, MediaSaveCallback callback = null)
 	{
 		if( image == null )
 			throw new ArgumentException( "Parameter 'image' is null!" );
 
 		if( filenameFormatted.EndsWith( ".jpeg" ) || filenameFormatted.EndsWith( ".jpg" ) )
-			return SaveToGallery( image.EncodeToJPG( 100 ), album, filenameFormatted, true, callback );
+			return SaveToGallery( image.EncodeToJPG( 100 ), album, filenameFormatted, true,target, callback );
 		else if( filenameFormatted.EndsWith( ".png" ) )
-			return SaveToGallery( image.EncodeToPNG(), album, filenameFormatted, true, callback );
+			return SaveToGallery( image.EncodeToPNG(), album, filenameFormatted, true,target,callback );
 		else
-			return SaveToGallery( image.EncodeToPNG(), album, filenameFormatted + ".png", true, callback );
+			return SaveToGallery( image.EncodeToPNG(), album, filenameFormatted + ".png", true,target, callback );
 	}
 
 	public static Permission SaveVideoToGallery( byte[] mediaBytes, string album, string filenameFormatted, MediaSaveCallback callback = null )
 	{
-		return SaveToGallery( mediaBytes, album, filenameFormatted, false, callback );
+		return SaveToGallery( mediaBytes, album, filenameFormatted, false, null, callback );
 	}
 
 	public static Permission SaveVideoToGallery( string existingMediaPath, string album, string filenameFormatted, MediaSaveCallback callback = null )
@@ -269,7 +269,7 @@ public static class NativeGallery
 	#endregion
 
 	#region Internal Functions
-	private static Permission SaveToGallery( byte[] mediaBytes, string album, string filenameFormatted, bool isImage, MediaSaveCallback callback )
+	private static Permission SaveToGallery( byte[] mediaBytes, string album, string filenameFormatted, bool isImage,PathGetter target, MediaSaveCallback callback )
 	{
 		Permission result = RequestPermission();
 		if( result == Permission.Granted )
@@ -284,16 +284,22 @@ public static class NativeGallery
 				throw new ArgumentException( "Parameter 'filenameFormatted' is null or empty!" );
 
 			string path = GetSavePath( album, filenameFormatted );
+			
 
 			File.WriteAllBytes( path, mediaBytes );
 
 			SaveToGalleryInternal( path, album, isImage, callback );
+			target.setImagePath(path);
 		}
 
 		return result;
 	}
 
-	private static Permission SaveToGallery( string existingMediaPath, string album, string filenameFormatted, bool isImage, MediaSaveCallback callback )
+	public interface PathGetter {
+		void setImagePath(string path);
+	}
+
+	private static Permission SaveToGallery( string existingMediaPath, string album, string filenameFormatted, bool isImage, MediaSaveCallback callback)
 	{
 		Permission result = RequestPermission();
 		if( result == Permission.Granted )
@@ -308,6 +314,7 @@ public static class NativeGallery
 				throw new ArgumentException( "Parameter 'filenameFormatted' is null or empty!" );
 
 			string path = GetSavePath( album, filenameFormatted );
+	//		target.setImagePath(path);
 
 			File.Copy( existingMediaPath, path, true );
 
@@ -333,7 +340,8 @@ public static class NativeGallery
 		else
 			_NativeGallery_VideoWriteToAlbum( path, album );
 
-		Debug.Log( "Saving to Pictures: " + Path.GetFileName( path ) );
+		Debug.Log( "Saving to Pictures: " + path );
+
 #else
 		if( callback != null )
 			callback( null );

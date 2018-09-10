@@ -5,7 +5,7 @@ using UnityEngine.UI;
 using UnityEngine.XR.iOS;
 using UnityEngine.EventSystems;
 using UnityEditor;
-
+using System.Collections;
 
 public class CanvasController : MonoBehaviour {
 
@@ -29,6 +29,7 @@ public class CanvasController : MonoBehaviour {
 	public Button reload_Button;
 	public Button screenShot_Button;
 	public Button info_Button;
+	public Button share_Button;
 
 
 	public GameObject intro_Panel;
@@ -47,10 +48,13 @@ public class CanvasController : MonoBehaviour {
 
 
 	private bool first_Enter = true;
-
 	private bool clickedFromUI;
 	public static bool isFirstSession;
 	private int currentCanvasState;
+
+	float exitShareButton_Timer = 0;
+	public bool isModelScene = false;
+	private bool isCoroutineRunning = false;
 
 
 
@@ -58,24 +62,21 @@ public class CanvasController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		isCoroutineRunning = false;
+		isModelScene = false;
 		currentCanvasState = 0;
 		_animator = GetComponent<Animator>();
 		component = new AnimationComponent();
 		
-
 		hide_back_Button ();
 		hide_reload_btn ();
 		hide_info_Button();
 		hide_screenShot_btn ();
 		isFirstSession = SaveManager.Instance.session_state.isFirstEnter;
 
-
-
 		if(!isFirstSession){
 			show_info_Button();
 		} 
-
-
 		startGeneratePlane();
 
 		bool isX = UnityEngine.iOS.Device.generation == UnityEngine.iOS.DeviceGeneration.iPhoneX;
@@ -84,17 +85,6 @@ public class CanvasController : MonoBehaviour {
 			about_pins_Panel.transform.position += new Vector3(0,-120f,0);
 			find_surface_Panel.transform.position += new Vector3(0,-120f,0);			
 		}
-
-		// if (UnityEngine.iOS.Device.generation == UnityEngine.iOS.DeviceGeneration.iPadPro10Inch1Gen || 
-		// UnityEngine.iOS.Device.generation == UnityEngine.iOS.DeviceGeneration.iPadPro10Inch2Gen || 
-		// UnityEngine.iOS.Device.generation == UnityEngine.iOS.DeviceGeneration.iPad5Gen){
-		// 	mIpadupperPanel.transform.position += new Vector3(0,400,0);
-		// 	mIpadbotPanel.transform.position += new Vector3(0,400,0);
-		// } else if (UnityEngine.iOS.Device.generation == UnityEngine.iOS.DeviceGeneration.iPadPro2Gen ||
-		// UnityEngine.iOS.Device.generation == UnityEngine.iOS.DeviceGeneration.iPadPro1Gen){
-		// 	mIpadupperPanel.transform.position += new Vector3(0,450,0);
-		// 	mIpadbotPanel.transform.position += new Vector3(0,450,0);
-		// }
 	}
 
 //
@@ -192,9 +182,17 @@ public class CanvasController : MonoBehaviour {
 	public void hide_screenShot_btn(){
 		screenShot_Button.transform.localScale = new Vector3 (0, 0, 0);
 	}
+	public void show_share_btn(){
+		share_Button.GetComponent<Animator>().Play("Share_Anim_Enter");	
+	}
+	public void hide_share_btn(){
+		share_Button.GetComponent<Animator>().Play("Share_Anim_Exit");
+		Invoke("close_share",0.5f);
+	}
 	public void show_screenShot_btn(){
 		screenShot_Button.transform.localScale = new Vector3 (1f, 1f, 1f);
 	}
+
 
 	public void screenShot_Flash(){
 		screenShot_Panel.SetActive(true);
@@ -203,11 +201,51 @@ public class CanvasController : MonoBehaviour {
 	}
 	private void screenshot_anim_EVENT(){
 		screenShot_Panel.SetActive(false);
-		setCanvasAnimatorParametr(currentCanvasState);
+		setUIVisible(true);
+		if(SaveManager.Instance.session_state.isFirstEnter)
+			hide_about_pins();
+		exitShareButton_Timer = 3f;
+		if(!share_Button.gameObject.activeInHierarchy){
+			share_Button.gameObject.SetActive(true);	
+			show_share_btn();
+
+			StartCoroutine(ShareButton_AnimTimer());
+			isCoroutineRunning = true;
+
+		} 
+		// StopCoroutine(ShareButton_AnimTimer());
+		// StartCoroutine(ShareButton_AnimTimer());
 		
+
+	}
+	IEnumerator ShareButton_AnimTimer(){
+		
+		bool waitForCloseButton = true;
+		while (waitForCloseButton){
+			
+			yield return new WaitForSeconds(1f);
+			exitShareButton_Timer--;
+			Debug.Log("Countfind - " + exitShareButton_Timer);
+			if(exitShareButton_Timer == 0){		
+				waitForCloseButton = false;
+				
+				hide_share_btn();
+
+				if(SaveManager.Instance.session_state.isFirstEnter)
+					 show_about_pins();
+
+				isCoroutineRunning = false;
+			}
+		}
+    }
+	public void close_share(){
+		StopAllCoroutines();
+		Color color = share_Button.GetComponent<Color>();
+		color.a = 0;
+		share_Button.transform.position += new Vector3(256,0,0);
+		share_Button.gameObject.SetActive(false);
 	}
 
-	public AnimationComponent getAnimScript(){return component;}
 
 	void startGeneratePlane(){
 		intro_Panel.SetActive(false);
@@ -223,15 +261,24 @@ public class CanvasController : MonoBehaviour {
 	}
 	public int getCurrentCanvasState(){ return currentCanvasState;}
 
+	public void setUIVisible(bool visible){
+		screenShot_Button.gameObject.SetActive(visible);
+		info_Button.gameObject.SetActive(visible);
+		reload_Button.gameObject.SetActive(visible);
+		if(isCoroutineRunning )
+			share_Button.gameObject.SetActive(visible);
+
+		
+		if (isModelScene){
+			modelName_Text.gameObject.SetActive(visible);
+			back_Button.gameObject.SetActive(visible);
+		} else if (SaveManager.Instance.session_state.isFirstEnter){
+			about_pins_Panel.SetActive(visible);
+		}
+		
+	}
 
 	public void resetAnimationState(){
 		setCanvasAnimatorParametr(ANIM_EXIT);
-	}
-	public void hideAllHelpers(){
-		if(currentCanvasState == TOUCH_PIN_PANEL_ENTER){
-			var text = about_pins_Panel.transform.GetChild(0).gameObject.GetComponent<Text>();
-			var color = text.color;
-			text.color = new Color(color.r,color.g,color.b,0);
-		}
 	}
 }

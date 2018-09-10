@@ -37,6 +37,8 @@ public class clicker : MonoBehaviour {
 		var delta = Time.time - timerScript.time_model;
 		Analytics.CustomEvent("model_event",new Dictionary<string,object>{{"model_time",delta},
 																			{"model_name",modelName}});
+
+		ccontroller.isModelScene = false;															
 	}
 
 	public void OnClickPin(Transform mTransform,float resultScaleCoef){
@@ -73,6 +75,7 @@ public class clicker : MonoBehaviour {
 		} else {
 			ccontroller.show_modelName_Text(modelName);		
 		}
+		ccontroller.isModelScene = true;
 
 	}
 

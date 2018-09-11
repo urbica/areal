@@ -20,7 +20,6 @@ public class UnityARCameraManager : MonoBehaviour,PlaneDetectorSwitcher {
 
 	// Use this for initialization
 	void Start () {
-				Debug.Log("FindStart - UnityARCameraManager");
 
 		m_session = UnityARSessionNativeInterface.GetARSessionNativeInterface();
 

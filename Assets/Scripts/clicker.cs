@@ -44,12 +44,7 @@ public class clicker : MonoBehaviour {
 	public void OnClickPin(Transform mTransform,float resultScaleCoef){
 		timerScript.time_model = Time.time;
 
-
-
 		var id = Convert.ToInt32(mTransform.GetComponent<BoxCollider>().name);
-
-		// float x = resultScaleCoef / 0.12f;
-		// modelsCollection.transform.localScale = new Vector3(x,x,x);
 
 		setMapActive(false);
 		
@@ -96,6 +91,7 @@ public class clicker : MonoBehaviour {
 	}
 
 	private void setMapActive(bool value){
+		//GameObject
 		if(!value){
 			map.transform.parent.gameObject.GetComponent<LeanScale>().enabled = value;
 			map.SetActive (value);
@@ -104,7 +100,7 @@ public class clicker : MonoBehaviour {
 			map.transform.parent.gameObject.GetComponent<LeanScale>().enabled = value;
 		}
 
-
+		//UI
 		if (value) {
 			ccontroller.show_reload_btn();
 			ccontroller.hide_back_Button();

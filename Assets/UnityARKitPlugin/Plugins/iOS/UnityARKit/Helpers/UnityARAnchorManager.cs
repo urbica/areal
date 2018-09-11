@@ -46,8 +46,6 @@ namespace UnityEngine.XR.iOS
 				detector.planeDetect ();
 				PlaneDetectorSwitcher switcher = Camera_managerScrpt;
 				
-//			}
-
 		}
 
 		public void RemoveAnchor(ARPlaneAnchor arPlaneAnchor)

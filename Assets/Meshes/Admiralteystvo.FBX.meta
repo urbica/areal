@@ -1,0 +1,194 @@
+fileFormatVersion: 2
+guid: 080b649f5d3971b42ab1b1ecaf70cd78
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Arka
+    100004: Arka_Bild
+    100006: Balasinas
+    100008: Box011
+    100010: Fish_002
+    100012: Group40059
+    100014: Group40062
+    100016: Group41862
+    100018: Korablik
+    100020: Object068
+    100022: Object071
+    100024: Object079
+    100026: Object101
+    100028: Plane12
+    100030: Roof_Kolonada
+    100032: Shape06
+    100034: Window_Tower
+    100036: Balas
+    100038: Venok
+    400000: //RootNode
+    400002: Arka
+    400004: Arka_Bild
+    400006: Balasinas
+    400008: Box011
+    400010: Fish_002
+    400012: Group40059
+    400014: Group40062
+    400016: Group41862
+    400018: Korablik
+    400020: Object068
+    400022: Object071
+    400024: Object079
+    400026: Object101
+    400028: Plane12
+    400030: Roof_Kolonada
+    400032: Shape06
+    400034: Window_Tower
+    400036: Balas
+    400038: Venok
+    2100000: 'Material #33'
+    2100002: 13 - Default
+    2100004: No Name
+    2100006: 'Material #0'
+    2100008: 03 - Default
+    2100010: 22 - Default
+    2100012: 21 - Default
+    2100014: default
+    2100016: 14 - Default
+    2100018: 07___Default
+    2100020: 22___Default
+    2100022: 13___Default
+    2100024: 19___Default
+    2100026: pasted__pasted__mia_material2
+    2300000: Arka
+    2300002: Arka_Bild
+    2300004: Balasinas
+    2300006: Box011
+    2300008: Fish_002
+    2300010: Group40059
+    2300012: Group40062
+    2300014: Korablik
+    2300016: Object068
+    2300018: Object071
+    2300020: Object079
+    2300022: Object101
+    2300024: Plane12
+    2300026: Roof_Kolonada
+    2300028: Shape06
+    2300030: Window_Tower
+    2300032: Balas
+    2300034: Venok
+    3300000: Arka
+    3300002: Arka_Bild
+    3300004: Balasinas
+    3300006: Box011
+    3300008: Fish_002
+    3300010: Group40059
+    3300012: Group40062
+    3300014: Korablik
+    3300016: Object068
+    3300018: Object071
+    3300020: Object079
+    3300022: Object101
+    3300024: Plane12
+    3300026: Roof_Kolonada
+    3300028: Shape06
+    3300030: Window_Tower
+    3300032: Balas
+    3300034: Venok
+    4300000: Arka
+    4300002: Korablik
+    4300004: Window_Tower
+    4300006: Plane12
+    4300008: Arka_Bild
+    4300010: Shape06
+    4300012: Roof_Kolonada
+    4300014: Box011
+    4300016: Object068
+    4300018: Object071
+    4300020: Object079
+    4300022: Balasinas
+    4300024: Group40059
+    4300026: Group40062
+    4300028: Fish_002
+    4300030: Object101
+    4300032: Balas
+    4300034: Venok
+  externalObjects: {}
+  materials:
+    importMaterials: 0
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 0.2
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

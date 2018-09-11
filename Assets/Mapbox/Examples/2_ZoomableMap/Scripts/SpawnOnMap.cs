@@ -60,7 +60,6 @@
 					_spawnedObjects.Add(instance);
 
 				}
-				Camera.GetComponent<clicker>().setPinsList(_spawnedObjects);
 				showPinsOnMap();
 				pinsSpawned = true;
 			}
@@ -70,8 +69,9 @@
 		}
 
 		private void Update()
-		{
-			if ((Input.touchCount > 0) && (Input.GetTouch (0).phase == TouchPhase.Began) && !EventSystem.current.IsPointerOverGameObject()) {
+		{ //
+			var overScene = CanvasManager.SCENE_UNDER_CANVAS;
+			if ((Input.touchCount > 0) && (Input.GetTouch (0).phase == TouchPhase.Began) && !overScene) {
 				Ray raycast = Camera.main.ScreenPointToRay(Input.GetTouch(0).position);
 				RaycastHit raycastHit;
 
@@ -145,7 +145,7 @@
 
 				pin.transform.localScale = value ? 	getCurrentScale() : new Vector3(0,0,0);
 				if(value){
-					pin.GetComponent<Animator>().Play("название анимации");
+					pin.GetComponent<Animator>().Play("new_star_anim");
 				}
 			}		
 		}

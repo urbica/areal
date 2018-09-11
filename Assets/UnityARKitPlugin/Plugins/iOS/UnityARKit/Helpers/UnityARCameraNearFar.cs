@@ -12,6 +12,7 @@ public class UnityARCameraNearFar : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		Debug.Log("FindStart - UnityARCameraNearFar");
 		attachedCamera = GetComponent<Camera> ();
 		UpdateCameraClipPlanes ();
 	}

@@ -19,6 +19,7 @@ namespace UnityEngine.XR.iOS
 
 		public void Start()
 		{
+			Debug.Log("FindStart - UnityARVideo");
 			UnityARSessionNativeInterface.ARFrameUpdatedEvent += UpdateFrame;
 			bCommandBufferInitialized = false;
 		}

@@ -34,10 +34,13 @@ namespace UnityEngine.XR.iOS
 		private float resultScale = normalScale;
 
 
+
+
         bool HitTestWithResultType (ARPoint point, ARHitTestResultType resultTypes)
         {
+			var overScene = CanvasManager.SCENE_UNDER_CANVAS;
             List<ARHitTestResult> hitResults = UnityARSessionNativeInterface.GetARSessionNativeInterface ().HitTest (point, resultTypes);
-			if (hitResults.Count > 0 && !mapWasShown && planeAppeared && !EventSystem.current.IsPointerOverGameObject()) {
+			if (hitResults.Count > 0 && !mapWasShown && planeAppeared && !overScene) {
 				mapWasShown = true;
 
                 foreach (var hitResult in hitResults) {
@@ -58,6 +61,9 @@ namespace UnityEngine.XR.iOS
 							MAP.GetComponent<Animator>().SetInteger("mapAnimTransition",SHOW_MAP_ANIM);
 							spawnScript = MAP.GetComponent<SpawnOnMap> ();
 							m_HitTransform.gameObject.GetComponent<LeanScale>().enabled = true;
+							if(CanvasController.isFirstSession){
+								ccontroller.show_info_Button();
+							}
 							
 						}
 					}
@@ -139,6 +145,7 @@ namespace UnityEngine.XR.iOS
 				planePosition = arpag.gameObject.transform.position;
 			}
 			float distance = planePosition.magnitude - cameraPostiton.magnitude;
+			camera_manager.m_camera.GetComponent<clicker>().setDistance(distance);
 			calculateResultScale(distance);
 			
 		}
@@ -149,7 +156,11 @@ namespace UnityEngine.XR.iOS
 
 			if(CanvasController.isFirstSession){
 				ccontroller.resetAnimationState();
-				Invoke("show_first_help",0.5f);
+				ccontroller.hide_info_Button();
+				if(SaveManager.Instance.session_state.isFirstEnter){
+					Invoke("show_first_help",0.5f);
+				}
+				
 			}
 
 			generate_script.reload_plane();
@@ -177,7 +188,6 @@ namespace UnityEngine.XR.iOS
 		private void show_first_help(){
 			ccontroller.show_find_surface_info();
 		}
-	
 	}
 }
 

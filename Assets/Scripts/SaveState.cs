@@ -1,12 +1,14 @@
 ﻿
 public class SaveState  {
 
-	public bool isFirstEnter;
+		public bool isFirstEnter = true;	
+		public bool isPermissionRequested = false;	
 
-	public SaveState(){
-	}
+		public bool wasIntroShown = false;
 
-	public void setState(bool value){
-		isFirstEnter = value;
-	}
+		public SaveState(){
+
+		}
+
+
 }

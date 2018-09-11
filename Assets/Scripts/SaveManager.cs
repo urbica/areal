@@ -3,9 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class SaveManager : MonoBehaviour {
-	private const string SAVE_SASSION_KEY = "firstSession15";
+	private const string SAVE_SASSION_KEY = "firstSession18";
 	public static SaveManager Instance { get;set; }
-	public SaveState state;
+	public SaveState session_state;
+
 
 	private void Awake() {
 
@@ -14,20 +15,31 @@ public class SaveManager : MonoBehaviour {
 		Load();
 	}
 
-	public void Save() {
+	public void SaveSassionEnter() {
 		//
-		state.isFirstEnter = false;
-		PlayerPrefs.SetString(SAVE_SASSION_KEY, SaveHelper.Serialize<SaveState>(state));
+		session_state.isFirstEnter = false;
+		PlayerPrefs.SetString(SAVE_SASSION_KEY, SaveHelper.Serialize<SaveState>(session_state));
+	}
+	public void SavePermissionRequest(){
+
+		session_state.isPermissionRequested = true;
+
+		PlayerPrefs.SetString(SAVE_SASSION_KEY, SaveHelper.Serialize<SaveState>(session_state));
+	}
+	public void SaveIntroState(){
+		session_state.wasIntroShown = true;
+
+		PlayerPrefs.SetString(SAVE_SASSION_KEY, SaveHelper.Serialize<SaveState>(session_state));
 	}
 
 	public void Load() {
-		if(PlayerPrefs.HasKey(SAVE_SASSION_KEY))
-		{
-			state = SaveHelper.Deserialize<SaveState>(PlayerPrefs.GetString(SAVE_SASSION_KEY));
-		} else {
-			state = new SaveState();
-			state.isFirstEnter = true;
-		}
-	}
 
+		if(PlayerPrefs.HasKey(SAVE_SASSION_KEY)){
+			session_state = SaveHelper.Deserialize<SaveState>(PlayerPrefs.GetString(SAVE_SASSION_KEY));
+			session_state.isPermissionRequested = true;
+		} else {
+			session_state = new SaveState();
+		}
+			
+	}
 }

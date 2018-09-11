@@ -1,6 +1,8 @@
 ﻿#if UNITY_IOS
 using System.Runtime.InteropServices;
 using System;
+using UnityEngine;
+
 #else
 using UnityEngine;
 #endif

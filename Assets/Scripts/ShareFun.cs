@@ -24,6 +24,10 @@ public class ShareFun : MonoBehaviour, NativeGallery.PathGetter {
 	public void onClickSS(){
 		canvas.GetComponent<CanvasController>().setUIVisible(false);
 	//	canvas.gameObject.SetActive(false);
+	//Invoke("playCoroutine",0.1f);
+		
+	}
+	public void playCoroutine(){
 		StartCoroutine(takeCapture());
 	}
 

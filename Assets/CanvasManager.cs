@@ -58,7 +58,17 @@ public class CanvasManager : MonoBehaviour {
 	public void switchCaptureCanvas(bool show){
 		if(show){
 			main.GetComponent<CanvasController>().close_share();
-		}
+			
+		} 
+		// else {
+		// 	switchCanvases(show);
+		// }
+		switchCanvases(show);
+		
+
+	}
+
+	public void switchCanvases(bool show){
 		main.gameObject.SetActive(!show);
 		capture.gameObject.SetActive(show);
 		if (show){
@@ -66,7 +76,6 @@ public class CanvasManager : MonoBehaviour {
 		} else if (SaveManager.Instance.session_state.isFirstEnter && !main.GetComponent<CanvasController>().isModelScene) {
 			main.GetComponent<CanvasController>().show_about_pins();
 		}
-
 	}
 
 

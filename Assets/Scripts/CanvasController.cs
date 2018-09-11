@@ -15,6 +15,7 @@ public class CanvasController : MonoBehaviour {
 	private const int PUT_MAP_PANEL_ENTER = 4;
 	private const int TOUCH_PIN_PANEL_ENTER = 6;
 	private const int MODEL_TEXT_ENTER = 8;
+	private const int FAST_HIDE_PINS = 66;
 	private const int ANIM_EXIT = 0;
 
 	private Animator _animator;
@@ -55,6 +56,8 @@ public class CanvasController : MonoBehaviour {
 	float exitShareButton_Timer = 0;
 	public bool isModelScene = false;
 	private bool isCoroutineRunning = false;
+	[SerializeField]
+	private ShareFun shareObj;
 
 
 
@@ -205,9 +208,11 @@ public class CanvasController : MonoBehaviour {
 		if(SaveManager.Instance.session_state.isFirstEnter)
 			hide_about_pins();
 		exitShareButton_Timer = 3f;
+		Debug.Log("Countfind - isActive " + share_Button.gameObject.activeInHierarchy);
 		if(!share_Button.gameObject.activeInHierarchy){
 			share_Button.gameObject.SetActive(true);	
 			show_share_btn();
+			Debug.Log("Countfind Corutine started");
 
 			StartCoroutine(ShareButton_AnimTimer());
 			isCoroutineRunning = true;
@@ -225,8 +230,7 @@ public class CanvasController : MonoBehaviour {
 			
 			yield return new WaitForSeconds(1f);
 			exitShareButton_Timer--;
-			Debug.Log("Countfind - " + exitShareButton_Timer);
-			if(exitShareButton_Timer == 0){		
+			if(exitShareButton_Timer <= 0){		
 				waitForCloseButton = false;
 				
 				hide_share_btn();
@@ -239,7 +243,8 @@ public class CanvasController : MonoBehaviour {
 		}
     }
 	public void close_share(){
-		StopAllCoroutines();
+		isCoroutineRunning = false;
+		exitShareButton_Timer = 0;
 		Color color = share_Button.GetComponent<Color>();
 		color.a = 0;
 		share_Button.transform.position += new Vector3(256,0,0);
@@ -273,12 +278,19 @@ public class CanvasController : MonoBehaviour {
 			modelName_Text.gameObject.SetActive(visible);
 			back_Button.gameObject.SetActive(visible);
 		} else if (SaveManager.Instance.session_state.isFirstEnter){
-			about_pins_Panel.SetActive(visible);
+//			about_pins_Panel.SetActive(visible);
+			hide_Helper_forShare();
 		}
-		
+	}
+	public void uiPreparedForCapture(){
+		shareObj.playCoroutine();
 	}
 
 	public void resetAnimationState(){
 		setCanvasAnimatorParametr(ANIM_EXIT);
+	}
+
+	private void hide_Helper_forShare(){
+		setCanvasAnimatorParametr(FAST_HIDE_PINS);
 	}
 }

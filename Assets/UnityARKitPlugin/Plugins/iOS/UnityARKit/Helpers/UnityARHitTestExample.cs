@@ -34,6 +34,8 @@ namespace UnityEngine.XR.iOS
 		private float resultScale = normalScale;
 
 
+
+
         bool HitTestWithResultType (ARPoint point, ARHitTestResultType resultTypes)
         {
 			var overScene = CanvasManager.SCENE_UNDER_CANVAS;

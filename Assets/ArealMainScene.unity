@@ -3155,6 +3155,7 @@ GameObject:
   - component: {fileID: 754092367}
   - component: {fileID: 754092366}
   - component: {fileID: 754092365}
+  - component: {fileID: 754092368}
   m_Layer: 5
   m_Name: Share_Button
   m_TagString: Untagged
@@ -3266,6 +3267,24 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 754092363}
+--- !u!95 &754092368
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 754092363}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 82cf61805314549ae8cc97ff8e78cec5, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &755929967
 Prefab:
   m_ObjectHideFlags: 0
@@ -4424,7 +4443,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -80, y: -110}
+  m_AnchoredPosition: {x: -70.8, y: -70}
   m_SizeDelta: {x: 110, y: 110}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1110491457
@@ -7115,6 +7134,8 @@ MonoBehaviour:
   modelName_Text: {fileID: 687608979}
   mIpadupperPanel: {fileID: 2046406094}
   mIpadbotPanel: {fileID: 1824964319}
+  isModelScene: 0
+  shareObj: {fileID: 794602835}
 --- !u!95 &2004565154
 Animator:
   serializedVersion: 3

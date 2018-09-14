@@ -28,7 +28,6 @@
 
 		List<GameObject> _spawnedObjects;
 
-		// public clicker clicker;
 		public Camera Camera;
 
 		private bool pinsShown = false;
@@ -96,17 +95,6 @@
 					float _x = pinLocalPosition.x;
 					float _z = pinLocalPosition.z;
 					spawnedObject.transform.localPosition = new Vector3 (_x, _map.transform.position.y, _z);
-					// spawnedObject.transform.rotation = UnityARMatrixOps.GetRotation(spawnedObject.transform.localToWorldMatrix);
-					// spawnedObject.transform.LookAt (Camera.main.transform.position);
-					// spawnedObject.transform.eulerAngles = new Vector3 (0, spawnedObject.transform.eulerAngles.y, 0);
-
-					// Vector3 currAngle = spawnedObject.transform.eulerAngles;
-					// if(i == 1)
-					// Debug.Log("Angel before " + spawnedObject.transform.rotation.ToString());
-					// spawnedObject.transform.LookAt(Camera.main.transform.position);
-					// spawnedObject.transform.eulerAngles = new Vector3(currAngle.x,spawnedObject.transform.eulerAngles.y,currAngle.z);
-					// if(i == 1)
-					// Debug.Log("Angel after " + spawnedObject.transform.rotation.ToString());
 					
 				}
 			} 
@@ -133,16 +121,6 @@
 			pinsShown = value;
 			foreach(GameObject pin in _spawnedObjects){
 				pin.GetComponent<LeanScale>().enabled = value;
-				// if (!value){
-				// 	currentPinsScale = pin.transform.localScale;
-				// 	currentPinsScale = new Vector3(0,0,0);
-
-				// } 
-				// else {
-				// 	pin.GetComponent<Animator>().Play("new_star_anim");
-				// }
-				
-
 				pin.transform.localScale = value ? 	getCurrentScale() : new Vector3(0,0,0);
 				if(value){
 					pin.GetComponent<Animator>().Play("new_star_anim");

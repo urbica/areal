@@ -289,7 +289,7 @@ public static class NativeGallery
 			File.WriteAllBytes( path, mediaBytes );
 
 			SaveToGalleryInternal( path, album, isImage, callback );
-			target.setImagePath(path);
+		
 		}
 
 		return result;

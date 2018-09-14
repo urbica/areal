@@ -57,12 +57,8 @@ public class CanvasManager : MonoBehaviour {
 
 	public void switchCaptureCanvas(bool show){
 		if(show){
-			main.GetComponent<CanvasController>().close_share();
-			
+			main.GetComponent<CanvasController>().close_share();	
 		} 
-		// else {
-		// 	switchCanvases(show);
-		// }
 		switchCanvases(show);
 		
 

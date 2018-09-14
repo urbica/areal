@@ -60,10 +60,6 @@ public class CanvasController : MonoBehaviour {
 	private ShareFun shareObj;
 
 
-
-
-
-	// Use this for initialization
 	void Start () {
 		isCoroutineRunning = false;
 		isModelScene = false;
@@ -89,8 +85,6 @@ public class CanvasController : MonoBehaviour {
 			find_surface_Panel.transform.position += new Vector3(0,-120f,0);			
 		}
 	}
-
-//
 	
 	public void close_introduction(){
 		close_intro ();
@@ -107,7 +101,6 @@ public class CanvasController : MonoBehaviour {
 	}
 
 	public void show_find_surface_info(){
-//		show_info_Button();
 		find_surface_Panel.SetActive(true);
 		setCanvasAnimatorParametr(FIND_SURFACE_PANEL_ENTER);
 	}
@@ -218,10 +211,6 @@ public class CanvasController : MonoBehaviour {
 			isCoroutineRunning = true;
 
 		} 
-		// StopCoroutine(ShareButton_AnimTimer());
-		// StartCoroutine(ShareButton_AnimTimer());
-		
-
 	}
 	IEnumerator ShareButton_AnimTimer(){
 		
@@ -264,23 +253,22 @@ public class CanvasController : MonoBehaviour {
 		_animator.SetInteger(CANVAS_ANIMATOR_STATE,transitionState);
 		currentCanvasState = transitionState;
 	}
-	public int getCurrentCanvasState(){ return currentCanvasState;}
 
 	public void setUIVisible(bool visible){
+
 		screenShot_Button.gameObject.SetActive(visible);
 		info_Button.gameObject.SetActive(visible);
 		reload_Button.gameObject.SetActive(visible);
+		modelName_Text.gameObject.SetActive(visible);
+		back_Button.gameObject.SetActive(visible);
+
 		if(isCoroutineRunning )
 			share_Button.gameObject.SetActive(visible);
 
-		
-		if (isModelScene){
-			modelName_Text.gameObject.SetActive(visible);
-			back_Button.gameObject.SetActive(visible);
-		} else if (SaveManager.Instance.session_state.isFirstEnter){
-//			about_pins_Panel.SetActive(visible);
-			hide_Helper_forShare();
-		}
+		if (SaveManager.Instance.session_state.isFirstEnter && !isCoroutineRunning){
+			hide_Helper_ToShowShare();
+		} else if(!visible)
+			uiPreparedForCapture();
 	}
 	public void uiPreparedForCapture(){
 		shareObj.playCoroutine();
@@ -290,7 +278,7 @@ public class CanvasController : MonoBehaviour {
 		setCanvasAnimatorParametr(ANIM_EXIT);
 	}
 
-	private void hide_Helper_forShare(){
+	private void hide_Helper_ToShowShare(){
 		setCanvasAnimatorParametr(FAST_HIDE_PINS);
 	}
 }

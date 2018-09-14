@@ -11,7 +11,6 @@ namespace UnityEngine.XR.iOS
 		public CanvasController controller;
 		public GameObject planePrefab;
         private UnityARAnchorManager unityARAnchorManager;
-//		public UnityARHitTestExample hitTest;
 		public GameObject hitParent;
 		public UnityARCameraManager Camera_managerScrpt;
 		public GameObject pointCloud;
@@ -50,18 +49,11 @@ namespace UnityEngine.XR.iOS
             }
         }
 		void PlaneAppearDetector.planeDetect(){
-
-//			controller.show_info_Button();
 			controller.hide_find_surface_info();
-
-
 			var delta = Time.time - analytic.time_startFindPlane;
 
-
-			Debug.Log("FindDelta " + delta);
 			AnalyticsEvent.Custom("plane_find",new Dictionary<string,object>{{"find_time",delta}});
 			
-
 		}
 
 		public void reload_plane(){
@@ -76,7 +68,6 @@ namespace UnityEngine.XR.iOS
 				}
 			}
 		}
-		public UnityARAnchorManager getAnchorManager(){ return unityARAnchorManager;}
 	}
 }
 

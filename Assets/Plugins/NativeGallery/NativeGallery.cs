@@ -196,7 +196,7 @@ public static class NativeGallery
 	#region Save Functions
 	public static Permission SaveImageToGallery( byte[] mediaBytes, string album, string filenameFormatted, MediaSaveCallback callback = null )
 	{
-		return SaveToGallery( mediaBytes, album, filenameFormatted, true,null, callback );
+		return SaveToGallery( mediaBytes, album, filenameFormatted, true, callback );
 	}
 
 	public static Permission SaveImageToGallery( string existingMediaPath, string album, string filenameFormatted, MediaSaveCallback callback = null )
@@ -204,22 +204,22 @@ public static class NativeGallery
 		return SaveToGallery( existingMediaPath, album, filenameFormatted, true, callback );
 	}
 
-	public static Permission SaveImageToGallery( Texture2D image, string album, string filenameFormatted,PathGetter target, MediaSaveCallback callback = null)
+	public static Permission SaveImageToGallery( Texture2D image, string album, string filenameFormatted, MediaSaveCallback callback = null)
 	{
 		if( image == null )
 			throw new ArgumentException( "Parameter 'image' is null!" );
 
 		if( filenameFormatted.EndsWith( ".jpeg" ) || filenameFormatted.EndsWith( ".jpg" ) )
-			return SaveToGallery( image.EncodeToJPG( 100 ), album, filenameFormatted, true,target, callback );
+			return SaveToGallery( image.EncodeToJPG( 100 ), album, filenameFormatted, true, callback );
 		else if( filenameFormatted.EndsWith( ".png" ) )
-			return SaveToGallery( image.EncodeToPNG(), album, filenameFormatted, true,target,callback );
+			return SaveToGallery( image.EncodeToPNG(), album, filenameFormatted, true,callback );
 		else
-			return SaveToGallery( image.EncodeToPNG(), album, filenameFormatted + ".png", true,target, callback );
+			return SaveToGallery( image.EncodeToPNG(), album, filenameFormatted + ".png", true, callback );
 	}
 
 	public static Permission SaveVideoToGallery( byte[] mediaBytes, string album, string filenameFormatted, MediaSaveCallback callback = null )
 	{
-		return SaveToGallery( mediaBytes, album, filenameFormatted, false, null, callback );
+		return SaveToGallery( mediaBytes, album, filenameFormatted, false, callback );
 	}
 
 	public static Permission SaveVideoToGallery( string existingMediaPath, string album, string filenameFormatted, MediaSaveCallback callback = null )
@@ -269,7 +269,7 @@ public static class NativeGallery
 	#endregion
 
 	#region Internal Functions
-	private static Permission SaveToGallery( byte[] mediaBytes, string album, string filenameFormatted, bool isImage,PathGetter target, MediaSaveCallback callback )
+	private static Permission SaveToGallery( byte[] mediaBytes, string album, string filenameFormatted, bool isImage, MediaSaveCallback callback )
 	{
 		Permission result = RequestPermission();
 		if( result == Permission.Granted )

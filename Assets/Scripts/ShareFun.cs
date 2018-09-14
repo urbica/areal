@@ -9,7 +9,7 @@ using UnityEngine.UI;
  * https://github.com/ChrisMaire/unity-native-sharing
  */
 
-public class ShareFun : MonoBehaviour, NativeGallery.PathGetter {
+public class ShareFun : MonoBehaviour {
 	[SerializeField]
 	private Canvas canvas, shareCanvas;
 	[SerializeField]
@@ -37,7 +37,7 @@ public class ShareFun : MonoBehaviour, NativeGallery.PathGetter {
 		img.Apply();
 		image = img;
 
-		NativeGallery.SaveImageToGallery( image,"AReal","maimga{}.png",this );
+		NativeGallery.SaveImageToGallery( image,"AReal","maimga{}.png" );
 
 		lastImage = image;
 		canvas.GetComponent<CanvasController>().screenShot_Flash();
@@ -56,13 +56,6 @@ public class ShareFun : MonoBehaviour, NativeGallery.PathGetter {
 		
 	}
 
-	// private void returnCanvas(){
-	// 	shareCanvas.gameObject.SetActive(false);
-	// 	canvas.gameObject.SetActive(true);
-
-	// }
-
-
 	public string ScreenshotName = "screenshot.png";
 
 
@@ -71,21 +64,14 @@ public class ShareFun : MonoBehaviour, NativeGallery.PathGetter {
 
 		string screenShotPath = Application.persistentDataPath + "/" + ScreenshotName;
 		if(File.Exists(screenShotPath)) File.Delete(screenShotPath);
-	//	mainPath = screenShotPath;
 
 		b1.gameObject.SetActive(false);
 		b2.gameObject.SetActive(false);
 
 		ScreenCapture.CaptureScreenshot(ScreenshotName);
 		StartCoroutine(delayedShare(screenShotPath, text));
-	//	NativeShare.Share(text, mainPath, "", "", "image/png", true, "");
 	}
-	// public void shareMyScreen(){
-	// 	NativeShare.Share("Hello from Areal!", mainPath, "", "", "image/png", true, "");
-	// }
 
-	//CaptureScreenshot runs asynchronously, so you'll need to either capture the screenshot early and wait a fixed time
-	//for it to save, or set a unique image name and check if the file has been created yet before sharing.
 	IEnumerator delayedShare(string screenShotPath, string text)
 	{
 		Debug.Log("Sshare delayed");
@@ -119,104 +105,4 @@ public class ShareFun : MonoBehaviour, NativeGallery.PathGetter {
 			return Screen.height;
 		}
 	}
-
-
-	//---------- Screenshot ----------//
-	// public void Screenshot()
-	// {
-	// 	// Short way
-	// 	StartCoroutine(GetScreenshot());
-	// }
-
-	//---------- Get Screenshot ----------//
-	// public IEnumerator GetScreenshot()
-	// {
-	// 	yield return new WaitForEndOfFrame();
-
-	// 	// Get Screenshot
-	// 	Texture2D screenshot;
-	// 	screenshot = new Texture2D((int)width, (int)height, TextureFormat.ARGB32, false);
-	// 	screenshot.ReadPixels(new Rect(0, 0, width, height), 0, 0, false);
-	// 	screenshot.Apply();
-	// 	lastImage = screenshot;
-
-	// 	// Save Screenshot
-	// 	Save_Screenshot(screenshot);
-	// }
-
-	//---------- Save Screenshot ----------//
-// 	private void Save_Screenshot(Texture2D screenshot)
-// 	{
-// 		string screenShotPath = Application.persistentDataPath + "/" + DateTime.Now.ToString("dd-MM-yyyy_HH:mm:ss") + "_" + ScreenshotName;
-// 	//	string screenShotPath = Application.persistentDataPath + "/" +  "Areal";
-// 		mCapturePath = screenShotPath;
-// 		File.WriteAllBytes(screenShotPath, screenshot.EncodeToPNG());
-
-// 		// Native Share
-// //		StartCoroutine(DelayedShare_Image(screenShotPath));
-// 	}
-
-	//---------- Clear Saved Screenshots ----------//
-	// public void Clear_SavedScreenShots()
-	// {
-	// 	string path = Application.persistentDataPath;
-
-	// 	DirectoryInfo dir = new DirectoryInfo(path);
-	// 	FileInfo[] info = dir.GetFiles("*.png");
-
-	// 	foreach (FileInfo f in info)
-	// 	{
-	// 		File.Delete(f.FullName);
-	// 	}
-	// }
-
-	// public void ShareCapture(){
-	// 	Debug.Log("sshare clicked");
-	// 	StartCoroutine(DelayedShare_Image(mCapturePath));
-	// }
-
-	// //---------- Delayed Share ----------//
-	// private IEnumerator DelayedShare_Image(string screenShotPath)
-	// {
-	// 	while (!File.Exists(screenShotPath))
-	// 	{
-	// 		Debug.Log("sshare file not exists");
-	// 		yield return new WaitForSeconds(.05f);
-	// 	}
-
-	// 	// Share
-	// 	NativeShare_Image(screenShotPath);
-	// }
-
-	// //---------- Native Share ----------//
-	// private void NativeShare_Image(string screenShotPath)
-	// {
-	// 	string text = "";
-	// 	string subject = "";
-	// 	string url = "";
-	// 	string title = "Select sharing app";
-
-	// 	#if UNITY_ANDROID
-
-	// 	subject = "Test subject.";
-	// 	text = "Test text";
-	// 	#endif
-
-	// 	#if UNITY_IOS
-	// 	subject = "Test subject.";
-	// 	text = "Test text";
-	// 	#endif
-
-	// 	// Share
-	// 	NativeShare.Share(text, screenShotPath, url, subject, "image/png", true, title);
-	// }
-
-    public void setImagePath(string path)
-    {
-		 mainPath = "file://" + path;//Path.GetFileName( path );
-		 string pathq = "file://" + System.IO.Path.Combine(Application.persistentDataPath, "maimga{}.png");
-		// mainPath = pathq;
-		
-
-    }
 }

@@ -20,6 +20,7 @@ public class ShareFun : MonoBehaviour, NativeGallery.PathGetter {
 	private string mainPath;
 
 	private string mCapturePath;
+		private string ScreenShotText = "AReal — St Petersburg's architecture in augmented reality: https://itunes.apple.com/app/areal/id1373207530";
 
 	public void onClickSS(){
 		canvas.GetComponent<CanvasController>().setUIVisible(false);
@@ -43,6 +44,7 @@ public class ShareFun : MonoBehaviour, NativeGallery.PathGetter {
 
 	}
 
+
 	public void showScreenShot(){
 		if (lastImage != null) {
 			Image image = shareCanvas.transform.GetChild(0).gameObject.GetComponent<Image>();
@@ -50,6 +52,8 @@ public class ShareFun : MonoBehaviour, NativeGallery.PathGetter {
 			Sprite s = Sprite.Create(lastImage,rect, new Vector2(0.5f, 0.5f));
 			image.sprite = s;
 		}
+		ShareScreenshotWithText(ScreenShotText);
+		
 	}
 
 	// private void returnCanvas(){
@@ -60,6 +64,7 @@ public class ShareFun : MonoBehaviour, NativeGallery.PathGetter {
 
 
 	public string ScreenshotName = "screenshot.png";
+
 
 	public void ShareScreenshotWithText(string text)
 	{

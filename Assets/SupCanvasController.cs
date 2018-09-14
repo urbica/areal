@@ -42,7 +42,6 @@ public class SupCanvasController : MonoBehaviour {
 	}
 
 	public void intro_anim_EVENT(){
-//		openSettings();
 		intro_Panel.SetActive(false);
 		util.GetComponent<CameraPermissionChecker>().verifyPermission();	
 	}

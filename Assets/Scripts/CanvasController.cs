@@ -18,6 +18,7 @@ public class CanvasController : MonoBehaviour {
 	private const int FAST_HIDE_PINS = 66;
 	private const int ANIM_EXIT = 0;
 
+
 	private Animator _animator;
 
 
